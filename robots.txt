@@ -1,0 +1,5 @@
+User-Agent: *
+Disallow: /admin/
+Disallow: /api/
+
+Sitemap: https://rewora.com/sitemap.xml
