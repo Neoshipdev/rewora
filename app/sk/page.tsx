@@ -98,26 +98,30 @@ export default function Home() {
       {/* Split hero */}
       <section className="hero">
         <div className="hero__left">
-          <span className="eyebrow hero__eyebrow">{hero.eyebrow}</span>
-          <h1>
-            {hero.titleLines.map((line, i) => (
-              <span key={line}>
-                {line}
-                {i < hero.titleLines.length - 1 && <br />}
-              </span>
-            ))}
-          </h1>
-          <p className="hero__lead">{hero.lead}</p>
-          <div className="hero__actions">
-            <a className="btn btn--dark" href={hero.primary.href}>
-              {hero.primary.label}
-            </a>
-            <VideoButton />
+          <div className="hero__copy">
+            <span className="eyebrow hero__eyebrow">{hero.eyebrow}</span>
+            <h1>
+              {hero.titleLines.map((line, i) => (
+                <span key={line}>
+                  {line}
+                  {i < hero.titleLines.length - 1 && <br />}
+                </span>
+              ))}
+            </h1>
+            <p className="hero__lead">{hero.lead}</p>
+            <div className="hero__actions">
+              <a className="btn btn--dark" href={hero.primary.href}>
+                {hero.primary.label}
+              </a>
+              <VideoButton />
+            </div>
+            <div className="hero__rating">
+              <Stars value={5} size={18} emptyColor="#fff" />
+              <span>{hero.rating}</span>
+            </div>
           </div>
-          <div className="hero__rating">
-            <Stars value={5} size={18} emptyColor="#fff" />
-            <span>{hero.rating}</span>
-          </div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img className="hero__photo" src="/images/image-1787143637388.webp" alt="" />
         </div>
 
         <div className="hero__right">

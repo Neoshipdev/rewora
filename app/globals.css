@@ -287,11 +287,28 @@ svg {
   grid-template-columns: 1fr 1fr;
 }
 .hero__left {
+  position: relative;
   background: var(--orange-500);
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 26px;
   padding: 76px var(--pad) 76px var(--gutter);
+}
+.hero__copy {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  max-width: 560px;
+}
+/* hviezda s fotografiou je dekorácia — text si drží plnú šírku */
+.hero__photo {
+  position: absolute;
+  right: clamp(8px, 2vw, 40px);
+  bottom: clamp(8px, 3vw, 48px);
+  width: clamp(150px, 15vw, 240px);
+  height: auto;
+  pointer-events: none;
 }
 .hero__eyebrow {
   color: var(--orange-200);
@@ -1998,6 +2015,9 @@ svg {
   }
   .hero__left {
     padding: 56px var(--pad);
+  }
+  .hero__photo {
+    display: none;
   }
   .hero__right {
     padding: 32px var(--pad);
