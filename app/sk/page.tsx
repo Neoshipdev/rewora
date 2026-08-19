@@ -20,13 +20,7 @@ import VideoButton from '@/components/VideoButton';
 import { biIcons, subfeatureIcons } from '@/components/icons';
 import { adminShots, clientLogos, hotspotVisual, integrationShots } from '@/lib/assets';
 import { hero, integrations, numbers } from '@/lib/content';
-import {
-  adminPanelSection,
-  benefits,
-  features,
-  featuresIntro,
-  integrationsIntro,
-} from '@/lib/features';
+import { adminPanelSection, features, featuresIntro, integrationsIntro } from '@/lib/features';
 import { biRowMetrics, hotspots } from '@/lib/panel-data';
 
 /** Ukážka vpravo v riadku nástroja — podľa dizajnu 1c. */
@@ -190,24 +184,6 @@ export default function Home() {
                   );
                 })}
               </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Čo vám Rewora prinesie */}
-      <section className="container" style={{ paddingBottom: 72 }}>
-        <span className="eyebrow" style={{ color: 'var(--orange-500)' }}>
-          {benefits.eyebrow}
-        </span>
-        <h2 className="h2" style={{ maxWidth: 720, marginTop: 8 }}>
-          {benefits.title}
-        </h2>
-        <div className="benefits">
-          {benefits.items.map((item) => (
-            <div className="benefit" key={item.title}>
-              <span className="benefit__title">{item.title}</span>
-              <p className="benefit__text">{item.text}</p>
             </div>
           ))}
         </div>

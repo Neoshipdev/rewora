@@ -155,29 +155,6 @@ export const adminPanelSection = {
   ],
 };
 
-/** Sekcia „Čo vám Rewora prinesie“ — dlhšie znenie k číselnému pásu. */
-export const benefits = {
-  eyebrow: 'Čo vám Rewora prinesie',
-  title: 'Rewora prináša merateľné výsledky od začiatku používania',
-  items: [
-    {
-      value: '+10 %',
-      title: 'Zvýšenie tržieb',
-      text: 'Priemerný 10 % nárast celkových tržieb súvisiaci so zavedením recenzií na e-shop ich robí jedným z najefektívnejších predajných nástrojov.',
-    },
-    {
-      value: '88 %',
-      title: 'Zvýšenie dôveryhodnosti',
-      text: 'Online recenziám dôveruje 88 % zákazníkov do takej istej miery ako osobným odporúčaniam známych a priateľov.',
-    },
-    {
-      value: '270 %',
-      title: 'Vyšší konverzný pomer',
-      text: 'Produkty s 5 a viac recenziami zvyšujú pravdepodobnosť nákupu o 270 % v porovnaní s produktami bez recenzií.',
-    },
-  ],
-};
-
 /** Rozšírené texty integrácií (sekcia „Jednoduchá a rýchla integrácia“). */
 export const integrationsIntro =
   'Rewora sa vďaka svojej univerzálnosti veľmi ľahko integruje s akýmkoľvek softvérom pre e-commerce obchod pomocou jednej z nasledujúcich metód.';

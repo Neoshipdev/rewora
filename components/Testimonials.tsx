@@ -1,64 +1,117 @@
 'use client';
 
-import { useState } from 'react';
-import { testimonials, testimonialsCta } from '@/lib/content';
+import { useEffect, useRef, useState } from 'react';
+import { testimonials, testimonialsCta, testimonialsIntro } from '@/lib/content';
 
-/** Referencie klientov ako preklikávateľné slidy. */
+/** O koľko sa karta posunie, kým odíde zo scény. */
+const EXIT = 130;
+const ENTER = 28;
+
+/**
+ * Referencie — vľavo text, vpravo karty prípadových štúdií.
+ * Scrollovaním sa karty striedajú: prvá odíde nadol a odkryje druhú,
+ * druhá rovnako tretiu, ktorá zostane zobrazená.
+ */
 export default function Testimonials() {
-  const [index, setIndex] = useState(0);
-  const go = (next: number) => setIndex((next + testimonials.length) % testimonials.length);
-  const item = testimonials[index];
+  const runway = useRef<HTMLDivElement>(null);
+  const [progress, setProgress] = useState(0);
+  const [enabled, setEnabled] = useState(false);
+
+  useEffect(() => {
+    const desktop = window.matchMedia('(min-width: 1024px)');
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+    const update = () => {
+      setEnabled(desktop.matches && !reduced.matches);
+      const el = runway.current;
+      if (!el) return;
+      const rect = el.getBoundingClientRect();
+      const distance = rect.height - window.innerHeight;
+      setProgress(distance > 0 ? Math.min(1, Math.max(0, -rect.top / distance)) : 0);
+    };
+
+    update();
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    desktop.addEventListener('change', update);
+    return () => {
+      window.removeEventListener('scroll', update);
+      window.removeEventListener('resize', update);
+      desktop.removeEventListener('change', update);
+    };
+  }, []);
+
+  const count = testimonials.length;
 
   return (
-    <div className="tm">
-      <div className="tm__head">
-        <div>
-          <span className="eyebrow" style={{ color: 'var(--orange-500)' }}>
-            Referencie
-          </span>
-          <h2 className="h2" style={{ marginTop: 8 }}>
-            Čo hovoria naši klienti
-          </h2>
-        </div>
-        <div className="tm__nav">
-          <button type="button" onClick={() => go(index - 1)} aria-label="Predchádzajúca referencia">
-            ←
-          </button>
-          <button type="button" onClick={() => go(index + 1)} aria-label="Nasledujúca referencia">
-            →
-          </button>
-        </div>
+    <div className="cases">
+      <div className="cases__intro">
+        <span className="eyebrow" style={{ color: 'var(--orange-500)' }}>
+          {testimonialsIntro.eyebrow}
+        </span>
+        <h2 className="h2">{testimonialsIntro.title}</h2>
+        <p className="cases__text">{testimonialsIntro.text}</p>
+        <a className="btn btn--outline-dark" href={testimonialsIntro.button.href}>
+          {testimonialsIntro.button.label}
+        </a>
       </div>
 
-      <article className="tm__slide">
-        <div className="tm__panel" style={{ background: item.color }}>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img className="tm__logo" src={item.logo} alt={item.company} />
-          <blockquote className="tm__quote">{item.quote}</blockquote>
-          <p className="tm__author">
-            {item.author} <span>, {item.role}</span>
-          </p>
-          <a className="tm__cta" href={item.href}>
-            {testimonialsCta}
-          </a>
-        </div>
-        <div className="tm__media">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={item.cover} alt={`${item.company} — prípadová štúdia`} />
-        </div>
-      </article>
+      <div className="cases__runway" ref={runway}>
+        <div className="cases__stage">
+          {testimonials.map((item, i) => {
+            /* poloha v poradí: 0 = práve zobrazená, <0 čaká, >0 odchádza */
+            const step = progress * (count - 1) - i;
+            const last = i === count - 1;
+            const waiting = Math.min(1, Math.max(0, -step));
+            const leaving = last ? 0 : Math.min(1, Math.max(0, step));
 
-      <div className="tm__dots">
-        {testimonials.map((slide, i) => (
-          <button
-            key={slide.company}
-            type="button"
-            className={i === index ? 'is-active' : ''}
-            aria-label={`Referencia ${i + 1}`}
-            aria-current={i === index}
-            onClick={() => setIndex(i)}
-          />
-        ))}
+            /* odchádzajúca karta zmizne skôr, než sa objaví ďalšia —
+               aby sa texty dvoch kariet neprekrývali */
+            const fadeOut = Math.min(1, leaving / 0.45);
+            const fadeIn = Math.min(1, waiting / 0.45);
+            const shift = -ENTER * waiting + EXIT * leaving;
+            const scale = 1 - 0.06 * waiting - 0.04 * leaving;
+            const opacity = 1 - Math.max(fadeOut, fadeIn);
+
+            return (
+              <article
+                className="case-card"
+                key={item.company}
+                style={
+                  enabled
+                    ? {
+                        transform: `translateY(${shift}px) scale(${scale})`,
+                        opacity: Math.max(0, opacity),
+                        zIndex: count - i,
+                        pointerEvents: opacity > 0.6 ? 'auto' : 'none',
+                      }
+                    : undefined
+                }
+              >
+                <div className="case-card__head">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img className="case-card__logo" src={item.logo} alt={item.company} />
+                  <span className="case-card__metric">
+                    <b>{item.metric.value}</b>
+                    <small>{item.metric.label}</small>
+                  </span>
+                </div>
+                <blockquote className="case-card__quote">{item.quote}</blockquote>
+                <div className="case-card__foot">
+                  <span className="case-card__author">
+                    <b>{item.author}</b>
+                    <small>
+                      {item.role} · {item.company}
+                    </small>
+                  </span>
+                  <a className="case-card__link" href={item.href}>
+                    {testimonialsCta} →
+                  </a>
+                </div>
+              </article>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

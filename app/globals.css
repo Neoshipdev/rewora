@@ -284,7 +284,8 @@ svg {
 /* ---------- hero ---------- */
 .hero {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  /* oranžová polovica je širšia — vojde sa do nej text aj hviezda s fotkou */
+  grid-template-columns: 1.15fr 1fr;
 }
 .hero__left {
   position: relative;
@@ -299,14 +300,15 @@ svg {
   display: flex;
   flex-direction: column;
   gap: 26px;
-  max-width: 560px;
+  max-width: 420px;
 }
 /* hviezda s fotografiou je dekorácia — text si drží plnú šírku */
+/* hviezda s fotkou vpravo vedľa textu */
 .hero__photo {
   position: absolute;
-  right: clamp(8px, 2vw, 40px);
-  bottom: clamp(8px, 3vw, 48px);
-  width: clamp(150px, 15vw, 240px);
+  right: 8px;
+  bottom: 28px;
+  width: clamp(200px, 20vw, 300px);
   height: auto;
   pointer-events: none;
 }
@@ -1524,39 +1526,6 @@ svg {
   color: var(--ink-400);
 }
 
-/* ---------- benefity ---------- */
-.benefits {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  margin-top: 32px;
-}
-.benefit {
-  border-top: 2px solid var(--ink-900);
-  padding-top: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.benefit__value {
-  font-family: var(--font-space-grotesk), sans-serif;
-  font-size: 40px;
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  color: var(--orange-500);
-}
-.benefit__title {
-  font-family: var(--font-space-grotesk), sans-serif;
-  font-size: 20px;
-  font-weight: 600;
-  color: var(--ink-900);
-}
-.benefit__text {
-  font-size: 15px;
-  line-height: 1.6;
-  color: var(--ink-600);
-}
-
 /* ---------- podfunkcie v riadkoch nástrojov ---------- */
 .tool-row__long {
   font-size: 15px;
@@ -2067,7 +2036,6 @@ svg {
   }
   .quotes,
   .integrations__grid,
-  .benefits,
   .blog-grid {
     grid-template-columns: 1fr;
   }
@@ -3306,129 +3274,167 @@ svg {
 }
 
 
-/* ---------- referencie klientov (slidy) ---------- */
-.tm {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-.tm__head {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 24px;
-}
-.tm__nav {
-  display: flex;
-  gap: 10px;
-}
-.tm__nav button {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  border: 1px solid var(--line-300);
-  color: var(--ink-900);
-  font-size: 16px;
-  transition: background 0.15s ease, border-color 0.15s ease;
-}
-.tm__nav button:hover {
-  background: var(--surface-100);
-  border-color: var(--ink-900);
-}
-.tm__slide {
+/* ---------- referencie: vľavo text, vpravo karty štúdií ---------- */
+.cases {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  min-height: 400px;
+  grid-template-columns: minmax(0, 420px) minmax(0, 1fr);
+  gap: 56px;
+  align-items: start;
 }
-.tm__panel {
-  padding: 44px 48px;
+.cases__intro {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 20px;
-  color: #fff;
+  gap: 14px;
+  position: sticky;
+  top: 104px;
 }
-.tm__logo {
-  height: 34px;
+.cases__text {
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--ink-600);
+}
+.cases__intro .btn {
+  align-self: flex-start;
+  margin-top: 6px;
+}
+/* dráha, po ktorej sa balíček kariet rozbaľuje */
+.cases__runway {
+  position: relative;
+  /* dráha na dve výmeny kariet */
+  height: 200vh;
+}
+.cases__stage {
+  position: sticky;
+  top: 140px;
+  height: 300px;
+}
+.case-card {
+  position: absolute;
+  inset: 0 0 auto 0;
+  min-height: 236px;
+  border: 1px solid rgba(255, 87, 13, 0.25);
+  border-radius: var(--radius-lg);
+  padding: 26px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transform-origin: top center;
+  box-shadow: 0 -2px 0 rgba(255, 255, 255, 0.6), 0 18px 40px rgba(16, 24, 40, 0.12);
+  transition: box-shadow 0.15s ease;
+  will-change: transform, opacity;
+}
+.case-card:nth-child(1) {
+  background: linear-gradient(150deg, #fff6f0 0%, #ffe6d8 100%);
+}
+.case-card:nth-child(2) {
+  background: linear-gradient(150deg, #ffe9dd 0%, #ffcdb2 100%);
+}
+.case-card:nth-child(3) {
+  background: linear-gradient(150deg, #ffd6c1 0%, #ffb086 100%);
+}
+.case-card:hover {
+  box-shadow: 0 -2px 0 rgba(255, 255, 255, 0.6), 0 22px 48px rgba(16, 24, 40, 0.18);
+}
+.case-card__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.case-card__logo {
+  height: 26px;
   width: auto;
-  max-width: 180px;
+  max-width: 150px;
   object-fit: contain;
   object-position: left center;
-  filter: brightness(0) invert(1);
+  filter: brightness(0);
+  opacity: 0.7;
 }
-.tm__quote {
-  margin: 0;
-  font-size: 21px;
-  line-height: 1.5;
+.case-card__metric {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  text-align: right;
+}
+.case-card__metric b {
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-size: 24px;
   font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--orange-500);
 }
-.tm__author {
+.case-card__metric small {
+  font-size: 12px;
+  color: var(--ink-500);
+  max-width: 150px;
+}
+.case-card__quote {
   margin: 0;
-  font-size: 15px;
-  font-weight: 700;
-}
-.tm__author span {
-  font-weight: 400;
-  opacity: 0.9;
-}
-.tm__cta {
-  align-self: flex-start;
-  padding: 13px 24px;
-  border-radius: 999px;
-  background: #fff;
+  font-size: 17px;
+  line-height: 1.6;
   color: var(--ink-900);
+}
+.case-card__foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding-top: 14px;
+  border-top: 1px solid rgba(16, 24, 40, 0.12);
+}
+.case-card__author {
+  display: flex;
+  flex-direction: column;
+}
+.case-card__author b {
+  font-size: 14px;
+  color: var(--ink-900);
+}
+.case-card__author small {
+  font-size: 13px;
+  color: var(--ink-500);
+}
+.case-card__link {
   font-size: 14px;
   font-weight: 600;
-  transition: background 0.15s ease;
-}
-.tm__cta:hover {
-  background: var(--surface-100);
-  color: var(--ink-900);
-}
-.tm__media {
-  background: var(--surface-100);
-}
-.tm__media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-.tm__dots {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-}
-.tm__dots button {
-  width: 28px;
-  height: 4px;
-  border-radius: 999px;
-  background: var(--line-300);
-  transition: background 0.15s ease, width 0.15s ease;
-}
-.tm__dots button.is-active {
-  background: var(--orange-500);
-  width: 40px;
+  color: var(--orange-600);
+  white-space: nowrap;
 }
 
 @media (max-width: 1023px) {
-  .tm__slide {
+  .cases {
     grid-template-columns: 1fr;
+    gap: 28px;
   }
-  .tm__panel {
-    padding: 32px 24px;
+  .cases__intro {
+    position: static;
   }
-  .tm__quote {
-    font-size: 18px;
+  /* na menších displejoch žiadne skladanie — karty idú pod sebou */
+  .cases__runway {
+    height: auto;
   }
-  .tm__media {
-    order: -1;
-    height: 220px;
+  .cases__stage {
+    position: static;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .case-card {
+    position: static;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+  .case-card__head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .case-card__metric {
+    text-align: left;
   }
 }
-
 
 /* ---------- kontakt ---------- */
 .contact {

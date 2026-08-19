@@ -106,6 +106,7 @@ export const testimonials = [
     author: 'Ľuboš Tanáč',
     role: 'Managing director',
     company: 'FixServis',
+    metric: { value: '+15 %', label: 'nárast konverzného pomeru' },
     color: '#28B0EA',
     logo: '/images/media/01-logo-fixservis.max-200x60.svg',
     cover: '/images/media/fixservis_en.2e16d0ba.fill-800x500.png',
@@ -117,6 +118,7 @@ export const testimonials = [
     author: 'Pavol Šťastný',
     role: 'Marketing manager',
     company: 'Drinkcentrum',
+    metric: { value: '+25 %', label: 'nárast konverzného pomeru' },
     color: '#081335',
     logo: '/images/media/03-logo-drinkcentrum.max-200x60.png',
     cover: '/images/media/drinkcentrum_en.2e16d0ba.fill-800x500.png',
@@ -128,6 +130,7 @@ export const testimonials = [
     author: 'Patrik Jucha',
     role: 'E-commerce manager',
     company: 'kilpi.cz',
+    metric: { value: '~10 %', label: 'viac vložení do košíka' },
     color: '#28B0EA',
     logo: '/images/media/kilpi-logo_whitepng.max-200x60.png',
     cover: '/images/media/kilpi_en.2e16d0ba.fill-800x500.png',
@@ -136,6 +139,14 @@ export const testimonials = [
 ];
 
 export const testimonialsCta = 'Prečítať si prípadovú štúdiu';
+
+/** Ľavý stĺpec sekcie s referenciami. */
+export const testimonialsIntro = {
+  eyebrow: 'Referencie',
+  title: 'Čo hovoria naši klienti',
+  text: 'Reworu používa viac než 100 domén na Slovensku a v Česku — od distribútorov nápojov cez servis elektroniky až po výrobcov športového oblečenia. Tri z nich sme spracovali do prípadových štúdií s konkrétnymi číslami.',
+  button: { label: 'Všetky prípadové štúdie', href: '/sk/pripadove-studie/' },
+};
 
 export const integrations = [
   {
