@@ -124,6 +124,24 @@ export const productWidget = {
   ],
 };
 
+/**
+ * Foto a video recenzie — widget s krátkymi videami od zákazníkov.
+ * Náhľady sú zástupné (farebné dlaždice), po nasadení ich nahradia
+ * reálne miniatúry videí z e-shopu.
+ */
+export const videoReviews = {
+  title: 'Skutočné príbehy zákazníkov',
+  average: '4,8',
+  count: '84 recenzií',
+  items: [
+    { name: 'Katarína H.', stars: 5, tone: 'a', caption: 'Rozbalenie objednávky' },
+    { name: 'Martin P.', stars: 5, tone: 'b', caption: 'Prvé dojmy po týždni' },
+    { name: 'Simona K.', stars: 5, tone: 'c', caption: 'Ako to nosím každý deň' },
+    { name: 'Jakub M.', stars: 4, tone: 'd', caption: 'Porovnanie s predchádzajúcim' },
+    { name: 'Lucia V.', stars: 5, tone: 'e', caption: 'Darček, ktorý potešil' },
+  ],
+};
+
 /** Karusel recenzií obchodu — widget na homepage e-shopu. */
 export const shopReviews = {
   title: 'Čo hovoria naši zákazníci',

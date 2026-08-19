@@ -41,14 +41,16 @@ export default function HotspotStage({
 
   return (
     <div
-      className="hotspot-stage"
-      style={
-        image
-          ? { height, background: `#F6F3F0 center/cover no-repeat url(${image})` }
-          : { height }
-      }
+      className={`hotspot-stage ${image ? 'hotspot-stage--photo' : ''}`}
+      style={image ? undefined : { height }}
     >
-      {!image && <span className="hotspot-stage__caption mono">{caption}</span>}
+      {image ? (
+        /* Reálny vizuál necháme v plnom pomere strán — nič sa neoreže. */
+        /* eslint-disable-next-line @next/next/no-img-element */
+        <img className="hotspot-stage__img" src={image} alt="" />
+      ) : (
+        <span className="hotspot-stage__caption mono">{caption}</span>
+      )}
 
       {markers &&
         dots.map((dot, i) => (

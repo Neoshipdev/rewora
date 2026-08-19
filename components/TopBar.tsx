@@ -7,6 +7,7 @@ import { CloseIcon, MenuIcon } from './icons';
 
 export default function TopBar() {
   const [open, setOpen] = useState(false);
+  const [submenu, setSubmenu] = useState<string | null>(null);
 
   return (
     <header className="topbar">
@@ -17,11 +18,46 @@ export default function TopBar() {
             className={`topbar__links ${open ? 'topbar__links--open' : ''}`}
             aria-label="Hlavná navigácia"
           >
-            {nav.map((item) => (
-              <a key={item.href} href={item.href} onClick={() => setOpen(false)}>
-                {item.label}
-              </a>
-            ))}
+            {nav.map((item) =>
+              item.children ? (
+                <div
+                  key={item.href}
+                  className="topbar__has-sub"
+                  onMouseEnter={() => setSubmenu(item.href)}
+                  onMouseLeave={() => setSubmenu(null)}
+                >
+                  <button
+                    type="button"
+                    className="topbar__sub-toggle"
+                    aria-expanded={submenu === item.href}
+                    onClick={() => setSubmenu(submenu === item.href ? null : item.href)}
+                  >
+                    {item.label}
+                    <span aria-hidden>▾</span>
+                  </button>
+                  <div
+                    className={`topbar__sub ${submenu === item.href ? 'topbar__sub--open' : ''}`}
+                  >
+                    {item.children.map((child) => (
+                      <a
+                        key={child.href}
+                        href={child.href}
+                        onClick={() => {
+                          setSubmenu(null);
+                          setOpen(false);
+                        }}
+                      >
+                        {child.label}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <a key={item.href} href={item.href} onClick={() => setOpen(false)}>
+                  {item.label}
+                </a>
+              )
+            )}
           </nav>
         </div>
 

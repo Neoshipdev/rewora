@@ -4,14 +4,40 @@
  * v jednom objekte, nie roztrúsený po komponentoch.
  */
 
-/* Kotvy smerujú na sekcie domovskej stránky, aby fungovali aj z podstránok. */
-export const nav = [
+/**
+ * Horná lišta — Kontakt a Partnerský program sú schované pod „O nás“,
+ * FAQ a Kontakt sú dostupné z pätičky.
+ * Kotvy smerujú na sekcie domovskej stránky, aby fungovali aj z podstránok.
+ */
+export type NavItem = { label: string; href: string; children?: NavItem[] };
+
+export const nav: NavItem[] = [
+  { label: 'Funkcie', href: '/sk/#features' },
+  { label: 'Prípadové štúdie', href: '/sk/pripadove-studie/' },
+  { label: 'Cenník', href: '/sk/cennik/' },
+  { label: 'Integrácie', href: '/sk/#integration' },
+  { label: 'Blog', href: '/sk/blog/' },
+  {
+    label: 'O nás',
+    href: '/sk/o-nas/',
+    children: [
+      { label: 'O Rewore', href: '/sk/o-nas/' },
+      { label: 'Kontakt', href: '/sk/kontakt/' },
+      { label: 'Partnerský program', href: '/sk/partnersky-program/' },
+    ],
+  },
+];
+
+/** Pätička ukazuje celú štruktúru vrátane FAQ a kontaktu. */
+export const footerNav: NavItem[] = [
   { label: 'Funkcie', href: '/sk/#features' },
   { label: 'Prípadové štúdie', href: '/sk/pripadove-studie/' },
   { label: 'Cenník', href: '/sk/cennik/' },
   { label: 'Integrácie', href: '/sk/#integration' },
   { label: 'FAQ', href: '/sk/#faq' },
   { label: 'Blog', href: '/sk/blog/' },
+  { label: 'O nás', href: '/sk/o-nas/' },
+  { label: 'Kontakt', href: '/sk/kontakt/' },
 ];
 
 export const cta = { label: 'Vyskúšať teraz', href: '/sk/cennik/' };
@@ -174,14 +200,281 @@ export const faq = [
   },
 ];
 
+/**
+ * Legislatíva k recenziám pre slovenské e-shopy.
+ * Informatívny prehľad — nenahrádza právne poradenstvo.
+ */
+export const faqLegalIntro =
+  'Od 1. júla 2024 platí zákon č. 108/2024 Z. z. o ochrane spotrebiteľa, ktorý do slovenského práva preniesol európsku smernicu Omnibus (EÚ) 2019/2161. Priniesol konkrétne povinnosti pre každý e-shop, ktorý zverejňuje spotrebiteľské recenzie alebo hodnotenia. Nižšie sú zhrnuté v praktickej podobe.';
+
+export const faqLegal = [
+  {
+    q: 'Aké predpisy upravujú recenzie na slovenských e-shopoch?',
+    a: [
+      'Základom je zákon č. 108/2024 Z. z. o ochrane spotrebiteľa, účinný od 1. júla 2024, ktorý nahradil pôvodné zákony č. 250/2007 Z. z. a č. 102/2014 Z. z. Preberá smernicu Európskeho parlamentu a Rady (EÚ) 2019/2161, známu ako smernica Omnibus.',
+      'Na recenzie sa vzťahujú aj všeobecné pravidlá o nekalých obchodných praktikách a klamlivom konaní, zoznam praktík zakázaných za každých okolností (tzv. čierna listina) a pri zverejňovaní mien recenzentov aj nariadenie GDPR.',
+      'Ak predávate do iných krajín EÚ, rovnaké pravidlá platia aj tam — smernica Omnibus je transponovaná vo všetkých členských štátoch.',
+    ],
+  },
+  {
+    q: 'Musím uvádzať, či sú recenzie overené?',
+    a: [
+      'Áno. Ak sprístupňujete spotrebiteľské recenzie produktov, máte informačnú povinnosť uviesť, či a akým spôsobom zabezpečujete, že zverejnené recenzie pochádzajú od spotrebiteľov, ktorí produkt skutočne kúpili alebo použili.',
+      'Informácia musí byť dostupná na mieste, kde sa recenzie zobrazujú — teda pri produkte alebo v sekcii hodnotení, nie schovaná len v obchodných podmienkach. V praxi ide o krátky text typu „Recenzie zbierame od zákazníkov, ktorí si produkt objednali; každú párujeme s číslom objednávky.“',
+      'Ak recenzie neoverujete, nesmiete tvrdiť ani naznačovať, že overené sú. Aj to je legitímna možnosť — musíte to však uviesť pravdivo.',
+    ],
+  },
+  {
+    q: 'Čo je pri recenziách zakázané za každých okolností?',
+    a: [
+      'Tvrdiť, že recenzie zverejnené na e-shope pochádzajú od spotrebiteľov, ktorí produkt skutočne kúpili alebo použili, bez toho, aby ste podnikli primerané a proporcionálne kroky na overenie tejto skutočnosti.',
+      'Zverejňovať falošné recenzie alebo odporúčania, poveriť ich vytvorením inú osobu (napríklad nakupovať recenzie od agentúry) alebo písať recenzie na vlastné produkty pod menom zákazníka.',
+      'Skresľovať spotrebiteľské recenzie s cieľom propagovať produkt — napríklad zverejňovať len pozitívne a systematicky zamlčiavať negatívne, meniť ich obsah, presúvať hodnotenia z iného produktu alebo zobrazovať priemer, ktorý nezodpovedá reálnym recenziám.',
+      'Uvádzať zavádzajúce agregované hodnotenie, napríklad počítať priemer len z vybraných recenzií alebo ponechať hviezdičky z obdobia, keď mal produkt inú podobu.',
+    ],
+  },
+  {
+    q: 'Ako mám overovať, že recenzia pochádza od skutočného zákazníka?',
+    a: [
+      'Zákon nepredpisuje jednu konkrétnu technológiu, vyžaduje „primerané a proporcionálne kroky“. V praxi sa za dostatočné považuje spárovanie recenzie s konkrétnou objednávkou — teda pozvánka na hodnotenie odoslaná po doručení tovaru na e-mail z objednávky, s jedinečným odkazom.',
+      'Odporúča sa uchovávať väzbu medzi recenziou a identifikátorom objednávky, dátum odoslania pozvánky a dátum zverejnenia. Pri kontrole zo strany Slovenskej obchodnej inšpekcie tak viete preukázať, že proces reálne funguje.',
+      'Ak zbierate aj recenzie od návštevníkov bez objednávky alebo preberáte hodnotenia z iných platforiem, mali by byť viditeľne odlíšené od overených — napríklad štítkom „overená recenzia“ pri tých, ktoré sú spárované s nákupom.',
+    ],
+  },
+  {
+    q: 'Môžem mazať negatívne recenzie?',
+    a: [
+      'Selektívne mazanie negatívnych recenzií je zakázané — ide o skresľovanie recenzií a teda o nekalú obchodnú praktiku.',
+      'Odstrániť možno recenziu, ktorá porušuje vopred zverejnené pravidlá moderovania: obsahuje vulgarizmy, urážky, osobné údaje tretích osôb, reklamu, netýka sa produktu alebo existuje dôvodné podozrenie, že je podvodná. Dôvod odstránenia by mal byť zdokumentovaný.',
+      'Pravidlá moderovania odporúčame zverejniť a uplatňovať rovnako na pozitívne aj negatívne hodnotenia. Na negatívnu recenziu je vhodnejšie verejne odpovedať než ju skrývať — reakcia obchodu býva pre ďalších zákazníkov silnejším signálom dôveryhodnosti než samotná recenzia.',
+    ],
+  },
+  {
+    q: 'Môžem za recenziu ponúknuť zľavu alebo darček?',
+    a: [
+      'Motivovať zákazníkov k napísaniu recenzie je prípustné, no odmena nesmie byť podmienená pozitívnym hodnotením. Formulácia „napíšte 5-hviezdičkovú recenziu a získate zľavu“ je zakázaná.',
+      'Ak bola recenzia odmenená, táto skutočnosť by mala byť pri recenzii uvedená, aby nebola zavádzajúca. Rovnako sa označuje spolupráca s influencermi a recenzie výmenou za produkt zdarma.',
+      'Odmena musí byť poskytnutá bez ohľadu na to, či zákazník napísal pochvalu alebo kritiku.',
+    ],
+  },
+  {
+    q: 'Aké povinnosti mám pri osobných údajoch recenzentov?',
+    a: [
+      'Meno, e-mail či fotografia recenzenta sú osobné údaje. Potrebujete pre ich spracúvanie právny základ, informovať dotknutú osobu o účele a dobe uchovávania a umožniť jej uplatniť práva podľa GDPR vrátane výmazu.',
+      'Odporúčame zverejňovať iba údaje, ktoré zákazník na zverejnenie odsúhlasil — napríklad krstné meno a iniciálu priezviska, prípadne označenie „overený zákazník“.',
+      'Ak recenzie spracúva externý nástroj, ide o sprostredkovateľa a vzťah treba ošetriť zmluvou o spracúvaní osobných údajov.',
+    ],
+  },
+  {
+    q: 'Platia pravidlá aj pre hviezdičky v reklame a vo vyhľadávaní?',
+    a: [
+      'Áno. Ak zobrazujete hodnotenie v Google Shopping, v reklamách alebo v štruktúrovaných dátach vo vyhľadávaní, musí zodpovedať reálnym recenziám na vašom e-shope a spĺňať rovnaké požiadavky na pravdivosť.',
+      'Rovnako to platí pre hodnotenie obchodu uvádzané v pätičke, na bannery či do e-mailov. Priemer aj počet recenzií musia byť aktuálne.',
+      'Platformy majú navyše vlastné pravidlá — pri porušení môžu produktové kampane pozastaviť aj nezávisle od štátneho dozoru.',
+    ],
+  },
+  {
+    q: 'Čo hrozí pri porušení pravidiel?',
+    a: [
+      'Dozor vykonáva Slovenská obchodná inšpekcia, ktorá môže uložiť pokutu a nariadiť odstránenie protiprávneho stavu. Konanie môže začať na základe vlastnej kontroly aj podnetu spotrebiteľa či konkurencie.',
+      'Pri rozsiahlych porušeniach s cezhraničným dosahom umožňuje smernica Omnibus pokutu až do výšky 4 % ročného obratu obchodníka v dotknutých členských štátoch.',
+      'Popri sankcii treba počítať aj s reputačnou stratou — kauzy s falošnými recenziami sú mediálne vďačné a zákazníci ich dohľadajú aj po rokoch.',
+    ],
+  },
+  {
+    q: 'Ako pomáha Rewora splniť tieto povinnosti?',
+    a: [
+      'Pozvánky na recenziu sa odosielajú až po objednávke, takže každá recenzia má väzbu na konkrétny nákup — to je jadro požadovaného overenia. Overené recenzie sú viditeľne označené a odlíšené od neoverených.',
+      'Moderovanie prebieha podľa jednotných pravidiel s históriou zásahov, takže viete preukázať, prečo bola recenzia odstránená. Negatívne hodnotenia sa nedajú „potichu“ schovať — namiesto toho máte upozornenie a priestor na verejnú odpoveď.',
+      'Agregované hodnotenie a počet recenzií sa počítajú zo všetkých zverejnených recenzií a rovnaké čísla putujú aj do Google Shopping. Informáciu o spôsobe overovania zobrazíme priamo pri widgete s recenziami.',
+      'Tento prehľad má informatívny charakter a nenahrádza právne poradenstvo — konkrétne nastavenie procesov odporúčame konzultovať s vaším právnikom.',
+    ],
+  },
+];
+
+/**
+ * Partnerský program pre agentúry a freelancerov.
+ * Konkrétne provízne sadzby si Rewora dopĺňa podľa dohody — v texte sú
+ * zámerne uvedené ako „podľa zmluvy“, nie ako fixné číslo.
+ */
+export const partner = {
+  eyebrow: 'Partnerský program',
+  title: 'Odporúčajte Reworu a zarábajte na tom',
+  lead: 'Robíte e-shopy, marketing alebo konzultácie? Za každého klienta, ktorý cez vás začne používať Reworu, dostávate províziu — a klient nadštandardnú starostlivosť.',
+  audience: {
+    title: 'Pre koho je program',
+    items: [
+      {
+        title: 'E-commerce agentúry',
+        text: 'Riešite klientom e-shop na Shoptete, Shopify či na mieru. Recenzie sú prirodzená súčasť nasadenia a vy k nej pridáte ďalší príjem.',
+      },
+      {
+        title: 'Marketingové agentúry',
+        text: 'Staráte sa o výkonnostné kampane a SEO. Hviezdičky v Google Shopping a obsah z recenzií zlepšia čísla, ktoré klientovi reportujete.',
+      },
+      {
+        title: 'Freelanceri a konzultanti',
+        text: 'Radíte e-shopom, ako rásť. Rewora je nástroj, ktorý viete odporučiť s čistým svedomím a mať z odporúčania podiel.',
+      },
+    ],
+  },
+  steps: {
+    title: 'Ako to funguje',
+    items: [
+      {
+        num: '01',
+        title: 'Ozvete sa nám',
+        text: 'Napíšete nám pár viet o tom, s akými e-shopmi pracujete. Dohodneme si krátky hovor a podmienky spolupráce.',
+      },
+      {
+        num: '02',
+        title: 'Dostanete partnerský prístup',
+        text: 'Získate demo účet, podklady na prezentáciu klientovi a vlastný odkaz či kód, cez ktorý sa registrácie priradia k vám.',
+      },
+      {
+        num: '03',
+        title: 'Odporučíte Reworu klientovi',
+        text: 'Nasadenie zvládnete sami cez GTM alebo API, alebo ho necháte na nás — podľa toho, ako veľmi sa chcete zapojiť.',
+      },
+      {
+        num: '04',
+        title: 'Poberáte províziu',
+        text: 'Za každého platiaceho klienta dostávate províziu podľa zmluvy, opakovane počas trvania jeho predplatného.',
+      },
+    ],
+  },
+  benefits: {
+    title: 'Čo od nás dostanete',
+    items: [
+      {
+        title: 'Opakovaná provízia',
+        text: 'Nejde o jednorazový bonus za registráciu — provízia vám chodí, kým je klient aktívny.',
+      },
+      {
+        title: 'Demo účet zdarma',
+        text: 'Plnohodnotný prístup, na ktorom klientovi ukážete widgety aj administráciu naživo.',
+      },
+      {
+        title: 'Podklady na predaj',
+        text: 'Prezentácia, prípadové štúdie a automaticky generovaná PDF ukážka widgetov na e-shope vášho klienta.',
+      },
+      {
+        title: 'Prednostná podpora',
+        text: 'Priamy kontakt na náš tím pri nasadení, bez čakania v bežnej fronte.',
+      },
+      {
+        title: 'Technická pomoc pri integrácii',
+        text: 'Pomôžeme s GTM, API aj s netypickými riešeniami na mieru.',
+      },
+      {
+        title: 'Spoločná propagácia',
+        text: 'Úspešné nasadenie spracujeme do prípadovej štúdie, kde má priestor aj vaša značka.',
+      },
+    ],
+  },
+  cta: {
+    title: 'Chcete sa stať partnerom?',
+    text: 'Napíšte nám alebo zavolajte — dohodneme si 20-minútový hovor a prejdeme podmienky.',
+    button: 'Napísať Andrei',
+  },
+};
+
+/**
+ * O nás — fakty z investorskej prezentácie (november 2025), z ktorej sú
+ * použité len údaje vhodné na verejný web. Finančné ukazovatele, investičný
+ * dopyt ani interná konverzia obchodného lievika tu zámerne nie sú.
+ */
+export const about = {
+  eyebrow: 'O nás',
+  title: 'Zo Slovenska meníme, ako e-shopy pracujú s dôverou',
+  lead: 'Rewora je slovenská SaaS platforma pre zákaznícku skúsenosť. Začali sme pilotmi, dnes ovplyvňujeme tržby desiatok e-shopov na Slovensku a v Česku — a to je len začiatok.',
+  facts: [
+    { value: '2023', label: 'na trhu od roku' },
+    { value: '100+', label: 'domén používa Reworu' },
+    { value: '8', label: 'ľudí v tíme' },
+    { value: '13 rokov', label: 'pracujeme spolu' },
+  ],
+  story: {
+    title: 'Prečo Rewora vznikla',
+    paragraphs: [
+      'Európa je po Ázii druhý najväčší e-commerce trh a do online nákupov sa zapája osem z desiatich Európanov. Napriek tomu končí až 85 % košíkov opustených — zákazník si nie je istý produktom, obchodom alebo oboma.',
+      'Táto nedôvera stojí e-shopy miliardy. Pritom nástroj, ktorý ju rieši, majú na dosah: skúsenosti vlastných zákazníkov. Recenzie sú dôveryhodnejšie ako reklama a pri rozhodovaní vážia viac než cena.',
+      'Rewora preto spája do jednej platformy všetko, čím sa dá sociálny dôkaz na e-shope využiť — recenzie produktov aj obchodu, poradňu a fórum, hotspoty, BI dáta o produkte a prenos hodnotení do Google Shopping.',
+    ],
+  },
+  market: {
+    title: 'Trh, na ktorom pôsobíme',
+    intro: 'Potenciál merateľne kvantifikujeme počtom internetových obchodov v krajinách, kde pôsobíme alebo kam smerujeme.',
+    items: [
+      { value: '20 000+', label: 'e-shopov na Slovensku' },
+      { value: '50 000+', label: 'e-shopov v Česku' },
+      { value: '90 000+', label: 'e-shopov v Poľsku' },
+      { value: '13 000+', label: 'e-shopov v Rakúsku' },
+    ],
+  },
+  team: {
+    title: 'Kto je za Reworou',
+    paragraphs: [
+      'Sme zohraný kolektív, ktorý spolu pracuje viac než 13 rokov — a práve stabilita je naša sila. Spájame skúsenosti z Microsoftu, zo zahraničných e-commerce a technologických firiem a dopĺňame ich o silný obchod a marketing.',
+      'Baví nás posúvať hranice a s odhodlaním ukazujeme, že zo Slovenska sa dá rásť a uspieť v celej Európe.',
+    ],
+    roles: [
+      { count: '2', role: 'programátori' },
+      { count: '3', role: 'obchodníci' },
+      { count: '1', role: 'produktový vlastník' },
+      { count: '1', role: 'dizajn a marketing' },
+      { count: '1', role: 'technická podpora' },
+    ],
+  },
+  future: {
+    title: 'Kam smerujeme',
+    paragraphs: [
+      'Pracujeme na TrustGraph™ — technológii, ktorá z reálneho správania zákazníkov vytvára personalizované odporúčania. Každý návštevník uvidí obsah zoradený podľa svojich preferencií a nákupnej histórie, podobne ako to poznáte zo streamovacích služieb.',
+      'Rozširujeme pluginy pre e-commerce platformy, prehlbujeme viacjazyčnosť pre expanziu do zahraničia a staviame komunitu, ktorá e-shopom prináša organickú návštevnosť a prirodzený rast predaja cez odporúčania.',
+    ],
+  },
+  cta: {
+    title: 'Chcete vedieť viac?',
+    text: 'Radi vám ukážeme, ako Rewora funguje na vašom e-shope.',
+  },
+};
+
 export const finalCta = {
   title: 'Vyskúšajte Reworu teraz',
   subtitle: 'GTM, integrácia na mieru alebo Shopify plugin — vyberte si.',
   button: { label: 'Vyskúšať teraz', href: '/sk/cennik/' },
 };
 
+/** Kontaktné údaje — obchodný kontakt a firemné údaje z VOP. */
+export const contact = {
+  eyebrow: 'Kontakt',
+  title: 'Ozvite sa nám',
+  lead: 'Poradíme s nasadením, pripravíme ukážku na vašom e-shope alebo prejdeme cenník podľa veľkosti vášho obchodu.',
+  person: {
+    name: 'Andrea Vargová',
+    role: 'Sales manažérka Rewora',
+    photo: '/images/andrea-vargova.png',
+    phone: '+421 948 227 871',
+    phoneHref: 'tel:+421948227871',
+    email: 'andrea.vargova@rewora.com',
+  },
+  general: {
+    title: 'Všeobecné otázky a podpora',
+    email: 'info@rewora.io',
+  },
+  company: {
+    title: 'Fakturačné údaje',
+    name: 'Rewora s. r. o.',
+    address: 'Prešovská 40A, 821 02 Bratislava – Ružinov, Slovenská republika',
+    ico: 'IČO: 50 647 652',
+    registration:
+      'Zapísaná v Obchodnom registri Mestského súdu Bratislava III, oddiel Sro, vložka č. 116449/B',
+  },
+};
+
 export const footer = {
   links: [
+    { label: 'Partnerský program', href: '/sk/partnersky-program/' },
     { label: 'Všeobecné obchodné podmienky', href: '/sk/vseobecne-obchodne-podmienky/' },
     { label: 'Ochrana osobných údajov', href: '/sk/ochrana-osobnych-udajov/' },
   ],

@@ -13,7 +13,9 @@ import Stars from '@/components/Stars';
 import Testimonials from '@/components/Testimonials';
 import TopBar from '@/components/TopBar';
 import ForumThread from '@/components/ForumThread';
+import GoogleShopping from '@/components/GoogleShopping';
 import ReviewsWidget from '@/components/ReviewsWidget';
+import VideoReviews from '@/components/VideoReviews';
 import VideoButton from '@/components/VideoButton';
 import { biIcons, subfeatureIcons } from '@/components/icons';
 import { adminShots, clientLogos, hotspotVisual, integrationShots } from '@/lib/assets';
@@ -33,6 +35,14 @@ function ToolDemo({ index }: { index: number }) {
     return (
       <div className="tool-row__demo demo demo--widget">
         <ReviewsWidget />
+        <div className="demo__gshop">
+          <span className="demo__gshop-title">Foto a video recenzie</span>
+          <VideoReviews />
+        </div>
+        <div className="demo__gshop">
+          <span className="demo__gshop-title">Hviezdičky v Google Shopping</span>
+          <GoogleShopping />
+        </div>
       </div>
     );
   }

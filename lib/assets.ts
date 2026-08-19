@@ -48,7 +48,7 @@ export const widgetShots = [
 ];
 
 /** Reálny vizuál pod hotspot bodmi (nahrádza pruhovaný placeholder z dizajnu). */
-export const hotspotVisual = `${M}/image-hotspot-sk.format-avif.width-1400.avif`;
+export const hotspotVisual = `${M}/hotspot-vizual.png`;
 
 /** Screenshoty administrátorského panelu. */
 export const adminShots = {

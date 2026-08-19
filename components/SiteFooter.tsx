@@ -1,4 +1,4 @@
-import { footer, nav } from '@/lib/content';
+import { footer, footerNav } from '@/lib/content';
 import Logo from './Logo';
 
 export default function SiteFooter() {
@@ -7,7 +7,7 @@ export default function SiteFooter() {
       <div className="container footer__inner">
         <Logo variant="light" height={22} />
         <nav className="footer__links" aria-label="Pätička">
-          {nav.map((item) => (
+          {footerNav.map((item) => (
             <a key={item.href} href={item.href}>
               {item.label}
             </a>
