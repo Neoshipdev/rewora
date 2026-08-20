@@ -399,6 +399,10 @@ export const about = {
   eyebrow: 'O nás',
   title: 'Zo Slovenska meníme, ako e-shopy pracujú s dôverou',
   lead: 'Rewora je slovenská SaaS platforma pre zákaznícku skúsenosť. Začali sme pilotmi, dnes ovplyvňujeme tržby desiatok e-shopov na Slovensku a v Česku — a to je len začiatok.',
+  heroImage: {
+    src: '/images/media/rewora-reviews-that-matter-44.format-webp.width-1200.webp',
+    alt: 'Recenzie s fotografiami produktov na e-shope',
+  },
   facts: [
     { value: '2023', label: 'na trhu od roku' },
     { value: '100+', label: 'domén používa Reworu' },
@@ -413,22 +417,34 @@ export const about = {
       'Rewora preto spája do jednej platformy všetko, čím sa dá sociálny dôkaz na e-shope využiť — recenzie produktov aj obchodu, poradňu a fórum, hotspoty, BI dáta o produkte a prenos hodnotení do Google Shopping.',
     ],
   },
-  market: {
-    title: 'Trh, na ktorom pôsobíme',
-    intro: 'Potenciál merateľne kvantifikujeme počtom internetových obchodov v krajinách, kde pôsobíme alebo kam smerujeme.',
-    items: [
-      { value: '20 000+', label: 'e-shopov na Slovensku' },
-      { value: '50 000+', label: 'e-shopov v Česku' },
-      { value: '90 000+', label: 'e-shopov v Poľsku' },
-      { value: '13 000+', label: 'e-shopov v Rakúsku' },
+  /* Úvodné krédo — vľavo text, vpravo ukážka widgetu. */
+  belief: {
+    title: 'Veríme, že najlepším predajcom značky je jej zákazník.',
+    paragraphs: [
+      'Rewora vznikla z jednoduchej myšlienky: ľudia dôverujú skúsenostiam iných ľudí viac než reklame. Preto pomáhame e-shopom premieňať skúsenosti ich zákazníkov na dôveru — a dôveru na nákup.',
+      'Zbierame, prepájame a zobrazujeme autentické produktové a obchodné recenzie presne tam, kde ich zákazník potrebuje pri rozhodovaní.',
+      'Rewora však nie je iba nástroj na hviezdičky a hodnotenia. Spájame recenzie, sociálny dôkaz, zákaznícke otázky a odpovede, produktové dáta, Google Shopping, interaktívny obsah a analytiku do jednej platformy, ktorá pomáha zákazníkom rozhodovať sa jednoduchšie a e-shopom predávať viac.',
     ],
   },
-  team: {
-    title: 'Kto je za Reworou',
+  /* Dôvera ako merateľná hodnota — pod textom kolobeh nákupnej cesty. */
+  trust: {
+    eyebrow: 'Dôvera je merateľná hodnota',
+    title: 'Zákaznícka dôvera je pre nás merateľná hodnota',
     paragraphs: [
-      'Sme zohraný kolektív, ktorý spolu pracuje viac než 13 rokov — a práve stabilita je naša sila. Spájame skúsenosti z Microsoftu, zo zahraničných e-commerce a technologických firiem a dopĺňame ich o silný obchod a marketing.',
-      'Baví nás posúvať hranice a s odhodlaním ukazujeme, že zo Slovenska sa dá rásť a uspieť v celej Európe.',
+      'Nechceme, aby boli recenzie iba doplnkom na konci produktovej stránky. Chceme z nich vytvoriť jeden z najsilnejších predajných nástrojov e-shopu.',
+      'Rewora pracuje so zákazníckou skúsenosťou počas celej nákupnej cesty — od automatického získavania spätnej väzby cez jej zobrazovanie pri produktoch až po využitie recenzií vo vyhľadávačoch, Google Shoppingu a ďalších miestach, kde sa zákazník rozhoduje.',
+      'Každá skúsenosť jedného zákazníka tak môže pomôcť pri rozhodovaní ďalšieho.',
     ],
+    flow: ['Nákup', 'Skúsenosť', 'Recenzia', 'Dôvera', 'Ďalší nákup'],
+  },
+  team: {
+    title: 'Zo Slovenska tvoríme technológiu pre európsky e-commerce',
+    paragraphs: [
+      'Reworu budujeme od roku 2023. Za platformou stojí zohraný tím ľudí z technológií, e-commerce, obchodu a marketingu, ktorí spolupracujú dlhé roky a spájajú skúsenosti zo slovenských aj zahraničných technologických spoločností.',
+      'Dnes Rewora pomáha e-shopom pracovať s dôverou zákazníkov na viac ako 100 doménach a naše ambície siahajú ďaleko za hranice Slovenska.',
+      'V roku 2025 sme získali 1. miesto v inkubačnom programe Upsteer by Asseco CE. Vnímame to ako potvrdenie, že problém, ktorý riešime, je reálny — a že spôsob, akým zákazníci nakupujú online, sa dá robiť lepšie.',
+    ],
+    disciplines: ['Technológie', 'E-commerce', 'Obchod', 'Marketing'],
     roles: [
       { count: '2', role: 'programátori' },
       { count: '3', role: 'obchodníci' },

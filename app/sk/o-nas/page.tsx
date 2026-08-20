@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import CtaBand from '@/components/CtaBand';
 import PageHero from '@/components/PageHero';
+import ReviewsWidget from '@/components/ReviewsWidget';
 import SiteFooter from '@/components/SiteFooter';
 import TopBar from '@/components/TopBar';
 import { about, contact } from '@/lib/content';
@@ -18,7 +19,12 @@ export default function ONasPage() {
   return (
     <>
       <TopBar />
-      <PageHero eyebrow={about.eyebrow} title={about.title} lead={about.lead} />
+      <PageHero
+        eyebrow={about.eyebrow}
+        title={about.title}
+        lead={about.lead}
+        image={about.heroImage}
+      />
 
       <section className="numbers">
         <div className="container">
@@ -29,6 +35,20 @@ export default function ONasPage() {
                 <span className="numbers__label">{fact.label}</span>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section about-belief">
+        <div className="container about-belief__grid">
+          <div className="about-belief__copy">
+            <h2 className="h2">{about.belief.title}</h2>
+            {about.belief.paragraphs.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+          </div>
+          <div className="about-belief__visual">
+            <ReviewsWidget />
           </div>
         </div>
       </section>
@@ -44,22 +64,31 @@ export default function ONasPage() {
         </div>
       </section>
 
-      <section className="section integrations" style={{ paddingTop: 0, paddingBottom: 72 }}>
-        <div className="container" style={{ paddingTop: 72 }}>
+      <section className="section about-trust">
+        <div className="container">
           <span className="eyebrow" style={{ color: 'var(--orange-500)' }}>
-            {about.market.title}
+            {about.trust.eyebrow}
           </span>
-          <p style={{ maxWidth: 640, marginTop: 14, fontSize: 17, color: 'var(--ink-600)' }}>
-            {about.market.intro}
-          </p>
-          <div className="about__market">
-            {about.market.items.map((item) => (
-              <div key={item.label} className="about__market-item">
-                <span className="about__market-value">{item.value}</span>
-                <span className="about__market-label">{item.label}</span>
-              </div>
+          <h2 className="h2" style={{ maxWidth: 760, marginTop: 8 }}>
+            {about.trust.title}
+          </h2>
+          <div className="about__text about-trust__text">
+            {about.trust.paragraphs.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
             ))}
           </div>
+          <ol className="trust-flow">
+            {about.trust.flow.map((krok, i) => (
+              <li
+                key={krok}
+                className={`trust-flow__step ${
+                  i === about.trust.flow.length - 1 ? 'trust-flow__step--end' : ''
+                }`}
+              >
+                {krok}
+              </li>
+            ))}
+          </ol>
         </div>
       </section>
 
@@ -70,6 +99,9 @@ export default function ONasPage() {
             {about.team.paragraphs.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
             ))}
+            <p className="about__disciplines">
+              {about.team.disciplines.join(' × ')}
+            </p>
             <ul className="about__roles">
               {about.team.roles.map((role) => (
                 <li key={role.role}>
