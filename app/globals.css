@@ -303,11 +303,11 @@ svg {
   max-width: 420px;
 }
 /* hviezda s fotografiou je dekorácia — text si drží plnú šírku */
-/* hviezda s fotkou vpravo vedľa textu */
+/* hviezda s fotkou vpravo, zarovnaná k nadpisu */
 .hero__photo {
   position: absolute;
   right: 8px;
-  bottom: 28px;
+  top: 96px;
   width: clamp(200px, 20vw, 300px);
   height: auto;
   pointer-events: none;
@@ -1040,9 +1040,9 @@ svg {
   color: var(--ink-400);
 }
 .logos__img {
+  /* rovnaká plocha pre každé logo — rozdielne pomery strán sa doň vpíšu */
   height: 52px;
-  width: auto;
-  max-width: 190px;
+  width: 170px;
   object-fit: contain;
   filter: grayscale(1);
   opacity: 0.72;
@@ -1975,6 +1975,7 @@ svg {
   }
   .logos__img {
     height: 44px;
+    width: 140px;
   }
 }
 
@@ -2139,6 +2140,7 @@ svg {
   }
   .logos__img {
     height: 34px;
+    width: 110px;
   }
   .plan {
     border-right: 0;
@@ -3836,6 +3838,89 @@ svg {
 }
 
 
+/* ---------- podmenu v hornej lište ---------- */
+.topbar__has-sub {
+  position: relative;
+}
+.topbar__sub-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 15px;
+  color: var(--nav-text);
+  transition: color 0.15s ease;
+}
+.topbar__sub-toggle:hover,
+.topbar__sub-toggle[aria-expanded='true'] {
+  color: #fff;
+}
+.topbar__sub-toggle span {
+  font-size: 10px;
+}
+.topbar__sub {
+  display: none;
+  position: absolute;
+  top: calc(100% + 14px);
+  left: -14px;
+  min-width: 210px;
+  padding: 8px;
+  background: var(--ink-900);
+  border: 1px solid var(--divider-dark);
+  border-radius: var(--radius);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.28);
+  z-index: 50;
+}
+.topbar__sub--open {
+  display: block;
+}
+.topbar__sub a {
+  display: block;
+  padding: 9px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  color: var(--nav-text);
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.topbar__sub a:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+/* neviditeľný mostík, aby kurzor prešiel z položky do podmenu */
+.topbar__has-sub::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 16px;
+}
+
+@media (max-width: 1023px) {
+  .topbar__has-sub {
+    border-bottom: 1px solid var(--divider-dark);
+  }
+  .topbar__sub-toggle {
+    width: 100%;
+    justify-content: space-between;
+    padding: 12px 0;
+  }
+  .topbar__sub {
+    position: static;
+    min-width: 0;
+    padding: 0 0 10px 12px;
+    background: none;
+    border: 0;
+    box-shadow: none;
+  }
+  .topbar__sub a {
+    padding: 10px 0;
+  }
+  .topbar__has-sub::after {
+    display: none;
+  }
+}
+
+
 /* Google Shopping ako druhá ukážka v riadku nástroja 01 */
 .demo__gshop {
   margin-top: 24px;
@@ -3890,6 +3975,7 @@ svg {
 .vrev__card {
   position: relative;
   margin: 0;
+  background: var(--line-200);
   flex: 1 1 0;
   aspect-ratio: 9 / 16;
   max-height: 230px;
@@ -3906,22 +3992,17 @@ svg {
   max-height: 280px;
   box-shadow: 0 14px 34px rgba(16, 24, 40, 0.18);
 }
-.vrev__card--a {
-  background: linear-gradient(160deg, #f6d6c4, #d9b7a6);
-}
-.vrev__card--b {
-  background: linear-gradient(160deg, #cdd9e6, #9fb2c6);
-}
-.vrev__card--c {
-  background: linear-gradient(160deg, #f3e2d0, #cbb39c);
-}
-.vrev__card--d {
-  background: linear-gradient(160deg, #d8e2d4, #a9bda6);
-}
-.vrev__card--e {
-  background: linear-gradient(160deg, #ecd9e4, #c1a6b6);
+.vrev__photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
 }
 .vrev__play {
+  position: relative;
+  z-index: 1;
   width: 34px;
   height: 34px;
   border-radius: 50%;
@@ -3935,6 +4016,7 @@ svg {
 }
 .vrev__meta {
   position: absolute;
+  z-index: 1;
   left: 0;
   right: 0;
   bottom: 0;

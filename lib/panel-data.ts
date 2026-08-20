@@ -14,8 +14,8 @@ export type PanelKey =
   | 'bi';
 
 export const panelTabs: { key: PanelKey; label: string }[] = [
-  { key: 'overview', label: 'Prehľad' },
   { key: 'widget', label: 'Recenzie' },
+  { key: 'overview', label: 'Prehľad' },
   { key: 'shop', label: 'Recenzie obchodu' },
   { key: 'gshop', label: 'Google Shopping recenzie' },
   { key: 'reviews', label: 'Moderovanie recenzií' },
@@ -134,11 +134,11 @@ export const videoReviews = {
   average: '4,8',
   count: '84 recenzií',
   items: [
-    { name: 'Katarína H.', stars: 5, tone: 'a', caption: 'Rozbalenie objednávky' },
-    { name: 'Martin P.', stars: 5, tone: 'b', caption: 'Prvé dojmy po týždni' },
-    { name: 'Simona K.', stars: 5, tone: 'c', caption: 'Ako to nosím každý deň' },
-    { name: 'Jakub M.', stars: 4, tone: 'd', caption: 'Porovnanie s predchádzajúcim' },
-    { name: 'Lucia V.', stars: 5, tone: 'e', caption: 'Darček, ktorý potešil' },
+    { name: 'Katarína H.', stars: 5, photo: '/images/video-recenzia-1.png', caption: 'Rozbalenie objednávky' },
+    { name: 'Martin P.', stars: 5, photo: '/images/video-recenzia-2.png', caption: 'Prvé dojmy po týždni' },
+    { name: 'Simona K.', stars: 5, photo: '/images/video-recenzia-3.png', caption: 'Ako to nosím každý deň' },
+    { name: 'Jakub M.', stars: 4, photo: '/images/video-recenzia-4.png', caption: 'Porovnanie s predchádzajúcim' },
+    { name: 'Lucia V.', stars: 5, photo: '/images/video-recenzia-5.png', caption: 'Darček, ktorý potešil' },
   ],
 };
 

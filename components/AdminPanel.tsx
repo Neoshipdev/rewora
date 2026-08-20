@@ -14,7 +14,7 @@ import Stars from './Stars';
 const keys = panelTabs.map((t) => t.key);
 
 export default function AdminPanel() {
-  const [tab, setTab] = useState<PanelKey>('overview');
+  const [tab, setTab] = useState<PanelKey>('widget');
   const tabRefs = useRef<(HTMLButtonElement | null)[]>([]);
 
   /* Linkovanie z marketingu: #panel=hotspots */

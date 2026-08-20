@@ -30,8 +30,10 @@ export default function VideoReviews() {
         {ordered.map((item, i) => (
           <figure
             key={item.name}
-            className={`vrev__card vrev__card--${item.tone} ${i === middle ? 'vrev__card--active' : ''}`}
+            className={`vrev__card ${i === middle ? 'vrev__card--active' : ''}`}
           >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img className="vrev__photo" src={item.photo} alt="" loading="lazy" />
             <span className="vrev__play" aria-hidden>
               ▶
             </span>

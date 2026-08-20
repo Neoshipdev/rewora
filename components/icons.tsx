@@ -200,7 +200,27 @@ export function ShieldCheckIcon({ size = 30 }: Props) {
   );
 }
 
+export function CameraIcon({ size = 30 }: Props) {
+  return (
+    <svg {...base(size)}>
+      <path d="M6.83 6.18 7.9 4.6c.28-.42.75-.67 1.25-.67h5.7c.5 0 .97.25 1.25.67l1.06 1.58h2.09c1.24 0 2.25 1 2.25 2.25v9c0 1.24-1 2.25-2.25 2.25H4.75c-1.24 0-2.25-1-2.25-2.25v-9c0-1.24 1-2.25 2.25-2.25h2.08z" />
+      <circle cx="12" cy="12.75" r="3.75" />
+    </svg>
+  );
+}
+
+export function VideoIcon({ size = 30 }: Props) {
+  return (
+    <svg {...base(size)}>
+      <path d="M2.25 7.5c0-1.24 1-2.25 2.25-2.25h9c1.24 0 2.25 1 2.25 2.25v9c0 1.24-1 2.25-2.25 2.25h-9c-1.24 0-2.25-1-2.25-2.25v-9z" />
+      <path d="M15.75 10.5 21 7.3v9.4l-5.25-3.2" />
+    </svg>
+  );
+}
+
 export const subfeatureIcons = {
+  camera: CameraIcon,
+  video: VideoIcon,
   star: StarOutlineIcon,
   store: StoreIcon,
   bag: BagIcon,

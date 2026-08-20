@@ -5,11 +5,13 @@
 
 export const featuresIntro = {
   eyebrow: 'Nástroje',
-  title: 'Štyri widgety, ktoré presvedčia aj náročného zákazníka',
+  title: 'Šesť widgetov, ktoré presvedčia aj náročného zákazníka',
   lead: 'S Reworou získate pokročilé nástroje, ktoré vám pomôžu budovať dôveru vašej značky. Či už vlastníte e-shop alebo je váš biznis zameraný iným smerom, Rewora pomôže aj vám.',
 };
 
 export type SubfeatureIcon =
+  | 'camera'
+  | 'video'
   | 'star'
   | 'store'
   | 'bag'
@@ -58,6 +60,54 @@ export const features: Feature[] = [
   },
   {
     num: '02',
+    name: 'Foto a video recenzie',
+    short:
+      'Fotky a krátke videá od zákazníkov priamo pri produkte — najsilnejší druh sociálneho dôkazu.',
+    long: 'Text presvedčí, obraz presvedčí rýchlejšie. Zákazník na vlastné oči vidí, ako produkt vyzerá v reálnom používaní, nie na ateliérovej fotografii. Obsah od zákazníkov zároveň zdarma dopĺňa vašu produktovú galériu.',
+    items: [
+      {
+        title: 'Fotky od zákazníkov',
+        icon: 'camera',
+        text: 'K recenzii sa dá pripojiť fotografia produktu v reálnom prostredí. Ukážete tak veľkosť, farbu aj skutočnú kvalitu spracovania.',
+      },
+      {
+        title: 'Video recenzie',
+        icon: 'video',
+        text: 'Krátke zvislé videá v štýle, na aký sú zákazníci zvyknutí zo sociálnych sietí. Zobrazujú sa v karuseli priamo na karte produktu aj na homepage.',
+      },
+      {
+        title: 'Moderovanie a práva k obsahu',
+        icon: 'shield',
+        text: 'Každý príspevok schvaľujete pred zverejnením a máte poriadok v súhlasoch, takže obsah viete použiť aj v kampaniach.',
+      },
+    ],
+  },
+  {
+    num: '03',
+    name: 'Hviezdičky v Google Shopping',
+    short:
+      'Hodnotenia sa prenášajú do Googlu a vaša karta vo výsledkoch vyhľadávania vyčnieva.',
+    long: 'Recenzie zozbierané Reworou automaticky posielame do Google Merchant Center. Vaše produkty sa vo vyhľadávaní zobrazia s hviezdičkami a počtom hodnotení — na rozdiel od kariet konkurencie, ktoré ostávajú bez nich.',
+    items: [
+      {
+        title: 'Automatický prenos hodnotení',
+        icon: 'bag',
+        text: 'Zbierame, overujeme a odosielame recenzie do Google Merchant Center bez toho, aby ste čokoľvek exportovali ručne.',
+      },
+      {
+        title: 'Vyššia preklikovosť',
+        icon: 'trending',
+        text: 'Karta s hviezdičkami priťahuje pozornosť a získava vyšší podiel preklikov pri rovnakom rozpočte na kampane.',
+      },
+      {
+        title: 'Súlad s pravidlami Googlu',
+        icon: 'document',
+        text: 'Odosielame len overené recenzie v požadovanom formáte, takže feed prejde kontrolou bez zbytočných zamietnutí.',
+      },
+    ],
+  },
+  {
+    num: '04',
     name: 'Poradňa a fórum',
     short:
       'Otázky ku produktom, diskusné fórum a odborné odpovede. Odpoviete raz, použijete stokrát.',
@@ -81,7 +131,7 @@ export const features: Feature[] = [
     ],
   },
   {
-    num: '03',
+    num: '05',
     name: 'Hotspots',
     short:
       'Označte produkty v obrázku, lookbooku či PDF katalógu — a zmeňte inšpiráciu na nákup.',
@@ -105,7 +155,7 @@ export const features: Feature[] = [
     ],
   },
   {
-    num: '04',
+    num: '06',
     name: 'Business Intelligence',
     short:
       'Predajnosť, reklamovanosť, vratkovosť. Vy si vyberiete, ktoré dáta váš segment potrebuje.',

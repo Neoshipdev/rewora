@@ -29,25 +29,31 @@ function ToolDemo({ index }: { index: number }) {
     return (
       <div className="tool-row__demo demo demo--widget">
         <ReviewsWidget />
-        <div className="demo__gshop">
-          <span className="demo__gshop-title">Foto a video recenzie</span>
-          <VideoReviews />
-        </div>
-        <div className="demo__gshop">
-          <span className="demo__gshop-title">Hviezdičky v Google Shopping</span>
-          <GoogleShopping />
-        </div>
       </div>
     );
   }
   if (index === 1) {
+    return (
+      <div className="tool-row__demo demo demo--widget">
+        <VideoReviews />
+      </div>
+    );
+  }
+  if (index === 2) {
+    return (
+      <div className="tool-row__demo demo demo--widget">
+        <GoogleShopping />
+      </div>
+    );
+  }
+  if (index === 3) {
     return (
       <div className="tool-row__demo demo demo--thread">
         <ForumThread showStrip={false} />
       </div>
     );
   }
-  if (index === 2) {
+  if (index === 4) {
     return (
       <div className="tool-row__demo">
         <HotspotStage
