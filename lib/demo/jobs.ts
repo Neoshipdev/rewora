@@ -19,6 +19,8 @@ export type Job = {
   error?: string;
   pdf?: Buffer;
   html?: string;
+  /** podstránka, z ktorej sme brali produkt — nech je vidno, čo ukážka zachytila */
+  productUrl?: string;
   fileName?: string;
   createdAt: number;
 };
@@ -72,6 +74,7 @@ async function run(job: Job) {
     job.status = 'running';
     const capture = await captureSite(job.url, setStep);
     job.warnings = capture.warnings;
+    job.productUrl = capture.productUrl;
 
     setStep('Skladám widgety do ukážky…');
     const html = buildDeckHtml(capture);

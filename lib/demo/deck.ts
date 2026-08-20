@@ -39,16 +39,6 @@ const browserFrame = (src: string, height: number, domain: string) => `
     <div class="frame__shot"><img src="${src}" alt=""></div>
   </div>`;
 
-/** Reálny výpis Google Shopping s hviezdičkami — snímka obrazovky, nie mock. */
-const googleShopping = (() => {
-  try {
-    const bin = readFileSync(join(process.cwd(), 'public', 'images', 'Google_shopping.png'));
-    return `data:image/png;base64,${bin.toString('base64')}`;
-  } catch {
-    return undefined;
-  }
-})();
-
 /** Šírka obsahu snímky prezentácie — podľa nej škálujeme snímky e-shopu. */
 const CONTENT = SLIDE.width - 96;
 
@@ -277,19 +267,48 @@ export function buildDeckHtml(capture: Capture): string {
       num: '06',
       title: 'Hviezdičky v Google Shopping',
       lead: 'Produktové hodnotenia sa prenášajú do Google Shopping a zvyšujú preklikovosť.',
-      body: `<div class="gshop">
-          ${
-            googleShopping
-              ? `<img class="gshop__shot" src="${googleShopping}" alt="Výpis Google Shopping s hviezdičkami pri produkte">`
-              : ''
-          }
-          <div class="gshop__note">
-            <b>Takto vyzerá výpis v Google Shopping</b>
-            <p>Karta s hviezdičkami a počtom hodnotení vyčnieva medzi ponukami bez nich.
-            Recenzie zozbierané Reworou posielame do Google Merchant Center automaticky, takže
-            rovnaké hodnotenie sa zobrazí aj pri produktoch e-shopu ${escape(capture.domain)}.</p>
+      body: (() => {
+        /* výpis skladáme z produktov e-shopu — sortiment tak sedí zákazníkovi */
+        /* ceny z rôznych webov prídu v rôznom tvare, zjednotíme ich */
+        const suma = (hodnota?: string) =>
+          (hodnota ?? price).replace(/(\d)[.](\d{2})/, '$1,$2').replace(/(\d)\s*€/, '$1 €');
+        const polozky = (capture.items.length ? capture.items : [{ name: productName, price }]).slice(0, 8);
+        const dotaz = (polozky[0]?.name ?? productName).split(' ').slice(0, 4).join(' ').toLowerCase();
+        const karty = polozky
+          .map((item, i) => {
+            /* hviezdičky nesie časť ponúk — presne ako to vyzerá vo výpise */
+            const hodnotenie = i % 3 === 0
+              ? `<span class="g__stars">${stars(5, '#F9AB00')} <small>(${12 + i * 7})</small></span>`
+              : `<span class="g__ship">+ dopravné ${(1.9 + i * 0.4).toFixed(2).replace('.', ',')} €</span>`;
+            return `
+            <div class="g__card">
+              ${item.image ? `<img src="${item.image}" alt="">` : '<div class="g__ph"></div>'}
+              <span class="g__name">${escape(item.name)}</span>
+              <span class="g__price">${escape(suma(item.price))}</span>
+              <span class="g__shop">${escape(capture.domain)}</span>
+              ${hodnotenie}
+              <span class="g__src">Z webu ${escape(capture.domain)}</span>
+            </div>`;
+          })
+          .join('');
+        return `<div class="gshop">
+          <div class="g">
+            <div class="g__bar">
+              <span class="g__logo"><b style="color:#4285F4">G</b><b style="color:#EA4335">o</b><b style="color:#FBBC05">o</b><b style="color:#4285F4">g</b><b style="color:#34A853">l</b><b style="color:#EA4335">e</b></span>
+              <span class="g__input">${escape(dotaz)}</span>
+            </div>
+            <div class="g__tabs"><span>Všetko</span><span>Obrázky</span><span>Videá</span><span class="g__tab--on">Výrobky</span><span>Krátke videá</span><span>Viac</span></div>
+            <div class="g__label">Sponzorované Produkty ⋮</div>
+            <div class="g__row">${karty}</div>
           </div>
-        </div>`,
+          <div class="gshop__note">
+            <b>Takto by vyzeral výpis vašich produktov</b>
+            <p>Karta s hviezdičkami a počtom hodnotení vyčnieva medzi ponukami bez nich.
+            Recenzie zozbierané Reworou posielame do Google Merchant Center automaticky,
+            takže hodnotenie sa zobrazí aj pri produktoch e-shopu ${escape(capture.domain)}.</p>
+          </div>
+        </div>`;
+      })(),
       note: 'Automatické zaradenie produktov do Google Shopping je súčasťou balíka Profesionálny.',
     }),
     `<section class="slide slide--cta">
@@ -385,9 +404,26 @@ export function buildDeckHtml(capture: Capture): string {
 
   .gshop { display:flex; flex-direction:column; gap:14px; }
   /* reálna snímka z Google Shopping — orezaná na pás s kartami produktov */
-  /* snímku nechávame celú — orez by odrezal práve hviezdičky */
-  .gshop__shot { width:100%; max-height:360px; object-fit:contain; object-position:center top;
-    border:1px solid #E7E2DC; border-radius:10px; display:block; background:#fff; }
+  /* výpis v Google Shopping — vizuál kopíruje záložku Výrobky */
+  .g { border:1px solid #E7E2DC; border-radius:10px; padding:14px 16px 16px; background:#fff;
+    font-family:Arial,'Helvetica Neue',sans-serif; }
+  .g__bar { display:flex; align-items:center; gap:16px; }
+  .g__logo { font-family:Arial,sans-serif; font-size:22px; font-weight:700; letter-spacing:-0.5px; }
+  .g__input { flex:1; border:1px solid #DFE1E5; border-radius:999px; padding:7px 16px; font-size:13px; color:#202124; }
+  .g__tabs { display:flex; gap:20px; margin:10px 0 0 62px; font-size:12px; color:#5F6368; }
+  .g__tab--on { color:#1A73E8; border-bottom:2px solid #1A73E8; padding-bottom:3px; }
+  .g__label { margin:12px 0 8px; font-size:14px; color:#202124; }
+  .g__row { display:flex; gap:8px; overflow:hidden; }
+  .g__card { flex:0 0 128px; border:1px solid #E8EAED; border-radius:8px; padding:8px;
+    display:flex; flex-direction:column; gap:3px; }
+  .g__card img { width:100%; height:92px; object-fit:contain; }
+  .g__ph { width:100%; height:92px; background:repeating-linear-gradient(135deg,#F3EFEA 0 10px,#EDE8E2 10px 20px); }
+  .g__name { font-size:11px; line-height:1.25; color:#1A0DAB; height:28px; overflow:hidden; }
+  .g__price { font-size:12px; font-weight:700; color:#202124; }
+  .g__shop, .g__ship, .g__src { font-size:10px; color:#5F6368; }
+  .g__src { color:#1A0DAB; }
+  .g__stars { font-size:10px; color:#5F6368; display:flex; align-items:center; gap:4px; }
+  .g__stars svg { width:52px; }
   .gshop__card { border:1px solid #E7E2DC; border-radius:10px; padding:16px; display:flex; gap:16px; }
   .gshop__card img { width:180px; height:180px; object-fit:contain; }
   .gshop__ph { width:180px; height:180px; background:repeating-linear-gradient(135deg,#F3EFEA 0 10px,#EDE8E2 10px 20px); }

@@ -17,5 +17,6 @@ export async function GET(_request: Request, { params }: { params: { id: string 
     warnings: job.warnings,
     error: job.error,
     fileName: job.fileName,
+    productUrl: job.productUrl,
   });
 }

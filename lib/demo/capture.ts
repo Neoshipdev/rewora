@@ -9,6 +9,9 @@ import { chromium, type Browser, type Page } from 'playwright';
 /** Výsek stránky s miestom, kam widget patrí (`anchor` = odsadenie v snímke). */
 export type Strip = { image: string; anchor: number; width: number };
 
+/** Položka do ukážky výpisu v Google Shopping. */
+export type ShopItem = { image?: string; name: string; price?: string };
+
 export type Capture = {
   url: string;
   domain: string;
@@ -25,6 +28,8 @@ export type Capture = {
   stripHero?: Strip;
   stripPhoto?: Strip;
   stripDesc?: Strip;
+  /** produkty e-shopu do ukážky Google Shopping */
+  items: ShopItem[];
   pageText: string;
   warnings: string[];
 };
@@ -332,6 +337,82 @@ async function stripAround(page: Page, y: number, above = 300): Promise<Strip | 
   }
 }
 
+/**
+ * Produkty z výpisu e-shopu — meno, cena a fotografia. Používame ich vo výpise
+ * Google Shopping, aby ukážka zodpovedala sortimentu konkrétneho obchodu.
+ */
+async function collectItems(page: Page, limit = 8): Promise<ShopItem[]> {
+  /* výpisy sa načítavajú až pri scrollovaní — najprv stránku prebehneme */
+  for (const y of [600, 1400, 2200]) {
+    await page.evaluate((t) => window.scrollTo(0, t), y).catch(() => {});
+    await page.waitForTimeout(350);
+  }
+  await page.evaluate(() => window.scrollTo(0, 0)).catch(() => {});
+  await page.waitForTimeout(250);
+
+  const zaklad = await page
+    .evaluate((max) => {
+      const cena = /\d+[\s]?[,.]\d{2}\s*€/;
+      const vysledok: { name: string; price?: string; imgIndex: number }[] = [];
+      const obrazky = Array.from(document.querySelectorAll('img'));
+      const pouzite = new Set<string>();
+
+      for (const [index, img] of obrazky.entries()) {
+        const rect = img.getBoundingClientRect();
+        if (rect.width < 90 || rect.height < 90) continue;
+
+        /* karta produktu je najbližší predok, ktorý obsahuje cenu a je krátky */
+        let karta: HTMLElement | null = img.parentElement;
+        let text = '';
+        for (let i = 0; i < 5 && karta; i++) {
+          text = karta.innerText ?? '';
+          if (cena.test(text) && text.length < 320) break;
+          karta = karta.parentElement;
+          text = '';
+        }
+        if (!karta || !text) continue;
+
+        const odkaz = karta.querySelector('a[href]');
+        /* v karte býva aj skladovosť, zľava či tlačidlo — názov je najdlhší zmysluplný riadok */
+        const stitok = /^(na sklade|skladom|nie je skladom|posledn|novinka|nové|akcia|zľava|výpredaj|doprava|do košíka|kúpiť|detail|porovnať|obľúben|top|odporúčame|[-+]?\d+\s*%|\d+\s*ks)/i;
+        const riadky = text
+          .split(String.fromCharCode(10))
+          .map((r) => r.trim())
+          .filter((r) => r.length > 8 && r.length < 90 && !cena.test(r) && !stitok.test(r));
+        riadky.sort((a, b) => b.length - a.length);
+        const nazov = riadky[0] ?? (odkaz?.textContent ?? '').trim();
+        if (!nazov || nazov.length < 8 || nazov.length > 90) continue;
+        if (pouzite.has(nazov)) continue;
+        pouzite.add(nazov);
+
+        vysledok.push({ name: nazov, price: text.match(cena)?.[0]?.replace(/\s+/g, ' '), imgIndex: index });
+        if (vysledok.length >= max) break;
+      }
+      return vysledok;
+    }, limit)
+    .catch(() => [] as { name: string; price?: string; imgIndex: number }[]);
+
+  const items: ShopItem[] = [];
+  for (const polozka of zaklad) {
+    let image: string | undefined;
+    try {
+      const handle = await page.evaluateHandle(
+        (i) => document.querySelectorAll('img')[i] ?? null,
+        polozka.imgIndex
+      );
+      const element = handle.asElement();
+      if (element) {
+        const buffer = await element.screenshot({ type: 'jpeg', quality: 75 });
+        image = `data:image/jpeg;base64,${buffer.toString('base64')}`;
+      }
+    } catch {
+      /* obrázok preskočíme, karta bude bez fotky */
+    }
+    items.push({ name: polozka.name, price: polozka.price, image });
+  }
+  return items;
+}
+
 /** Pásy produktovej stránky — pod fotografiou a pod popisom. */
 async function productStrips(page: Page): Promise<{ stripPhoto?: Strip; stripDesc?: Strip }> {
   const handle = await productPhotoHandle(page);
@@ -350,15 +431,23 @@ async function heroBottom(page: Page): Promise<number | null> {
   return page
     .evaluate(() => {
       const kandidati = Array.from(
-        document.querySelectorAll<HTMLElement>('img, [class*="banner"], [class*="hero"], [class*="slider"], [class*="carousel"]')
+        document.querySelectorAll<HTMLElement>(
+          'img, [class*="banner"], [class*="hero"], [class*="slider"], [class*="carousel"], section, div'
+        )
       );
       let best: DOMRect | null = null;
       for (const el of kandidati) {
         const r = el.getBoundingClientRect();
-        if (r.top < 40 || r.top > 900 || r.width < window.innerWidth * 0.5 || r.height < 150) continue;
+        if (r.top < 40 || r.top > 1000 || r.width < window.innerWidth * 0.4 || r.height < 130) continue;
+        /* banner býva aj ako pozadie, nie vždy ako <img> */
+        const pozadie = getComputedStyle(el).backgroundImage;
+        const jeObrazok = el.tagName === 'IMG' || (pozadie && pozadie !== 'none');
+        const jeBanner = /banner|hero|slider|carousel/i.test(`${el.className ?? ''}`);
+        if (!jeObrazok && !jeBanner) continue;
         if (!best || r.width * r.height > best.width * best.height) best = r;
       }
-      return best ? Math.round(best.bottom + window.scrollY) : null;
+      /* keď banner nenájdeme, položíme recenzie pod hornú časť stránky */
+      return best ? Math.round(best.bottom + window.scrollY) : 620;
     })
     .catch(() => null);
 }
@@ -390,30 +479,59 @@ async function productPhotoHandle(page: Page) {
 }
 
 /**
- * Spodná hrana popisu produktu — tam patria recenzie aj poradňa.
- * Hľadáme najdlhší súvislý text pod fotografiou; súhlasové a navigačné bloky
- * (cookie lišta, pätička, menu) vynechávame, inak by sme trafili ich.
+ * Koniec popisu produktu — tam patria recenzie aj poradňa.
+ * Popis býva raz odsekom textu, inokedy záložkou („Popis produktu“), preto
+ * hľadáme jeho nadpis a koniec sekcie: buď začiatok ďalšej sekcie stránky
+ * (súvisiace produkty, recenzie), alebo spodok najdlhšieho textu pod ním.
  */
 async function productDescBottom(page: Page, photoBottom: number | null): Promise<number | null> {
   return page
     .evaluate((odFotky) => {
+      const y = (el: Element) => Math.round(el.getBoundingClientRect().top + window.scrollY);
+      const dole = (el: Element) => Math.round(el.getBoundingClientRect().bottom + window.scrollY);
       const zakazane = /cmplz|cookie|consent|newsletter|footer|header|menu|nav|breadcrumb|modal|dialog/i;
+      const nadpisPopisu = /^(popis|popis produktu|o produkte|charakteristika|description|detail produktu|informácie o produkte)$/i;
+      const dalsiaSekcia = /^(mohlo by vás zaujímať|podobné produkty|súvisiace|odporúčame|naposledy|recenzie|hodnotenia|zákazníci|ostatní zákazníci|k tomuto produktu)/i;
+
+      /* 1. nadpis alebo záložka popisu */
+      let popisY: number | null = null;
+      for (const el of Array.from(document.querySelectorAll('h2,h3,h4,button,a,[role="tab"],li,span,div'))) {
+        const text = (el.textContent ?? '').trim();
+        if (text.length > 40 || !nadpisPopisu.test(text)) continue;
+        if (el.getBoundingClientRect().height === 0) continue;
+        popisY = y(el);
+        break;
+      }
+      const odkial = popisY ?? (odFotky ? odFotky : 0);
+
+      /* 2. začiatok najbližšej ďalšej sekcie pod popisom */
+      let hranica: number | null = null;
+      for (const el of Array.from(document.querySelectorAll('h2,h3,h4,strong,span,div'))) {
+        const text = (el.textContent ?? '').trim();
+        if (text.length > 60 || !dalsiaSekcia.test(text)) continue;
+        const top = y(el);
+        if (top <= odkial + 40) continue;
+        if (hranica === null || top < hranica) hranica = top;
+      }
+      if (hranica !== null) return hranica - 12;
+
+      /* 3. spodok najdlhšieho textového bloku pod popisom */
       let best: { dlzka: number; bottom: number } | null = null;
-      for (const el of Array.from(document.querySelectorAll<HTMLElement>('div,section,article'))) {
+      for (const el of Array.from(document.querySelectorAll<HTMLElement>('div,section,article,p'))) {
         const trieda = `${el.className ?? ''} ${el.id ?? ''}`;
         if (zakazane.test(trieda)) continue;
         const rect = el.getBoundingClientRect();
-        const top = rect.top + window.scrollY;
-        if (rect.height < 80 || rect.width < window.innerWidth * 0.3) continue;
-        if (odFotky && top < odFotky - 200) continue;
+        if (rect.height < 60 || rect.width < window.innerWidth * 0.25) continue;
+        if (y(el) < odkial - 100) continue;
         const text = (el.innerText ?? '').trim();
-        if (text.length < 150 || text.length > 5000) continue;
-        /* zaujíma nás blok textu, nie obal plný ďalších sekcií */
-        if (el.querySelectorAll('div,section,article').length > 6) continue;
-        const dlzka = text.length;
-        if (!best || dlzka > best.dlzka) best = { dlzka, bottom: Math.round(rect.bottom + window.scrollY) };
+        if (text.length < 120 || text.length > 5000) continue;
+        if (el.querySelectorAll('div,section,article').length > 10) continue;
+        if (!best || text.length > best.dlzka) best = { dlzka: text.length, bottom: dole(el) };
       }
-      return best ? best.bottom : null;
+      if (best) return best.bottom;
+
+      /* 4. aspoň koniec záložky s popisom */
+      return popisY ? popisY + 60 : null;
     }, photoBottom)
     .catch(() => null);
 }
@@ -582,6 +700,7 @@ export async function captureSite(
     const logo = await captureLogo(page);
     const heroBox = (await findHeroBox(page)) ?? undefined;
     const homepage = await shot(page);
+    const items = await collectItems(page);
     const heroY = await heroBottom(page);
     const stripHero = heroY ? await stripAround(page, heroY, 260) : undefined;
     await page.evaluate(() => window.scrollTo(0, 0)).catch(() => {});
@@ -632,6 +751,7 @@ export async function captureSite(
         productImage = await captureProductImage(page);
         product = await shot(page);
         ({ stripPhoto, stripDesc } = await productStrips(page));
+        if (items.length < 4) items.push(...(await collectItems(page, 8 - items.length)));
         break;
       } catch {
         /* skúsime ďalšieho kandidáta */
@@ -678,6 +798,7 @@ export async function captureSite(
       stripHero,
       stripPhoto,
       stripDesc,
+      items,
       pageText: meta?.text ?? '',
       warnings,
     };
