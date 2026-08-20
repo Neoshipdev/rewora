@@ -31,6 +31,10 @@ async function walk(dir) {
   return files;
 }
 
+/* Tvary, v ktorých sa odkaz objaví: v HTML, v hydratačných dátach (aj
+   escapovaných) a v minifikovanom JS klientskych komponentov. */
+const ODKAZY = ['href="', 'href=\\"', '"href":"', '\\"href\\":\\"', 'href:"'];
+
 /**
  * Cesty k obrázkom z public/ uvádzame v komponentoch absolútne, takže ich Next
  * neprefixuje — dorobíme to tu. Rátame aj s JS balíkmi: časť widgetov sa
@@ -41,13 +45,17 @@ async function applyBasePath() {
   if (!BASE) return 0;
   const files = await walk(OUT);
   const images = new RegExp('(?<!rewora[.]com)(?<!' + BASE + ')/images/', 'g');
-  const routy = new RegExp('(?<!rewora[.]com)(?<!' + BASE + ')/sk/', 'g');
 
   let changed = 0;
   for (const file of files) {
     if (!/\.(html|css|js|txt|xml|json)$/i.test(file)) continue;
     const original = await readFile(file, 'utf8');
-    let updated = original.replace(images, `${BASE}/images/`).replace(routy, `${BASE}/sk/`);
+    let updated = original.replace(images, `${BASE}/images/`);
+    /* Odkazy prefixujeme cielene v hodnote href — plošný prepis „/sk/“ by
+       zasiahol aj cesty, s ktorými pracuje smerovač Nextu, a stránka by spadla. */
+    for (const tvar of ODKAZY) {
+      updated = updated.split(tvar + '/sk/').join(tvar + BASE + '/sk/');
+    }
     /* url(/…) v CSS mieri na koreň domény, ten na Pages patrí niekomu inému */
     if (/\.(css|html)$/i.test(file)) {
       const cssUrl = new RegExp('url[(]/(?!/|' + BASE.slice(1) + '/)', 'g');
