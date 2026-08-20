@@ -78,6 +78,27 @@ if (BASE) console.log(`· cesty prefixnuté v ${changed} súboroch`);
 /* GitHub Pages inak ignoruje priečinky začínajúce podčiarkovníkom (_next). */
 await writeFile(join(OUT, '.nojekyll'), '', 'utf8');
 
+/* Koreň exportu presmerujeme na slovenskú verziu — statický hosting nevie 301. */
+const home = `${BASE}/sk/`;
+await writeFile(
+  join(OUT, 'index.html'),
+  `<!doctype html>
+<html lang="sk">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="refresh" content="0; url=${home}">
+<link rel="canonical" href="${home}">
+<title>Rewora</title>
+</head>
+<body>
+<p>Presmerovanie na <a href="${home}">slovenskú verziu</a>…</p>
+<script>location.replace(${JSON.stringify(home)});</script>
+</body>
+</html>
+`,
+  'utf8'
+);
+
 const pages = (await walk(OUT)).filter((f) => f.endsWith('.html'));
 const size = (await Promise.all((await walk(OUT)).map((f) => stat(f)))).reduce(
   (sum, s) => sum + s.size,
