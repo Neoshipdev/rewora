@@ -181,15 +181,16 @@ async function waitOutSecurityCheck(page: Page): Promise<boolean> {
   const isBlocked = () =>
     page
       .evaluate(() =>
-        /prebieha bezpečnostné overenie|just a moment|checking your browser|overujeme|kontrola prehliadača|attention required/i.test(
+        /prebieha bezpečnostné overenie|just a moment|checking your browser|kontrola prehliadača|attention required|overujeme, či ste|overujeme vaše pripojenie|verifying you are human/i.test(
           document.body.innerText.slice(0, 800)
         )
       )
       .catch(() => false);
 
-  for (let attempt = 0; attempt < 4; attempt++) {
+  /* Cloudflare zvyčajne prepustí do pár sekúnd; dlhšie čakanie sa neoplatí. */
+  for (let attempt = 0; attempt < 3; attempt++) {
     if (!(await isBlocked())) return false;
-    await page.waitForTimeout(4000);
+    await page.waitForTimeout(2500);
   }
   return isBlocked();
 }
@@ -468,51 +469,69 @@ export async function captureSite(
     const homepage = await shot(page);
 
     onStep('Hľadám produktovú stránku…');
-    const candidates = await productCandidates(page, url);
+    /* Niektoré e-shopy presmerujú na inú doménu (napr. .sk → .eu) — odkazy
+       porovnávame s adresou, na ktorej sme reálne skončili. */
+    const candidates = await productCandidates(page, page.url());
     let product: string | undefined;
     let productUrl: string | undefined;
     let meta: { name: string; price: string; text: string } | undefined;
     let productImage: string | undefined;
 
     /** Prvý kandidát, ktorý sa tvári ako produkt; inak najlepšie hodnotený odkaz. */
-    let fallback: { url: string; shot: string; meta: typeof meta; image?: string } | undefined;
+    let fallback: { url: string; meta: typeof meta } | undefined;
 
-    for (const candidate of candidates.slice(0, 5)) {
+    const vyber = candidates.slice(0, 4);
+    /* Ak web chráni Cloudflare, prepustí nás rovnako málo na každej podstránke —
+       po druhom pokuse to vzdáme, aby zákazník nečakal zbytočné desiatky sekúnd. */
+    let blokovanych = 0;
+    for (const [i, candidate] of vyber.entries()) {
       try {
-        await page.goto(candidate, { waitUntil: 'domcontentloaded', timeout: 30000 });
-        await page.waitForTimeout(1200);
-        if (await waitOutSecurityCheck(page)) continue; // bot ochrana — skúsime inú podstránku
+        onStep(`Overujem podstránku ${i + 1} z ${vyber.length}…`);
+        await page.goto(candidate, { waitUntil: 'domcontentloaded', timeout: 20000 });
+        await page.waitForTimeout(700);
+        /* prekrytia zavrieme skôr než vyhodnotíme ochranu — veková brána
+           inak vyzerá ako bot check a zbytočne sa na ňu čaká */
         await dismissOverlays(page);
-        const confirmed = await isProductPage(page);
-        const candidateMeta = await productMeta(page);
-        const candidateShot = await shot(page);
+        if (await waitOutSecurityCheck(page)) {
+          if (++blokovanych >= 2) {
+            warnings.push('E-shop chráni služba proti robotom, preto sme podstránky nevedeli načítať.');
+            break;
+          }
+          continue;
+        }
 
-        if (!confirmed) {
-          fallback ??= {
-            url: candidate,
-            shot: candidateShot,
-            meta: candidateMeta,
-            image: await captureProductImage(page),
-          };
+        /* Najprv lacné overenie — snímku robíme až pre stránku, ktorú použijeme. */
+        const candidateMeta = await productMeta(page);
+        if (!(await isProductPage(page))) {
+          fallback ??= { url: candidate, meta: candidateMeta };
           continue;
         }
 
         productUrl = candidate;
         meta = candidateMeta;
         productImage = await captureProductImage(page);
-        product = candidateShot;
+        product = await shot(page);
         break;
       } catch {
         /* skúsime ďalšieho kandidáta */
       }
     }
 
+    /* Nenašiel sa potvrdený produkt — vrátime sa na najlepšieho kandidáta. */
     if (!product && fallback) {
-      warnings.push('Produktovú stránku sme nevedeli overiť — použili sme najpravdepodobnejšiu podstránku.');
-      productUrl = fallback.url;
-      meta = fallback.meta;
-      productImage = fallback.image;
-      product = fallback.shot;
+      try {
+        onStep('Pripravujem náhradnú podstránku…');
+        await page.goto(fallback.url, { waitUntil: 'domcontentloaded', timeout: 20000 });
+        await page.waitForTimeout(600);
+        await dismissOverlays(page);
+        productUrl = fallback.url;
+        meta = fallback.meta;
+        productImage = await captureProductImage(page);
+        product = await shot(page);
+        warnings.push('Produktovú stránku sme nevedeli overiť — použili sme najpravdepodobnejšiu podstránku.');
+      } catch {
+        fallback = undefined;
+      }
     }
 
     if (!product) {
