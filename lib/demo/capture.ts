@@ -224,13 +224,21 @@ async function detectAccent(page: Page): Promise<string> {
         const s = d === 0 ? 0 : d / (1 - Math.abs(2 * l - 1));
         return { s, l };
       };
-      const counts = new Map<string, number>();
+      /* Farbu značky nesú hlavne tlačidlá (do košíka, odoslať) — tie vážime
+         zvlášť, inak by vyhrala veľká plocha hlavičky. */
+      const tlacidla = new Map<string, number>();
+      const ostatne = new Map<string, number>();
+      const jeTlacidlo = (el: HTMLElement) =>
+        el.tagName === 'BUTTON' ||
+        (el.tagName === 'INPUT' && (el as HTMLInputElement).type === 'submit') ||
+        /btn|button|cart|kosik|košík|add-to|buy|objednat|objednať/i.test(`${el.className ?? ''}`);
       const selectors =
-        'header *, nav *, [class*="header"] *, [class*="btn"], button, a[class*="button"], [class*="cart"]';
+        'header *, nav *, [class*="header"] *, [class*="btn"], [class*="button"], button, input[type="submit"], a[class*="button"], [class*="cart"]';
       for (const el of Array.from(document.querySelectorAll<HTMLElement>(selectors)).slice(0, 900)) {
         const style = getComputedStyle(el);
         const rect = el.getBoundingClientRect();
         if (rect.width < 8 || rect.height < 8 || rect.top > 900) continue;
+        const counts = jeTlacidlo(el) ? tlacidla : ostatne;
         for (const value of [style.backgroundColor, style.color, style.borderTopColor]) {
           const m = /rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*([\d.]+))?\)/.exec(value);
           if (!m) continue;
@@ -244,7 +252,8 @@ async function detectAccent(page: Page): Promise<string> {
           counts.set(key, (counts.get(key) ?? 0) + weight);
         }
       }
-      const best = [...counts.entries()].sort((a, b) => b[1] - a[1])[0];
+      const zdroj = tlacidla.size ? tlacidla : ostatne;
+      const best = [...zdroj.entries()].sort((a, b) => b[1] - a[1])[0];
       if (!best) return null;
       const [r, g, b] = best[0].split(',').map(Number);
       return '#' + [r, g, b].map((c) => c.toString(16).padStart(2, '0')).join('');
@@ -488,6 +497,8 @@ async function productDescBottom(page: Page, photoBottom: number | null): Promis
   return page
     .evaluate((odFotky) => {
       const y = (el: Element) => Math.round(el.getBoundingClientRect().top + window.scrollY);
+      /* pod túto hranicu už býva pätička — widget tam nepatrí */
+      const strop = Math.max(1200, document.documentElement.scrollHeight - 1400);
       const dole = (el: Element) => Math.round(el.getBoundingClientRect().bottom + window.scrollY);
       const zakazane = /cmplz|cookie|consent|newsletter|footer|header|menu|nav|breadcrumb|modal|dialog/i;
       const nadpisPopisu = /^(popis|popis produktu|o produkte|charakteristika|description|detail produktu|informácie o produkte)$/i;
@@ -510,7 +521,7 @@ async function productDescBottom(page: Page, photoBottom: number | null): Promis
         const text = (el.textContent ?? '').trim();
         if (text.length > 60 || !dalsiaSekcia.test(text)) continue;
         const top = y(el);
-        if (top <= odkial + 40) continue;
+        if (top <= odkial + 40 || top > strop) continue;
         if (hranica === null || top < hranica) hranica = top;
       }
       if (hranica !== null) return hranica - 12;
@@ -522,7 +533,7 @@ async function productDescBottom(page: Page, photoBottom: number | null): Promis
         if (zakazane.test(trieda)) continue;
         const rect = el.getBoundingClientRect();
         if (rect.height < 60 || rect.width < window.innerWidth * 0.25) continue;
-        if (y(el) < odkial - 100) continue;
+        if (y(el) < odkial - 100 || dole(el) > strop) continue;
         const text = (el.innerText ?? '').trim();
         if (text.length < 120 || text.length > 5000) continue;
         if (el.querySelectorAll('div,section,article').length > 10) continue;

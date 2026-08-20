@@ -221,17 +221,46 @@ export function buildDeckHtml(capture: Capture): string {
       body: vlozene(
         capture.stripDesc,
         capture.product ?? capture.homepage,
-        `<div class="widget">
-          <div class="widget__head">
-            <div>
-              <span class="widget__title">Recenzie a hodnotenia</span>
-              <div class="widget__score"><b style="color:${accent}">4,8</b> ${stars(5, accent)}
-              <small>na základe 37 recenzií</small></div>
+        (() => {
+          /* rozloženie kopíruje widget Rewory na e-shope: priemer, rozpad
+             hodnotení a výzva na napísanie recenzie — všetko vo farbe e-shopu */
+          const rozpad = [
+            { hviezd: 5, pocet: 30 },
+            { hviezd: 4, pocet: 5 },
+            { hviezd: 3, pocet: 1 },
+            { hviezd: 2, pocet: 1 },
+            { hviezd: 1, pocet: 0 },
+          ];
+          const spolu = rozpad.reduce((sucet, r) => sucet + r.pocet, 0);
+          const riadky = rozpad
+            .map(
+              (r) => `
+            <div class="rat__row">
+              <span class="rat__num">${r.hviezd}</span>
+              <span class="rat__track"><span class="rat__fill" style="width:${Math.round(
+                (r.pocet / spolu) * 100
+              )}%;background:${accent}"></span></span>
+              <span class="rat__count">${r.pocet} x</span>
+            </div>`
+            )
+            .join('');
+          return `<div class="widget">
+            <span class="widget__title">Recenzie a hodnotenia</span>
+            <div class="rat">
+              <div class="rat__summary">
+                <b class="rat__avg">4,8</b>
+                <span class="rat__meta">${stars(5, accent)}<small>${spolu} recenzií</small></span>
+              </div>
+              <div class="rat__bars">${riadky}</div>
             </div>
-            <span class="widget__cta" style="background:${accent}">Napísať recenziu</span>
-          </div>
-          ${reviewRows}
-        </div>`,
+            <div class="rat__cta">
+              <b>Páči sa Vám náš produkt?</b>
+              <p>Podeľte sa o svoju skúsenosť s produktom a pomôžte ostatným pri rozhodovaní.</p>
+              <span class="rat__btn" style="background:${accent}">＋ Napísať recenziu</span>
+            </div>
+            ${reviewRows}
+          </div>`;
+        })(),
         capture.domain,
         140,
         100
@@ -245,18 +274,42 @@ export function buildDeckHtml(capture: Capture): string {
       body: vlozene(
         capture.stripDesc,
         capture.product ?? capture.homepage,
-        `<div class="widget">
-          <div class="widget__head">
-            <span class="widget__title">Otázky a odpovede k produktu</span>
-            <span class="widget__cta" style="background:${accent}">＋ Položiť otázku</span>
-          </div>
-          <div class="qa">
-            <div class="qa__topic">${escape(qa.topic)}</div>
-            <div class="qa__q">${escape(qa.question)}</div>
-            <div class="qa__a">${escape(qa.answer)}</div>
-            <div class="qa__meta">Odpovedal <b style="color:${accent}">odborník e-shopu</b> · 2 dni</div>
-          </div>
-        </div>`,
+        (() => {
+          /* tabuľka otázok ako vo widgete Rewory: téma, počet odpovedí, aktivita */
+          const otazky = [
+            { tema: qa.topic, text: qa.question },
+            { tema: 'Skúsenosti s produktom', text: `Používa niekto ${productName.slice(0, 40)} dlhšie? Zaujíma ma, ako sa osvedčil.` },
+            { tema: 'Doprava a dostupnosť', text: 'Dobrý deň, do kedy treba objednať, aby zásielka prišla do konca týždňa? Ďakujem.' },
+          ];
+          const riadky = otazky
+            .map(
+              (o, i) => `
+            <div class="qat__row">
+              <span class="qat__cell">
+                <b>${escape(o.tema)}</b>
+                <small>${escape(o.text.slice(0, 96))}</small>
+                <em>od <b>Overený zákazník</b></em>
+              </span>
+              <span class="qat__answers" style="color:${accent}">✓ 1</span>
+              <span class="qat__date">${i === 0 ? 'dnes' : i === 1 ? 'včera' : 'pred 3 dňami'}</span>
+            </div>`
+            )
+            .join('');
+          return `<div class="widget">
+            <div class="widget__head">
+              <span class="widget__title">Otázky a odpovede k produktu</span>
+              <span class="widget__cta" style="background:${accent}">＋ Položiť otázku</span>
+            </div>
+            <div class="qat">
+              <div class="qat__head"><span>Téma</span><span>Odpovede</span><span>Aktivita</span></div>
+              ${riadky}
+            </div>
+            <div class="qa">
+              <div class="qa__a">${escape(qa.answer)}</div>
+              <div class="qa__meta">Odpovedal <b style="color:${accent}">odborník e-shopu</b> · 2 dni</div>
+            </div>
+          </div>`;
+        })(),
         capture.domain,
         140,
         100
@@ -385,6 +438,32 @@ export function buildDeckHtml(capture: Capture): string {
   .widget__score { display:flex; align-items:center; gap:8px; font-size:12px; margin-top:4px; }
   .widget__score b { font-family:'Space Grotesk',sans-serif; font-size:20px; }
   .widget__score small { color:#8A9099; }
+  .qat { border:1px solid #EFEAE4; border-radius:6px; overflow:hidden; }
+  .qat__head, .qat__row { display:grid; grid-template-columns:1fr 70px 80px; gap:10px; padding:8px 12px; align-items:center; }
+  .qat__head { background:#F7F4F0; font-size:10px; color:#8A9099; text-transform:none; }
+  .qat__row { border-top:1px solid #EFEAE4; }
+  .qat__cell { display:flex; flex-direction:column; gap:2px; }
+  .qat__cell b { font-size:12px; color:#202124; }
+  .qat__cell small { font-size:10px; color:#5F6368; }
+  .qat__cell em { font-size:9px; color:#8A9099; font-style:normal; }
+  .qat__answers { font-size:11px; font-weight:600; }
+  .qat__date { font-size:10px; color:#8A9099; }
+  .rat { display:flex; gap:22px; align-items:center; }
+  .rat__summary { display:flex; align-items:center; gap:10px; }
+  .rat__avg { font-family:'Space Grotesk',sans-serif; font-size:34px; font-weight:700; line-height:1; }
+  .rat__meta { display:flex; flex-direction:column; gap:2px; }
+  .rat__meta small { color:#8A9099; font-size:11px; }
+  .rat__bars { flex:1; display:flex; flex-direction:column; gap:4px; }
+  .rat__row { display:flex; align-items:center; gap:8px; font-size:10px; color:#5F6368; }
+  .rat__num { width:8px; font-weight:700; color:#202124; }
+  .rat__track { flex:1; height:5px; border-radius:3px; background:#EEE9E3; overflow:hidden; }
+  .rat__fill { display:block; height:100%; border-radius:3px; }
+  .rat__count { width:32px; text-align:right; }
+  .rat__cta { border-top:1px solid #EFEAE4; padding-top:10px; display:flex; flex-direction:column; gap:4px; }
+  .rat__cta b { font-size:13px; }
+  .rat__cta p { font-size:11px; color:#5F6368; }
+  .rat__btn { margin-top:4px; border-radius:6px; color:#fff; font-size:12px; font-weight:600;
+    padding:9px 14px; text-align:center; }
   .widget__cta { border-radius:6px; color:#fff; font-size:11px; font-weight:600; padding:7px 12px; white-space:nowrap; }
   .review { display:flex; gap:10px; padding:8px 0; border-top:1px solid #EFEAE4; }
   .review__avatar { width:28px; height:28px; border-radius:50%; background:#EFEAE4; color:#767E8B;
