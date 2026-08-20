@@ -32,22 +32,26 @@ async function walk(dir) {
 }
 
 /**
- * Absolútne cesty prefixneme, aby web fungoval aj v podpriečinku domény.
- * Prepisujeme aj cesty v hydratačných dátach Nextu (escapované úvodzovky) —
- * inak by ich React po načítaní vrátil späť a obrázky by hádzali 404.
+ * Cesty k obrázkom z public/ uvádzame v komponentoch absolútne, takže ich Next
+ * neprefixuje — dorobíme to tu. Rátame aj s JS balíkmi: časť widgetov sa
+ * vykresľuje až na klientovi a cesta k obrázku je v nich ako reťazec.
+ * /_next/ a routy rieši samotný Next cez basePath.
  */
 async function applyBasePath() {
   if (!BASE) return 0;
-  const files = (await walk(OUT)).filter((f) => /\.(html|css|txt|xml|json)$/i.test(f));
-  /* nechytáme už prefixnuté cesty ani absolútne URL na rewora.com */
-  const paths = /(?<!rewora\.com)(?<!\/rewora)\/(images|_next|sk)\//g;
+  const files = await walk(OUT);
+  const images = new RegExp('(?<!rewora[.]com)(?<!' + BASE + ')/images/', 'g');
 
   let changed = 0;
   for (const file of files) {
+    if (!/\.(html|css|js|txt|xml|json)$/i.test(file)) continue;
     const original = await readFile(file, 'utf8');
-    const updated = original
-      .replace(paths, `${BASE}/$1/`)
-      .replace(/url\(\/(?!\/|rewora\/)/g, `url(${BASE}/`);
+    let updated = original.replace(images, `${BASE}/images/`);
+    /* url(/…) v CSS mieri na koreň domény, ten na Pages patrí niekomu inému */
+    if (/\.(css|html)$/i.test(file)) {
+      const cssUrl = new RegExp('url[(]/(?!/|' + BASE.slice(1) + '/)', 'g');
+      updated = updated.replace(cssUrl, 'url(' + BASE + '/');
+    }
     if (updated !== original) {
       await writeFile(file, updated, 'utf8');
       changed++;
@@ -64,7 +68,10 @@ if (existsSync(API)) {
 }
 
 try {
-  execSync('npx next build', { stdio: 'inherit', env: { ...process.env, NEXT_EXPORT: '1' } });
+  execSync('npx next build', {
+    stdio: 'inherit',
+    env: { ...process.env, NEXT_EXPORT: '1', NEXT_EXPORT_BASE: BASE },
+  });
 } finally {
   if (existsSync(API_PARKED)) {
     await rename(API_PARKED, API);
