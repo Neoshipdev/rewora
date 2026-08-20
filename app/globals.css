@@ -4156,7 +4156,7 @@ svg {
 /* Štvorcové logo sa do rovnako vysokého boxu vpíše ako malý štvorec — dáme mu vyšší. */
 .logos__img--tall {
   height: 76px;
-  width: 110px;
+  width: 145px;
 }
 
 /* ---------- administrátorský panel: záložky vľavo, screenshot vpravo ---------- */

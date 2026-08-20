@@ -8,7 +8,8 @@ const S = '/images/static';
 
 /** Logá klientov v páse „Značky, ktoré nám dôverujú“. */
 export const clientLogos = [
-  { name: 'Andrea Shop', src: `${S}/logo-andreashop.7831be77dfb1.png` },
+  /* zvislá značka — v rovnako vysokom boxe by pôsobila menšia než nápisy */
+  { name: 'Panta Rhei', src: `${S}/logo-pantarhei.png`, tall: true },
   { name: 'eTabletka', src: `${S}/logo-etabletka.496670ca5ac0.png` },
   { name: 'FixServis', src: `${S}/logo-fixservis.0d2f81e253f7.png` },
   { name: 'Origos', src: `${S}/logo-origos.eac328ebe908.png` },
