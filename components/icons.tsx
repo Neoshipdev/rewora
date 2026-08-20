@@ -231,6 +231,7 @@ export function ShareIcon({ size = 30 }: Props) {
 
 export const subfeatureIcons = {
   share: ShareIcon,
+  return: ReturnIcon,
   camera: CameraIcon,
   video: VideoIcon,
   star: StarOutlineIcon,

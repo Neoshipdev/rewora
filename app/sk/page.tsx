@@ -24,6 +24,19 @@ import { hero, integrations, numbers } from '@/lib/content';
 import { adminPanelSection, features, featuresIntro, integrationsIntro } from '@/lib/features';
 import { hotspots } from '@/lib/panel-data';
 
+/** Text odrážky s voliteľne zvýraznenou časťou. */
+function Zvyraznene({ text, cast }: { text: string; cast?: string }) {
+  if (!cast || !text.includes(cast)) return <>{text}</>;
+  const [pred, ...zvysok] = text.split(cast);
+  return (
+    <>
+      {pred}
+      <strong className="subfeature__mark">{cast}</strong>
+      {zvysok.join(cast)}
+    </>
+  );
+}
+
 /** Ukážka vpravo v riadku nástroja — podľa dizajnu 1c. */
 function ToolDemo({ index }: { index: number }) {
   if (index === 0) {
@@ -173,7 +186,9 @@ export default function Home() {
                         <Icon size={26} />
                       </span>
                       <span className="subfeature__title">{item.title}</span>
-                      <span className="subfeature__text">{item.text}</span>
+                      <span className="subfeature__text">
+                        <Zvyraznene text={item.text} cast={item.highlight} />
+                      </span>
                     </div>
                   );
                 })}

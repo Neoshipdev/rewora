@@ -4172,3 +4172,9 @@ svg {
     grid-template-columns: 1fr;
   }
 }
+
+/* Zvýraznená časť textu v odrážke nástroja */
+.subfeature__mark {
+  color: var(--orange-600);
+  font-weight: 600;
+}

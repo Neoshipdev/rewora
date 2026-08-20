@@ -11,6 +11,7 @@ export const featuresIntro = {
 
 export type SubfeatureIcon =
   | 'share'
+  | 'return'
   | 'camera'
   | 'video'
   | 'star'
@@ -31,7 +32,8 @@ export type Feature = {
   name: string;
   short: string;
   long: string;
-  items: { title: string; text: string; icon: SubfeatureIcon }[];
+  /** `highlight` je časť textu, ktorú v odrážke zvýrazníme. */
+  items: { title: string; text: string; icon: SubfeatureIcon; highlight?: string }[];
 };
 
 export const features: Feature[] = [
@@ -128,6 +130,7 @@ export const features: Feature[] = [
         title: 'Moderovanie príspevkov a preklady',
         icon: 'language',
         text: 'Plná kontrola nad moderovaním príspevkov a pomocou strojového prekladu ich máte automaticky k dispozícii v 31 jazykoch.',
+        highlight: '31 jazykoch',
       },
     ],
   },
@@ -163,19 +166,19 @@ export const features: Feature[] = [
     long: 'Predajnosť, reklamovanosť, či vratkovosť? Aj takéto informácie dokážu zákazníka presvedčiť o nákupe. Pomocou nástroja BI dáta zobrazte prehľadné štatistiky a základné informácie o produkte na jednom mieste.',
     items: [
       {
-        title: 'Špecifické dáta pre váš segment',
-        icon: 'sliders',
-        text: 'Každý segment je jedinečný a preto je na vás, aké dáta ku produktu zobrazíte.',
-      },
-      {
-        title: 'Zvýšená miera konverzie',
+        title: 'Štatistiky predajnosti',
         icon: 'trending',
-        text: 'Zobrazením správnych štatistík a informácií presvedčíte aj náročných zákazníkov, čo zvyšuje konverzný pomer.',
+        text: 'Prehľad o tom, ktoré produkty sa predávajú najlepšie, ako sa ich výkon mení v čase a kde vzniká obchodný potenciál.',
       },
       {
-        title: 'Uistenie o správnom nákupe',
-        icon: 'shield',
-        text: 'Uistením zákazníka o správnej voľbe produktu dokážete preukázateľne zvýšiť mieru spokojnosti s nákupom.',
+        title: 'Vratkovosť a reklamovateľnosť',
+        icon: 'return',
+        text: 'Porovnanie produktov podľa miery vrátenia a reklamácií pomáha odhaliť problémový sortiment aj príčiny nespokojnosti.',
+      },
+      {
+        title: 'Vlastné definovanie dát',
+        icon: 'sliders',
+        text: 'Možnosť upravovať a definovať zobrazované ukazovatele, filtre a pohľady podľa potrieb konkrétneho tímu alebo klienta.',
       },
     ],
   },
