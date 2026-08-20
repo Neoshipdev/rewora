@@ -164,6 +164,11 @@ export const integrations = [
     name: 'Shopify Plugin',
     text: 'Integrujte so Shopify e-shopom na 1 klik a používajte všetky dostupné funkcie.',
   },
+  {
+    num: '04',
+    name: 'Shoptet Plugin',
+    text: 'Doplnok Rewora nainštalujete priamo z administrácie e-shopu na platforme Shoptet. Widgety sa zobrazia bez zásahu do šablóny.',
+  },
 ];
 
 export const faq = [

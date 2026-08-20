@@ -4341,3 +4341,26 @@ svg {
     gap: 28px;
   }
 }
+
+/* Integrácia bez screenshotu — dlaždica v štýle webu, nech je rad vyrovnaný */
+.integration__img--text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1240 / 628;
+  background: linear-gradient(140deg, var(--orange-100), #fff 70%);
+  border: 1px solid rgba(255, 87, 13, 0.18);
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--orange-600);
+}
+/* štyri spôsoby integrácie */
+.integrations__grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width: 1100px) {
+  .integrations__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

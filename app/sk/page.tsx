@@ -179,7 +179,7 @@ export default function Home() {
               <span className="tool-row__num">{feature.num}</span>
               <div className="tool-row__copy">
                 <h3 className="tool-row__name">{feature.name}</h3>
-                <p className="tool-row__text">{feature.short}</p>
+                {feature.short && <p className="tool-row__text">{feature.short}</p>}
                 <p className="tool-row__long">{feature.long}</p>
               </div>
               <ToolDemo index={i} />
@@ -238,9 +238,13 @@ export default function Home() {
               const shot = integrationShots[item.name];
               return (
                 <div key={item.name} className="integration">
-                  {shot && (
+                  {shot ? (
                     /* eslint-disable-next-line @next/next/no-img-element */
                     <img className="integration__img" src={shot.src} alt={shot.alt} loading="lazy" />
+                  ) : (
+                    <span className="integration__img integration__img--text" aria-hidden>
+                      {item.name}
+                    </span>
                   )}
                   <span className="integration__num">{item.num}</span>
                   <h3 className="integration__name">{item.name}</h3>

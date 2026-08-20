@@ -30,7 +30,8 @@ export type SubfeatureIcon =
 export type Feature = {
   num: string;
   name: string;
-  short: string;
+  /** Krátky popis pod názvom — nemusí byť pri každom nástroji. */
+  short?: string;
   long: string;
   /** `highlight` je časť textu, ktorú v odrážke zvýrazníme. */
   items: { title: string; text: string; icon: SubfeatureIcon; highlight?: string }[];
@@ -40,8 +41,6 @@ export const features: Feature[] = [
   {
     num: '01',
     name: 'Recenzie',
-    short:
-      'Produktové, obchodné aj Google Shopping recenzie. 12× dôveryhodnejšie ako iné marketingové materiály.',
     long: 'Recenzie sú 12-krát dôveryhodnejšie ako iné marketingové materiály, čo dáva sociálnemu dôkazu významnú silu. Až 92 % ľudí si pred nákupom prečíta recenzie zákazníkov.',
     items: [
       {
