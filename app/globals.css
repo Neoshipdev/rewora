@@ -4178,3 +4178,86 @@ svg {
   color: var(--orange-600);
   font-weight: 600;
 }
+
+/* Štvorcové logo sa do rovnako vysokého boxu vpíše ako malý štvorec — dáme mu vyšší. */
+.logos__img--tall {
+  height: 76px;
+  width: 110px;
+}
+
+/* ---------- administrátorský panel: záložky vľavo, screenshot vpravo ---------- */
+.admin-tabs {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 40px;
+  margin-top: 44px;
+  align-items: center;
+}
+.admin-tabs__list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.admin-tab {
+  text-align: left;
+  padding: 20px 22px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-lg);
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+.admin-tab:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+.admin-tab[aria-selected='true'] {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.14);
+}
+.admin-tab__title {
+  display: block;
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+}
+.admin-tab__text {
+  display: block;
+  margin-top: 8px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--nav-text);
+}
+.admin-tabs__shot {
+  border: 1px solid var(--divider-dark);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+.admin-tabs__shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  /* jemné preblysnutie pri výmene screenshotu */
+  animation: admin-shot-in 0.25s ease;
+}
+@keyframes admin-shot-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .admin-tabs__shot img {
+    animation: none;
+  }
+}
+@media (max-width: 1023px) {
+  .admin-tabs {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}

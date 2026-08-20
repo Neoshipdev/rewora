@@ -185,7 +185,14 @@ export const features: Feature[] = [
 ];
 
 /** Sekcia „Spravujte recenzie v prehľadnom administrátorskom paneli“. */
-export const adminPanelSection = {
+export type AdminShotKey = 'manage' | 'reviews' | 'dashboard';
+
+export const adminPanelSection: {
+  eyebrow: string;
+  title: string;
+  lead: string;
+  items: { title: string; text: string; shot: AdminShotKey }[];
+} = {
   eyebrow: 'Administrátorský panel',
   title: 'Spravujte recenzie v prehľadnom administrátorskom paneli',
   lead: 'Aktívny monitoring recenzií, automatické preklady pre viaceré krajiny, reagovanie na negatívne recenzie a zdôrazňovanie pozitívnych recenzií môžete spravovať z jedného miesta.',
@@ -193,18 +200,22 @@ export const adminPanelSection = {
     {
       title: 'Žiadosti o recenziu',
       text: 'Rozhodnite, pre ktoré produkty a kedy sa majú automaticky vyžiadať recenzie.',
+      shot: 'manage',
     },
     {
       title: 'Moderovanie recenzií',
       text: 'Overenie totožnosti recenzenta, posúdenie existencie konfliktu záujmov, moderovanie obsahu a schvaľovanie recenzií.',
+      shot: 'reviews',
     },
     {
       title: 'Riešenie problémov',
       text: 'Ak zákazník zanechá hodnotenie 1, 2 alebo 3 hviezdičky, budete okamžite informovaní a môžete otvoriť súkromnú diskusiu, aby ste mu pomohli vyriešiť jeho problém.',
+      shot: 'reviews',
     },
     {
       title: 'Pokročilá analytika',
       text: 'Zistite viac o svojich zákazníkoch a produktoch tým, že analytika bude pracovať za vás.',
+      shot: 'dashboard',
     },
   ],
 };

@@ -5,6 +5,7 @@ export const metadata: Metadata = {
 };
 
 import AdminPanel from '@/components/AdminPanel';
+import AdminTabs from '@/components/AdminTabs';
 import BiCard from '@/components/BiCard';
 import CtaBand from '@/components/CtaBand';
 import Faq from '@/components/Faq';
@@ -19,7 +20,7 @@ import ReviewsWidget from '@/components/ReviewsWidget';
 import VideoReviews from '@/components/VideoReviews';
 import VideoButton from '@/components/VideoButton';
 import { subfeatureIcons } from '@/components/icons';
-import { adminShots, clientLogos, hotspotVisual, integrationShots } from '@/lib/assets';
+import { clientLogos, hotspotVisual, integrationShots } from '@/lib/assets';
 import { hero, integrations, numbers } from '@/lib/content';
 import { adminPanelSection, features, featuresIntro, integrationsIntro } from '@/lib/features';
 import { hotspots } from '@/lib/panel-data';
@@ -151,7 +152,12 @@ export default function Home() {
           <div className="logos__row">
             {clientLogos.map((logo) => (
               /* eslint-disable-next-line @next/next/no-img-element */
-              <img key={logo.name} className="logos__img" src={logo.src} alt={`${logo.name} logo`} />
+              <img
+                key={logo.name}
+                className={`logos__img ${'tall' in logo && logo.tall ? 'logos__img--tall' : ''}`}
+                src={logo.src}
+                alt={`${logo.name} logo`}
+              />
             ))}
           </div>
         </div>
@@ -211,30 +217,7 @@ export default function Home() {
             {adminPanelSection.title}
           </h2>
           <p className="admin-section__lead">{adminPanelSection.lead}</p>
-          <div className="admin-shots">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              className="admin-shots__main"
-              src={adminShots.dashboard.src}
-              alt={adminShots.dashboard.alt}
-              loading="lazy"
-            />
-            <div className="admin-shots__side">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={adminShots.reviews.src} alt={adminShots.reviews.alt} loading="lazy" />
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={adminShots.manage.src} alt={adminShots.manage.alt} loading="lazy" />
-            </div>
-          </div>
-          <div className="admin-section__grid">
-            {adminPanelSection.items.map((item, i) => (
-              <div className="admin-section__item" key={item.title}>
-                <span className="admin-section__num">{String(i + 1).padStart(2, '0')}</span>
-                <span className="admin-section__title">{item.title}</span>
-                <span className="admin-section__text">{item.text}</span>
-              </div>
-            ))}
-          </div>
+          <AdminTabs />
         </div>
       </section>
 
