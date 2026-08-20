@@ -264,6 +264,15 @@ export const hotspots = {
   strip: { text: 'Funguje aj v PDF katalógoch', link: 'Pridať bod →' },
 };
 
+/** Produkt, na ktorom ukazujeme BI dáta — rovnaký ako vo widgete recenzií. */
+export const biProduct = {
+  photo: '/images/produkt-iphone.png',
+  name: 'Apple iPhone 17 Pro, 256 GB, Cosmic Orange',
+  brand: 'Apple',
+  price: '1 329,00 €',
+  badge: 'Skladom',
+};
+
 export const bi = {
   title: 'BI dáta na karte produktu',
   metrics: [

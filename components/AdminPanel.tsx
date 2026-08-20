@@ -1,13 +1,14 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import BiCard from '@/components/BiCard';
 import { bi, hotspots, overview, panelTabs, qa, reviews, type PanelKey } from '@/lib/panel-data';
 import { hotspotVisual } from '@/lib/assets';
 import ForumThread from './ForumThread';
 import GoogleShopping from './GoogleShopping';
 import ReviewsWidget from './ReviewsWidget';
 import ShopReviews from './ShopReviews';
-import { biIcons, PlusIcon } from './icons';
+import { PlusIcon } from './icons';
 import HotspotStage from './HotspotStage';
 import Stars from './Stars';
 
@@ -314,32 +315,7 @@ function Bi() {
   return (
     <div className="panel__stack">
       <span className="panel__title">{bi.title}</span>
-      <div className="metrics">
-        {bi.metrics.map((metric) => {
-          const Icon = biIcons[metric.icon];
-          return (
-            <div key={metric.label} className="metric">
-              <span className="metric__icon">
-                <Icon />
-              </span>
-              <span style={{ display: 'flex', flexDirection: 'column' }}>
-                <span className="metric__value">{metric.value}</span>
-                <span className="metric__label">{metric.label}</span>
-              </span>
-            </div>
-          );
-        })}
-      </div>
-      <div className="chips">
-        <span className="chips__title">{bi.chips.title}</span>
-        <div className="chips__row">
-          {bi.chips.items.map((chip) => (
-            <span key={chip.label} className={`chip ${chip.on ? 'chip--on' : ''}`}>
-              {chip.label}
-            </span>
-          ))}
-        </div>
-      </div>
+      <BiCard />
     </div>
   );
 }

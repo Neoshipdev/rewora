@@ -10,6 +10,7 @@ export const featuresIntro = {
 };
 
 export type SubfeatureIcon =
+  | 'share'
   | 'camera'
   | 'video'
   | 'star'
@@ -42,19 +43,19 @@ export const features: Feature[] = [
     long: 'Recenzie sú 12-krát dôveryhodnejšie ako iné marketingové materiály, čo dáva sociálnemu dôkazu významnú silu. Až 92 % ľudí si pred nákupom prečíta recenzie zákazníkov.',
     items: [
       {
-        title: 'Produktové recenzie',
-        icon: 'star',
-        text: 'Autentické hodnotenia produktov priamo zvyšujú konverzný pomer e-shopu, zjednodušia rozhodovanie a zvyšujú lojalitu. Rewora navyše integruje recenzie z rôznych zdrojov.',
-      },
-      {
-        title: 'Recenzie obchodu',
+        title: 'Zbierate produktové aj obchodné recenzie od online aj offline zákazníkov',
         icon: 'store',
-        text: 'Ukážte zákazníkom svoje kvality. Rewora vám umožní zobrazovať recenzie od zákazníkov a zbierať spätnú väzbu.',
+        text: 'Rewora vám pomáha získavať spätnú väzbu bez ohľadu na to, či zákazník nakúpil v e-shope alebo v kamennej predajni a ukazuje ich presne tam, kde ich zákazník očakáva.',
       },
       {
-        title: 'Google Shopping recenzie',
-        icon: 'bag',
-        text: 'Zobrazte vaše produktové recenzie v Google Shopping. Získate tak náskok voči konkurencii.',
+        title: 'Automaticky oslovujeme zákazníkov po nákupe',
+        icon: 'chat',
+        text: 'Po dokončení objednávky zákazníkovi automaticky odošleme e-mail so žiadosťou o hodnotenie zakúpeného tovaru aj samotného obchodu. Získavate tak viac recenzií bez ďalšej manuálnej práce, autentických a overených, ktoré podporujú predaj.',
+      },
+      {
+        title: 'Agregujeme recenzie z rôznych zdrojov priamo pri produktoch',
+        icon: 'star',
+        text: 'Hodnotenia z viacerých zdrojov dokážeme sústrediť na jednom mieste priamo na produktovej stránke. Produkty tak získajú viac relevantného používateľského obsahu, čo posilňuje dôveryhodnosť a zároveň môže podporiť SEO a viditeľnosť produktových stránok vo vyhľadávačoch.',
       },
     ],
   },
@@ -76,9 +77,9 @@ export const features: Feature[] = [
         text: 'Krátke zvislé videá v štýle, na aký sú zákazníci zvyknutí zo sociálnych sietí. Zobrazujú sa v karuseli priamo na karte produktu aj na homepage.',
       },
       {
-        title: 'Moderovanie a práva k obsahu',
-        icon: 'shield',
-        text: 'Každý príspevok schvaľujete pred zverejnením a máte poriadok v súhlasoch, takže obsah viete použiť aj v kampaniach.',
+        title: 'Prepájanie recenzií so sociálnymi sieťami',
+        icon: 'share',
+        text: 'Máte možnosť foto a video recenzie zdieľať na svojich sociálnych sieťach a vytvárať tak prirodzený UGC obsah.',
       },
     ],
   },

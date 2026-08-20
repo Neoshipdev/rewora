@@ -14,6 +14,7 @@ const EXIT = 130;
  */
 export default function Testimonials() {
   const runway = useRef<HTMLDivElement>(null);
+  const stage = useRef<HTMLDivElement>(null);
   const [progress, setProgress] = useState(0);
   const [enabled, setEnabled] = useState(false);
 
@@ -24,10 +25,16 @@ export default function Testimonials() {
     const update = () => {
       setEnabled(desktop.matches && !reduced.matches);
       const el = runway.current;
-      if (!el) return;
+      const scena = stage.current;
+      if (!el || !scena) return;
       const rect = el.getBoundingClientRect();
-      const distance = rect.height - window.innerHeight;
-      setProgress(distance > 0 ? Math.min(1, Math.max(0, -rect.top / distance)) : 0);
+      /* animácia beží presne po dobu, počas ktorej je scéna prilepená —
+         nezávisle od výšky okna, aby dráha mohla byť krátka */
+      const lepenieOd = parseFloat(getComputedStyle(scena).top) || 0;
+      const distance = rect.height - scena.offsetHeight - lepenieOd;
+      setProgress(
+        distance > 0 ? Math.min(1, Math.max(0, (lepenieOd - rect.top) / distance)) : 0
+      );
     };
 
     update();
@@ -57,7 +64,7 @@ export default function Testimonials() {
       </div>
 
       <div className="cases__runway" ref={runway}>
-        <div className="cases__stage">
+        <div className="cases__stage" ref={stage}>
           {testimonials.map((item, i) => {
             /* poloha v poradí: 0 = predná karta, <0 čaká v balíčku, >0 odchádza */
             const step = progress * (count - 1) - i;

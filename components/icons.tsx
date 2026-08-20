@@ -218,7 +218,19 @@ export function VideoIcon({ size = 30 }: Props) {
   );
 }
 
+export function ShareIcon({ size = 30 }: Props) {
+  return (
+    <svg {...base(size)}>
+      <circle cx="18" cy="5.25" r="2.75" />
+      <circle cx="6" cy="12" r="2.75" />
+      <circle cx="18" cy="18.75" r="2.75" />
+      <path d="M8.4 10.65 15.6 6.6M8.4 13.35l7.2 4.05" />
+    </svg>
+  );
+}
+
 export const subfeatureIcons = {
+  share: ShareIcon,
   camera: CameraIcon,
   video: VideoIcon,
   star: StarOutlineIcon,

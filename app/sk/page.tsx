@@ -5,6 +5,7 @@ export const metadata: Metadata = {
 };
 
 import AdminPanel from '@/components/AdminPanel';
+import BiCard from '@/components/BiCard';
 import CtaBand from '@/components/CtaBand';
 import Faq from '@/components/Faq';
 import HotspotStage from '@/components/HotspotStage';
@@ -17,11 +18,11 @@ import GoogleShopping from '@/components/GoogleShopping';
 import ReviewsWidget from '@/components/ReviewsWidget';
 import VideoReviews from '@/components/VideoReviews';
 import VideoButton from '@/components/VideoButton';
-import { biIcons, subfeatureIcons } from '@/components/icons';
+import { subfeatureIcons } from '@/components/icons';
 import { adminShots, clientLogos, hotspotVisual, integrationShots } from '@/lib/assets';
 import { hero, integrations, numbers } from '@/lib/content';
 import { adminPanelSection, features, featuresIntro, integrationsIntro } from '@/lib/features';
-import { biRowMetrics, hotspots } from '@/lib/panel-data';
+import { hotspots } from '@/lib/panel-data';
 
 /** Ukážka vpravo v riadku nástroja — podľa dizajnu 1c. */
 function ToolDemo({ index }: { index: number }) {
@@ -72,20 +73,7 @@ function ToolDemo({ index }: { index: number }) {
   }
   return (
     <div className="tool-row__demo demo demo--bi">
-      {biRowMetrics.map((metric) => {
-        const Icon = biIcons[metric.icon];
-        return (
-          <div key={metric.label} className="metric">
-            <span className="metric__icon">
-              <Icon size={20} />
-            </span>
-            <span style={{ display: 'flex', flexDirection: 'column' }}>
-              <span className="metric__value">{metric.value}</span>
-              <span className="metric__label">{metric.label}</span>
-            </span>
-          </div>
-        );
-      })}
+      <BiCard compact />
     </div>
   );
 }
@@ -176,7 +164,7 @@ export default function Home() {
                 <p className="tool-row__long">{feature.long}</p>
               </div>
               <ToolDemo index={i} />
-              <div className="subfeatures">
+              <div className={`subfeatures subfeatures--${feature.items.length}`}>
                 {feature.items.map((item) => {
                   const Icon = subfeatureIcons[item.icon];
                   return (
@@ -196,7 +184,7 @@ export default function Home() {
       </section>
 
       {/* Referencie */}
-      <section className="container" style={{ paddingBottom: 72 }}>
+      <section className="container" style={{ paddingBottom: 40 }}>
         <Testimonials />
       </section>
 

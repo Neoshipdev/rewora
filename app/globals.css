@@ -294,7 +294,7 @@ svg {
   flex-direction: column;
   justify-content: center;
   gap: 26px;
-  padding: 76px var(--pad) 76px var(--gutter);
+  padding: 56px var(--pad) 56px var(--gutter);
 }
 .hero__copy {
   display: flex;
@@ -317,7 +317,7 @@ svg {
 }
 .hero h1 {
   font-family: var(--font-space-grotesk), sans-serif;
-  font-size: 64px;
+  font-size: 54px;
   line-height: 1.02;
   letter-spacing: -0.04em;
   font-weight: 700;
@@ -2955,9 +2955,9 @@ svg {
   box-shadow: none;
   display: flex;
   flex-direction: column;
-  /* strop drží výšku hero sekcie stabilnú, obsah panela scrolluje */
+  /* panel je rovnako vysoký ako oranžová polovica, obsah v ňom scrolluje */
   min-height: 560px;
-  max-height: 620px;
+  max-height: none;
 }
 .panel__body {
   flex: 1;
@@ -3302,8 +3302,9 @@ svg {
 /* dráha, po ktorej sa balíček kariet rozbaľuje */
 .cases__runway {
   position: relative;
-  /* dráha na dve výmeny kariet */
-  height: 200vh;
+  /* dráha = prilepenie (140 px) + výška scény (300 px) + samotná animácia,
+     aby pod kartami nezostával dlhý prázdny pás */
+  height: 860px;
 }
 .cases__stage {
   position: sticky;
@@ -4062,5 +4063,112 @@ svg {
   }
   .vrev__card {
     flex: 0 0 120px;
+  }
+}
+
+/* ---------- BI karta produktu ---------- */
+/* BI dáta ukazujeme tak, ako ich zákazník vidí — pod fotografiou produktu. */
+.bi-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.bi-card__photo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+  background: #fff;
+  border: 1px solid var(--line-200);
+  border-radius: var(--radius);
+}
+.bi-card__photo img {
+  height: 220px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+.bi-card__badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--orange-100);
+  color: var(--orange-700);
+  font-size: 11px;
+  font-weight: 600;
+}
+.bi-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.bi-card__brand {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-400);
+}
+.bi-card__name {
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink-900);
+}
+.bi-card__price {
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--orange-600);
+}
+.bi-card .metric__text {
+  display: flex;
+  flex-direction: column;
+}
+.bi-card__metrics .metric {
+  border-radius: var(--radius-sm);
+}
+
+/* Kompaktná verzia v sekcii Nástroje */
+.bi-card--compact .bi-card__photo img {
+  height: 150px;
+}
+.bi-card--compact .bi-card__name {
+  font-size: 14px;
+}
+.demo--bi {
+  display: block;
+}
+.demo--bi .metric {
+  border: 1px solid var(--line-200);
+  padding: 10px 12px;
+  gap: 10px;
+}
+.demo--bi .metric__icon {
+  width: 32px;
+  height: 32px;
+}
+.demo--bi .metric__value {
+  font-size: 14px;
+}
+
+@media (max-width: 700px) {
+  .bi-card__photo img {
+    height: 170px;
+  }
+  .bi-card__metrics {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Nástroj s dvoma bodmi — rozdelíme šírku na polovicu, nech text nezostane v úzkom stĺpci. */
+.subfeatures--2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (max-width: 700px) {
+  .subfeatures--2 {
+    grid-template-columns: 1fr;
   }
 }
