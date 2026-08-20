@@ -17,6 +17,7 @@ import TopBar from '@/components/TopBar';
 import ForumThread from '@/components/ForumThread';
 import GoogleShopping from '@/components/GoogleShopping';
 import ReviewsWidget from '@/components/ReviewsWidget';
+import SmartSearch from '@/components/SmartSearch';
 import VideoReviews from '@/components/VideoReviews';
 import VideoButton from '@/components/VideoButton';
 import { subfeatureIcons } from '@/components/icons';
@@ -65,6 +66,13 @@ function ToolDemo({ index }: { index: number }) {
     return (
       <div className="tool-row__demo demo demo--thread">
         <ForumThread showStrip={false} />
+      </div>
+    );
+  }
+  if (index === 6) {
+    return (
+      <div className="tool-row__demo demo demo--widget">
+        <SmartSearch />
       </div>
     );
   }

@@ -53,10 +53,6 @@ export const hotspotVisual = `${M}/hotspot-vizual.png`;
 
 /** Screenshoty administrátorského panelu. */
 export const adminShots = {
-  dashboard: {
-    src: `${M}/admin-dashboard.format-avif.width-1100.avif`,
-    alt: 'Prehľadový dashboard v administrácii Rewora',
-  },
   reviews: {
     src: `${M}/admin-reviews.format-avif.width-640.avif`,
     alt: 'Moderovanie recenzií v administrácii Rewora',

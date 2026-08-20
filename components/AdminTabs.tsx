@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Overview from '@/components/Overview';
 import { adminShots } from '@/lib/assets';
 import { adminPanelSection } from '@/lib/features';
 
@@ -11,7 +12,9 @@ import { adminPanelSection } from '@/lib/features';
 export default function AdminTabs() {
   const [active, setActive] = useState(0);
   const items = adminPanelSection.items;
-  const shot = adminShots[items[active].shot];
+  /* prehľad nie je screenshot, ale ten istý živý dashboard ako v hero sekcii */
+  const key = items[active].shot;
+  const shot = key === 'overview' ? null : adminShots[key];
 
   /* šípkami sa dá prechádzať medzi záložkami rovnako ako myšou */
   const onKey = (e: React.KeyboardEvent) => {
@@ -48,8 +51,14 @@ export default function AdminTabs() {
         id="admin-tabpanel"
         aria-labelledby={`admin-tab-${active}`}
       >
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img key={shot.src} src={shot.src} alt={shot.alt} loading="lazy" />
+        {shot ? (
+          /* eslint-disable-next-line @next/next/no-img-element */
+          <img key={shot.src} src={shot.src} alt={shot.alt} loading="lazy" />
+        ) : (
+          <div className="admin-tabs__dash">
+            <Overview />
+          </div>
+        )}
       </div>
     </div>
   );

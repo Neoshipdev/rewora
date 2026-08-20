@@ -5,11 +5,12 @@
 
 export const featuresIntro = {
   eyebrow: 'Nástroje',
-  title: 'Šesť widgetov, ktoré presvedčia aj náročného zákazníka',
+  title: 'Sedem widgetov, ktoré presvedčia aj náročného zákazníka',
   lead: 'S Reworou získate pokročilé nástroje, ktoré vám pomôžu budovať dôveru vašej značky. Či už vlastníte e-shop alebo je váš biznis zameraný iným smerom, Rewora pomôže aj vám.',
 };
 
 export type SubfeatureIcon =
+  | 'search'
   | 'share'
   | 'return'
   | 'camera'
@@ -179,10 +180,32 @@ export const features: Feature[] = [
       },
     ],
   },
+  {
+    num: '07',
+    name: 'Inteligentné vyhľadávanie',
+    long: 'Inteligentné vyhľadávanie produktov na e-shope, aby zákazník našiel vždy to, čo hľadá — aj keď nevie presne, čo chce. Stačí mu farba, konkrétna požiadavka alebo len niečo, čo si z produktu pamätá.',
+    items: [
+      {
+        title: 'Hľadanie vlastnými slovami',
+        icon: 'search',
+        text: 'Zákazník napíše požiadavku tak, ako ju má v hlave — „modré tenisky na leto do 80 eur“. Vyhľadávanie rozumie celej vete, nielen zhode v názve produktu.',
+      },
+      {
+        title: 'Farba, parametre aj útržok spomienky',
+        icon: 'sliders',
+        text: 'Výsledky zúžime podľa farby, veľkosti, materiálu či ceny. Postačí aj detail, ktorý si zákazník pamätá z minulej návštevy.',
+      },
+      {
+        title: 'Návrhy počas písania',
+        icon: 'tag',
+        text: 'Našepkávač ponúka produkty aj kategórie hneď pri prvých písmenách, takže zákazník sa dostane k tovaru na pár úderov klávesnice.',
+      },
+    ],
+  },
 ];
 
 /** Sekcia „Spravujte recenzie v prehľadnom administrátorskom paneli“. */
-export type AdminShotKey = 'manage' | 'reviews' | 'dashboard';
+export type AdminShotKey = 'manage' | 'reviews' | 'overview';
 
 export const adminPanelSection: {
   eyebrow: string;
@@ -212,7 +235,7 @@ export const adminPanelSection: {
     {
       title: 'Pokročilá analytika',
       text: 'Zistite viac o svojich zákazníkoch a produktoch tým, že analytika bude pracovať za vás.',
-      shot: 'dashboard',
+      shot: 'overview',
     },
   ],
 };

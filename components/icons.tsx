@@ -229,7 +229,17 @@ export function ShareIcon({ size = 30 }: Props) {
   );
 }
 
+export function SearchIcon({ size = 30 }: Props) {
+  return (
+    <svg {...base(size)}>
+      <circle cx="11" cy="11" r="6.75" />
+      <path d="m16 16 4.5 4.5" />
+    </svg>
+  );
+}
+
 export const subfeatureIcons = {
+  search: SearchIcon,
   share: ShareIcon,
   return: ReturnIcon,
   camera: CameraIcon,

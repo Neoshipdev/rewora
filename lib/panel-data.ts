@@ -300,3 +300,20 @@ export const biRowMetrics = [
   { icon: 'refresh', value: '<0.1 %', label: 'reklamovanosť' },
   { icon: 'return', value: '<0.1 %', label: 'vratkovosť' },
 ] as const;
+
+/** Inteligentné vyhľadávanie — ukážka, ako widget rozumie celej otázke. */
+export const smartSearch = {
+  query: 'modré tenisky na leto do 80 €',
+  understood: [
+    { label: 'farba', value: 'modrá' },
+    { label: 'sezóna', value: 'leto' },
+    { label: 'cena', value: 'do 80 €' },
+  ],
+  resultsLabel: '14 produktov',
+  results: [
+    { name: 'Plátenné tenisky Marina', meta: 'modrá · textil · unisex', price: '59,90 €', stars: 5 },
+    { name: 'Bežecké tenisky Coast Air', meta: 'tmavomodrá · sieťovina', price: '74,00 €', stars: 4 },
+    { name: 'Nízke tenisky Summer Pier', meta: 'modro-biela · koža', price: '68,50 €', stars: 5 },
+  ],
+  hint: 'Skúste aj „niečo pohodlné na dovolenku k moru“.',
+};
