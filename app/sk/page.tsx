@@ -243,7 +243,7 @@ export default function Home() {
                     <img className="integration__img" src={shot.src} alt={shot.alt} loading="lazy" />
                   ) : (
                     <span className="integration__img integration__img--text" aria-hidden>
-                      {item.name}
+                      Už čoskoro
                     </span>
                   )}
                   <span className="integration__num">{item.num}</span>

@@ -160,8 +160,6 @@ export const features: Feature[] = [
   {
     num: '06',
     name: 'Business Intelligence',
-    short:
-      'Predajnosť, reklamovanosť, vratkovosť. Vy si vyberiete, ktoré dáta váš segment potrebuje.',
     long: 'Predajnosť, reklamovanosť, či vratkovosť? Aj takéto informácie dokážu zákazníka presvedčiť o nákupe. Pomocou nástroja BI dáta zobrazte prehľadné štatistiky a základné informácie o produkte na jednom mieste.',
     items: [
       {
