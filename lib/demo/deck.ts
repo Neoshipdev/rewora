@@ -6,7 +6,7 @@
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { chromium } from 'playwright';
-import type { Capture } from './capture';
+import type { Capture, Strip } from './capture';
 import { biMetrics, categorize, qaByCategory, reviewsFor } from './content';
 
 const SLIDE = { width: 1280, height: 720 };
@@ -38,6 +38,49 @@ const browserFrame = (src: string, height: number, domain: string) => `
     </div>
     <div class="frame__shot"><img src="${src}" alt=""></div>
   </div>`;
+
+/** Reálny výpis Google Shopping s hviezdičkami — snímka obrazovky, nie mock. */
+const googleShopping = (() => {
+  try {
+    const bin = readFileSync(join(process.cwd(), 'public', 'images', 'Google_shopping.png'));
+    return `data:image/png;base64,${bin.toString('base64')}`;
+  } catch {
+    return undefined;
+  }
+})();
+
+/** Šírka obsahu snímky prezentácie — podľa nej škálujeme snímky e-shopu. */
+const CONTENT = SLIDE.width - 96;
+
+/**
+ * Widget vykreslíme priamo do stránky: nad ním kus webu končiaci v mieste,
+ * kam widget patrí, pod ním pokračovanie tej istej stránky.
+ */
+const vlozene = (
+  strip: Strip | undefined,
+  nahrada: string,
+  widget: string,
+  domain: string,
+  nad = 150,
+  pod = 110
+) => {
+  if (!strip) return `${browserFrame(nahrada, 250, domain)}${widget}`;
+  const mierka = CONTENT / strip.width;
+  const kotva = Math.round(strip.anchor * mierka);
+  const sirka = Math.round(strip.width * mierka);
+  const cast = (posun: number, vyska: number) => `
+    <div class="cut" style="height:${vyska}px">
+      <img src="${strip.image}" style="width:${sirka}px;margin-top:${-posun}px" alt="">
+    </div>`;
+  return `
+    <div class="frame frame--flow">
+      <div class="frame__bar"><span></span><span></span><span></span>
+        <div class="frame__url">${escape(domain)}</div></div>
+      ${cast(Math.max(0, kotva - nad), Math.min(nad, kotva))}
+      <div class="inject">${widget}</div>
+      ${cast(kotva, pod)}
+    </div>`;
+};
 
 export function buildDeckHtml(capture: Capture): string {
   const category = categorize(capture.productName ?? '', capture.url, capture.pageText);
@@ -153,15 +196,17 @@ export function buildDeckHtml(capture: Capture): string {
       num: '02',
       title: 'BI dáta na karte produktu',
       lead: 'Predajnosť, reklamovanosť a vratkovosť presvedčia aj váhajúceho zákazníka.',
-      body: `${browserFrame(capture.product ?? capture.homepage, 300, capture.domain)}${biStrip}`,
+      body: vlozene(capture.stripPhoto, capture.product ?? capture.homepage, biStrip, capture.domain, 215, 95),
       note: 'Dáta si vyberáte vy — zobrazíme len tie, ktoré dávajú zmysel vášmu segmentu.',
     }),
     slide({
       num: '03',
       title: 'Recenzie na homepage',
       lead: 'Sociálny dôkaz hneď pri vstupe na web.',
-      body: `${browserFrame(capture.homepage, 300, capture.domain)}
-        <div class="carousel">
+      body: vlozene(
+        capture.stripHero,
+        capture.homepage,
+        `<div class="carousel">
           ${reviews
             .map(
               (review) => `
@@ -173,14 +218,20 @@ export function buildDeckHtml(capture: Capture): string {
             )
             .join('')}
         </div>`,
+        capture.domain,
+        150,
+        110
+      ),
       note: 'Priemerné hodnotenie e-shopu sa dá zobraziť aj v pätičke a v Google Shopping.',
     }),
     slide({
       num: '04',
       title: 'Recenzie pri produkte',
       lead: 'Hodnotenia priamo pod produktom — tam, kde sa zákazník rozhoduje.',
-      body: `${browserFrame(capture.product ?? capture.homepage, 250, capture.domain)}
-        <div class="widget">
+      body: vlozene(
+        capture.stripDesc,
+        capture.product ?? capture.homepage,
+        `<div class="widget">
           <div class="widget__head">
             <div>
               <span class="widget__title">Recenzie a hodnotenia</span>
@@ -191,14 +242,20 @@ export function buildDeckHtml(capture: Capture): string {
           </div>
           ${reviewRows}
         </div>`,
+        capture.domain,
+        140,
+        100
+      ),
       note: `Produkt: ${capture.productName ?? capture.domain}`,
     }),
     slide({
       num: '05',
       title: 'Poradňa a fórum pri produkte',
       lead: `Zákazníci sa pýtajú na to, čo ich brzdí — napríklad „${qa.topic.toLowerCase()}“.`,
-      body: `${browserFrame(capture.product ?? capture.homepage, 250, capture.domain)}
-        <div class="widget">
+      body: vlozene(
+        capture.stripDesc,
+        capture.product ?? capture.homepage,
+        `<div class="widget">
           <div class="widget__head">
             <span class="widget__title">Otázky a odpovede k produktu</span>
             <span class="widget__cta" style="background:${accent}">＋ Položiť otázku</span>
@@ -210,6 +267,10 @@ export function buildDeckHtml(capture: Capture): string {
             <div class="qa__meta">Odpovedal <b style="color:${accent}">odborník e-shopu</b> · 2 dni</div>
           </div>
         </div>`,
+        capture.domain,
+        140,
+        100
+      ),
       note: 'Odpoviete raz, odpoveď sa zobrazuje všetkým ďalším zákazníkom.',
     }),
     slide({
@@ -217,19 +278,16 @@ export function buildDeckHtml(capture: Capture): string {
       title: 'Hviezdičky v Google Shopping',
       lead: 'Produktové hodnotenia sa prenášajú do Google Shopping a zvyšujú preklikovosť.',
       body: `<div class="gshop">
-          <div class="gshop__card">
-            ${capture.productImage ? `<img src="${capture.productImage}" alt="">` : '<div class="gshop__ph"></div>'}
-            <div class="gshop__info">
-              <b>${escape(productName)}</b>
-              <span class="gshop__price">${escape(price)}</span>
-              <span class="gshop__shop">${escape(capture.domain)}</span>
-              <span class="gshop__stars">${stars(5, accent)} <small>4,8 · 37 recenzií</small></span>
-            </div>
-          </div>
+          ${
+            googleShopping
+              ? `<img class="gshop__shot" src="${googleShopping}" alt="Výpis Google Shopping s hviezdičkami pri produkte">`
+              : ''
+          }
           <div class="gshop__note">
-            <b>Čo to znamená v praxi</b>
-            <p>Karty s hviezdičkami majú v Google Shopping vyššiu mieru prekliku.
-            Recenzie sa do Googlu odosielajú automaticky, bez práce navyše.</p>
+            <b>Takto vyzerá výpis v Google Shopping</b>
+            <p>Karta s hviezdičkami a počtom hodnotení vyčnieva medzi ponukami bez nich.
+            Recenzie zozbierané Reworou posielame do Google Merchant Center automaticky, takže
+            rovnaké hodnotenie sa zobrazí aj pri produktoch e-shopu ${escape(capture.domain)}.</p>
           </div>
         </div>`,
       note: 'Automatické zaradenie produktov do Google Shopping je súčasťou balíka Profesionálny.',
@@ -270,6 +328,10 @@ export function buildDeckHtml(capture: Capture): string {
   .frame__bar span { width:8px; height:8px; border-radius:50%; background:#E2DDD6; }
   .frame__url { margin-left:12px; font-size:11px; color:#8A9099; }
   .frame__shot { flex:1; overflow:hidden; }
+  /* widget vložený priamo do toku stránky e-shopu */
+  .frame--flow .cut { overflow:hidden; }
+  .frame--flow .cut img { display:block; }
+  .inject { padding:12px 14px; background:#fff; border-top:1px solid #EFEAE4; border-bottom:1px solid #EFEAE4; }
   .frame__shot img { width:100%; display:block; }
 
   .stage { position:relative; }
@@ -321,7 +383,11 @@ export function buildDeckHtml(capture: Capture): string {
   .qa__a { font-size:12px; color:#5A6270; line-height:1.5; }
   .qa__meta { font-size:11px; color:#8A9099; }
 
-  .gshop { display:grid; grid-template-columns:1.1fr 1fr; gap:20px; align-items:start; }
+  .gshop { display:flex; flex-direction:column; gap:14px; }
+  /* reálna snímka z Google Shopping — orezaná na pás s kartami produktov */
+  /* snímku nechávame celú — orez by odrezal práve hviezdičky */
+  .gshop__shot { width:100%; max-height:360px; object-fit:contain; object-position:center top;
+    border:1px solid #E7E2DC; border-radius:10px; display:block; background:#fff; }
   .gshop__card { border:1px solid #E7E2DC; border-radius:10px; padding:16px; display:flex; gap:16px; }
   .gshop__card img { width:180px; height:180px; object-fit:contain; }
   .gshop__ph { width:180px; height:180px; background:repeating-linear-gradient(135deg,#F3EFEA 0 10px,#EDE8E2 10px 20px); }

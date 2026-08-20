@@ -6,6 +6,9 @@
  */
 import { chromium, type Browser, type Page } from 'playwright';
 
+/** Výsek stránky s miestom, kam widget patrí (`anchor` = odsadenie v snímke). */
+export type Strip = { image: string; anchor: number; width: number };
+
 export type Capture = {
   url: string;
   domain: string;
@@ -18,6 +21,10 @@ export type Capture = {
   logo?: string; // data URI
   accent: string; // hex
   heroBox?: { x: number; y: number; width: number; height: number };
+  /* miesta, kam widgety patria — pod banner, pod fotku, pod popis produktu */
+  stripHero?: Strip;
+  stripPhoto?: Strip;
+  stripDesc?: Strip;
   pageText: string;
   warnings: string[];
 };
@@ -290,6 +297,127 @@ async function findHeroBox(page: Page) {
     .catch(() => null);
 }
 
+/**
+ * Odfotí okno stránky okolo miesta, kam widget patrí, aby sa dal v prezentácii
+ * vykresliť priamo do stránky — nie pod jej snímkou.
+ */
+async function stripAround(page: Page, y: number, above = 300): Promise<Strip | undefined> {
+  try {
+    const cielovy = Math.max(0, Math.round(y - above));
+    await page.evaluate((t) => window.scrollTo(0, t), cielovy);
+    await page.waitForTimeout(500); /* dotiahnu sa obrázky načítavané pri scrollovaní */
+    /* Prilepená hlavička či promo pás by prekryli práve to miesto, ktoré ideme ukázať. */
+    await page
+      .evaluate(() => {
+        for (const el of Array.from(document.querySelectorAll<HTMLElement>('body *'))) {
+          const style = getComputedStyle(el);
+          if (style.position !== 'fixed' && style.position !== 'sticky') continue;
+          const rect = el.getBoundingClientRect();
+          /* zaujímajú nás len pásy prilepené o horný okraj okna */
+          if (rect.bottom < 0 || rect.top > 200 || rect.height > 500) continue;
+          if (rect.width < window.innerWidth * 0.3) continue;
+          el.style.visibility = 'hidden';
+        }
+      })
+      .catch(() => {});
+    const posun = await page.evaluate(() => window.scrollY);
+    const buffer = await page.screenshot({ type: 'jpeg', quality: 82 });
+    return {
+      image: `data:image/jpeg;base64,${buffer.toString('base64')}`,
+      anchor: Math.round(y - posun),
+      width: VIEWPORT.width,
+    };
+  } catch {
+    return undefined;
+  }
+}
+
+/** Pásy produktovej stránky — pod fotografiou a pod popisom. */
+async function productStrips(page: Page): Promise<{ stripPhoto?: Strip; stripDesc?: Strip }> {
+  const handle = await productPhotoHandle(page);
+  const photoY = await (handle?.asElement()?.evaluate(
+    (el) => Math.round(el.getBoundingClientRect().bottom + window.scrollY)
+  ) ?? Promise.resolve(null));
+  const stripPhoto = photoY ? await stripAround(page, photoY) : undefined;
+  const descY = (await productDescBottom(page, photoY)) ?? (photoY ? photoY + 600 : null);
+  const stripDesc = descY ? await stripAround(page, descY) : undefined;
+  await page.evaluate(() => window.scrollTo(0, 0)).catch(() => {});
+  return { stripPhoto, stripDesc };
+}
+
+/** Spodná hrana hlavného banneru na homepage (v súradniciach celej stránky). */
+async function heroBottom(page: Page): Promise<number | null> {
+  return page
+    .evaluate(() => {
+      const kandidati = Array.from(
+        document.querySelectorAll<HTMLElement>('img, [class*="banner"], [class*="hero"], [class*="slider"], [class*="carousel"]')
+      );
+      let best: DOMRect | null = null;
+      for (const el of kandidati) {
+        const r = el.getBoundingClientRect();
+        if (r.top < 40 || r.top > 900 || r.width < window.innerWidth * 0.5 || r.height < 150) continue;
+        if (!best || r.width * r.height > best.width * best.height) best = r;
+      }
+      return best ? Math.round(best.bottom + window.scrollY) : null;
+    })
+    .catch(() => null);
+}
+
+/**
+ * Hlavná fotografia produktu. Rozlišujeme ju od reklamných bannerov: má
+ * približne štvorcový pomer strán a leží blízko nadpisu produktu.
+ */
+async function productPhotoHandle(page: Page) {
+  return page
+    .evaluateHandle(() => {
+      const nadpis = document.querySelector('h1');
+      const nadpisY = nadpis ? nadpis.getBoundingClientRect().top + window.scrollY : 400;
+      let best: { el: HTMLImageElement; skore: number } | null = null;
+      for (const img of Array.from(document.querySelectorAll<HTMLImageElement>('img'))) {
+        const r = img.getBoundingClientRect();
+        if (r.width < 160 || r.height < 160) continue;
+        const y = r.top + window.scrollY;
+        if (y > 1600) continue;
+        const pomer = r.width / r.height;
+        if (pomer < 0.5 || pomer > 2) continue; /* široký pás je banner, nie produkt */
+        const vzdialenost = Math.abs(y - nadpisY);
+        const skore = Math.sqrt(r.width * r.height) - vzdialenost / 3;
+        if (!best || skore > best.skore) best = { el: img, skore };
+      }
+      return best?.el ?? null;
+    })
+    .catch(() => null);
+}
+
+/**
+ * Spodná hrana popisu produktu — tam patria recenzie aj poradňa.
+ * Hľadáme najdlhší súvislý text pod fotografiou; súhlasové a navigačné bloky
+ * (cookie lišta, pätička, menu) vynechávame, inak by sme trafili ich.
+ */
+async function productDescBottom(page: Page, photoBottom: number | null): Promise<number | null> {
+  return page
+    .evaluate((odFotky) => {
+      const zakazane = /cmplz|cookie|consent|newsletter|footer|header|menu|nav|breadcrumb|modal|dialog/i;
+      let best: { dlzka: number; bottom: number } | null = null;
+      for (const el of Array.from(document.querySelectorAll<HTMLElement>('div,section,article'))) {
+        const trieda = `${el.className ?? ''} ${el.id ?? ''}`;
+        if (zakazane.test(trieda)) continue;
+        const rect = el.getBoundingClientRect();
+        const top = rect.top + window.scrollY;
+        if (rect.height < 80 || rect.width < window.innerWidth * 0.3) continue;
+        if (odFotky && top < odFotky - 200) continue;
+        const text = (el.innerText ?? '').trim();
+        if (text.length < 150 || text.length > 5000) continue;
+        /* zaujíma nás blok textu, nie obal plný ďalších sekcií */
+        if (el.querySelectorAll('div,section,article').length > 6) continue;
+        const dlzka = text.length;
+        if (!best || dlzka > best.dlzka) best = { dlzka, bottom: Math.round(rect.bottom + window.scrollY) };
+      }
+      return best ? best.bottom : null;
+    }, photoBottom)
+    .catch(() => null);
+}
+
 async function isProductPage(page: Page): Promise<boolean> {
   return page
     .evaluate(() => {
@@ -411,20 +539,7 @@ async function productMeta(page: Page) {
 }
 
 async function captureProductImage(page: Page): Promise<string | undefined> {
-  const handle = await page
-    .evaluateHandle(() => {
-      const images = Array.from(document.querySelectorAll<HTMLImageElement>('img'));
-      let best: HTMLImageElement | null = null;
-      for (const img of images) {
-        const rect = img.getBoundingClientRect();
-        if (rect.width < 180 || rect.height < 180 || rect.top > 1200) continue;
-        if (!best || rect.width * rect.height > best.getBoundingClientRect().width * best.getBoundingClientRect().height)
-          best = img;
-      }
-      return best;
-    })
-    .catch(() => null);
-
+  const handle = await productPhotoHandle(page);
   const element = handle?.asElement();
   if (!element) return undefined;
   try {
@@ -467,6 +582,9 @@ export async function captureSite(
     const logo = await captureLogo(page);
     const heroBox = (await findHeroBox(page)) ?? undefined;
     const homepage = await shot(page);
+    const heroY = await heroBottom(page);
+    const stripHero = heroY ? await stripAround(page, heroY, 260) : undefined;
+    await page.evaluate(() => window.scrollTo(0, 0)).catch(() => {});
 
     onStep('Hľadám produktovú stránku…');
     /* Niektoré e-shopy presmerujú na inú doménu (napr. .sk → .eu) — odkazy
@@ -476,6 +594,8 @@ export async function captureSite(
     let productUrl: string | undefined;
     let meta: { name: string; price: string; text: string } | undefined;
     let productImage: string | undefined;
+    let stripPhoto: Strip | undefined;
+    let stripDesc: Strip | undefined;
 
     /** Prvý kandidát, ktorý sa tvári ako produkt; inak najlepšie hodnotený odkaz. */
     let fallback: { url: string; meta: typeof meta } | undefined;
@@ -511,6 +631,7 @@ export async function captureSite(
         meta = candidateMeta;
         productImage = await captureProductImage(page);
         product = await shot(page);
+        ({ stripPhoto, stripDesc } = await productStrips(page));
         break;
       } catch {
         /* skúsime ďalšieho kandidáta */
@@ -528,6 +649,7 @@ export async function captureSite(
         meta = fallback.meta;
         productImage = await captureProductImage(page);
         product = await shot(page);
+        ({ stripPhoto, stripDesc } = await productStrips(page));
         warnings.push('Produktovú stránku sme nevedeli overiť — použili sme najpravdepodobnejšiu podstránku.');
       } catch {
         fallback = undefined;
@@ -553,6 +675,9 @@ export async function captureSite(
       logo,
       accent,
       heroBox,
+      stripHero,
+      stripPhoto,
+      stripDesc,
       pageText: meta?.text ?? '',
       warnings,
     };
