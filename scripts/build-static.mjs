@@ -31,17 +31,23 @@ async function walk(dir) {
   return files;
 }
 
-/** Absolútne cesty prefixneme, aby web fungoval aj v podpriečinku domény. */
+/**
+ * Absolútne cesty prefixneme, aby web fungoval aj v podpriečinku domény.
+ * Prepisujeme aj cesty v hydratačných dátach Nextu (escapované úvodzovky) —
+ * inak by ich React po načítaní vrátil späť a obrázky by hádzali 404.
+ */
 async function applyBasePath() {
   if (!BASE) return 0;
   const files = (await walk(OUT)).filter((f) => /\.(html|css|txt|xml|json)$/i.test(f));
+  /* nechytáme už prefixnuté cesty ani absolútne URL na rewora.com */
+  const paths = /(?<!rewora\.com)(?<!\/rewora)\/(images|_next|sk)\//g;
+
   let changed = 0;
   for (const file of files) {
     const original = await readFile(file, 'utf8');
     const updated = original
-      .replace(/(href|src)="\/(?!\/)/g, `$1="${BASE}/`)
-      .replace(/url\(\/(?!\/)/g, `url(${BASE}/`)
-      .replace(/"\/_next\//g, `"${BASE}/_next/`);
+      .replace(paths, `${BASE}/$1/`)
+      .replace(/url\(\/(?!\/|rewora\/)/g, `url(${BASE}/`);
     if (updated !== original) {
       await writeFile(file, updated, 'utf8');
       changed++;

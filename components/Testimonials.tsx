@@ -3,14 +3,14 @@
 import { useEffect, useRef, useState } from 'react';
 import { testimonials, testimonialsCta, testimonialsIntro } from '@/lib/content';
 
-/** O koľko sa karta posunie, kým odíde zo scény. */
+/** Odsadenie kariet v balíčku a posun pri odchode zo scény. */
+const PEEK = 16;
 const EXIT = 130;
-const ENTER = 28;
 
 /**
- * Referencie — vľavo text, vpravo karty prípadových štúdií.
- * Scrollovaním sa karty striedajú: prvá odíde nadol a odkryje druhú,
- * druhá rovnako tretiu, ktorá zostane zobrazená.
+ * Referencie — vľavo text, vpravo balíček kariet prípadových štúdií.
+ * Na začiatku sú viditeľné všetky tri: prvá celá, z ďalších dvoch trčí
+ * horný okraj. Scrollovaním predná karta odíde nadol a odkryje ďalšiu.
  */
 export default function Testimonials() {
   const runway = useRef<HTMLDivElement>(null);
@@ -59,19 +59,17 @@ export default function Testimonials() {
       <div className="cases__runway" ref={runway}>
         <div className="cases__stage">
           {testimonials.map((item, i) => {
-            /* poloha v poradí: 0 = práve zobrazená, <0 čaká, >0 odchádza */
+            /* poloha v poradí: 0 = predná karta, <0 čaká v balíčku, >0 odchádza */
             const step = progress * (count - 1) - i;
             const last = i === count - 1;
-            const waiting = Math.min(1, Math.max(0, -step));
+            /* koľko kariet je pred touto — o toľko vyššie z nej trčí okraj */
+            const behind = Math.min(count - 1, Math.max(0, -step));
             const leaving = last ? 0 : Math.min(1, Math.max(0, step));
 
-            /* odchádzajúca karta zmizne skôr, než sa objaví ďalšia —
-               aby sa texty dvoch kariet neprekrývali */
-            const fadeOut = Math.min(1, leaving / 0.45);
-            const fadeIn = Math.min(1, waiting / 0.45);
-            const shift = -ENTER * waiting + EXIT * leaving;
-            const scale = 1 - 0.06 * waiting - 0.04 * leaving;
-            const opacity = 1 - Math.max(fadeOut, fadeIn);
+            const shift = PEEK * (count - 1 - behind) + EXIT * leaving;
+            const scale = 1 - 0.03 * behind - 0.03 * leaving;
+            /* karty v balíčku zostávajú viditeľné, mizne len tá odchádzajúca */
+            const opacity = 1 - Math.min(1, leaving / 0.45);
 
             return (
               <article

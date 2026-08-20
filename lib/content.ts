@@ -59,7 +59,7 @@ export const demoCta = {
 export const hero = {
   eyebrow: 'Na recenziách záleží',
   titleLines: ['Dôvera zákazníkov', 'mení návštevy', 'na nákupy'],
-  lead: 'Budujte dôveru u vašich zákazníkov a merateľne zvýšte konverzný pomer vášho webu jednoducho na pár klikov.',
+  lead: 'Budujte dôveru u vašich zákazníkov a merateľne zvýšte konverzný pomer vášho webu jednoducho na pár klikov. Rewora je rozhodujúci impulz k nákupu.',
   primary: { label: 'Vyskúšať teraz', href: '/sk/cennik/' },
   rating: '4,8 priemerné hodnotenie našich klientov',
 };
