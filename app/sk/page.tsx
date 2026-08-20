@@ -173,7 +173,7 @@ export default function Home() {
 
       {/* Nástroje — numerované riadky s pôvodnými textami */}
       <section className="section" id="features">
-        <div className="container">
+        <div className="container container--tools">
           <div className="tools__head">
             <span className="eyebrow">{featuresIntro.eyebrow}</span>
             <h2 className="h2">{featuresIntro.title}</h2>

@@ -4488,7 +4488,7 @@ svg {
    pri užšom okne by widget aj text ostali pritesné. */
 @media (min-width: 1360px) {
   .tool-row {
-    grid-template-columns: 56px 260px minmax(0, 1.3fr) minmax(0, 1fr);
+    grid-template-columns: 56px 260px minmax(0, 1.7fr) minmax(0, 1fr);
   }
   .tool-row .subfeatures,
   .tool-row .subfeatures--2,
@@ -4506,5 +4506,18 @@ svg {
   }
   .tool-row .subfeature:last-child {
     padding-bottom: 0;
+  }
+}
+
+/* Nástroje na širokej obrazovke využijú celú šírku, nech sú ukážky väčšie.
+   Pod 1360 px sa sekcia vracia do bežnej mriežky a časti idú pod seba. */
+@media (min-width: 1360px) {
+  .container--tools {
+    max-width: none;
+    padding-left: var(--pad);
+    padding-right: var(--pad);
+  }
+  .container--tools .tools__head {
+    max-width: calc(var(--content));
   }
 }
