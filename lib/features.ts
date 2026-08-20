@@ -48,9 +48,9 @@ export const features: Feature[] = [
         text: 'Rewora vám pomáha získavať spätnú väzbu bez ohľadu na to, či zákazník nakúpil v e-shope alebo v kamennej predajni a ukazuje ich presne tam, kde ich zákazník očakáva.',
       },
       {
-        title: 'Automaticky oslovujeme zákazníkov po nákupe',
+        title: 'Automaticky oslovujte zákazníkov po nákupe',
         icon: 'chat',
-        text: 'Po dokončení objednávky zákazníkovi automaticky odošleme e-mail so žiadosťou o hodnotenie zakúpeného tovaru aj samotného obchodu. Získavate tak viac recenzií bez ďalšej manuálnej práce, autentických a overených, ktoré podporujú predaj.',
+        text: 'Po dokončení objednávky zákazníkovi automaticky odošleme e-mail so žiadosťou o hodnotenie zakúpeného tovaru aj samotného obchodu. Získavate tak viac autentických a overených recenzií bez ďalšej manuálnej práce.',
       },
       {
         title: 'Agregujeme recenzie z rôznych zdrojov priamo pri produktoch',
