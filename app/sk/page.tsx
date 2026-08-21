@@ -185,7 +185,7 @@ export default function Home() {
           <div className="tools__head">
             <span className="eyebrow">{featuresIntro.eyebrow}</span>
             <h2 className="h2">{featuresIntro.title}</h2>
-            <p style={{ maxWidth: 720, marginTop: 6, fontSize: 17, color: 'var(--ink-600)' }}>
+            <p style={{ maxWidth: 720, marginTop: 6, fontSize: 16.1, color: 'var(--ink-600)' }}>
               {featuresIntro.lead}
             </p>
           </div>
@@ -246,7 +246,7 @@ export default function Home() {
           <h2 className="h2" style={{ maxWidth: 720, marginTop: 8 }}>
             Jednoduchá a rýchla integrácia
           </h2>
-          <p style={{ maxWidth: 640, marginTop: 14, fontSize: 17, color: 'var(--ink-600)' }}>
+          <p style={{ maxWidth: 640, marginTop: 14, fontSize: 16.1, color: 'var(--ink-600)' }}>
             {integrationsIntro}
           </p>
           <div className="integrations__grid">

@@ -18,7 +18,7 @@ export default function VideoReviews() {
       <div className="vrev__head">
         <span className="vrev__title">{videoReviews.title}</span>
         <span className="vrev__score">
-          <span className="stars" style={{ fontSize: 14 }}>
+          <span className="stars" style={{ fontSize: 13.3 }}>
             ★★★★★
           </span>
           <b>{videoReviews.average}</b>
@@ -38,7 +38,7 @@ export default function VideoReviews() {
               ▶
             </span>
             <figcaption className="vrev__meta">
-              <span className="stars" style={{ fontSize: 11 }}>
+              <span className="stars" style={{ fontSize: 10.4 }}>
                 {'★'.repeat(item.stars)}
               </span>
               <b>{item.name}</b>

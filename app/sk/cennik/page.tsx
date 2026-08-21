@@ -39,7 +39,7 @@ export default function CennikPage() {
           <h2 className="h2" style={{ maxWidth: 720, marginTop: 8 }}>
             Jednoduchá a rýchla integrácia
           </h2>
-          <p style={{ maxWidth: 640, marginTop: 14, fontSize: 17, color: 'var(--ink-600)' }}>
+          <p style={{ maxWidth: 640, marginTop: 14, fontSize: 16.1, color: 'var(--ink-600)' }}>
             {integrationsIntro}
           </p>
           <div className="integrations__grid">

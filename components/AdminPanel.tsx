@@ -182,7 +182,7 @@ function Hotspots() {
     <div className="panel__stack">
       <div className="panel__head">
         <span className="panel__title">Hotspots</span>
-        <span style={{ fontSize: 12, color: 'var(--ink-500)' }}>{hotspots.meta}</span>
+        <span style={{ fontSize: 11.4, color: 'var(--ink-500)' }}>{hotspots.meta}</span>
       </div>
       <HotspotStage
         height={300}

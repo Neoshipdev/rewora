@@ -60,7 +60,7 @@ export default function Faq() {
         <h2 className="h2" style={{ maxWidth: 720, marginTop: 8 }}>
           Často kladené otázky
         </h2>
-        <p style={{ maxWidth: 720, marginTop: 14, fontSize: 17, color: 'var(--ink-600)' }}>
+        <p style={{ maxWidth: 720, marginTop: 14, fontSize: 16.1, color: 'var(--ink-600)' }}>
           {faqIntro}
         </p>
 
@@ -73,7 +73,7 @@ export default function Faq() {
           <h2 className="h2" style={{ maxWidth: 760, marginTop: 8 }}>
             Povinnosti slovenských e-shopov pri recenziách
           </h2>
-          <p style={{ maxWidth: 760, marginTop: 14, fontSize: 17, color: 'var(--ink-600)' }}>
+          <p style={{ maxWidth: 760, marginTop: 14, fontSize: 16.1, color: 'var(--ink-600)' }}>
             {faqLegalIntro}
           </p>
           <FaqList items={faqLegal} idPrefix="faq-legal" />
