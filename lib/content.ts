@@ -317,6 +317,10 @@ export const faqLegal = [
  * zámerne uvedené ako „podľa zmluvy“, nie ako fixné číslo.
  */
 export const partner = {
+  image: {
+    src: '/images/partner.png',
+    alt: 'Podanie rúk pri partnerskej spolupráci s Reworou',
+  },
   eyebrow: 'Partnerský program',
   title: 'Odporúčajte Reworu a zarábajte na tom',
   lead: 'Robíte e-shopy, marketing alebo konzultácie? Za každého klienta, ktorý cez vás začne používať Reworu, dostávate províziu — a klient nadštandardnú starostlivosť.',

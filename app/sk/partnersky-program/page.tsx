@@ -18,7 +18,12 @@ export default function PartnerskyProgramPage() {
   return (
     <>
       <TopBar />
-      <PageHero eyebrow={partner.eyebrow} title={partner.title} lead={partner.lead} />
+      <PageHero
+        eyebrow={partner.eyebrow}
+        title={partner.title}
+        lead={partner.lead}
+        image={partner.image}
+      />
 
       <section className="section">
         <div className="container">
