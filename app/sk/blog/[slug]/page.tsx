@@ -29,6 +29,11 @@ export default async function BlogArticlePage({ params }: Props) {
   if (!slugs.includes(params.slug)) notFound();
   const doc = await readDoc(`blog/${params.slug}.md`);
 
+  /* Časť článkov má rovnakú fotografiu aj v texte — vtedy vrchnú vynecháme,
+     aby sa hneď pod sebou nezobrazila dvakrát. */
+  const nahlad = doc.thumb?.split('/').pop()?.split('.format')[0] ?? '';
+  const jeVTexte = nahlad ? doc.html.includes(nahlad) : false;
+
   return (
     <>
       <TopBar />
@@ -46,7 +51,7 @@ export default async function BlogArticlePage({ params }: Props) {
       <section className="section">
         <div className="container article">
           <div>
-            {doc.thumb && (
+            {doc.thumb && !jeVTexte && (
               /* eslint-disable-next-line @next/next/no-img-element */
               <img className="article__cover" src={doc.thumb} alt={doc.title} />
             )}
