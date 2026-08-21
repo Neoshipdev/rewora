@@ -1,11 +1,10 @@
 import type { Metadata } from 'next';
 import CtaBand from '@/components/CtaBand';
+import IntegrationGrid from '@/components/IntegrationGrid';
 import PageHero from '@/components/PageHero';
 import PricingPlans from '@/components/PricingPlans';
 import SiteFooter from '@/components/SiteFooter';
 import TopBar from '@/components/TopBar';
-import { integrationShots } from '@/lib/assets';
-import { integrations } from '@/lib/content';
 import { integrationsIntro } from '@/lib/features';
 
 export const metadata: Metadata = {
@@ -42,22 +41,7 @@ export default function CennikPage() {
           <p style={{ maxWidth: 640, marginTop: 14, fontSize: 16.1, color: 'var(--ink-600)' }}>
             {integrationsIntro}
           </p>
-          <div className="integrations__grid">
-            {integrations.map((item) => {
-              const shot = integrationShots[item.name];
-              return (
-                <div key={item.name} className="integration">
-                  {shot && (
-                    /* eslint-disable-next-line @next/next/no-img-element */
-                    <img className="integration__img" src={shot.src} alt={shot.alt} loading="lazy" />
-                  )}
-                  <span className="integration__num">{item.num}</span>
-                  <h3 className="integration__name">{item.name}</h3>
-                  <p className="integration__text">{item.text}</p>
-                </div>
-              );
-            })}
-          </div>
+          <IntegrationGrid />
         </div>
       </section>
 

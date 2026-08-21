@@ -11,6 +11,7 @@ import BiCard from '@/components/BiCard';
 import CtaBand from '@/components/CtaBand';
 import Faq from '@/components/Faq';
 import HotspotStage from '@/components/HotspotStage';
+import IntegrationGrid from '@/components/IntegrationGrid';
 import SiteFooter from '@/components/SiteFooter';
 import Stars from '@/components/Stars';
 import Testimonials from '@/components/Testimonials';
@@ -22,8 +23,8 @@ import SmartSearch from '@/components/SmartSearch';
 import VideoReviews from '@/components/VideoReviews';
 import VideoButton from '@/components/VideoButton';
 import { subfeatureIcons } from '@/components/icons';
-import { clientLogos, hotspotVisual, integrationShots } from '@/lib/assets';
-import { hero, integrations, numbers } from '@/lib/content';
+import { clientLogos, hotspotVisual } from '@/lib/assets';
+import { hero, numbers } from '@/lib/content';
 import { adminPanelSection, features, featuresIntro, integrationsIntro } from '@/lib/features';
 import { hotspots } from '@/lib/panel-data';
 
@@ -249,26 +250,7 @@ export default function Home() {
           <p style={{ maxWidth: 640, marginTop: 14, fontSize: 16.1, color: 'var(--ink-600)' }}>
             {integrationsIntro}
           </p>
-          <div className="integrations__grid">
-            {integrations.map((item) => {
-              const shot = integrationShots[item.name];
-              return (
-                <div key={item.name} className="integration">
-                  {shot ? (
-                    /* eslint-disable-next-line @next/next/no-img-element */
-                    <img className="integration__img" src={shot.src} alt={shot.alt} loading="lazy" />
-                  ) : (
-                    <span className="integration__img integration__img--text" aria-hidden>
-                      Už čoskoro
-                    </span>
-                  )}
-                  <span className="integration__num">{item.num}</span>
-                  <h3 className="integration__name">{item.name}</h3>
-                  <p className="integration__text">{item.text}</p>
-                </div>
-              );
-            })}
-          </div>
+          <IntegrationGrid />
         </div>
       </section>
 
