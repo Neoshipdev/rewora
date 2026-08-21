@@ -46,8 +46,17 @@ export default function UkazkaPage() {
       />
 
       <section className="section">
-        <div className="container">
+        <div className="container demo-split">
           <DemoForm />
+          {/* reálne nasadenie u zákazníka — vedľa generátora ukazuje výsledok */}
+          <figure className="demo-sample">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/images/ukazka-pantarhei.png" alt="Widgety Rewory na produktovej stránke e-shopu Panta Rhei" />
+            <figcaption>
+              Takto widgety vyzerajú v ostrej prevádzke — recenzie, hodnotenia aj poradňa na karte
+              produktu e-shopu Panta Rhei.
+            </figcaption>
+          </figure>
         </div>
       </section>
 

@@ -4783,3 +4783,36 @@ svg {
     zoom: 1.15;
   }
 }
+
+/* ---------- ukážka: generátor a reálne nasadenie vedľa seba ---------- */
+.demo-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.62fr);
+  gap: 44px;
+  align-items: start;
+}
+.demo-sample {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.demo-sample img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--line-300);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+.demo-sample figcaption {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--ink-400);
+}
+@media (max-width: 1023px) {
+  .demo-split {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
