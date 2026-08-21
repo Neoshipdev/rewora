@@ -4,7 +4,7 @@
 
 **Kategória:** Customer support
 **Autor a dátum:** David Kucak 10. august 2023
-**Náhľad:** /media/images/1691672183489b.format-avif.width-640.avif
+**Náhľad:** /media/images/1691672183489b.hd.webp
 
 ## Perex
 

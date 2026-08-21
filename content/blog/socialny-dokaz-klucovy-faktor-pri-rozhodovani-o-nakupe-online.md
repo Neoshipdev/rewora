@@ -4,7 +4,7 @@
 
 **Kategória:** Shopping trends
 **Autor a dátum:** David Kucak 23. august 2023
-**Náhľad:** /media/images/1692795141093.format-avif.width-640.avif
+**Náhľad:** /media/images/1692795141093.hd.webp
 
 ## Perex
 

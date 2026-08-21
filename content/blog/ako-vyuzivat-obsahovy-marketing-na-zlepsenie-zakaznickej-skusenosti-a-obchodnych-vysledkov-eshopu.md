@@ -4,7 +4,7 @@
 
 **Kategória:** Media
 **Autor a dátum:** David Kucak 28. jún 2023
-**Náhľad:** /media/images/content_b.format-avif.width-640.avif
+**Náhľad:** /media/images/content_b.hd.webp
 
 ## Perex
 

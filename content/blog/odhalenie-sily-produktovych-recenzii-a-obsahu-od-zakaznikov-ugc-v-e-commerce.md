@@ -4,7 +4,7 @@
 
 **Kategória:** Content marketing
 **Autor a dátum:** David Kucak 2. august 2023
-**Náhľad:** /media/images/medium-shot-young-people-with-rev.format-avif.width-640.avif
+**Náhľad:** /media/images/medium-shot-young-people-with-rev.hd.webp
 
 ## Perex
 

@@ -4,7 +4,7 @@
 
 **Kategória:** Ecommerce
 **Autor a dátum:** David Kucak 22. august 2023
-**Náhľad:** /media/images/MicrosoftTeams-image_8.format-avif.width-640.avif
+**Náhľad:** /media/images/MicrosoftTeams-image_8.hd.webp
 
 ## Perex
 

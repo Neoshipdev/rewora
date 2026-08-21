@@ -4,7 +4,7 @@
 
 **Kategória:** Smart shopping
 **Autor a dátum:** David Kucak 15. august 2023
-**Náhľad:** /media/images/robot-handshake-human-background-.format-avif.width-640.avif
+**Náhľad:** /media/images/robot-handshake-human-background-.hd.webp
 
 ## Perex
 

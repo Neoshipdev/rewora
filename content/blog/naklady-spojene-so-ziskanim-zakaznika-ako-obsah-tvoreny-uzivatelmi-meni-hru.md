@@ -4,7 +4,7 @@
 
 **Kategória:** Marketing roi
 **Autor a dátum:** David Kucak 9. august 2023
-**Náhľad:** /media/images/business-teamwork-meeting-concept.format-avif.width-640.avif
+**Náhľad:** /media/images/business-teamwork-meeting-concept.hd.webp
 
 ## Perex
 

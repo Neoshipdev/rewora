@@ -4,7 +4,7 @@
 
 **Kategória:** Product reviews
 **Autor a dátum:** David Kucak 16. máj 2023
-**Náhľad:** /media/images/rewora.format-avif.width-640.avif
+**Náhľad:** /media/images/rewora.hd.webp
 
 ## Perex
 

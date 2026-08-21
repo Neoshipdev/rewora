@@ -4,7 +4,7 @@
 
 **Kategória:** Business growth
 **Autor a dátum:** David Kucak 12. september 2023
-**Náhľad:** /media/images/group-friends-gathering-together.format-avif.width-640.avif
+**Náhľad:** /media/images/group-friends-gathering-together.hd.webp
 
 ## Perex
 

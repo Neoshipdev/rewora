@@ -4,7 +4,7 @@
 
 **Kategória:** Brand influence
 **Autor a dátum:** David Kucak 4. september 2023
-**Náhľad:** /media/images/male-office-worker.format-avif.width-640.avif
+**Náhľad:** /media/images/male-office-worker.hd.webp
 
 ## Perex
 

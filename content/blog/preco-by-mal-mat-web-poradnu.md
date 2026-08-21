@@ -4,13 +4,13 @@
 
 **Kategória:** SEO
 **Autor a dátum:** Andrea Vargová 17. január 2025
-**Náhľad:** /media/images/blog-poradna2x.format-avif.width-640.avif
+**Náhľad:** /media/images/blog-poradna2x.hd.webp
 
 ## Perex
 
 Dnes, keď sú zákazníci náročnejší a očakávajú okamžité odpovede na svoje otázky, sa poradňa stáva neoceniteľným nástrojom pre každú firmu. Nielenže zlepšuje zákaznícku skúsenosť, ale zároveň môže významne ovplyvniť vaše obchodné výsledky. Prečo je však poradňa taká dôležitá? Poďme sa na to pozrieť.
 
-![Dovoľte zákazníkom klásť otázky](/media/images/blog-poradna2x.format-avif.width-768.avif)
+![Dovoľte zákazníkom klásť otázky](/media/images/blog-poradna2x.hd.webp)
 **
 
 ## Vybudujte dôveru a staňte sa autoritou vo svojom odbore

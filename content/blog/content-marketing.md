@@ -4,7 +4,7 @@
 
 **Kategória:** Marketing
 **Autor a dátum:** David Kucak 11. máj 2023
-**Náhľad:** /media/images/content_marketing.format-avif.width-640.avif
+**Náhľad:** /media/images/content_marketing.hd.webp
 
 ## Perex
 
@@ -30,7 +30,7 @@ Videá sú v súčasnosti veľmi populárnym spôsobom zdieľania informácií a
 
 Infografiky sú vizuálne zaujímavým spôsobom, ako prezentovať informácie o vašej firme, produktoch a službách. Infografiky môžu byť použité na zobrazenie štatistík a údajov v atraktívnom a prehľadnom formáte.
 
-![1682431763762](/media/images/content_marketing.format-avif.width-768.avif)
+![1682431763762](/media/images/content_marketing.hd.webp)
 **
 
 ### Podcasty

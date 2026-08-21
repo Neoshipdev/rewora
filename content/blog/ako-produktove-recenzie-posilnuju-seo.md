@@ -4,7 +4,7 @@
 
 **Kategória:** Content marketing
 **Autor a dátum:** David Kucak 2. august 2023
-**Náhľad:** /media/images/seo-g8a8867ac7_1920.format-avif.width-640.avif
+**Náhľad:** /media/images/seo-g8a8867ac7_1920.hd.webp
 
 ## Perex
 

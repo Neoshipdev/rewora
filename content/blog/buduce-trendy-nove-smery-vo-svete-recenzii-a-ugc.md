@@ -4,7 +4,7 @@
 
 **Kategória:** Influencer marketing
 **Autor a dátum:** David Kucak 16. august 2023
-**Náhľad:** /media/images/person-using-ai-tool-job.format-avif.width-640.avif
+**Náhľad:** /media/images/person-using-ai-tool-job.hd.webp
 
 ## Perex
 

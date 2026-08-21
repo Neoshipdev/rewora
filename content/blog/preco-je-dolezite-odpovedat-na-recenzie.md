@@ -4,7 +4,7 @@
 
 **Kategória:** Online shopping
 **Autor a dátum:** David Kucak 4. august 2023
-**Náhľad:** /media/images/3d-render-customer-leave-feedback.format-avif.width-640.avif
+**Náhľad:** /media/images/3d-render-customer-leave-feedback.hd.webp
 
 ## Perex
 

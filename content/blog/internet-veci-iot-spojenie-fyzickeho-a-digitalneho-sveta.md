@@ -4,7 +4,7 @@
 
 **Kategória:** Ai
 **Autor a dátum:** David Kucak 17. august 2023
-**Náhľad:** /media/images/1692273142876b.format-avif.width-640.avif
+**Náhľad:** /media/images/1692273142876b.hd.webp
 
 ## Perex
 

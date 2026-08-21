@@ -4,7 +4,7 @@
 
 **Kategória:** Marketing
 **Autor a dátum:** David Kucak 31. máj 2023
-**Náhľad:** /media/images/personalisation.format-avif.width-640.avif
+**Náhľad:** /media/images/personalisation.hd.webp
 
 ## Perex
 

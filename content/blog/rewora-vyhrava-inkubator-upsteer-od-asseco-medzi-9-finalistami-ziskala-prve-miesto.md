@@ -4,13 +4,13 @@
 
 **Kategória:** Media
 **Autor a dátum:** Andrea Vargová 26. november 2025
-**Náhľad:** /media/images/DSC09129-edit.format-avif.width-640.avif
+**Náhľad:** /media/images/DSC09129-edit.hd.webp
 
 ## Perex
 
 Startup Rewora, ktorý mení spôsob, akým e-shopy pracujú so zákazníckou dôverou, sa stal víťazom inkubačného programu Upsteer by Asseco CE. Po šiestich mesiacoch intenzívnej práce, overovania produktu a rastu v rámci programu získala Rewora prvenstvo spomedzi deviatich finalistov.
 
-![DSC09129-edit](/media/images/DSC09129-edit.format-avif.width-768.avif)
+![DSC09129-edit](/media/images/DSC09129-edit.hd.webp)
 **
 
 Rewora od roku 2023 pomáha e-shopom v celej Európe zvyšovať konverziu a dôveru zákazníkov vďaka moderným nástrojom na zber, správu a využitie recenzií. Platforma umožňuje e-shopom zbierať recenzie v kľúčových momentoch zákazníckej cesty, zobrazovať ich na webe, zlepšiť transparentnosť a ponúka **Business Intelligence, poradňu/fórum, hot spoty, Google Shopping integráciu a automatické preklady**. Produkty s aspoň piatimi recenziami majú až o **270 % vyššiu šancu na predaj**, a práve Rewora pomáha e-shopom túto príležitosť aktívne využívať.

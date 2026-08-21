@@ -4,7 +4,7 @@
 
 **Kategória:** Marketing
 **Autor a dátum:** David Kucak 20. júl 2023
-**Náhľad:** /media/images/Why_is_content_important.format-avif.width-640.avif
+**Náhľad:** /media/images/Why_is_content_important.hd.webp
 
 ## Perex
 

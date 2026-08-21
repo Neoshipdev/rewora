@@ -4,13 +4,13 @@
 
 **Kategória:** Ceny
 **Autor a dátum:** Andrea Vargová 18. november 2025
-**Náhľad:** /media/images/blog-legislativa2x.format-avif.width-640.avif
+**Náhľad:** /media/images/blog-legislativa2x.hd.webp
 
 ## Perex
 
 Zákon o ochrane spotrebiteľa priniesol viacero dôležitých zmien, ktoré sa dotkli nielen spotrebiteľov, ale aj obchodníkov. V tomto článku sa pozrieme na kľúčové zmeny, ktoré by ste mali poznať.
 
-![Zákon o ochrane spotrebiteľa priniesol dôležité zmeny](/media/images/blog-legislativa2x.format-avif.width-768.avif)
+![Zákon o ochrane spotrebiteľa priniesol dôležité zmeny](/media/images/blog-legislativa2x.hd.webp)
 **
 
 ## Predĺženie lehoty na odstúpenie od zmluvy

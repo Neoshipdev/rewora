@@ -4,13 +4,13 @@
 
 **Kategória:** CPC
 **Autor a dátum:** Andrea Vargová 17. január 2025
-**Náhľad:** /media/images/blog-google-shopping2x.format-avif.width-640.avif
+**Náhľad:** /media/images/blog-google-shopping2x.hd.webp
 
 ## Perex
 
 Google Shopping môže byť vysoko efektívnym nástrojom, ktorý vám pomôže rozšíriť vaše podnikanie, najmä ak máte eshop alebo predávate produkty online. V čom Vám pomôže Google Shopping?
 
-![blog-google-shopping@2x](/media/images/blog-google-shopping2x.format-avif.width-768.avif)
+![blog-google-shopping@2x](/media/images/blog-google-shopping2x.hd.webp)
 **
 
 ## **Zvýšená viditeľnosť**

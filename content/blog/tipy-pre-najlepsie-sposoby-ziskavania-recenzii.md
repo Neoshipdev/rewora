@@ -4,7 +4,7 @@
 
 **Kategória:** Seo strategy
 **Autor a dátum:** David Kucak 3. august 2023
-**Náhľad:** /media/images/customer-experience-creative-coll.format-avif.width-640.avif
+**Náhľad:** /media/images/customer-experience-creative-coll.hd.webp
 
 ## Perex
 

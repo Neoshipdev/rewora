@@ -43,7 +43,7 @@
 
   /* layout */
   --content: 2200px;
-  --pad: 46px;
+  --pad: 92px;
   --gutter: max(var(--pad), calc((100vw - var(--content)) / 2));
 
   --shadow-card: 0 18px 44px rgba(16, 24, 40, 0.1);
@@ -1961,7 +1961,7 @@ svg {
    ========================================================= */
 @media (max-width: 1279px) {
   :root {
-    --pad: 37px;
+    --pad: 74px;
   }
   .hero h1 {
     font-size: 49.4px;
@@ -2097,7 +2097,7 @@ svg {
 
 @media (max-width: 639px) {
   :root {
-    --pad: 23px;
+    --pad: 32px;
   }
   .hero h1 {
     font-size: 34.2px;
