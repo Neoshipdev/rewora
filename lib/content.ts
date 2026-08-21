@@ -405,7 +405,7 @@ export const partner = {
  */
 export const about = {
   eyebrow: 'O nás',
-  title: 'Zo Slovenska meníme, ako e-shopy pracujú s dôverou',
+  title: 'Meníme spôsob, akým e-shopy pracujú s dôverou',
   lead: 'Rewora je slovenská SaaS platforma pre zákaznícku skúsenosť. Začali sme pilotmi, dnes ovplyvňujeme tržby desiatok e-shopov na Slovensku a v Česku — a to je len začiatok.',
   heroImage: {
     src: '/images/media/rewora-reviews-that-matter-44.format-webp.width-1200.webp',
