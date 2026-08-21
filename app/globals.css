@@ -624,9 +624,9 @@ svg {
   position: relative;
   background: var(--grid-placeholder);
 }
-/* pri reálnej fotke nepotrebujeme pruhovaný placeholder na pozadí */
+/* pri reálnej fotke nepotrebujeme žiadne pozadie — fotka vypĺňa celý blok */
 .hotspot-stage--photo {
-  background: var(--surface-100);
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
