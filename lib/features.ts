@@ -64,8 +64,6 @@ export const features: Feature[] = [
   {
     num: '02',
     name: 'Foto a video recenzie',
-    short:
-      'Fotky a krátke videá od zákazníkov priamo pri produkte — najsilnejší druh sociálneho dôkazu.',
     long: 'Text presvedčí, obraz presvedčí rýchlejšie. Zákazník na vlastné oči vidí, ako produkt vyzerá v reálnom používaní, nie na ateliérovej fotografii. Obsah od zákazníkov zároveň zdarma dopĺňa vašu produktovú galériu.',
     items: [
       {
@@ -88,8 +86,6 @@ export const features: Feature[] = [
   {
     num: '03',
     name: 'Hviezdičky v Google Shopping',
-    short:
-      'Hodnotenia sa prenášajú do Googlu a vaša karta vo výsledkoch vyhľadávania vyčnieva.',
     long: 'Recenzie zozbierané Reworou automaticky posielame do Google Merchant Center. Vaše produkty sa vo vyhľadávaní zobrazia s hviezdičkami a počtom hodnotení — na rozdiel od kariet konkurencie, ktoré ostávajú bez nich.',
     items: [
       {
@@ -112,8 +108,6 @@ export const features: Feature[] = [
   {
     num: '04',
     name: 'Poradňa a fórum',
-    short:
-      'Otázky ku produktom, diskusné fórum a odborné odpovede. Odpoviete raz, použijete stokrát.',
     long: 'Poskytnite zákazníkom platformu pre otázky a odpovede. Využite obsah generovaný používateľmi a získajte spätnú väzbu od zákazníkov. Dokážete takto ušetriť zdroje oddelenia podpory.',
     items: [
       {
@@ -137,8 +131,6 @@ export const features: Feature[] = [
   {
     num: '05',
     name: 'Hotspots',
-    short:
-      'Označte produkty v obrázku, lookbooku či PDF katalógu — a zmeňte inšpiráciu na nákup.',
     long: 'Umožnite nakupovanie produktov priamo z obrázkov na iných miestach webu. Pomocou nástroja Hotspots viete jednoducho označiť produkty na požadovanom mieste v akomkoľvek obrázku na webe.',
     items: [
       {
