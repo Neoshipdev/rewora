@@ -4521,3 +4521,11 @@ svg {
     max-width: calc(var(--content));
   }
 }
+
+/* Hviezda s fotografiou stojí vedľa textu — pri užšom okne by mu liezla
+   do riadkov, tak ju schováme. */
+@media (max-width: 1399px) {
+  .hero__photo {
+    display: none;
+  }
+}
