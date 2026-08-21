@@ -99,3 +99,8 @@ export const caseAssets: Record<string, { logo: string; cover: string; alt: stri
 };
 
 export const ogImage = `${S}/rewora-og-image.fc95944d3928.jpg`;
+
+/** Fotografie autorov článkov — zobrazujú sa pri mene v hlavičke článku. */
+export const authorPhotos: Record<string, string> = {
+  'Andrea Vargová': '/images/andrea-vargova.png',
+};

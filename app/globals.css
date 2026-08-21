@@ -4529,3 +4529,17 @@ svg {
     display: none;
   }
 }
+
+/* Autor článku s fotografiou */
+.page-hero__author {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.page-hero__avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}

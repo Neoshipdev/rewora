@@ -4,6 +4,7 @@ import CtaBand from '@/components/CtaBand';
 import PageHero from '@/components/PageHero';
 import SiteFooter from '@/components/SiteFooter';
 import TopBar from '@/components/TopBar';
+import { authorPhotos } from '@/lib/assets';
 import { listSlugs, readDoc } from '@/lib/markdown';
 
 type Props = { params: { slug: string } };
@@ -43,7 +44,15 @@ export default async function BlogArticlePage({ params }: Props) {
         back={{ label: 'Späť na blog', href: '/sk/blog/' }}
       >
         <div className="page-hero__meta">
-          {doc.author && <span>{doc.author}</span>}
+          {doc.author && (
+            <span className="page-hero__author">
+              {authorPhotos[doc.author] && (
+                /* eslint-disable-next-line @next/next/no-img-element */
+                <img className="page-hero__avatar" src={authorPhotos[doc.author]} alt="" />
+              )}
+              {doc.author}
+            </span>
+          )}
           {doc.date && <span>{doc.date}</span>}
         </div>
       </PageHero>
