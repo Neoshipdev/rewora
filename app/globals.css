@@ -3304,17 +3304,17 @@ svg {
   position: relative;
   /* dráha = prilepenie (140 px) + výška scény (300 px) + samotná animácia,
      aby pod kartami nezostával dlhý prázdny pás */
-  height: 860px;
+  height: 910px;
 }
 .cases__stage {
   position: sticky;
   top: 140px;
-  height: 300px;
+  height: 348px;
 }
 .case-card {
   position: absolute;
   inset: 0 0 auto 0;
-  min-height: 236px;
+  min-height: 284px;
   border: 1px solid rgba(255, 87, 13, 0.25);
   border-radius: var(--radius-lg);
   padding: 26px 28px;
@@ -3692,16 +3692,6 @@ svg {
 .about__roles b {
   color: var(--orange-600);
   font-family: var(--font-space-grotesk), sans-serif;
-}
-.about__future {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  margin-top: 24px;
-  max-width: 820px;
-  font-size: 17px;
-  line-height: 1.7;
-  color: var(--nav-text);
 }
 
 @media (max-width: 1023px) {
@@ -4540,8 +4530,10 @@ svg {
 }
 .case-card__shot {
   align-self: flex-end;
-  width: 150px;
-  height: calc(100% + 10px);
+  width: 168px;
+  /* pod fotkou necháme priestor, nech nedosadá na okraj karty */
+  height: calc(100% - 34px);
+  margin-bottom: 26px;
   object-fit: contain;
   object-position: bottom center;
   flex: none;

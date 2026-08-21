@@ -458,13 +458,6 @@ export const about = {
       caption: '1. miesto v inkubačnom programe Upsteer by Asseco CE (2025)',
     },
   },
-  future: {
-    title: 'Kam smerujeme',
-    paragraphs: [
-      'Pracujeme na TrustGraph™ — technológii, ktorá z reálneho správania zákazníkov vytvára personalizované odporúčania. Každý návštevník uvidí obsah zoradený podľa svojich preferencií a nákupnej histórie, podobne ako to poznáte zo streamovacích služieb.',
-      'Rozširujeme pluginy pre e-commerce platformy, prehlbujeme viacjazyčnosť pre expanziu do zahraničia a staviame komunitu, ktorá e-shopom prináša organickú návštevnosť a prirodzený rast predaja cez odporúčania.',
-    ],
-  },
   cta: {
     title: 'Chcete vedieť viac?',
     text: 'Radi vám ukážeme, ako Rewora funguje na vašom e-shope.',

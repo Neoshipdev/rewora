@@ -114,20 +114,6 @@ export default function ONasPage() {
         </div>
       </section>
 
-      <section className="section admin-section">
-        <div className="container">
-          <span className="eyebrow">Roadmapa</span>
-          <h2 className="h2" style={{ maxWidth: 760, marginTop: 8 }}>
-            {about.future.title}
-          </h2>
-          <div className="about__future">
-            {about.future.paragraphs.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="section">
         <div className="container partner__contact">
           {/* eslint-disable-next-line @next/next/no-img-element */}

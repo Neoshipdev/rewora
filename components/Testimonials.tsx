@@ -5,7 +5,7 @@ import { testimonials, testimonialsCta, testimonialsIntro } from '@/lib/content'
 
 /** Odsadenie kariet v balíčku a posun pri odchode zo scény. */
 const PEEK = 16;
-const EXIT = 130;
+const EXIT = 200;
 
 /**
  * Referencie — vľavo text, vpravo balíček kariet prípadových štúdií.
@@ -76,7 +76,7 @@ export default function Testimonials() {
             const shift = PEEK * (count - 1 - behind) + EXIT * leaving;
             const scale = 1 - 0.03 * behind - 0.03 * leaving;
             /* karty v balíčku zostávajú viditeľné, mizne len tá odchádzajúca */
-            const opacity = 1 - Math.min(1, leaving / 0.45);
+            const opacity = 1 - Math.min(1, leaving / 0.35);
 
             return (
               <article
