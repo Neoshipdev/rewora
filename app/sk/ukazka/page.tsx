@@ -47,7 +47,29 @@ export default function UkazkaPage() {
 
       <section className="section">
         <div className="container demo-split">
-          <DemoForm />
+          <div className="demo-split__form">
+            <DemoForm />
+
+            <div className="demo-steps">
+              <span className="eyebrow" style={{ color: 'var(--orange-500)' }}>
+                Ako to funguje
+              </span>
+              <h2 className="h2 demo-steps__title">Štyri kroky k ukážke na mieru</h2>
+              <div className="demo-steps__grid">
+                {steps.map((step) => (
+                  <div key={step.num} className="integration">
+                    <span className="integration__num">{step.num}</span>
+                    <h3 className="integration__name">{step.title}</h3>
+                    <p className="integration__text">{step.text}</p>
+                  </div>
+                ))}
+              </div>
+          <p className="faq__note">
+            Ukážka je nezáväzná a vytvára sa len zo verejne dostupných stránok vášho e-shopu.
+            Chcete ju rovno nasadiť? Napíšte nám na <a href="mailto:info@rewora.com">info@rewora.com</a>.
+          </p>
+            </div>
+          </div>
           {/* reálne nasadenie u zákazníka — vedľa generátora ukazuje výsledok */}
           <figure className="demo-sample">
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -57,30 +79,6 @@ export default function UkazkaPage() {
               produktu e-shopu Panta Rhei.
             </figcaption>
           </figure>
-        </div>
-      </section>
-
-      <section className="section" style={{ paddingTop: 0 }}>
-        <div className="container">
-          <span className="eyebrow" style={{ color: 'var(--orange-500)' }}>
-            Ako to funguje
-          </span>
-          <h2 className="h2" style={{ maxWidth: 720, marginTop: 8 }}>
-            Štyri kroky k ukážke na mieru
-          </h2>
-          <div className="integrations__grid" style={{ gridTemplateColumns: 'repeat(4, 1fr)' }}>
-            {steps.map((step) => (
-              <div key={step.num} className="integration">
-                <span className="integration__num">{step.num}</span>
-                <h3 className="integration__name">{step.title}</h3>
-                <p className="integration__text">{step.text}</p>
-              </div>
-            ))}
-          </div>
-          <p className="faq__note">
-            Ukážka je nezáväzná a vytvára sa len zo verejne dostupných stránok vášho e-shopu.
-            Chcete ju rovno nasadiť? Napíšte nám na <a href="mailto:info@rewora.com">info@rewora.com</a>.
-          </p>
         </div>
       </section>
 

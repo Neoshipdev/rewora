@@ -4816,3 +4816,28 @@ svg {
     gap: 28px;
   }
 }
+
+/* Kroky generátora ležia pod formulárom, vedľa snímky nasadenia */
+.demo-split__form {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+.demo-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.demo-steps__title {
+  margin-bottom: 10px;
+}
+.demo-steps__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+}
+@media (max-width: 640px) {
+  .demo-steps__grid {
+    grid-template-columns: 1fr;
+  }
+}
