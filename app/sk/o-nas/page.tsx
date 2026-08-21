@@ -81,29 +81,35 @@ export default function ONasPage() {
       </section>
 
       <section className="section about-trust">
-        <div className="container">
-          <span className="eyebrow" style={{ color: 'var(--orange-500)' }}>
-            {about.trust.eyebrow}
-          </span>
-          <h2 className="h2" style={{ maxWidth: 760, marginTop: 8 }}>
-            {about.trust.title}
-          </h2>
-          <div className="about__text about-trust__text">
-            {about.trust.paragraphs.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
-            ))}
+        <div className="container about-trust__grid">
+          <div>
+            <span className="eyebrow" style={{ color: 'var(--orange-500)' }}>
+              {about.trust.eyebrow}
+            </span>
+            <h2 className="h2" style={{ maxWidth: 620, marginTop: 8 }}>
+              {about.trust.title}
+            </h2>
+            <div className="about__text about-trust__text">
+              {about.trust.paragraphs.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+            </div>
           </div>
-          <ol className="trust-flow">
+
+          {/* kolobeh: každý krok posúva zákazníka k ďalšiemu nákupu */}
+          <ol className="cycle">
             {about.trust.flow.map((krok, i) => (
               <li
                 key={krok}
-                className={`trust-flow__step ${
-                  i === about.trust.flow.length - 1 ? 'trust-flow__step--end' : ''
-                }`}
+                className={`cycle__step ${i === about.trust.flow.length - 1 ? 'cycle__step--end' : ''}`}
               >
-                {krok}
+                <span className="cycle__num">{i + 1}</span>
+                <span className="cycle__label">{krok}</span>
               </li>
             ))}
+            <li className="cycle__loop">
+              <span aria-hidden>↻</span> a kolobeh sa opakuje
+            </li>
           </ol>
         </div>
       </section>
