@@ -452,19 +452,11 @@ export const about = {
       'Dnes Rewora pomáha e-shopom pracovať s dôverou zákazníkov na viac ako 100 doménach a naše ambície siahajú ďaleko za hranice Slovenska.',
       'V roku 2025 sme získali 1. miesto v inkubačnom programe Upsteer by Asseco CE. Vnímame to ako potvrdenie, že problém, ktorý riešime, je reálny — a že spôsob, akým zákazníci nakupujú online, sa dá robiť lepšie.',
     ],
-    disciplines: ['Technológie', 'E-commerce', 'Obchod', 'Marketing'],
     photo: {
       src: '/images/onas.png',
       alt: 'Tím Rewora s výhrou v inkubačnom programe Upsteer by Asseco CE',
       caption: '1. miesto v inkubačnom programe Upsteer by Asseco CE (2025)',
     },
-    roles: [
-      { count: '2', role: 'programátori' },
-      { count: '3', role: 'obchodníci' },
-      { count: '1', role: 'produktový vlastník' },
-      { count: '1', role: 'dizajn a marketing' },
-      { count: '1', role: 'technická podpora' },
-    ],
   },
   future: {
     title: 'Kam smerujeme',
