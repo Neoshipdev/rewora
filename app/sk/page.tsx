@@ -221,7 +221,7 @@ export default function Home() {
       </section>
 
       {/* Referencie */}
-      <section className="container" style={{ paddingBottom: 40 }}>
+      <section className="container" style={{ paddingBottom: 24 }}>
         <Testimonials />
       </section>
 

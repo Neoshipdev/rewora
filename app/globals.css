@@ -3304,12 +3304,12 @@ svg {
   position: relative;
   /* dráha = prilepenie (140 px) + výška scény (300 px) + samotná animácia,
      aby pod kartami nezostával dlhý prázdny pás */
-  height: 910px;
+  height: 640px;
 }
 .cases__stage {
   position: sticky;
-  top: 140px;
-  height: 348px;
+  top: 120px;
+  height: 320px;
 }
 .case-card {
   position: absolute;
