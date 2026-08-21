@@ -70,7 +70,7 @@ export default function UkazkaPage() {
           </div>
           <p className="faq__note">
             Ukážka je nezáväzná a vytvára sa len zo verejne dostupných stránok vášho e-shopu.
-            Chcete ju rovno nasadiť? Napíšte nám na <a href="mailto:info@rewora.io">info@rewora.io</a>.
+            Chcete ju rovno nasadiť? Napíšte nám na <a href="mailto:info@rewora.com">info@rewora.com</a>.
           </p>
         </div>
       </section>

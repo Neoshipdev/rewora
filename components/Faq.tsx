@@ -81,7 +81,7 @@ export default function Faq() {
 
         <p className="faq__note">
           Nenašli ste odpoveď na svoju otázku? Napíšte nám na{' '}
-          <a href="mailto:info@rewora.io">info@rewora.io</a>.
+          <a href="mailto:info@rewora.com">info@rewora.com</a>.
         </p>
       </div>
     </section>

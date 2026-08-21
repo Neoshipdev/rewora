@@ -371,7 +371,7 @@ export function buildDeckHtml(capture: Capture): string {
       Bezplatný balík je k dispozícii navždy.</p>
       <div class="cta__row">
         <span class="cta__btn">rewora.com/sk/cennik</span>
-        <span class="cta__mail">info@rewora.io</span>
+        <span class="cta__mail">info@rewora.com</span>
       </div>
     </section>`,
   ];

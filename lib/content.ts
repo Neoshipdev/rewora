@@ -485,7 +485,7 @@ export const contact = {
   },
   general: {
     title: 'Všeobecné otázky a podpora',
-    email: 'info@rewora.io',
+    email: 'info@rewora.com',
   },
   company: {
     title: 'Fakturačné údaje',

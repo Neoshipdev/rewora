@@ -261,4 +261,4 @@ export const integrationsIntro =
 
 /** FAQ intro z pôvodného webu. */
 export const faqIntro =
-  'V tejto sekcii nájdete odpovede na najčastejšie kladené otázky. Zoznam otázok je neustále doplňovaný. V prípade, že ste nenašli odpoveď na vašu otázku, neváhajte nás kontaktovať prostredníctvom emailu info@rewora.io.';
+  'V tejto sekcii nájdete odpovede na najčastejšie kladené otázky. Zoznam otázok je neustále doplňovaný. V prípade, že ste nenašli odpoveď na vašu otázku, neváhajte nás kontaktovať prostredníctvom emailu info@rewora.com.';
