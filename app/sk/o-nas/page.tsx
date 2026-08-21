@@ -27,19 +27,17 @@ export default function ONasPage() {
       />
 
       <section className="section">
-        <div className="container about__story">
-          <h2 className="h2">{about.team.title}</h2>
-          <div className="about__text about__team">
-            <div>
-              {about.team.paragraphs.map((paragraph) => (
-                <p key={paragraph}>{paragraph}</p>
-              ))}
-            </div>
-            <figure className="about__photo">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={about.team.photo.src} alt={about.team.photo.alt} />
-              <figcaption>{about.team.photo.caption}</figcaption>
-            </figure>
+        <div className="container about__team">
+          <figure className="about__photo">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={about.team.photo.src} alt={about.team.photo.alt} />
+            <figcaption>{about.team.photo.caption}</figcaption>
+          </figure>
+          <div className="about__team-copy">
+            <h2 className="h2">{about.team.title}</h2>
+            {about.team.paragraphs.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
           </div>
         </div>
       </section>

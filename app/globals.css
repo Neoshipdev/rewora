@@ -4522,12 +4522,20 @@ svg {
   border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
-/* O nás — text tímu a fotografia vedľa seba */
+/* O nás — vľavo fotografia tímu, vpravo nadpis a text pod ním */
 .about__team {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 0.8fr);
-  gap: 40px;
+  grid-template-columns: minmax(0, 0.75fr) minmax(0, 1fr);
+  gap: 48px;
   align-items: start;
+}
+.about__team-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--ink-600);
 }
 .about__photo {
   margin: 0;
