@@ -5,11 +5,12 @@
 
 export const featuresIntro = {
   eyebrow: 'Nástroje',
-  title: 'Sedem widgetov, ktoré presvedčia aj náročného zákazníka',
+  title: 'Osem widgetov, ktoré presvedčia aj náročného zákazníka',
   lead: 'S Reworou získate pokročilé nástroje, ktoré vám pomôžu budovať dôveru vašej značky. Či už vlastníte e-shop alebo je váš biznis zameraný iným smerom, Rewora pomôže aj vám.',
 };
 
 export type SubfeatureIcon =
+  | 'sparkles'
   | 'search'
   | 'share'
   | 'return'
@@ -130,6 +131,28 @@ export const features: Feature[] = [
   },
   {
     num: '05',
+    name: 'AI zhrnutie recenzií',
+    long: 'Zhrnutie vytiahne z všetkých recenzií produktu to podstatné — čo zákazníci chvália a čo im prekáža. Zákazník tak získa rýchly prehľad o produkte bez toho, aby musel prečítať desiatky hodnotení.',
+    items: [
+      {
+        title: 'Súhrn pozitív a negatív produktu',
+        icon: 'sparkles',
+        text: 'AI prejde všetky recenzie produktu a vypichne opakujúce sa klady aj výhrady. S každou novou recenziou sa zhrnutie prepíše, takže je stále aktuálne.',
+      },
+      {
+        title: 'Automatizované odpovede na recenzie',
+        icon: 'chat',
+        text: 'Na hodnotenie odpovie AI v tóne vášho e-shopu, vy odpoveď už len schválite. Zákazník dostane reakciu hneď a vy ušetríte čas podpory.',
+      },
+      {
+        title: 'Rýchlejšie rozhodnutie o nákupe',
+        icon: 'trending',
+        text: 'Zákazník vidí prehľad na pár riadkov namiesto dlhého zoznamu recenzií, takže sa rozhodne rýchlejšie a menej často odchádza inam.',
+      },
+    ],
+  },
+  {
+    num: '06',
     name: 'Hotspots',
     long: 'Umožnite nakupovanie produktov priamo z obrázkov na iných miestach webu. Pomocou nástroja Hotspots viete jednoducho označiť produkty na požadovanom mieste v akomkoľvek obrázku na webe.',
     items: [
@@ -151,7 +174,7 @@ export const features: Feature[] = [
     ],
   },
   {
-    num: '06',
+    num: '07',
     name: 'Business Intelligence',
     long: 'Predajnosť, reklamovanosť, či vratkovosť? Aj takéto informácie dokážu zákazníka presvedčiť o nákupe. Pomocou nástroja BI dáta zobrazte prehľadné štatistiky a základné informácie o produkte na jednom mieste.',
     items: [
@@ -173,7 +196,7 @@ export const features: Feature[] = [
     ],
   },
   {
-    num: '07',
+    num: '08',
     name: 'Inteligentné vyhľadávanie',
     long: 'Inteligentné vyhľadávanie produktov na e-shope, aby zákazník našiel vždy to, čo hľadá — aj keď nevie presne, čo chce. Stačí mu farba, konkrétna požiadavka alebo len niečo, čo si z produktu pamätá.',
     items: [

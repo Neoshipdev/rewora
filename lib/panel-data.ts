@@ -317,3 +317,28 @@ export const smartSearch = {
   ],
   hint: 'Skúste aj „niečo pohodlné na dovolenku k moru“.',
 };
+
+/** AI súhrn recenzií — čo zákazníci chvália a čo im prekáža. */
+export const aiSummary = {
+  title: 'Zhrnutie recenzií',
+  badge: 'Zosumarizované pomocou AI',
+  text: 'Zákazníci najviac chvália výdrž batérie a ostré fotografie aj po zotmení. Časť z nich upozorňuje na vyššiu cenu oproti konkurencii a zahrievanie pri hraní. Väčšina by telefón odporučila ďalej.',
+  pros: {
+    title: 'Zákazníci oceňujú',
+    items: [
+      'Batéria vydrží aj náročný deň s navigáciou a fotením.',
+      'Fotky zo zoomu sú ostré aj pri slabom svetle.',
+      'Rýchle dodanie a starostlivé balenie.',
+    ],
+  },
+  cons: {
+    title: 'Zákazníci vytýkajú',
+    items: [
+      'Vyššia cena oproti porovnateľným modelom.',
+      'Pri dlhšom hraní sa telefón zahrieva.',
+      'V balení chýba nabíjací adaptér.',
+    ],
+  },
+  foot: 'Pomohlo vám zhrnutie?',
+  count: 'z 25 recenzií',
+};

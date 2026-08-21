@@ -238,7 +238,17 @@ export function SearchIcon({ size = 30 }: Props) {
   );
 }
 
+export function SparklesIcon({ size = 30 }: Props) {
+  return (
+    <svg {...base(size)}>
+      <path d="M12 3.5 13.6 8.4 18.5 10 13.6 11.6 12 16.5 10.4 11.6 5.5 10 10.4 8.4z" />
+      <path d="M18 15.5 18.7 17.3 20.5 18 18.7 18.7 18 20.5 17.3 18.7 15.5 18 17.3 17.3z" />
+    </svg>
+  );
+}
+
 export const subfeatureIcons = {
+  sparkles: SparklesIcon,
   search: SearchIcon,
   share: ShareIcon,
   return: ReturnIcon,

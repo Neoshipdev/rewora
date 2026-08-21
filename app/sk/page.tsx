@@ -6,6 +6,7 @@ export const metadata: Metadata = {
 
 import AdminPanel from '@/components/AdminPanel';
 import AdminTabs from '@/components/AdminTabs';
+import AiSummary from '@/components/AiSummary';
 import BiCard from '@/components/BiCard';
 import CtaBand from '@/components/CtaBand';
 import Faq from '@/components/Faq';
@@ -40,43 +41,43 @@ function Zvyraznene({ text, cast }: { text: string; cast?: string }) {
 }
 
 /** Ukážka vpravo v riadku nástroja — podľa dizajnu 1c. */
-function ToolDemo({ index }: { index: number }) {
-  if (index === 0) {
+function ToolDemo({ num }: { num: string }) {
+  if (num === '01') {
     return (
       <div className="tool-row__demo demo demo--widget">
         <ReviewsWidget />
       </div>
     );
   }
-  if (index === 1) {
+  if (num === '02') {
     return (
       <div className="tool-row__demo demo demo--widget">
         <VideoReviews />
       </div>
     );
   }
-  if (index === 2) {
+  if (num === '03') {
     return (
       <div className="tool-row__demo demo demo--widget">
         <GoogleShopping />
       </div>
     );
   }
-  if (index === 3) {
+  if (num === '04') {
     return (
       <div className="tool-row__demo demo demo--thread">
         <ForumThread showStrip={false} />
       </div>
     );
   }
-  if (index === 6) {
+  if (num === '05') {
     return (
       <div className="tool-row__demo demo demo--widget">
-        <SmartSearch />
+        <AiSummary />
       </div>
     );
   }
-  if (index === 4) {
+  if (num === '06') {
     return (
       <div className="tool-row__demo">
         <HotspotStage
@@ -90,6 +91,13 @@ function ToolDemo({ index }: { index: number }) {
           bubble={hotspots.bubble}
           bubbleWidth={210}
         />
+      </div>
+    );
+  }
+  if (num === '08') {
+    return (
+      <div className="tool-row__demo demo demo--widget">
+        <SmartSearch />
       </div>
     );
   }
@@ -182,7 +190,7 @@ export default function Home() {
             </p>
           </div>
 
-          {features.map((feature, i) => (
+          {features.map((feature) => (
             <div className="tool-row" key={feature.num}>
               <span className="tool-row__num">{feature.num}</span>
               <div className="tool-row__copy">
@@ -190,7 +198,7 @@ export default function Home() {
                 {feature.short && <p className="tool-row__text">{feature.short}</p>}
                 <p className="tool-row__long">{feature.long}</p>
               </div>
-              <ToolDemo index={i} />
+              <ToolDemo num={feature.num} />
               <div className={`subfeatures subfeatures--${feature.items.length}`}>
                 {feature.items.map((item) => {
                   const Icon = subfeatureIcons[item.icon];
