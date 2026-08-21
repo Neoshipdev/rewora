@@ -4543,3 +4543,63 @@ svg {
   object-fit: cover;
   border: 1px solid rgba(255, 255, 255, 0.25);
 }
+
+/* O nás — text tímu a fotografia vedľa seba */
+.about__team {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.8fr);
+  gap: 40px;
+  align-items: start;
+}
+.about__photo {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.about__photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-lg);
+}
+.about__photo figcaption {
+  font-size: 13px;
+  color: var(--ink-400);
+}
+@media (max-width: 900px) {
+  .about__team {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+/* Karta prípadovej štúdie s ukážkou e-shopu vpravo */
+.case-card {
+  flex-direction: row;
+  align-items: stretch;
+  gap: 24px;
+  overflow: hidden;
+  padding-bottom: 0;
+}
+.case-card__body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-bottom: 26px;
+}
+.case-card__shot {
+  align-self: flex-end;
+  width: 150px;
+  height: calc(100% + 10px);
+  object-fit: contain;
+  object-position: bottom center;
+  flex: none;
+}
+@media (max-width: 900px) {
+  .case-card__shot {
+    display: none;
+  }
+}

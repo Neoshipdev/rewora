@@ -93,6 +93,7 @@ export default function Testimonials() {
                     : undefined
                 }
               >
+                <div className="case-card__body">
                 <div className="case-card__head">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img className="case-card__logo" src={item.logo} alt={item.company} />
@@ -113,6 +114,9 @@ export default function Testimonials() {
                     {testimonialsCta} →
                   </a>
                 </div>
+                </div>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img className="case-card__shot" src={item.shot} alt={`Rewora na e-shope ${item.company}`} />
               </article>
             );
           })}
