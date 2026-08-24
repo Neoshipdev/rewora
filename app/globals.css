@@ -2014,7 +2014,7 @@ svg {
     border-bottom-color: var(--orange-500);
   }
   .tool-row {
-    grid-template-columns: 48px 1fr;
+    grid-template-columns: 48px minmax(0, 1fr);
     gap: 20px 24px;
   }
   .tool-row__demo {
@@ -2164,10 +2164,26 @@ svg {
     font-size: 17.1px;
   }
   .tool-row {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
-  .tool-row__demo {
+  /* v jednom stĺpci musia ísť všetky časti pod seba, inak sa prekryjú */
+  .tool-row__num,
+  .tool-row__copy,
+  .tool-row__demo,
+  .subfeatures,
+  .subfeatures--2,
+  .subfeatures--3 {
     grid-column: 1 / -1;
+  }
+  .subfeatures,
+  .subfeatures--2,
+  .subfeatures--3 {
+    grid-template-columns: 1fr;
+    margin-top: 8px;
+  }
+  .tool-row__num {
+    width: auto;
+    margin-bottom: -6px;
   }
   .cta__inner {
     flex-direction: column;
@@ -4294,6 +4310,13 @@ svg {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+@media (max-width: 639px) {
+  /* na telefóne jeden stĺpec — dva by stránku roztiahli do šírky */
+  .integrations__grid,
+  .demo-steps__grid {
+    grid-template-columns: 1fr;
+  }
+}
 
 /* Prehľad v administrátorskom paneli — živý dashboard namiesto screenshotu */
 .admin-tabs__dash {
@@ -4838,6 +4861,54 @@ svg {
 }
 @media (max-width: 640px) {
   .demo-steps__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Na úzkych displejoch nesmie žiadna ukážka roztiahnuť stránku — mriežkové
+   položky sa inak nezmestia pod svoj obsah a prehliadač zmenší celý web. */
+@media (max-width: 1023px) {
+  .tool-row > *,
+  .tool-row__demo,
+  .tool-row__copy,
+  .subfeature {
+    min-width: 0;
+  }
+  /* širšie widgety sa posúvajú vo vlastnom rámčeku, nie celou stránkou */
+  .tool-row__demo {
+    overflow-x: auto;
+  }
+  .vrev__row,
+  .g__row,
+  .qat,
+  .ssearch__results {
+    overflow-x: auto;
+  }
+}
+
+/* Prilepené záložky panela sa musia dať posúvať vo vlastnom páse. */
+@media (max-width: 1023px) {
+  .panel,
+  .panel__body,
+  .panel__nav,
+  .panel__content,
+  .panel__stack {
+    min-width: 0;
+  }
+  .vrev,
+  .vrev__head,
+  .vrev__row {
+    min-width: 0;
+  }
+  .vrev__head {
+    flex-wrap: wrap;
+    row-gap: 6px;
+  }
+}
+
+@media (max-width: 639px) {
+  /* widget recenzií má na telefóne jeden stĺpec — dva by pretiekli cez okraj */
+  .wdg__columns {
     grid-template-columns: 1fr;
   }
 }
