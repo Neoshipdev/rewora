@@ -412,8 +412,8 @@ export const about = {
   title: 'Meníme spôsob, akým e-shopy pracujú s dôverou',
   lead: 'Rewora je slovenská SaaS platforma pre zákaznícku skúsenosť. Začali sme pilotmi, dnes ovplyvňujeme tržby desiatok e-shopov na Slovensku a v Česku — a to je len začiatok.',
   heroImage: {
-    src: '/images/media/rewora-reviews-that-matter-44.format-webp.width-1200.webp',
-    alt: 'Recenzie s fotografiami produktov na e-shope',
+    src: '/images/recenzieklienti.webp',
+    alt: 'Widgety Rewory s hodnoteniami na produktoch klientov',
   },
   facts: [
     { value: '2023', label: 'na trhu od roku' },
