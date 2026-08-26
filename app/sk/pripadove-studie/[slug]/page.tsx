@@ -49,10 +49,6 @@ export default async function CaseStudyPage({ params }: Props) {
       <section className="section">
         <div className="container article">
           <div>
-            {assets && (
-              /* eslint-disable-next-line @next/next/no-img-element */
-              <img className="article__cover" src={assets.cover} alt={assets.alt} />
-            )}
             {doc.perex && <p className="article__perex">{doc.perex}</p>}
             <div className="prose" dangerouslySetInnerHTML={{ __html: doc.html }} />
           </div>

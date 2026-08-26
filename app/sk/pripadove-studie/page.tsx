@@ -77,10 +77,6 @@ export default async function CaseStudiesPage() {
                 </a>
               </div>
               <div>
-                <a href={`/sk/pripadove-studie/${study.slug}/`}>
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img className="case-row__cover" src={study.cover} alt={study.alt} loading="lazy" />
-                </a>
                 <div className="case-row__metrics">
                   {study.metrics.map((metric) => (
                     <div className="case-row__metric" key={metric.label}>
