@@ -2,7 +2,15 @@
 
 import { useEffect, useRef, useState } from 'react';
 import BiCard from '@/components/BiCard';
-import { bi, hotspots, overview, panelTabs, qa, reviews, type PanelKey } from '@/lib/panel-data';
+import type { Lang } from '@/lib/i18n';
+import {
+  bi as biData,
+  hotspots as hotspotsData,
+  panelTabs as panelTabsData,
+  reviews as reviewsData,
+  type PanelKey,
+} from '@/lib/panel-data';
+import { createT, tDeep } from '@/lib/t';
 import { hotspotVisual } from '@/lib/assets';
 import ForumThread from './ForumThread';
 import GoogleShopping from './GoogleShopping';
@@ -13,9 +21,11 @@ import { PlusIcon } from './icons';
 import HotspotStage from './HotspotStage';
 import Stars from './Stars';
 
-const keys = panelTabs.map((t) => t.key);
+const keys = panelTabsData.map((t) => t.key);
 
-export default function AdminPanel() {
+export default function AdminPanel({ lang = 'sk' }: { lang?: Lang }) {
+  const t = createT(lang);
+  const panelTabs = tDeep(panelTabsData, lang);
   const [tab, setTab] = useState<PanelKey>('widget');
   const tabRefs = useRef<(HTMLButtonElement | null)[]>([]);
 
@@ -60,7 +70,7 @@ export default function AdminPanel() {
           className="panel__nav"
           role="tablist"
           aria-orientation="vertical"
-          aria-label="Nástroje v administrátorskom panely"
+          aria-label={t('Nástroje v administrátorskom panely')}
           onKeyDown={onKeyDown}
         >
           {panelTabs.map((item, i) => (
@@ -90,29 +100,29 @@ export default function AdminPanel() {
           aria-labelledby={`panel-tab-${tab}`}
           tabIndex={0}
         >
-          {tab === 'overview' && <Overview />}
+          {tab === 'overview' && <Overview lang={lang} />}
           {tab === 'widget' && (
             <div className="panel__stack" style={{ gap: 10 }}>
-              <ReviewsWidget />
+              <ReviewsWidget lang={lang} />
             </div>
           )}
           {tab === 'shop' && (
             <div className="panel__stack" style={{ gap: 10 }}>
-              <ShopReviews />
+              <ShopReviews lang={lang} />
             </div>
           )}
           {tab === 'gshop' && (
             <div className="panel__stack" style={{ gap: 10 }}>
-              <GoogleShopping />
+              <GoogleShopping lang={lang} />
             </div>
           )}
-          {tab === 'reviews' && <Reviews />}
-          {tab === 'qa' && <ForumThread />}
-          {tab === 'hotspots' && <Hotspots />}
-          {tab === 'bi' && <Bi />}
+          {tab === 'reviews' && <Reviews lang={lang} />}
+          {tab === 'qa' && <ForumThread lang={lang} />}
+          {tab === 'hotspots' && <Hotspots lang={lang} />}
+          {tab === 'bi' && <Bi lang={lang} />}
 
           <span className="panel__credit">
-            Vytvorené pomocou
+            {t('Vytvorené pomocou')}
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img className="panel__credit-logo" src="/images/logo-rewora.svg" alt="Rewora" />
           </span>
@@ -122,7 +132,9 @@ export default function AdminPanel() {
   );
 }
 
-function Reviews() {
+function Reviews({ lang }: { lang: Lang }) {
+  const t = createT(lang);
+  const reviews = tDeep(reviewsData, lang);
   return (
     <div className="panel__stack" style={{ gap: 10 }}>
       <div className="panel__head">
@@ -163,7 +175,7 @@ function Reviews() {
             </div>
             <span className="rev__rating">{row.rating}</span>
             <span className={`rev__pill ${row.approved ? 'rev__pill--yes' : 'rev__pill--no'}`}>
-              {row.approved ? 'Áno' : 'Nie'}
+              {row.approved ? t('Áno') : t('Nie')}
             </span>
           </div>
         ))}
@@ -177,7 +189,8 @@ function Reviews() {
   );
 }
 
-function Hotspots() {
+function Hotspots({ lang }: { lang: Lang }) {
+  const hotspots = tDeep(hotspotsData, lang);
   return (
     <div className="panel__stack">
       <div className="panel__head">
@@ -199,11 +212,12 @@ function Hotspots() {
   );
 }
 
-function Bi() {
+function Bi({ lang }: { lang: Lang }) {
+  const bi = tDeep(biData, lang);
   return (
     <div className="panel__stack">
       <span className="panel__title">{bi.title}</span>
-      <BiCard />
+      <BiCard lang={lang} />
     </div>
   );
 }

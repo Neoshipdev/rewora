@@ -2,6 +2,7 @@ import CtaBand from '@/components/CtaBand';
 import PageHero from '@/components/PageHero';
 import SiteFooter from '@/components/SiteFooter';
 import TopBar from '@/components/TopBar';
+import { contentDir, type Lang } from '@/lib/i18n';
 import { readDoc } from '@/lib/markdown';
 
 type Props = {
@@ -10,15 +11,16 @@ type Props = {
   eyebrow: string;
   /** Bez CTA pásu (napr. ďakovacia stránka). */
   hideCta?: boolean;
+  lang?: Lang;
 };
 
 /** Statická textová stránka (VOP, GDPR, ďakujeme) z markdownu. */
-export default async function ContentPage({ file, eyebrow, hideCta }: Props) {
-  const doc = await readDoc(`stranky/${file}.md`);
+export default async function ContentPage({ file, eyebrow, hideCta, lang = 'sk' }: Props) {
+  const doc = await readDoc(`${contentDir[lang]}stranky/${file}.md`);
 
   return (
     <>
-      <TopBar />
+      <TopBar lang={lang} />
       <PageHero eyebrow={eyebrow} title={doc.title} />
 
       <section className="section">
@@ -30,8 +32,8 @@ export default async function ContentPage({ file, eyebrow, hideCta }: Props) {
         </div>
       </section>
 
-      {!hideCta && <CtaBand />}
-      <SiteFooter />
+      {!hideCta && <CtaBand lang={lang} />}
+      <SiteFooter lang={lang} />
     </>
   );
 }

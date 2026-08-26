@@ -2,13 +2,17 @@
  * Karusel recenzií obchodu — widget, ktorý e-shop nasadzuje na homepage.
  * Používa sa v mockupe admin panela.
  */
+import type { Lang } from '@/lib/i18n';
 import { shopReviews } from '@/lib/panel-data';
+import { createT, tDeep } from '@/lib/t';
 
-export default function ShopReviews() {
+export default function ShopReviews({ lang = 'sk' }: { lang?: Lang }) {
+  const t = createT(lang);
+  const recenzie = tDeep(shopReviews, lang);
   return (
     <div className="shopr">
       <div className="shopr__head">
-        <span className="shopr__title">{shopReviews.title}</span>
+        <span className="shopr__title">{recenzie.title}</span>
         <span className="shopr__arrows" aria-hidden>
           <span className="shopr__arrow">←</span>
           <span className="shopr__arrow">→</span>
@@ -16,14 +20,14 @@ export default function ShopReviews() {
       </div>
 
       <div className="shopr__grid">
-        {shopReviews.items.map((item) => (
+        {recenzie.items.map((item) => (
           <div className="shopr__item" key={item.text}>
-            <span className="shopr__stars" role="img" aria-label={`Hodnotenie ${item.stars} z 5`}>
+            <span className="shopr__stars" role="img" aria-label={t('Hodnotenie {n} z 5').replace('{n}', String(item.stars))}>
               {'★'.repeat(item.stars)}
             </span>
             <p className="shopr__text">{item.text}</p>
             <span className="shopr__source">{item.source}</span>
-            <span className="shopr__report">⚑ {shopReviews.report}</span>
+            <span className="shopr__report">⚑ {recenzie.report}</span>
           </div>
         ))}
       </div>

@@ -2,14 +2,26 @@
  * Značka Rewora — oficiálne logo (SVG).
  * `variant="light"` je biela verzia pre tmavé a oranžové pozadia.
  */
+import { home, type Lang } from '@/lib/i18n';
+import { createT } from '@/lib/t';
+
 type Props = {
   variant?: 'light' | 'brand';
   height?: number;
   href?: string | null;
   className?: string;
+  lang?: Lang;
 };
 
-export default function Logo({ variant = 'light', height = 26, href = '/sk/', className }: Props) {
+export default function Logo({
+  variant = 'light',
+  height = 26,
+  href,
+  className,
+  lang = 'sk',
+}: Props) {
+  const t = createT(lang);
+  const ciel = href === null ? null : href ?? home[lang];
   const src = variant === 'light' ? '/images/logo-rewora-white.svg' : '/images/logo-rewora.svg';
 
   const image = (
@@ -24,9 +36,9 @@ export default function Logo({ variant = 'light', height = 26, href = '/sk/', cl
     />
   );
 
-  if (!href) return image;
+  if (!ciel) return image;
   return (
-    <a href={href} className="logo-link" aria-label="Rewora — domovská stránka">
+    <a href={ciel} className="logo-link" aria-label={t('Rewora — domovská stránka')}>
       {image}
     </a>
   );

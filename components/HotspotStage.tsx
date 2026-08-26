@@ -1,6 +1,8 @@
 'use client';
 
 import { useState } from 'react';
+import type { Lang } from '@/lib/i18n';
+import { createT } from '@/lib/t';
 import Stars from './Stars';
 import { ArrowRightIcon } from './icons';
 
@@ -17,6 +19,7 @@ type Props = {
   image?: string;
   /** Vlastné body a bublina — pri reálnom vizuáli, ktorý ich už obsahuje, sa vypnú. */
   showMarkers?: boolean;
+  lang?: Lang;
 };
 
 const shift = (pct: string, by: number) => `calc(${pct} + ${by}%)`;
@@ -33,7 +36,9 @@ export default function HotspotStage({
   bubbleWidth = 200,
   image,
   showMarkers,
+  lang = 'sk',
 }: Props) {
+  const t = createT(lang);
   const [active, setActive] = useState(0);
   const anchor = dots[active] ?? dots[0];
   /* Reálny vizuál z e-shopu už má body aj bublinu vypálené v obrázku. */
@@ -59,7 +64,7 @@ export default function HotspotStage({
           type="button"
           className="hotspot-dot"
           style={{ left: dot.left, top: dot.top }}
-          aria-label={`Zobraziť produkt v bode ${i + 1}`}
+          aria-label={t('Zobraziť produkt v bode {n}').replace('{n}', String(i + 1))}
           aria-pressed={i === active}
           onMouseEnter={() => setActive(i)}
           onFocus={() => setActive(i)}
@@ -76,7 +81,7 @@ export default function HotspotStage({
           <span className="hotspot-bubble__name">{bubble.name}</span>
           <span className="hotspot-bubble__off">{bubble.badge}</span>
         </div>
-        <Stars value={5} size={12} />
+        <Stars value={5} size={12} lang={lang} />
         <div className="hotspot-bubble__row">
           <span className="hotspot-bubble__price">{bubble.price}</span>
           <span className="hotspot-bubble__go" aria-hidden>

@@ -1,33 +1,36 @@
 import Stars from '@/components/Stars';
 import { SearchIcon } from '@/components/icons';
+import type { Lang } from '@/lib/i18n';
 import { smartSearch } from '@/lib/panel-data';
+import { tDeep } from '@/lib/t';
 
 /**
  * Inteligentné vyhľadávanie — widget rozumie celej otázke zákazníka
  * a rozloží ju na vlastnosti, podľa ktorých zúži výsledky.
  */
-export default function SmartSearch() {
+export default function SmartSearch({ lang = 'sk' }: { lang?: Lang }) {
+  const search = tDeep(smartSearch, lang);
   return (
     <div className="ssearch">
       <div className="ssearch__bar">
         <span className="ssearch__icon" aria-hidden>
           <SearchIcon size={18} />
         </span>
-        <span className="ssearch__query">{smartSearch.query}</span>
+        <span className="ssearch__query">{search.query}</span>
         <span className="ssearch__caret" aria-hidden />
       </div>
 
       <div className="ssearch__chips">
-        {smartSearch.understood.map((chip) => (
+        {search.understood.map((chip) => (
           <span key={chip.label} className="ssearch__chip">
             <span className="ssearch__chip-label">{chip.label}:</span> {chip.value}
           </span>
         ))}
-        <span className="ssearch__count">{smartSearch.resultsLabel}</span>
+        <span className="ssearch__count">{search.resultsLabel}</span>
       </div>
 
       <ul className="ssearch__results">
-        {smartSearch.results.map((item) => (
+        {search.results.map((item) => (
           <li key={item.name} className="ssearch__item">
             <span className="ssearch__thumb" aria-hidden />
             <span className="ssearch__info">
@@ -40,7 +43,7 @@ export default function SmartSearch() {
         ))}
       </ul>
 
-      <p className="ssearch__hint">{smartSearch.hint}</p>
+      <p className="ssearch__hint">{search.hint}</p>
     </div>
   );
 }

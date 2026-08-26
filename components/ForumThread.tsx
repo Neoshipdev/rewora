@@ -2,26 +2,37 @@
  * Vlákno v poradni a fóre tak, ako ho vidí zákazník pri produkte.
  * Používa sa v mockupe admin panela aj v sekcii Nástroje.
  */
-import { qa } from '@/lib/panel-data';
+import type { Lang } from '@/lib/i18n';
+import { qa as qaData } from '@/lib/panel-data';
+import { tDeep } from '@/lib/t';
 
 function ThreadActions({
   helpful,
   withReply,
+  report,
 }: {
   helpful: { up: number; down: number };
   withReply?: boolean;
+  report: string;
 }) {
   return (
     <div className="thread__actions">
       {withReply && <span aria-hidden>↩</span>}
       <span>👍 {helpful.up}</span>
       <span>👎 {helpful.down}</span>
-      <span className="thread__report">⚑ {qa.report}</span>
+      <span className="thread__report">⚑ {report}</span>
     </div>
   );
 }
 
-export default function ForumThread({ showStrip = true }: { showStrip?: boolean }) {
+export default function ForumThread({
+  showStrip = true,
+  lang = 'sk',
+}: {
+  showStrip?: boolean;
+  lang?: Lang;
+}) {
+  const qa = tDeep(qaData, lang);
   return (
     <div className="panel__stack" style={{ gap: 12 }}>
       <div className="thread__head">
@@ -41,7 +52,7 @@ export default function ForumThread({ showStrip = true }: { showStrip?: boolean 
           <div className="thread__body">
             <span className="thread__q">{qa.question.title}</span>
             <p className="thread__text">{qa.question.text}</p>
-            <ThreadActions helpful={qa.question.helpful} />
+            <ThreadActions helpful={qa.question.helpful} report={qa.report} />
           </div>
         </div>
 
@@ -57,7 +68,7 @@ export default function ForumThread({ showStrip = true }: { showStrip?: boolean 
                 {paragraph}
               </p>
             ))}
-            <ThreadActions helpful={qa.answer.helpful} withReply />
+            <ThreadActions helpful={qa.answer.helpful} report={qa.report} withReply />
           </div>
         </div>
       </div>

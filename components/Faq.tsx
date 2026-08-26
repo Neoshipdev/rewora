@@ -1,8 +1,14 @@
 'use client';
 
 import { useState } from 'react';
-import { faq, faqLegal, faqLegalIntro } from '@/lib/content';
-import { faqIntro } from '@/lib/features';
+import {
+  faq as faqData,
+  faqLegal as faqLegalData,
+  faqLegalIntro as faqLegalIntroData,
+} from '@/lib/content';
+import { faqIntro as faqIntroData } from '@/lib/features';
+import type { Lang } from '@/lib/i18n';
+import { createT, tDeep } from '@/lib/t';
 
 type Item = { q: string; a: string[] };
 
@@ -50,7 +56,10 @@ function FaqList({ items, idPrefix }: { items: Item[]; idPrefix: string }) {
   );
 }
 
-export default function Faq() {
+export default function Faq({ lang = 'sk' }: { lang?: Lang }) {
+  const t = createT(lang);
+  const faq = tDeep(faqData, lang);
+  const faqLegal = tDeep(faqLegalData, lang);
   return (
     <section className="section" id="faq">
       <div className="container">
@@ -58,29 +67,29 @@ export default function Faq() {
           FAQ
         </span>
         <h2 className="h2" style={{ maxWidth: 720, marginTop: 8 }}>
-          Často kladené otázky
+          {t('Často kladené otázky')}
         </h2>
         <p style={{ maxWidth: 720, marginTop: 14, fontSize: 16.1, color: 'var(--ink-600)' }}>
-          {faqIntro}
+          {t(faqIntroData)}
         </p>
 
         <FaqList items={faq} idPrefix="faq" />
 
         <div className="faq__group" id="legislativa">
           <span className="eyebrow" style={{ color: 'var(--orange-500)' }}>
-            Legislatíva
+            {t('Legislatíva')}
           </span>
           <h2 className="h2" style={{ maxWidth: 760, marginTop: 8 }}>
-            Povinnosti slovenských e-shopov pri recenziách
+            {t('Povinnosti slovenských e-shopov pri recenziách')}
           </h2>
           <p style={{ maxWidth: 760, marginTop: 14, fontSize: 16.1, color: 'var(--ink-600)' }}>
-            {faqLegalIntro}
+            {t(faqLegalIntroData)}
           </p>
           <FaqList items={faqLegal} idPrefix="faq-legal" />
         </div>
 
         <p className="faq__note">
-          Nenašli ste odpoveď na svoju otázku? Napíšte nám na{' '}
+          {t('Nenašli ste odpoveď na svoju otázku? Napíšte nám na')}{' '}
           <a href="mailto:info@rewora.com">info@rewora.com</a>.
         </p>
       </div>

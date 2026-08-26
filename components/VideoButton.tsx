@@ -1,10 +1,20 @@
 'use client';
 
 import { useCallback, useEffect, useState } from 'react';
-import { heroVideo } from '@/lib/content';
+import { heroVideo as heroVideoData } from '@/lib/content';
+import type { Lang } from '@/lib/i18n';
+import { createT, tDeep } from '@/lib/t';
 
 /** Tlačidlo „Pozrieť video“ + modálny prehrávač (YouTube bez cookies). */
-export default function VideoButton({ className = 'btn btn--video' }: { className?: string }) {
+export default function VideoButton({
+  className = 'btn btn--video',
+  lang = 'sk',
+}: {
+  className?: string;
+  lang?: Lang;
+}) {
+  const t = createT(lang);
+  const heroVideo = tDeep(heroVideoData, lang);
   const [open, setOpen] = useState(false);
   const close = useCallback(() => setOpen(false), []);
 
@@ -40,7 +50,7 @@ export default function VideoButton({ className = 'btn btn--video' }: { classNam
           onClick={close}
         >
           <div className="video-modal__box" onClick={(event) => event.stopPropagation()}>
-            <button type="button" className="video-modal__close" onClick={close} aria-label="Zavrieť video">
+            <button type="button" className="video-modal__close" onClick={close} aria-label={t('Zavrieť video')}>
               ✕
             </button>
             <div className="video-modal__frame">

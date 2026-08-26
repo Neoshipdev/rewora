@@ -1,19 +1,23 @@
 'use client';
 
 import { useState } from 'react';
-import { plans, pricingNote } from '@/lib/pricing';
+import { routes, type Lang } from '@/lib/i18n';
+import { plans as plansData, pricingNote as pricingNoteData } from '@/lib/pricing';
+import { createT, tDeep } from '@/lib/t';
 
-export default function PricingPlans() {
+export default function PricingPlans({ lang = 'sk' }: { lang?: Lang }) {
+  const t = createT(lang);
+  const plans = tDeep(plansData, lang);
   const [yearly, setYearly] = useState(false);
 
   return (
     <>
-      <div className="period-toggle" role="group" aria-label="Obdobie platby">
+      <div className="period-toggle" role="group" aria-label={t('Obdobie platby')}>
         <button type="button" aria-pressed={!yearly} onClick={() => setYearly(false)}>
-          Mesačne
+          {t('Mesačne')}
         </button>
         <button type="button" aria-pressed={yearly} onClick={() => setYearly(true)}>
-          Ročne
+          {t('Ročne')}
         </button>
       </div>
 
@@ -22,7 +26,7 @@ export default function PricingPlans() {
           <div key={plan.name} className={`plan ${plan.featured ? 'plan--featured' : ''}`}>
             <span className="plan__name">
               {plan.name}
-              {plan.featured && <span className="plan__badge">Najobľúbenejší</span>}
+              {plan.featured && <span className="plan__badge">{t('Najobľúbenejší')}</span>}
             </span>
             <div>
               <div className="plan__price">{yearly ? plan.priceYearly : plan.priceMonthly}</div>
@@ -30,7 +34,7 @@ export default function PricingPlans() {
                 {yearly ? plan.periodYearly : plan.periodMonthly}
               </span>
             </div>
-            <a className="plan__cta" href={plan.cta.href}>
+            <a className="plan__cta" href={routes.demo[lang] ?? plan.cta.href}>
               {plan.cta.label}
             </a>
             {plan.intro && <span className="plan__intro">{plan.intro}</span>}
@@ -43,7 +47,7 @@ export default function PricingPlans() {
         ))}
       </div>
 
-      <p className="pricing-note">{pricingNote}</p>
+      <p className="pricing-note">{t(pricingNoteData)}</p>
     </>
   );
 }

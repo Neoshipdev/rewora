@@ -2,7 +2,9 @@
  * Widget „Recenzie a hodnotenia“ tak, ako sa zobrazuje na karte produktu.
  * Používa sa v mockupe admin panela aj v sekcii Nástroje.
  */
+import type { Lang } from '@/lib/i18n';
 import { productWidget } from '@/lib/panel-data';
+import { createT, tDeep } from '@/lib/t';
 
 /** Ilustrácia telefónu — fotografia produktu v ľavom stĺpci widgetu. */
 function PhoneShot() {
@@ -37,8 +39,9 @@ function PhoneShot() {
   );
 }
 
-export default function ReviewsWidget() {
-  const { accent, product, summary, filters, items } = productWidget;
+export default function ReviewsWidget({ lang = 'sk' }: { lang?: Lang }) {
+  const t = createT(lang);
+  const { accent, product, summary, filters, items } = tDeep(productWidget, lang);
 
   return (
     <div className="panel__stack" style={{ gap: 10 }}>
@@ -119,8 +122,8 @@ export default function ReviewsWidget() {
                   {item.title && <span className="wdg__card-title">{item.title}</span>}
                   <span className="wdg__card-text">{item.text}</span>
                   <span className="wdg__card-foot">
-                    Bolo to užitočné? 👍 {item.helpful.up} 👎 {item.helpful.down}
-                    {item.top && <span className="wdg__top">Top recenzia</span>}
+                    {t('Bolo to užitočné?')} 👍 {item.helpful.up} 👎 {item.helpful.down}
+                    {item.top && <span className="wdg__top">{t('Top recenzia')}</span>}
                   </span>
                 </div>
               ))}

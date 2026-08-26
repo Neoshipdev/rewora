@@ -1,14 +1,18 @@
 'use client';
 
-import { overview } from '@/lib/panel-data';
+import type { Lang } from '@/lib/i18n';
+import { overview as overviewData } from '@/lib/panel-data';
+import { createT, tDeep } from '@/lib/t';
 
-function Donut() {
+function Donut({ lang }: { lang: Lang }) {
+  const t = createT(lang);
+  const overview = tDeep(overviewData, lang);
   const radius = 34;
   const circumference = 2 * Math.PI * radius;
   let offset = 0;
 
   return (
-    <svg viewBox="0 0 90 90" className="donut" role="img" aria-label="Rozloženie zobrazení widgetov">
+    <svg viewBox="0 0 90 90" className="donut" role="img" aria-label={t('Rozloženie zobrazení widgetov')}>
       <g transform="rotate(-90 45 45)">
         {overview.activity.items.map((item) => {
           const length = (item.share / 100) * circumference;
@@ -34,13 +38,14 @@ function Donut() {
         {overview.activity.total}
       </text>
       <text x="45" y="52" className="donut__label">
-        zobrazení
+        {t('zobrazení')}
       </text>
     </svg>
   );
 }
 
-export default function Overview() {
+export default function Overview({ lang = 'sk' }: { lang?: Lang }) {
+  const overview = tDeep(overviewData, lang);
   return (
     <div className="panel__stack" style={{ gap: 12 }}>
       <div className="dash__headline">
@@ -73,7 +78,7 @@ export default function Overview() {
           {overview.activity.title}
         </span>
         <div className="dash__activity">
-          <Donut />
+          <Donut lang={lang} />
           <ul className="dash__legend">
             {overview.activity.items.map((item) => (
               <li key={item.label}>

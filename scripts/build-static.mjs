@@ -51,10 +51,17 @@ async function applyBasePath() {
     if (!/\.(html|css|js|txt|xml|json)$/i.test(file)) continue;
     const original = await readFile(file, 'utf8');
     let updated = original.replace(images, `${BASE}/images/`);
-    /* Odkazy prefixujeme cielene v hodnote href — plošný prepis „/sk/“ by
-       zasiahol aj cesty, s ktorými pracuje smerovač Nextu, a stránka by spadla. */
+    /* Odkazy prefixujeme cielene v hodnote href — plošný prepis ciest by
+       zasiahol aj tie, s ktorými pracuje smerovač Nextu, a stránka by spadla.
+       Preskakujeme, čo už prefix má (Next si vlastné odkazy prefixuje sám). */
+    const ZNACKA = String.fromCharCode(0);
     for (const tvar of ODKAZY) {
-      updated = updated.split(tvar + '/sk/').join(tvar + BASE + '/sk/');
+      /* najprv odložíme bokom to, čo prefix už má, a odkazy na cudzie domény */
+      updated = updated.split(tvar + BASE + '/').join(tvar + ZNACKA);
+      updated = updated.split(tvar + '//').join(tvar + ZNACKA + ZNACKA);
+      updated = updated.split(tvar + '/').join(tvar + BASE + '/');
+      updated = updated.split(tvar + ZNACKA + ZNACKA).join(tvar + '//');
+      updated = updated.split(tvar + ZNACKA).join(tvar + BASE + '/');
     }
     /* url(/…) v CSS mieri na koreň domény, ten na Pages patrí niekomu inému */
     if (/\.(css|html)$/i.test(file)) {
@@ -79,7 +86,7 @@ if (existsSync(API)) {
 try {
   execSync('npx next build', {
     stdio: 'inherit',
-    env: { ...process.env, NEXT_EXPORT: '1', NEXT_EXPORT_BASE: BASE },
+    env: { ...process.env, NEXT_EXPORT: '1', NEXT_EXPORT_BASE: BASE, NEXT_PUBLIC_BASE_PATH: BASE },
   });
 } finally {
   if (existsSync(API_PARKED)) {
@@ -94,26 +101,7 @@ if (BASE) console.log(`· cesty prefixnuté v ${changed} súboroch`);
 /* GitHub Pages inak ignoruje priečinky začínajúce podčiarkovníkom (_next). */
 await writeFile(join(OUT, '.nojekyll'), '', 'utf8');
 
-/* Koreň exportu presmerujeme na slovenskú verziu — statický hosting nevie 301. */
-const home = `${BASE}/sk/`;
-await writeFile(
-  join(OUT, 'index.html'),
-  `<!doctype html>
-<html lang="sk">
-<head>
-<meta charset="utf-8">
-<meta http-equiv="refresh" content="0; url=${home}">
-<link rel="canonical" href="${home}">
-<title>Rewora</title>
-</head>
-<body>
-<p>Presmerovanie na <a href="${home}">slovenskú verziu</a>…</p>
-<script>location.replace(${JSON.stringify(home)});</script>
-</body>
-</html>
-`,
-  'utf8'
-);
+/* Koreň exportu je anglická mutácia — /sk/ a /cs/ sú v podpriečinkoch. */
 
 const pages = (await walk(OUT)).filter((f) => f.endsWith('.html'));
 const size = (await Promise.all((await walk(OUT)).map((f) => stat(f)))).reduce(

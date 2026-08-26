@@ -1,13 +1,17 @@
 'use client';
 
 import { useState } from 'react';
-import { videoReviews } from '@/lib/panel-data';
+import type { Lang } from '@/lib/i18n';
+import { videoReviews as videoReviewsData } from '@/lib/panel-data';
+import { createT, tDeep } from '@/lib/t';
 
 /**
  * Widget s foto a video recenziami. Stredná karta je zväčšená,
  * šípky posúvajú poradie dokola.
  */
-export default function VideoReviews() {
+export default function VideoReviews({ lang = 'sk' }: { lang?: Lang }) {
+  const t = createT(lang);
+  const videoReviews = tDeep(videoReviewsData, lang);
   const [offset, setOffset] = useState(0);
   const items = videoReviews.items;
   const ordered = items.map((_, i) => items[(i + offset) % items.length]);
@@ -52,14 +56,14 @@ export default function VideoReviews() {
         <button
           type="button"
           onClick={() => setOffset((o) => (o - 1 + items.length) % items.length)}
-          aria-label="Predchádzajúce video"
+          aria-label={t('Predchádzajúce video')}
         >
           ‹
         </button>
         <button
           type="button"
           onClick={() => setOffset((o) => (o + 1) % items.length)}
-          aria-label="Nasledujúce video"
+          aria-label={t('Nasledujúce video')}
         >
           ›
         </button>

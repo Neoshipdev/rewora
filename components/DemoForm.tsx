@@ -1,6 +1,8 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import type { Lang } from '@/lib/i18n';
+import { createT } from '@/lib/t';
 
 type Status = 'idle' | 'running' | 'done' | 'error';
 
@@ -15,7 +17,8 @@ type JobState = {
   domain: string;
 };
 
-export default function DemoForm() {
+export default function DemoForm({ lang = 'sk' }: { lang?: Lang }) {
+  const t = createT(lang);
   const [url, setUrl] = useState('');
   const [status, setStatus] = useState<Status>('idle');
   const [job, setJob] = useState<JobState | null>(null);
@@ -33,7 +36,7 @@ export default function DemoForm() {
       if (state.status === 'done' || state.status === 'error') {
         if (timer.current) clearInterval(timer.current);
         setStatus(state.status === 'done' ? 'done' : 'error');
-        if (state.status === 'error') setError(state.error ?? 'Ukážku sa nepodarilo vytvoriť.');
+        if (state.status === 'error') setError(state.error ?? t('Ukážku sa nepodarilo vytvoriť.'));
       }
     }, 1200);
   };
@@ -53,10 +56,10 @@ export default function DemoForm() {
 
     if (!res.ok) {
       setStatus('error');
-      setError(data.error ?? 'Adresu sa nepodarilo spracovať.');
+      setError(data.error ?? t('Adresu sa nepodarilo spracovať.'));
       return;
     }
-    setJob({ id: data.id, domain: data.domain, status: 'pending', step: 'Spúšťam…', steps: [], warnings: [] });
+    setJob({ id: data.id, domain: data.domain, status: 'pending', step: t('Spúšťam…'), steps: [], warnings: [] });
     poll(data.id);
   };
 
@@ -70,7 +73,7 @@ export default function DemoForm() {
     <div className="demo">
       <form className="demo__form" onSubmit={submit}>
         <label className="demo__label" htmlFor="eshop-url">
-          Adresa vášho e-shopu
+          {t('Adresa vášho e-shopu')}
         </label>
         <div className="demo__row">
           <input
@@ -78,18 +81,20 @@ export default function DemoForm() {
             className="demo__input"
             type="text"
             inputMode="url"
-            placeholder="napr. www.vasobchod.sk"
+            placeholder={t('napr. www.vasobchod.sk')}
             value={url}
             onChange={(e) => setUrl(e.target.value)}
             required
             disabled={status === 'running'}
           />
           <button className="btn btn--orange demo__submit" type="submit" disabled={status === 'running'}>
-            {status === 'running' ? 'Generujem…' : 'Vytvoriť ukážku'}
+            {status === 'running' ? t('Generujem…') : t('Vytvoriť ukážku')}
           </button>
         </div>
         <p className="demo__hint">
-          Ukážku vytvoríme automaticky zo snímok vášho webu — trvá to približne minútu. Nič neinštalujete.
+          {t(
+            'Ukážku vytvoríme automaticky zo snímok vášho webu — trvá to približne minútu. Nič neinštalujete.'
+          )}
         </p>
       </form>
 
@@ -97,7 +102,7 @@ export default function DemoForm() {
         <div className="demo__progress" role="status" aria-live="polite">
           <div className="demo__spinner" aria-hidden />
           <div>
-            <b>{job?.step ?? 'Spúšťam…'}</b>
+            <b>{job?.step ?? t('Spúšťam…')}</b>
             <ul className="demo__steps">
               {(job?.steps ?? []).slice(0, -1).map((step, i) => (
                 <li key={`${step}-${i}`}>{step}</li>
@@ -109,11 +114,12 @@ export default function DemoForm() {
 
       {status === 'done' && job && (
         <div className="demo__result">
-          <span className="demo__badge">Ukážka je pripravená</span>
-          <h3>Rewora widgety na {job.domain}</h3>
+          <span className="demo__badge">{t('Ukážka je pripravená')}</span>
+          <h3>{t('Rewora widgety na')} {job.domain}</h3>
           <p>
-            PDF obsahuje 8 strán — hotspoty, BI dáta, recenzie na homepage aj pri produkte, poradňu
-            a hviezdičky v Google Shopping. Widgety sú prefarbené podľa dizajnu vášho webu.
+            {t(
+              'PDF obsahuje 8 strán — hotspoty, BI dáta, recenzie na homepage aj pri produkte, poradňu a hviezdičky v Google Shopping. Widgety sú prefarbené podľa dizajnu vášho webu.'
+            )}
           </p>
           {job.warnings.length > 0 && (
             <ul className="demo__warnings">
@@ -124,7 +130,7 @@ export default function DemoForm() {
           )}
           <div className="demo__actions">
             <a className="btn btn--dark" href={`/api/ukazka/${job.id}/pdf/`} download>
-              Stiahnuť ukážku (PDF)
+              {t('Stiahnuť ukážku (PDF)')}
             </a>
             <a
               className="btn btn--outline-dark"
@@ -132,10 +138,10 @@ export default function DemoForm() {
               target="_blank"
               rel="noreferrer"
             >
-              Otvoriť v prehliadači
+              {t('Otvoriť v prehliadači')}
             </a>
             <button className="demo__again" type="button" onClick={reset}>
-              Vytvoriť ďalšiu ukážku
+              {t('Vytvoriť ďalšiu ukážku')}
             </button>
           </div>
         </div>
@@ -143,10 +149,10 @@ export default function DemoForm() {
 
       {status === 'error' && (
         <div className="demo__error">
-          <b>Ukážku sa nepodarilo vytvoriť.</b>
+          <b>{t('Ukážku sa nepodarilo vytvoriť.')}</b>
           <p>{error}</p>
           <button className="demo__again" type="button" onClick={reset}>
-            Skúsiť znova
+            {t('Skúsiť znova')}
           </button>
         </div>
       )}

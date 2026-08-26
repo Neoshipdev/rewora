@@ -1,11 +1,15 @@
 import { integrationShots } from '@/lib/assets';
 import { integrations } from '@/lib/content';
+import type { Lang } from '@/lib/i18n';
+import { createT, tDeep } from '@/lib/t';
 
 /** Spôsoby integrácie — spoločné pre homepage aj cenník. */
-export default function IntegrationGrid() {
+export default function IntegrationGrid({ lang = 'sk' }: { lang?: Lang }) {
+  const t = createT(lang);
+  const zoznam = tDeep(integrations, lang);
   return (
     <div className="integrations__grid">
-      {integrations.map((item) => {
+      {zoznam.map((item) => {
         const shot = integrationShots[item.name];
         return (
           <div key={item.name} className="integration">
@@ -15,7 +19,7 @@ export default function IntegrationGrid() {
             ) : (
               /* doplnok, ktorý ešte nie je vonku — namiesto snímky dlaždica */
               <span className="integration__img integration__img--text" aria-hidden>
-                Už čoskoro
+                {t('Už čoskoro')}
               </span>
             )}
             <span className="integration__num">{item.num}</span>

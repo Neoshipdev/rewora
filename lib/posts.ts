@@ -1,7 +1,9 @@
 import { readFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { caseAssets } from './assets';
-import { CONTENT_DIR, firstImage, readDoc } from './markdown';
+import { contentDir, type Lang } from './i18n';
+import { tDeep } from './t';
+import { CONTENT_DIR, firstImage, listSlugs, readDoc } from './markdown';
 
 export type BlogListItem = {
   slug: string;
@@ -13,8 +15,31 @@ export type BlogListItem = {
   image?: string;
 };
 
-/** Poradie a kategórie berieme z indexu content/blog.md (najnovšie prvé). */
-export async function getBlogIndex(): Promise<BlogListItem[]> {
+/**
+ * Slovenský blog má ručný index s poradím a kategóriami; ostatné jazyky
+ * čítame priamo z priečinka so stiahnutými článkami.
+ */
+export async function getBlogIndex(lang: Lang = 'sk'): Promise<BlogListItem[]> {
+  if (lang !== 'sk') {
+    const dir = `${contentDir[lang]}blog`;
+    const slugs = await listSlugs(dir);
+    const items = await Promise.all(
+      slugs.map(async (slug) => {
+        const doc = await readDoc(`${dir}/${slug}.md`);
+        return {
+          slug,
+          title: doc.title,
+          category: doc.category ?? '',
+          perex: doc.perex,
+          date: doc.date,
+          author: doc.author,
+          image: doc.thumb ?? firstImage(doc.html),
+        };
+      })
+    );
+    return items.filter((i) => i.title);
+  }
+
   const raw = await readFile(join(CONTENT_DIR, 'blog.md'), 'utf8');
   const rows = [...raw.matchAll(/^\|\s*\d+\s*\|\s*(.+?)\s*\|\s*(.+?)\s*\|\s*\[(.+?)\.md\]/gm)];
 
@@ -38,26 +63,34 @@ export async function getBlogIndex(): Promise<BlogListItem[]> {
  * URL slugy musia zostať zhodné s pôvodným webom kvôli SEO;
  * `file` je názov súboru v content/pripadove-studie/.
  */
-export const caseStudies = [
-  {
-    slug: 'ako-sme-pre-fixservis-pomocou-recenzii-zvysili-obrat-o-vyse-10',
-    file: 'fixservis',
-  },
-  {
-    slug: 'rewora-ako-katalyzator-rastu-drinkcentrum',
-    file: 'drinkcentrum',
-  },
-  {
-    slug: 'od-dovery-k-vykonu-ako-rewora-pomohla-eshopu-kilpi',
-    file: 'kilpi',
-  },
-] as const;
+export type CaseKey = 'fixservis' | 'drinkcentrum' | 'kilpi';
+
+/** URL slugy prípadových štúdií presne podľa pôvodného webu. */
+export const caseStudiesByLang: Record<Lang, { slug: string; file: string; key: CaseKey }[]> = {
+  sk: [
+    { slug: 'ako-sme-pre-fixservis-pomocou-recenzii-zvysili-obrat-o-vyse-10', file: 'pripadove-studie/fixservis', key: 'fixservis' },
+    { slug: 'rewora-ako-katalyzator-rastu-drinkcentrum', file: 'pripadove-studie/drinkcentrum', key: 'drinkcentrum' },
+    { slug: 'od-dovery-k-vykonu-ako-rewora-pomohla-eshopu-kilpi', file: 'pripadove-studie/kilpi', key: 'kilpi' },
+  ],
+  cs: [
+    { slug: 'jak-jsme-za-fix-servisu-pouzili-recenze-ke-zvyseni-obratu-o-10', file: 'cs/pripadove-studie/jak-jsme-za-fix-servisu-pouzili-recenze-ke-zvyseni-obratu-o-10', key: 'fixservis' },
+    { slug: 'rewora-ako-katalyzator-rastu-drinkcentrum', file: 'cs/pripadove-studie/rewora-ako-katalyzator-rastu-drinkcentrum', key: 'drinkcentrum' },
+    { slug: 'od-sebeduvery-k-vykonu-jak-rewora-pomohla-eshopu-kilpi-cz', file: 'cs/pripadove-studie/od-sebeduvery-k-vykonu-jak-rewora-pomohla-eshopu-kilpi-cz', key: 'kilpi' },
+  ],
+  en: [
+    { slug: 'how-are-we-for-fix-service-using-reviews-to-increase-turnover-by-10', file: 'en/pripadove-studie/how-are-we-for-fix-service-using-reviews-to-increase-turnover-by-10', key: 'fixservis' },
+    { slug: 'rewora-as-catalyst-growth-drinkcentre', file: 'en/pripadove-studie/rewora-as-catalyst-growth-drinkcentre', key: 'drinkcentrum' },
+    { slug: 'from-dovery-to-performance-how-rescue-helped-eshop-kilpi', file: 'en/pripadove-studie/from-dovery-to-performance-how-rescue-helped-eshop-kilpi', key: 'kilpi' },
+  ],
+};
+
+export const caseStudies = caseStudiesByLang.sk;
 
 export const caseStudySlugs = caseStudies.map((c) => c.slug);
 
-/** Súbor s obsahom pre daný URL slug (undefined pri neznámej URL). */
-export const caseStudyFile = (slug: string) =>
-  caseStudies.find((c) => c.slug === slug)?.file;
+/** Štúdia pre daný URL slug v danom jazyku (undefined pri neznámej URL). */
+export const caseStudyRef = (slug: string, lang: Lang = 'sk') =>
+  caseStudiesByLang[lang].find((c) => c.slug === slug);
 
 export type CaseStudy = {
   slug: string;
@@ -99,17 +132,17 @@ const caseHighlights: Record<string, { client: string; metrics: { value: string;
   },
 };
 
-export async function getCaseStudies(): Promise<CaseStudy[]> {
+export async function getCaseStudies(lang: Lang = 'sk'): Promise<CaseStudy[]> {
   return Promise.all(
-    caseStudies.map(async ({ slug, file }) => {
-      const doc = await readDoc(`pripadove-studie/${file}.md`);
+    caseStudiesByLang[lang].map(async ({ slug, file, key }) => {
+      const doc = await readDoc(`${file}.md`);
       return {
         slug,
         title: doc.title,
         perex: doc.perex,
         tags: (doc.category ?? '').split('·').map((t) => t.trim()).filter(Boolean),
-        ...caseHighlights[file],
-        ...caseAssets[file],
+        ...tDeep(caseHighlights[key], lang),
+        ...caseAssets[key],
       };
     })
   );

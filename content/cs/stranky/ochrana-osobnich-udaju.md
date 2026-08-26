@@ -1,0 +1,533 @@
+# Ochrana osobních údajů a GDPR
+
+> Zdroj: https://rewora.com/cs/ochrana-osobnich-udaju/
+
+*uzavřená podle článku 28 nařízení Evropského parlamentu a Rady (EU) č. 2016/679 o ochraně fyzických osob při zpracování osobních údajů a o volném pohybu takovýchto údajů, kterým se zrušuje směrnice 95/46/ES (obecné nařízení o ochraně údajů) a podle zákona č. 18/2018 Z. z. o ochraně osobních údajů a o změně a doplnění některých zákonů* mezi **Objednatelem jako Správcem a Rewora s. r. o.**
+
+## SMLUVNÍ STRANY
+
+**Správce:**
+
+Správcem je Objednatel podle Základní smlouvy, tj. právnická osoba nebo fyzická osoba – podnikatel, který se Zpracovatelem uzavřel Základní smlouvu podle VOP a Objednávky. Identifikační údaje Správce jsou uvedeny v Objednávce, uživatelském účtu, fakturačních údajích nebo jiném dokumentu tvořícím součást Základní smlouvy. Kontaktní údaje Správce pro účely této Smlouvy jsou kontaktní údaje uvedené v Objednávce, uživatelském účtu nebo v jiném oznámení Správce doručeném Zpracovateli.
+
+(dále jen „**Správce**“)
+
+a
+
+**Zpracovatel:**
+
+**Obchodní firma:** **Rewora s. r. o.**
+
+Sídlo: Prešovská 40A, 821 02 Bratislava - mestská časť Ružinov,
+
+IČO: 50 647 652
+
+Zápis: zapsaná v Obchodním rejstříku vedeném Městským soudem Bratislava III, oddíl: Sro, vložka č.: 116449/B
+
+(dále jen „**Zpracovatel**“)
+
+(Správce a Zpracovatel dále společně také jako „Smluvní strany“ a jednotlivě také jako „Smluvní strana“)
+
+## 1. DEFINICE POJMŮ
+
+1.1. Pokud není v této Smlouvě uvedeno něco jiného, pojmy začínající velkým písmenem mají pro účely této Smlouvy následující význam:
+
+1.1.1. „**Automatizovaným rozhodováním**“ je rozhodování v jednotlivých případech týkajících se fyzických osob pouze na základě automatizovaného zpracování Osobních údajů, včetně profilování bez lidského zásahu;
+
+1.1.2. „**Dotčenými osobami**“ se pro účely této Smlouvy rozumějí fyzické osoby, jejichž osobní údaje jsou zpracovávány, přičemž kategorie dotčených osob, časové omezení zpracování a účely zpracování jsou vymezeny v Příloze č. 1 k této Smlouvě;
+
+1.1.3. „**Oprávněnou osobou**“ se pro účely této Smlouvy rozumí každá fyzická osoba, která má přístup k Osobním údajům (přičemž nejde o Subzpracovatele);
+
+1.1.4. „**Osobními údaji**“ se rozumějí jakékoli informace týkající se identifikované nebo identifikovatelné fyzické osoby; identifikovatelná fyzická osoba je osoba, kterou lze identifikovat přímo či nepřímo, zejména odkazem na identifikátor, jako je jméno, identifikační číslo, lokalizační údaje, online identifikátor, nebo odkazem na jeden či více prvků, které jsou specifické pro fyzickou, fyziologickou, genetickou, mentální, ekonomickou, kulturní nebo sociální identitu této fyzické osoby, přičemž Zpracovatel bude jménem Správce zpracovávat výlučně Osobní údaje uvedené v Příloze č. 1 k této Smlouvě;
+
+1.1.5. „**Nařízením**“ se pro účely této Smlouvy rozumí nařízení Evropského parlamentu a Rady (EU) 2016/679 ze dne 27. dubna 2016 o ochraně fyzických osob v souvislosti se zpracováním osobních údajů a o volném pohybu těchto údajů, kterým se zrušuje směrnice 95/46/ES (obecné nařízení o ochraně údajů);
+
+1.1.6. „**Subzpracovatelem**“ se pro účely této Smlouvy rozumí další zpracovatel zapojený Zpracovatelem do zpracování Osobních údajů jménem Správce;
+
+1.1.7. „**Třetí zemí**“ se pro účely této Smlouvy rozumí země, která není členským státem Evropské unie ani státem Dohody o Evropském hospodářském prostoru;
+
+1.1.8. „**Úřadem**“ se pro účely této Smlouvy rozumí Úrad na ochranu osobných údajov Slovenskej republiky [Úřad pro ochranu osobních údajů Slovenské republiky], se sídlem Galvaniho Business Centrum II, Galvaniho 7/B, Bratislava, Slovenská republika, IČO: 36 064 220;
+
+1.1.9. „**Základní smlouvou**“ se pro účely této Smlouvy rozumí smluvní vztah mezi Zpracovatelem jako poskytovatelem služby Rewora a Správcem jako objednatelem, který vzniká způsobem podle VOP, zejména potvrzením Objednávky, samoregistrací, aktivací Služeb nebo jiným prokazatelným způsobem akceptace podle VOP, včetně Objednávky, VOP, Ceníku, případné individuální dohody a všech jejich pozdějších změn;
+
+1.1.10. „**ZoOOÚ**“ se pro účely této Smlouvy rozumí zákon č. 18/2018 Z. z. o ochraně osobních údajů a o změně a doplnění některých zákonů ve znění pozdějších dodatků;
+
+1.1.11. „**Smlouvou**“ se rozumí tato smlouva o zpracování osobních údajů, včetně všech jejích příloh, změn, dodatků a ostatních součástí, která tvoří nedílnou součást Základní smlouvy.
+
+1.2. Pojmy uvedené v bodě 1.1 této Smlouvy v jednotném čísle zahrnují i tvary v množném čísle a naopak. Pojmy Objednávka, VOP, Ceník, Služby, Platforma, Dashboard, Widget, API, Recenze, Q&A obsah, Obsah Objednatele, Zákazník a další pojmy, které nejsou výslovně definovány v této Smlouvě, mají význam uvedený ve VOP, pokud z kontextu této Smlouvy nevyplývá něco jiného.
+
+1.3. Nadpisy a pojmenování jednotlivých bodů v této Smlouvě jsou určeny pro informativní a orientační účely, nemají závazný charakter ani vliv na výklad ustanovení této Smlouvy.
+
+## 2. PŘEDMĚT SMLOUVY A ZPRACOVÁNÍ
+
+2.1. Předmět Smlouvy: Předmětem této Smlouvy je stanovení podmínek mezi Správcem a Zpracovatelem ohledně zpracování Osobních údajů souvisejícího se Základní smlouvou a poskytováním Služeb Rewora, a to za účelem zajištění dostatečných záruk, že Zpracovatel v souvislosti se zpracováním Osobních údajů jménem Správce přijme technická a organizační opatření tak, aby předmětné zpracování splňovalo požadavky primárně Nařízení a ZoOOÚ a aby byla zajištěna ochrana práv Dotčených osob.
+
+2.2. Správce a Zpracovatel berou plně na vědomí, že vzhledem k povaze Služeb poskytovaných prostřednictvím Platformy, zejména při zpracování Recenzí, Q&A obsahu, údajů Zákazníků, údajů uživatelů Dashboardu, integračních, technických a provozních údajů, je nutné, aby Správce a Zpracovatel v souladu s článkem 28 Nařízení a ZoOOÚ uzavřeli i tuto Smlouvu.
+
+2.3. Zpracovatel se zavazuje, že je plně způsobilý a oprávněný tuto Smlouvu uzavřít, být jí vázán a po celou dobu trvání této Smlouvy plnit všechny povinnosti v ní stanovené.
+
+2.4. Správce a Zpracovatel se dohodli, že zpracování Osobních údajů v souvislosti se Smlouvou a Základní smlouvou bude vykonáváno plně v souladu s Nařízením, ZoOOÚ a ostatními příslušnými obecně závaznými právními předpisy.
+
+2.5. Správce a Zpracovatel berou na vědomí, že Správce je v postavení správce podle článku 4 odst. 7 Nařízení a Zpracovatel je v postavení zpracovatele podle článku 4 odst. 8 Nařízení. Zpracovatel při poskytování Služeb podle této Smlouvy zpracovává Osobní údaje výlučně jménem Správce a na základě jeho zdokumentovaných pokynů. Pokud Objednatel při používání Služeb jedná jako zpracovatel jménem třetí osoby jako správce, Objednatel prohlašuje, že je oprávněn pověřit Zpracovatele zpracováním Osobních údajů jako dalšího zpracovatele a udělit mu pokyny podle této Smlouvy. Objednatel odpovídá za to, že takové pověření je v souladu s právním vztahem mezi Objednatelem a příslušným správcem.
+
+2.7. Novace: Správce a Zpracovatel se dohodli, že tato Smlouva v celém rozsahu nahrazuje všechny dosavadní smlouvy, jejich dodatky nebo jiná ujednání Smluvních stran vztahující se na podmínky zpracování a ochranu Osobních údajů v souvislosti se Základní smlouvou a poskytováním Služeb.
+
+2.8. Pověření Zpracovatele zpracováním: Správce touto Smlouvou pověřuje Zpracovatele zpracováním Osobních údajů, které Správce, uživatelé Správce, Zákazníci nebo jiné osoby vloží, odešlou, zpřístupní nebo jinak poskytnou prostřednictvím Platformy nebo v souvislosti se Službami, a to za podmínek a v rozsahu dohodnutém v této Smlouvě.
+
+2.9. Odměna: Zpracování Osobních údajů na základě této Smlouvy Zpracovatelem je vykonáváno bez samostatné odměny; odměna za zpracování Osobních údajů je zahrnuta v Odměně za Služby podle Základní smlouvy, pokud Smluvní strany v Objednávce nebo jiné dohodě výslovně neurčí jinak.
+
+2.10. Kategorie Osobních údajů: Správce a Zpracovatel se dohodli, že předmětem zpracování podle této Smlouvy budou Osobní údaje Dotčených osob, které bude Zpracovatel zpracovávat při poskytování Služeb, zejména při sběru, přijímání, uchovávání, zpracování, moderaci, správě, zobrazování a analytickém vyhodnocování Recenzí, Q&A obsahu, výzev na hodnocení, importů, exportů, integrací, Dashboardu, Widgetů, API, reportovacích, překladových, podpůrných a souvisejících funkcionalit, a které jsou uvedeny v Příloze č. 1 k této Smlouvě.
+
+2.11. Účel/předmět zpracování: Zpracovatel je oprávněn zpracovávat Osobní údaje jménem Správce výlučně pro účel/účely uvedené v Příloze č. 1 k této Smlouvě, pro účely, které vyplývají ze Základní smlouvy, VOP, Objednávky, nastavení Platformy nebo jiných zdokumentovaných pokynů Správce.
+
+2.12. Pokyny Správce: Zpracovatel bere plně na vědomí, že bez předchozího výslovného pokynu nebo rozhodnutí Správce není Zpracovatel oprávněn určovat účely ani prostředky zpracování Osobních údajů a současně Zpracovatel není oprávněn zpracovávat Osobní údaje nad rámec vymezený touto Smlouvou.
+
+2.13. Zpracovatel se zavazuje zpracovávat Osobní údaje pouze na základě zdokumentovaných pokynů Správce, včetně pokynů uvedených v této Smlouvě, Základní smlouvě, VOP, Objednávce, nastaveních Platformy, Dashboardu nebo v jiné elektronické komunikaci Smluvních stran, přičemž Zpracovatel je oprávněn zpracovávat, poskytovat a zpřístupňovat Osobní údaje výlučně v souladu s touto Smlouvou. Zpracovatel je povinen zdokumentovat a vést záznamy o pokynech Správce v rozsahu vyžadovaném Nařízením. V případě, že Zpracovatel bude mít důvodně za to, že některý z pokynů Správce má nebo by měl mít za následek porušení Nařízení, ZoOOÚ nebo jiných příslušných obecně závazných právních předpisů, je Zpracovatel povinen tuto skutečnost bez zbytečného odkladu oznámit Správci na kontaktní údaje podle článku 13 této Smlouvy.
+
+2.14. Zpracovatel je povinen na pokyn Správce Osobní údaje bez zbytečného odkladu opravit, doplnit, vymazat (zlikvidovat) nebo omezit zpracování Osobních údajů a současně je Zpracovatel povinen takovou zpracovatelskou operaci řádně zdokumentovat. Za omezení zpracování podle předchozí věty se rozumí označení uchovávaných osobních údajů s cílem omezit jejich zpracování v budoucnu v rovině článku 18 Nařízení.
+
+2.15. Zpracovatelské operace: Zpracovatel je při plnění Smlouvy oprávněn s Osobními údaji vykonávat výlučně takové zpracovatelské operace, které jsou skutečně nezbytné pro plnění povinností Zpracovatele podle Základní smlouvy a této Smlouvy, zejména operace uvedené v Příloze č. 1 k této Smlouvě. Zpracovatel není oprávněn Osobní údaje zveřejnit nebo zpřístupnit třetím osobám nad rámec Základní smlouvy, VOP, této Smlouvy, nastavení Platformy nebo zákonné povinnosti, pokud se na tom Správce a Zpracovatel nedohodnou jinak ve Smlouvě, Základní smlouvě nebo VOP. Smluvní strany se pro vyloučení jakýchkoli pochybností dohodly, že Zpracovatel je oprávněn vykonávat i takové zpracovatelské operace, které vyplývají ze Základní smlouvy, a to zejména anonymizovat osobní údaje a tyto anonymizované údaje poskytnout třetím osobám.
+
+2.16. Zpracovatel je povinen poskytnout Správci přiměřenou součinnost pro řádné posouzení vlivu zpracovatelských operací na ochranu Osobních údajů, a to především při posuzování vlivu na ochranu Osobních údajů, při opatřeních na řešení rizik, bezpečnostních opatřeních a mechanismech na zajištění ochrany Osobních údajů, vždy s přihlédnutím k povaze zpracování a informacím dostupným Zpracovateli.
+
+2.17. Dobrá pověst Správce: Zpracovatel zpracovává Osobní údaje a plní povinnosti dohodnuté v této Smlouvě tak, aby tím nepoškodil dobrou pověst Správce.
+
+2.18. Dobrá pověst Zpracovatele: Správce se zavazuje pověřovat Zpracovatele takovými zpracovatelskými operacemi a při zpracování osobních údajů postupovat takovým způsobem, aby tím nepoškodil dobrou pověst Zpracovatele.
+
+2.19. Práva k Osobním údajům: Zpracovatel bere plně na vědomí a je srozuměn s tím, že touto Smlouvou nenabývá žádná práva ani licence k Osobním údajům, s výjimkou práva zpracovávat Osobní údaje jménem Správce podle podmínek stanovených v této Smlouvě. Tím není dotčeno právo Zpracovatele uchovávat, zpracovávat a používat řádně anonymizovaná a agregovaná data podle bodu 10.3 této Smlouvy a podle VOP, pokud taková data již nepředstavují Osobní údaje, ani právo Zpracovatele poskytnout taková data třetí osobě (za odměnu nebo bezplatně).
+
+2.20. Záznamy o zpracovatelských činnostech: Zpracovatel je povinen vést přesné, přehledné a úplné záznamy o zpracovatelských činnostech podle článku 30 odst. 2 Nařízení.
+
+2.21. Spolupráce Zpracovatele s Úřadem: Zpracovatel je povinen spolupracovat s Úřadem v rámci dozoru podle článku 31 Nařízení.
+
+2.22. Automatizované rozhodování a profilování: Zpracovatel není oprávněn vykonávat Automatizované rozhodování ani profilování v souvislosti s Osobními údaji, pokud tak není výslovně stanoveno v Základní smlouvě, Objednávce, nastaveních Platformy nebo pokud Správce neudělí Zpracovateli jiný zdokumentovaný pokyn. Běžné technické třídění, označování, moderace, analytika, překlad nebo reportování v rámci Platformy se nepovažuje za Automatizované rozhodování, pokud z něj nevyplývají právní účinky nebo obdobně významné účinky vůči Dotčené osobě.
+
+2.23. Vzdálený přístup: V případě, že v souvislosti se zpracováním Osobních údajů podle této Smlouvy bude mít Zpracovatel vzdálený přístup k informačním systémům Správce nebo Správce poskytne Zpracovateli přístupové údaje, je Správce oprávněn takový vzdálený přístup omezit nebo odebrat, pokud tím neznemožní řádné poskytování objednaných Služeb nebo pokud se Smluvní strany nedohodnou jinak.
+
+## 3. OPRÁVNĚNÉ OSOBY
+
+3.1. Zpracování Oprávněnými osobami: Zpracovatel je povinen zajistit, aby každá Oprávněná osoba (zejména zaměstnanci Zpracovatele a osoby pověřené Zpracovatelem) zpracovávala tyto Osobní údaje výlučně na základě zdokumentovaných pokynů Správce, v souladu se zásadami integrity a důvěrnosti podle článku 5 odst. 1 písm. f) Nařízení, pokud právo Evropské unie nebo právo státu, který je smluvní stranou Dohody o Evropském hospodářském prostoru, nestanoví jinak.
+
+3.2. Seznámení Oprávněných osob a mlčenlivost: Zpracovatel je povinen zajistit, aby Oprávněné osoby byly plně seznámeny s ustanoveními Nařízení, aplikovatelnými ustanoveními ZoOOÚ a ostatními příslušnými obecně závaznými právními předpisy upravujícími ochranu a zpracování Osobních údajů a aby se vůči Zpracovateli zavázaly, že zachovají mlčenlivost o informacích, o kterých se dozvěděly v souvislosti s plněním předmětu Základní smlouvy a této Smlouvy, a to i po skončení pracovního poměru, služebního poměru a jiného smluvního vztahu založeného mezi Zpracovatelem a Oprávněnou osobou. Zpracovatel a Oprávněné osoby jsou povinny zachovávat mlčenlivost o všech Osobních údajích Dotčených osob, které byly poskytnuty, zpřístupněny nebo s nimiž přijdou do styku v souvislosti s plněním Základní smlouvy a této Smlouvy. Správce je plně oprávněn požadovat od Zpracovatele poskytnutí dokumentů, které prokáží splnění povinnosti Zpracovatele podle tohoto bodu této Smlouvy.
+
+3.3. Oprávněné osoby a třetí osoby: Zpracovatel je povinen zajistit, aby Oprávněné osoby Osobní údaje nezveřejnily, neposkytly a nezpřístupnily třetím osobám, pokud to výslovně nevyplývá z ustanovení této Smlouvy, Základní smlouvy, z pokynů Správce nebo pokud je takové zveřejnění, poskytnutí nebo zpřístupnění nezbytné podle obecně závazného právního předpisu pro plnění úkolů soudu, orgánů činných v trestním řízení nebo jiných státních orgánů.
+
+3.4. Ostatní osoby s přístupem: Povinnost Zpracovatele zajistit zachovávání mlčenlivosti Oprávněnými osobami podle tohoto článku této Smlouvy se rovněž vztahuje i na fyzické osoby, které u Zpracovatele přijdou do styku s Osobními údaji (například osoby, které u Zpracovatele spravují a zabezpečují IT technologie).
+
+3.5. Povinnost zachovávat mlčenlivost po zániku Smlouvy: Povinnosti Zpracovatele stanovené v tomto článku této Smlouvy trvají i po zániku/ukončení této Smlouvy.
+
+## 4. OCHRANA A BEZPEČNOST OSOBNÍCH ÚDAJŮ
+
+4.1. Bezpečnost ochrany Osobních údajů: Zpracovatel je povinen se zřetelem k nejnovějším poznatkům, nákladům na provedení opatření a k povaze, rozsahu, kontextu a účelům zpracování, jakož i k rizikům s různou pravděpodobností a závažností pro práva a svobody fyzických osob, zajistit ochranu Osobních údajů podle článku 32 Nařízení a článku 28 odst. 3 písm. c) Nařízení ve spojení s článkem 5 Nařízení.
+
+4.2. Při posuzování přiměřené úrovně bezpečnosti podle bodu 4.1 této Smlouvy je Zpracovatel povinen přihlížet především k rizikům, která představuje zpracování, a to zejména v důsledku náhodného nebo nezákonného zničení, ztráty, změny, neoprávněného poskytnutí Osobních údajů, které se přenášejí, uchovávají nebo jinak zpracovávají, nebo neoprávněného přístupu k Osobním údajům. Zpracovatel je současně povinen zajistit trvalou důvěrnost, integritu, dostupnost a odolnost systémů, v rámci kterých jsou Osobní údaje zpracovávány.
+
+4.3. Přiměřená technická a organizační opatření Zpracovatele: Přiměřená technická a organizační opatření, která je Zpracovatel povinen přijmout pro účely zajištění ochrany osobních údajů podle tohoto článku této Smlouvy, jsou zejména následující opatření:
+
+4.3.1. Osobní údaje musí být:
+
+4.3.1.1. zpracovávány zákonným způsobem, spravedlivě a transparentně ve vztahu k Dotčeným osobám;
+
+4.3.1.2. získávány pro konkrétně určené, výslovně uvedené a legitimní účely a nesmí být dále zpracovávány způsobem, který není slučitelný s těmito účely;
+
+4.3.1.3. zpracovávány přiměřeně, relevantně a omezeně na rozsah, který je nezbytný s ohledem na účely, pro které se zpracovávají;
+
+4.3.1.4. zpracovávány správně a podle potřeby musí být aktualizovány; musí být přijata všechna potřebná opatření, aby bylo zajištěno, že Osobní údaje, které jsou nesprávné z hlediska účelů, pro které se zpracovávají, budou bez zbytečného odkladu vymazány nebo opraveny;
+
+4.3.2. pseudonymizace;
+
+4.3.3. šifrování;
+
+4.3.4. fyzické i elektronické zamezení přístupu k Osobním údajům neoprávněným osobám;
+
+4.3.5. hardwarové a softwarové zabezpečení ochrany Osobních údajů (zejména ochrana proti malware, firewall, průběžná aktualizace softwaru, zálohování a podobně);
+
+4.3.6. omezení přístupu k Osobním údajům především na osoby, které potřebují nezbytný přístup pro účely plnění Základní smlouvy a této Smlouvy;
+
+4.3.7. management bezpečnostních incidentů;
+
+4.3.8. oddělení Osobních údajů od osobních údajů, které se zpracovávají pro jiné účely;
+
+4.3.9. průběžné vzdělávání Oprávněných osob v oblasti ochrany osobních údajů;
+
+4.3.10. schopnost včas obnovit dostupnost Osobních údajů a přístup k nim v případě fyzického nebo technického incidentu;
+
+4.3.11. ochrana Osobních údajů ve smyslu zásady „*privacy by default*“ a „*privacy by design*“.
+
+4.4. Zpracovatel je oprávněn přijmout i další přiměřená technická a organizační opatření pro účely zajištění ochrany Osobních údajů, než která jsou uvedena v bodě 4.3 této Smlouvy. Konkrétní popis minimálních bezpečnostních opatření, která přijme zpracovatel, je uveden v příloze 2 této smlouvy.
+
+4.5. Zpracovatel je povinen zajistit, aby bezpečnostní opatření stanovená v tomto článku této Smlouvy byla průběžně aktualizována vždy v rovině s aktuálním skutkovým stavem zpracování vykonávaného u Zpracovatele, jakož i v rovině aktuální legislativy týkající se oblasti ochrany osobních údajů. Zpracovatel je povinen nastavit proces pravidelného testování, posuzování a hodnocení účinnosti technických a organizačních opatření pro zajištění bezpečnosti zpracování Osobních údajů.
+
+4.6. Poskytnutí a zpřístupnění třetí osobě: Zpracovatel není oprávněn Osobní údaje bez předchozího pokynu nebo souhlasu Správce poskytnout ani zpřístupnit třetí osobě s výjimkou případů, kdy taková povinnost vyplývá z obecně závazného právního předpisu. Pokud si poskytnutí nebo zpřístupnění Osobních údajů vyžádá třetí osoba na základě obecně závazného právního předpisu, je Zpracovatel před takovým poskytnutím nebo zpřístupněním povinen o tom informovat Správce, pokud takové informování nezakazuje příslušný právní předpis. Tím není dotčeno právo Zpracovatele uchovávat, zpracovávat a používat řádně anonymizovaná a agregovaná data podle bodu 10.3 této Smlouvy a podle VOP, pokud taková data již nepředstavují Osobní údaje, ani právo Zpracovatele poskytnout taková data třetí osobě (za odměnu nebo bezplatně). Zpracovatel je povinen vést řádnou evidenci o každém poskytnutí Osobních údajů třetí osobě.
+
+4.7. Účast Zpracovatele na opatřeních Správce: Zpracovatel je povinen pomáhat Správci zajistit plnění povinností podle článků 32 až 36 Nařízení s přihlédnutím k povaze zpracování Osobních údajů a informacím dostupným Zpracovateli.
+
+4.8. Vázanost Zpracovatele bezpečnostními pravidly: Zpracovatel se zavazuje dodržovat svá interní bezpečnostní pravidla, technickou dokumentaci, bezpečnostní standardy Platformy a další interní dokumenty, které se týkají zpracování Osobních údajů a informační bezpečnosti. Pokud Správce požaduje dodržování vlastních interních směrnic nebo zvláštních bezpečnostních požadavků, jsou takové požadavky pro Zpracovatele závazné pouze v rozsahu, v jakém je Zpracovatel výslovně akceptoval samostatným prohlášením.
+
+## 5. SUBZPRACOVATELÉ
+
+5.1. Zpracovatel je oprávněn zapojit do zpracování Osobních údajů Subzpracovatele, kteří jsou nezbytní nebo přiměřeně potřební pro poskytování Služeb, zejména poskytovatele hostingu, cloudové infrastruktury, e-mailových a komunikačních služeb, technické podpory, bezpečnostních, analytických, integračních, překladových a obdobných služeb, a to za podmínek podle této Smlouvy.
+
+5.2. Zpracovatel závazně prohlašuje a zavazuje se vůči Správci, že v době uzavření této Smlouvy zapojuje do zpracování Osobních údajů výlučně ty Subzpracovatele, kteří jsou uvedeni v Příloze č. 1 k této Smlouvě nebo v jiném seznamu Subzpracovatelů zpřístupněném Zpracovatelem Správci, případně ty Subzpracovatele, které Správce samostatně schválil.
+
+5.3. Správce touto Smlouvou uděluje Zpracovateli obecné povolení k zapojení Subzpracovatelů podle článku 28 odst. 2 Nařízení, a to v rozsahu potřebném pro řádné poskytování Služeb a provoz Platformy.
+
+5.4. V případě, že Zpracovatel zamýšlí zapojit nového Subzpracovatele nebo nahradit stávajícího Subzpracovatele, je povinen o takové změně informovat Správce přiměřeným způsobem, zejména zveřejněním aktualizovaného seznamu Subzpracovatelů na Platformě, na webovém sídle Zpracovatele, ve VOP nebo zasláním oznámení na kontaktní údaje Správce. Oznámení musí obsahovat alespoň:
+
+5.4.1. identifikaci Subzpracovatele, který má být zapojen do zpracování Osobních údajů;
+
+5.4.2. rozsah nebo kategorii služeb, v nichž má být Subzpracovatel zapojen do zpracování;
+
+5.4.3. účel zapojení do zpracování;
+
+5.4.4. informaci o tom, zda v souvislosti se zapojením Subzpracovatele může docházet k přenosu Osobních údajů do Třetí země;
+
+5.4.5. přiměřené informace o technických a organizačních opatřeních nebo zárukách Subzpracovatele, pokud jsou vzhledem k povaze zpracování relevantní.
+
+5.5. Správce je oprávněn z důvodů týkajících se ochrany Osobních údajů namítat zapojení nového Subzpracovatele v přiměřené lhůtě určené v oznámení Zpracovatele; pokud taková lhůta není určena, ve lhůtě pěti (5) kalendářních dnů ode dne oznámení. Pokud Správce v této lhůtě nevznese odůvodněnou námitku, má se za to, že se zapojením Subzpracovatele souhlasí. Námitka Správce musí být řádně odůvodněna důvody týkajícími se ochrany Osobních údajů.
+
+5.6. V případě, že Zpracovatel zapojí dalšího zpracovatele – Subzpracovatele do zpracování Osobních údajů na základě této Smlouvy, je Zpracovatel povinen tohoto Subzpracovatele prostřednictvím smlouvy nebo jiného právního úkonu zavázat stejnými povinnostmi týkajícími se ochrany Osobních údajů, jaké jsou stanoveny v této Smlouvě, a to především přijetím dostatečných záruk pro provedení přiměřených technických a organizačních opatření takovým způsobem, aby zpracování splňovalo požadavky Nařízení a příslušných ustanovení ZoOOÚ. Pokud Subzpracovatel nesplní své povinnosti ochrany Osobních údajů, Zpracovatel zůstává vůči Správci plně odpovědný za plnění povinností Subzpracovatele v rozsahu stanoveném Nařízením a touto Smlouvou.
+
+5.7. V návaznosti na bod 5.6 této Smlouvy se Zpracovatel zavazuje na žádost Správce poskytnout přiměřené informace prokazující splnění povinností Zpracovatele ve vztahu k Subzpracovatelům. Kopie smluv se Subzpracovateli je Zpracovatel povinen poskytnout pouze v rozsahu přiměřeném a nezbytném pro prokázání splnění požadavků článku 28 Nařízení; v kopiích mohou být vymazány obchodní, technické, bezpečnostní nebo cenové informace, které se nevztahují na zpracování Osobních údajů.
+
+5.8. Zpracovatel je povinen vést aktuální přehled zapojených Subzpracovatelů a umožnit Správci přiměřeným způsobem seznámit se se změnami v seznamu Subzpracovatelů. Správce bere na vědomí, že odmítnutí Subzpracovatele, který je objektivně potřebný pro poskytování Služeb, může mít za následek nemožnost poskytování příslušné Služby nebo oprávnění Smluvních stran ukončit dotčenou část Základní smlouvy.
+
+5.9. Zpracovatel se zavazuje, že sám Zpracovatel ani ostatní Subzpracovatelé neposkytnou a nezpřístupní Osobní údaje příjemcům v Třetí zemi ani neuskuteční přenos Osobních údajů do Třetí země, pokud nejsou splněny podmínky podle článků 44 až 49 Nařízení, této Smlouvy a příslušných pokynů Správce.
+
+## 6. ZAJIŠTĚNÍ PRÁV DOTČENÝCH OSOB
+
+6.1. Opatření pro výkon práv Dotčených osob: Zpracovatel je povinen, po zohlednění povahy zpracování, v co největší míře pomáhat Správci vhodnými technickými a organizačními opatřeními při plnění jeho povinnosti reagovat na žádosti o výkon práv Dotčených osob stanovených v článcích 15 až 22 Nařízení.
+
+6.2. V případě, že si jakoukoli formou Dotčená osoba u Zpracovatele uplatní některé z práv stanovených v článcích 15 až 22 Nařízení, případně ZoOOÚ, je Zpracovatel povinen o tom bez zbytečného odkladu, nejpozději do deseti (10) pracovních dnů, informovat Správce na kontaktní údaje podle článku 13 této Smlouvy, pokud povaha žádosti nebo dostupné údaje umožňují identifikovat příslušného Správce. Zpracovatel není oprávněn posuzovat/vyhodnocovat oprávněnost žádostí, podnětů a jiných dotazů Dotčených osob ani provést jiná opatření kromě těch, která jsou stanoveny v této Smlouvě, pokud Správce nerozhodne jinak nebo neudělí Zpracovateli jiný pokyn. Podmínka stanovená v předchozí větě neplatí, pokud Dotčené osobě hrozí bezprostřední újma na jejích právech a/nebo svobodách, kdy je Zpracovatel povinen bez zbytečného odkladu provést všechna přiměřená a dočasná opatření, aby v co největší míře minimalizoval hrozbu bezprostřední újmy na právech a svobodách Dotčených osob.
+
+6.3. Záznam o uplatnění práv Dotčených osob: V případě, že si Dotčená osoba uplatní své právo stanovené v Nařízení, případně ZoOOÚ osobně, elektronicky nebo prostřednictvím Platformy, je Zpracovatel povinen vyhotovit nebo uchovat přiměřený záznam o uplatnění tohoto práva (zejména identifikaci Dotčené osoby, jaké právo si uplatnila, jakých Osobních údajů se toto právo týká, jaké zpracovatelské činnosti nebo funkcionality Platformy se to týká, čeho se domáhá) a tento záznam nebo jeho obsah bez zbytečného odkladu zpřístupnit Správci.
+
+6.4. Pokud je to podle povahy žádosti (uplatnění práva) možné, je Zpracovatel povinen bez zbytečného odkladu informovat Dotčenou osobu o tom, že její žádost (uplatnění práva) oznámil a přeposlal Správci (zejména žádosti/uplatnění práva podané osobně nebo elektronicky). Zpracovatel je povinen poskytovat Správci veškerou součinnost a příslušné dokumenty v souvislosti s vyřizováním všech žádostí, podnětů a stížností Dotčených osob v souvislosti s Osobními údaji.
+
+6.5. Ochrana práv Dotčených osob při zpracování: Zpracovatel se zavazuje, že zpracování Osobních údajů podle této Smlouvy bude vykonávat tak, aby tím nezasáhl do práv a právem chráněných zájmů Dotčených osob (zejména do osobnostních práv a soukromí).
+
+## 7. POSTUP V PŘÍPADĚ PORUŠENÍ OCHRANY OSOBNÍCH ÚDAJŮ
+
+7.1. Oznámení o porušení ochrany Osobních údajů: Zpracovatel bere plně na vědomí, že Správce je podle podmínek stanovených v článcích 33 a 34 Nařízení povinen oznámit porušení ochrany Osobních údajů. Zpracovatel je oprávněn oznámit porušení ochrany Osobních údajů primárně Správci.
+
+7.2. Zpracovatel je povinen oznámit Správci každé porušení ochrany Osobních údajů bez zbytečného odkladu, nejpozději do čtyřiceti osmi (48) hodin poté, co se o tomto porušení dozvěděl, a to na kontaktní údaje podle článku 13 této Smlouvy, přičemž Zpracovatel je současně povinen v přiměřeném rozsahu popsat předmětné porušení ochrany Osobních údajů, zejména uvést počet Dotčených osob, kterých se porušení týká, kdy se Zpracovatel o porušení dozvěděl, povahu a příčiny porušení, identifikovat informační systém a/nebo zpracovatelské činnosti/operace, kterých se porušení týká, popsat pravděpodobné důsledky předmětného porušení a popsat všechna přijatá opatření ke zmírnění potenciálních nepříznivých důsledků porušení ze strany Zpracovatele.
+
+7.3. V případě porušení ochrany Osobních údajů je Zpracovatel povinen bez zbytečného odkladu přijmout přiměřená nápravná opatření, aby v co největší míře minimalizoval porušení ochrany Osobních údajů, a současně je Zpracovatel povinen Správci bez zbytečného odkladu poskytnout všechny relevantní informace, o které Správce Zpracovatele v souvislosti s porušením ochrany Osobních údajů požádá. Zpracovatel je současně povinen poskytnout Správci veškerou součinnost potřebnou k odstranění následků porušení ochrany Osobních údajů.
+
+## 8. PŘENOS DO TŘETÍCH ZEMÍ
+
+8.1. Zpracovatel není oprávněn bez splnění podmínek podle článků 44 až 49 Nařízení přenést Osobní údaje do Třetí země nebo zpřístupnit Osobní údaje příjemci v Třetí zemi. Pokud se v rámci poskytování Služeb nebo využívání Subzpracovatelů uskuteční přenos Osobních údajů do Třetí země, musí být takový přenos uveden v Příloze č. 1 k této Smlouvě nebo v seznamu Subzpracovatelů a musí být založen na přiměřeném mechanismu podle Nařízení, zejména na rozhodnutí o přiměřenosti, standardních smluvních doložkách nebo jiné přípustné výjimce. Ke dni účinnosti této Smlouvy Zpracovatel neuskutečňuje přenos Osobních údajů mimo EHP, s výjimkou případů uvedených v aktuálním seznamu Subzpracovatelů.
+
+8.2. Přenos na základě souhlasu, pokynu nebo rozhodnutí Správce: V případě, že na základě konkrétního souhlasu, pokynu nebo rozhodnutí Správce bude Zpracovatel oprávněn přenést Osobní údaje i do Třetí země, v níž není zaručena přiměřená úroveň ochrany, je Zpracovatel povinen dodržet podmínky stanovené v článcích 44 až 49 Nařízení, jakož i další podmínky Nařízení tak, aby tento přenos splňoval požadavky této Smlouvy a přiměřené bezpečnostní standardy Zpracovatele.
+
+## 9. AUDIT/KONTROLA OCHRANY OSOBNÍCH ÚDAJŮ
+
+9.1. Informace ohledně ochrany Osobních údajů: Zpracovatel bere na vědomí, že je ve smyslu článku 28 odst. 3 písm. h) Nařízení povinen poskytnout Správci všechny informace potřebné k prokázání splnění jeho povinností stanovených v této Smlouvě a umožnit audit, jakož i kontrolu vykonávanou Správcem nebo jiným auditorem, kterého pověří Správce, a Zpracovatel je současně povinen poskytnout Správci přiměřenou součinnost.
+
+9.2. Poskytnutí informací a dokumentů: Zpracovatel je povinen na žádost Správce poskytnout Správci informace a dokumentaci potřebnou k prokázání, že si Zpracovatel plní povinnosti stanovené v této Smlouvě, v Nařízení a v ZoOOÚ, a to v přiměřeném rozsahu a s přihlédnutím k ochraně důvěrných informací, bezpečnosti Platformy a práv třetích osob. Informace a dokumentaci podle předchozí věty je Zpracovatel povinen poskytnout v přiměřené lhůtě, zpravidla do čtrnácti (14) pracovních dnů ode dne doručení žádosti, a v případě porušení ochrany Osobních údajů bez zbytečného odkladu. Smluvní strany berou na vědomí, že Zpracovatel není povinen poskytovat Správci informace a dokumentaci potřebnou k prokázání, že si Zpracovatel plní povinnosti stanovené v této Smlouvě, v Nařízení a v ZoOOÚ v případě řádně neodůvodněných opakovaných a/nebo šikanózních žádostí.
+
+9.3. Audit zabezpečení ochrany Osobních údajů: Zpracovatel je povinen na žádost Správce umožnit Správci, pověřeným osobám a auditorům Správce provést kontrolu nebo audit v rozsahu potřebném k ověření, zda Zpracovatel plní povinnosti stanovené v této Smlouvě, Nařízením, příslušnými ustanoveními ZoOOÚ a ostatními příslušnými obecně závaznými právními předpisy týkajícími se ochrany a zpracování osobních údajů. Audit se provádí přednostně formou posouzení dokumentů, dotazníku, bezpečnostních potvrzení, certifikací nebo vzdálené kontroly; fyzická kontrola prostor nebo systémů Zpracovatele se provádí pouze v odůvodněných případech a po předchozí dohodě Smluvních stran. V rámci auditu nebo kontroly podle tohoto bodu této Smlouvy je Zpracovatel povinen poskytnout Správci zejména:
+
+9.3.1. dokumenty týkající se ochrany a zpracování Osobních údajů v přiměřeném rozsahu (zejména relevantní bezpečnostní politiky, záznamy o zpracovatelských činnostech, popis technických a organizačních opatření, evidenci incidentů a jiné dokumenty týkající se zpracování Osobních údajů);
+
+9.3.2. přiměřenou součinnost při ověření technických a organizačních opatření Zpracovatele a jeho Subzpracovatelů, pokud je to potřebné vzhledem k povaze a rozsahu zpracování;
+
+9.3.3. součinnost kontaktní osoby nebo jiné osoby, která má u Zpracovatele na starosti ochranu a zpracování Osobních údajů.
+
+Zpracovatel je povinen umožnit Správci, pověřeným osobám a auditorům Správce provést audit nebo kontrolu podle tohoto bodu této Smlouvy v přiměřené lhůtě, zpravidla do třiceti (30) kalendářních dnů ode dne doručení žádosti; v případě porušení ochrany Osobních údajů, které se týká Správce, tak musí Zpracovatel učinit bez zbytečného odkladu. Audit a kontrola nesmí nepřiměřeně zasahovat do činnosti Zpracovatele, bezpečnosti Platformy, práv ostatních zákazníků Zpracovatele ani práv třetích osob. Správce je oprávněn požadovat audit nebo kontrolu podle tohoto článku této Smlouvy nejvýše jednou za kalendářní rok; v případě porušení ochrany Osobních údajů, které zavinil Zpracovatel, může Správce požadovat další audit bez omezení. Náklady vzniklé Správci v souvislosti s auditem nese Správce a běžné náklady vzniklé Zpracovateli v souvislosti s auditem nese Zpracovatel, pokud se Smluvní strany nedohodnou jinak. Pokud se v rámci kontroly nebo auditu prokáže, že porušení ochrany Osobních údajů způsobil nebo zavinil Zpracovatel, Smluvní strany se vypořádají podle článku 12 této Smlouvy a Základní smlouvy.
+
+9.4. Mlčenlivost při auditu nebo kontrole: Správce je povinen zachovávat mlčenlivost o všech skutečnostech, o kterých se během auditu nebo kontroly vykonávané podle tohoto článku této Smlouvy dozví. Mlčenlivost podle předchozí věty se nevztahuje na informace a dokumenty, které bude Správce a Dotčené osoby potřebovat k uplatnění jejich práv vůči Zpracovateli, Subzpracovateli a dalším třetím osobám.
+
+9.5. Kontrola státních orgánů: Zpracovatel je povinen bez zbytečného odkladu informovat Správce o každé kontrole státního orgánu u Zpracovatele nebo Subzpracovatelů, která se týká Osobních údajů zpracovávaných jménem Správce, jakož i o všech výsledcích a opatřeních, která byla uložena nebo přijata v souvislosti s touto kontrolou, pokud takové informování nezakazuje příslušný právní předpis.
+
+## 10. DOBA ZPRACOVÁNÍ
+
+10.1. Zahájení zpracování Osobních údajů: Zpracovatel je oprávněn jménem Správce zpracovávat Osobní údaje podle této Smlouvy ode dne nabytí účinnosti této Smlouvy, resp. ode dne zahájení poskytování Služeb podle Základní smlouvy, pokud nastane dříve.
+
+10.2. Omezení doby zpracování: Správce a Zpracovatel se výslovně dohodli, že doba zpracování Osobních údajů je omezena po dobu trvání Základní smlouvy, resp. po dobu vykonávání činnosti Zpracovatelem podle podmínek stanovených v Základní smlouvě, avšak nejdéle po dobu trvání účelu zpracování nebo po dobu nezbytnou k splnění zákonných povinností, ochraně práv Zpracovatele, řešení bezpečnostních incidentů, auditních záznamů a prokazování splnění povinností. Tím není dotčeno právo Zpracovatele uchovávat, zpracovávat a používat řádně anonymizovaná a agregovaná data podle bodu 10.3 této Smlouvy a podle VOP, pokud taková data již nepředstavují Osobní údaje, ani právo Zpracovatele poskytnout taková data třetí osobě (za odměnu nebo bezplatně).
+
+10.3. Pokud Správce nerozhodne jinak nebo nedá Zpracovateli jiný pokyn, bez zbytečného odkladu po zániku nebo jiném skončení Základní smlouvy nebo poté, co Zpracovatel přestane vykonávat činnost podle Základní smlouvy, je Zpracovatel povinen podle volby Správce vrátit Správci Osobní údaje nebo vymazat (zlikvidovat) všechny Osobní údaje včetně jejich kopií, pokud právo Evropské unie nebo právo členského státu nevyžaduje uchovávání Osobních údajů. Správce současně touto Smlouvou uděluje Zpracovateli zdokumentovaný pokyn a oprávnění, aby z údajů zpracovávaných v rámci poskytování Služeb vytvořil a i po skončení Základní smlouvy uchovával, zpracovával a používal anonymizovaná nebo agregovaná data odvozená z Obsahu Objednatele a ze zpracování v rámci poskytování Služeb, zejména agregované statistiky, metriky, modelové výstupy, reporty, benchmarky, kategorizace a jiné odvozené datové soubory, a to bezplatně, pro účely vytváření a rozvoje znalostní báze, nových funkcionalit Platformy, zlepšování a vývoje Služeb a Platformy, zajištění kvality, bezpečnosti a prevence zneužití, analytiky a statistických vyhodnocení a komerčního využití včetně zpřístupnění nebo poskytnutí takových anonymizovaných dat nebo výstupů z nich vytvořených třetím osobám za odměnu. Za anonymizovaná data se považují pouze taková data, která již nepředstavují Osobní údaje a není možné je přiřadit ke konkrétní fyzické osobě ani při vynaložení přiměřeného úsilí. Zpracovatel je povinen zajistit, aby anonymizace byla provedena před jakýmkoli zpřístupněním nebo poskytnutím třetím osobám. Pokud by určitý výstup navzdory označení jako anonymizovaný nebo agregovaný představoval Osobní údaje, Zpracovatel jej může zpracovávat pouze v souladu s Nařízením a na příslušném právním základě. Ustanovení o nakládání s Osobními údaji a jejich výmazu tím nejsou dotčena.
+
+10.4. Povinnost Zpracovatele poskytnout Správci součinnost pro účely zajištění kontinuity zpracování Osobních údajů podle bodu 10.3 této Smlouvy se považuje za splněnou v případě, že Zpracovatel umožní Správci export Osobních údajů prostřednictvím Platformy nebo mu Osobní údaje předá v přiměřeném strukturovaném formátu, pokud je to vzhledem k povaze Služby technicky možné. Povinnost Zpracovatele vymazat (zlikvidovat) Osobní údaje podle bodu 10.3 této Smlouvy se považuje za splněnou v případě, že Zpracovatel provede výmaz podle svých standardních technických a bezpečnostních postupů a na žádost Správce mu poskytne přiměřené potvrzení.
+
+10.5. Potvrzení o výmazu (likvidaci): Zpracovatel je povinen na žádost Správce bez zbytečného odkladu písemně nebo elektronicky potvrdit Správci výmaz (likvidaci) Osobních údajů podle bodu 10.3 této Smlouvy, pokud takové potvrzení lze přiměřeně poskytnout vzhledem k technickému nastavení Platformy a povaze Služeb.
+
+## 11. TRVÁNÍ SMLOUVY A SANKCE
+
+11.1. Platnost a účinnost Smlouvy: Tato Smlouva nabývá platnosti a účinnosti okamžikem uzavření/přijetí Smlouvy a uzavření Základní smlouvy, potvrzením Objednávky, aktivací Služeb, samoregistrací Správce nebo jiným prokazatelným způsobem akceptace podle VOP, podle toho, který z těchto okamžiků nastane jako první.
+
+11.2. Správce a Zpracovatel se dohodli, že tato Smlouva trvá po dobu trvání Základní smlouvy. V případě skončení platnosti, účinnosti Základní smlouvy nebo v případě jakéhokoli zániku Základní smlouvy automaticky (ex nunc) zaniká i tato Smlouva, pokud tato Smlouva nezanikne dříve z jiných důvodů, nebo pokud se Smluvní strany nedohodnou jinak; tím nejsou dotčena ustanovení této Smlouvy, která mají podle své povahy trvat i po skončení zpracování, zejména povinnost mlčenlivosti, součinnosti, vrácení nebo výmazu Osobních údajů, oprávnění používat anonymizovaná data podle bodu 10.3 této Smlouvy, odpovědnostní ustanovení a ustanovení o řešení sporů.
+
+11.3. Případy ukončení: Zpracovatel a Správce se dohodli, že mimo případů stanovených zákonem a případů stanovených na jiném místě v Základní smlouvě je Správce oprávněn ukončit dotčenou část Služeb nebo odstoupit od této Smlouvy a od Základní smlouvy i v následujících případech, tj. v případě, že:
+
+11.3.1. Zpracovatel navzdory upozornění Správce zpracovává Osobní údaje v rozporu s pokynem/pokyny Správce; nebo
+
+11.3.2. Zpracovatel navzdory upozornění Správce zpracovává Osobní údaje pro jiný účel, než je stanoven v této Smlouvě nebo než mu určil Správce; nebo
+
+11.3.3. Zpracovatel navzdory upozornění Správce zpracovává Osobní údaje nad rámec stanovený v této Smlouvě; nebo
+
+11.3.4. Zpracovatel zavinil porušení ochrany Osobních údajů; nebo
+
+11.3.5. Zpracovatel povolil zpracování Osobních údajů Subzpracovatelem nad rámec povolený v článku 5 této Smlouvy; nebo
+
+11.3.6. Zpracovatel nebo Subzpracovatel neumožnil Správci provést audit nebo kontrolu podle podmínek stanovených v článku 9 této Smlouvy;
+
+11.3.7. Zpracovatel navzdory upozornění Správce nadále porušuje některou z jeho povinností stanovených v této Smlouvě; nebo
+
+11.3.8. Zpracovatel navzdory upozornění Správce nadále porušuje některou z jeho povinností stanovených v Nařízení, ZoOOÚ nebo v jiném příslušném obecně závazném právním předpise týkajícím se ochrany osobních údajů.
+
+11.4. Právo Zpracovatele na ukončení: Zpracovatel je oprávněn ukončit tuto Smlouvu a příslušnou část Základní smlouvy v případě, že Správce navzdory písemnému upozornění Zpracovatele podstatným způsobem poruší povinnosti podle této Smlouvy nebo Nařízení, a to s přiměřenou výpovědní lhůtou ne kratší než třicet (30) dnů.
+
+11.5. Smluvní pokuty: Smluvní strany se dohodly, že porušení povinností podle této Smlouvy nezakládá nárok na smluvní pokutu, pokud není smluvní pokuta výslovně dohodnuta v Objednávce, Základní smlouvě nebo jiné zvláštní písemné dohodě Smluvních stran. Tím není dotčen nárok na náhradu škody nebo jiné nároky podle Nařízení, ZoOOÚ, Základní smlouvy nebo obecně závazných právních předpisů.
+
+11.6. Nároky po zániku Smlouvy: Zánikem této Smlouvy nebo jiným skončením této Smlouvy není dotčen nárok Smluvních stran na náhradu škody nebo jiné nároky, pokud tento nárok vznikl před zánikem/skončením Smlouvy, a nejsou tím ani dotčeny povinnosti Zpracovatele na zachování mlčenlivosti o Osobních údajích a povinnosti podle článku 10 této Smlouvy.
+
+## 12. ODPOVĚDNOST A NÁHRADA ŠKODY
+
+12.1. Zpracovatel odpovídá za to, že zpracování Osobních údajů bude v rozsahu, v němž je vykonává Zpracovatel, odpovídat požadavkům uvedeným v této Smlouvě, v Nařízení a v ZoOOÚ.
+
+12.2. Správce odpovídá za to, že Osobní údaje získal v souladu s platnými právními předpisy, má řádný právní základ pro zpracování těchto Osobních údajů a Dotčeným osobám poskytl všechny informace ve smyslu Nařízení.
+
+12.3. Pokud Zpracovatel poruší příslušný právní předpis nebo ustanovení této Smlouvy a tím způsobí Správci škodu, je povinen nahradit Správci přímou škodu v rozsahu stanoveném Nařízením, ZoOOÚ, Základní smlouvou a obecně závaznými právními předpisy, přičemž celková odpovědnost Zpracovatele za škodu podle této Smlouvy je omezena na souhrnnou výši Odměny zaplacené Zpracovateli Správcem za dvanáct (12) měsíců předcházejících události zakládající odpovědnost za škodu; toto omezení se neuplatní v případě úmyslného jednání nebo hrubé nedbalosti Zpracovatele nebo v případech, kdy jeho vyloučení vyžaduje příslušný právní předpis. Pokud Správce uhradí Dotčené osobě, dozorovému orgánu nebo jinému oprávněnému subjektu peněžní plnění z důvodu prokázaného porušení povinností Zpracovatele, je Zpracovatel povinen Správci nahradit takto vzniklou škodu a účelně vynaložené náklady v rozsahu, v jakém byly způsobeny porušením povinností Zpracovatele.
+
+12.4. Pokud Správce poruší příslušný právní předpis nebo ustanovení této Smlouvy a tím způsobí Zpracovateli škodu, je povinen nahradit Zpracovateli přímou škodu v rozsahu stanoveném Nařízením, ZoOOÚ, Základní smlouvou a obecně závaznými právními předpisy. Pokud Zpracovatel uhradí Dotčené osobě, dozorovému orgánu nebo jinému oprávněnému subjektu peněžní plnění z důvodu prokázaného porušení povinností Správce, je Správce povinen Zpracovateli nahradit takto vzniklou škodu a účelně vynaložené náklady v rozsahu, v jakém byly způsobeny porušením povinností Správce.
+
+12.5. Vyloučení nepřímé škody: Zpracovatel neodpovídá za nepřímou škodu, ušlý zisk, ztrátu příjmů, ztrátu dat, ztrátu dobré pověsti ani za žádné jiné nepřímé, následné nebo zvláštní škody, a to ani v případě, že byl Zpracovatel předem informován o možnosti vzniku takových škod. Toto vyloučení se neuplatní v případě úmyslného jednání nebo hrubé nedbalosti Zpracovatele nebo v případech, kdy jeho vyloučení zakazuje příslušný právní předpis.
+
+12.6. Vyšší moc: Zpracovatel neodpovídá za neplnění nebo opožděné plnění povinností podle této Smlouvy, pokud bylo způsobeno okolnostmi vylučujícími odpovědnost podle § 374 Obchodního zákoníka nebo jiného příslušného právního předpisu (vyšší moc), tj. událostí, která nastala nezávisle na vůli Zpracovatele, jejímuž vzniku nemohl Zpracovatel zabránit ani při vynaložení odborné péče, kterou lze na něm spravedlivě požadovat, a která zahrnuje zejména přírodní katastrofy, válečné konflikty, pandemie, rozsáhlé kybernetické útoky třetích stran nebo výpadky infrastruktury mimo kontrolu Zpracovatele. Zpracovatel je povinen o vzniku takové události bez zbytečného odkladu informovat Správce a vynaložit přiměřené úsilí k minimalizaci dopadů.
+
+12.7. Zpracovatel je povinen poskytnout Správci přiměřenou součinnost v jakémkoli řízení před soudem, Úřadem nebo jiným orgánem veřejné moci, které se vůči Správci zahájí v souvislosti se zpracováním Osobních údajů podle této Smlouvy, a to v rozsahu, v jakém se takové řízení týká plnění povinností Zpracovatele podle této Smlouvy.
+
+12.8. Zpracovatel je povinen do čtyřiceti osmi (48) hodin oznámit Správci, že obdržel předvolání nebo soudní nebo správní příkaz orgánu veřejné moci požadující přístup k Osobním údajům zpracovávaným jménem Správce, nebo jejich předložení, pokud takové oznámení nezakazuje obecně závazný právní předpis nebo rozhodnutí oprávněného orgánu.
+
+12.9. Zpracovatel neodpovídá za zákonnost, správnost, přiměřenost, úplnost, rozsah ani obsah Osobních údajů, Obsahu Objednatele, Recenzí, Q&A obsahu nebo jiných údajů vložených, importovaných, zpřístupněných nebo zveřejněných Správcem, jeho uživateli, Zákazníky nebo třetími osobami, pokud porušení nevzniklo v důsledku porušení povinností Zpracovatele podle této Smlouvy nebo Nařízení.
+
+## 13. KONTAKTNÍ ÚDAJE PRO ÚČELY OCHRANY OSOBNÍCH ÚDAJŮ
+
+13.1. Kontaktní údaje ohledně ochrany Osobních údajů: Správce a Zpracovatel se dohodli, že pro veškerou komunikaci týkající se ochrany Osobních údajů podle této Smlouvy budou použity následující kontaktní údaje:
+
+13.1.1. Správce:
+
+13.1.1.1. kontaktní osoba, telefonický kontakt a e-mail uvedený v Objednávce nebo uživatelském účtu, případně jiné kontaktní údaje oznámené Zpracovateli.
+
+13.1.2. Zpracovatel:
+
+13.1.2.1. kontaktní osoba, telefonický kontakt a e-mail uvedený na Platformě, na stránkách Zpracovatele, případně jiné kontaktní údaje oznámené Správci.
+
+13.2. Změna kontaktních údajů: Smluvní strana je povinna bez zbytečného odkladu oznámit druhé Smluvní straně každou změnu kontaktních údajů uvedených v bodě 13.1 této Smlouvy. Změna kontaktních údajů Zpracovatele může být provedena i aktualizací této Smlouvy, VOP, Platformy nebo webového sídla Zpracovatele.
+
+## 14. DORUČOVÁNÍ
+
+14.1. Podmínky doručování: Doručením jakýchkoli písemností na základě této Smlouvy nebo v souvislosti s touto Smlouvou mezi Smluvními stranami, pokud tato Smlouva v jiném bodě nestanoví jinak, se rozumí doručení písemnosti elektronicky na kontaktní údaje uvedené v článku 13 této Smlouvy, prostřednictvím Platformy nebo Dashboardu, doručení na adresu sídla Smluvní strany, pokud je známa, doručení prostřednictvím uživatelského účtu nebo jiný způsob doručování podle VOP nebo Základní smlouvy. Zpráva se považuje za doručenou 3. den po jejím odeslání adresátovi; to neplatí, pokud Smluvní strana prokáže, že písemnost jí nebyla doručena. Zvláštní lhůty podle článků 5, 7, 9 a 15 této Smlouvy se řídí zvláštními ustanoveními těchto článků; tím není dotčena obecná úprava doručování podle tohoto článku.
+
+14.2. Jazyk komunikace: Veškeré písemnosti, oznámení a korespondenci, které mají Smluvní strany uskutečnit na základě této Smlouvy, budou v slovenském jazyce.
+
+## 15. ZÁVĚREČNÁ USTANOVENÍ
+
+15.1. Smluvní prevence: Smluvní strany se zavazují zdržet jakéhokoli jednání, které by mělo za následek zmaření možnosti plnění jejich závazků z této Smlouvy. V případě, že by v budoucnu mělo dojít z jakéhokoli důvodu ke zmaření možnosti plnění jejich závazků, oznámí si Smluvní strany tuto skutečnost s dostatečným časovým předstihem.
+
+15.2. Smluvní rozpor se Základní smlouvou: V případě rozporů mezi ustanoveními této Smlouvy a ustanoveními Základní smlouvy mají v otázkách zpracování a ochrany Osobních údajů přednost ustanovení této Smlouvy. V ostatních otázkách mají přednost ustanovení Základní smlouvy, Objednávky nebo VOP v pořadí přednosti podle VOP.
+
+15.3. Změny Smlouvy: Tato Smlouva může být změněna nebo doplněna způsobem určeným ve VOP nebo Základní smlouvě, zejména zveřejněním aktualizovaného znění této Smlouvy na webovém sídle Zpracovatele, na Platformě nebo doručením oznámení Správci. Změny, které podstatně ovlivňují zpracování Osobních údajů, a to zejména z pohledu bezpečnosti Osobních údajů, nabudou účinnosti vůči Správci nejdříve uplynutím přiměřené lhůty po oznámení, pokud právní předpis nebo naléhavá bezpečnostní potřeba nevyžaduje dřívější účinnost, přičemž přiměřenou lhůtou se rozumí lhůta 7 dnů po oznámení změn Správci. Správce má v případě změn, které podstatně ovlivňují zpracování Osobních údajů, a to zejména z pohledu bezpečnosti Osobních údajů, právo namítat nové znění Smlouvy nebo konkrétní změny ve výše uvedené lhůtě, a to formou řádně odůvodněných námitek. V případě včasné námitky Správce proti těmto změnám nebudou tyto změny vůči Správci účinné a kterákoli Smluvní strana je oprávněna od této Smlouvy odstoupit, pokud se Smluvní strany nedohodnou jinak. Příloha č. 1 a Příloha č. 2 k této Smlouvě mohou být aktualizovány i jednostranně Zpracovatelem, pokud aktualizace odpovídá skutečnému rozsahu Služeb, technickým a organizačním opatřením nebo seznamu Subzpracovatelů.
+
+15.4. Právní nástupnictví: Práva a povinnosti stanovené v této Smlouvě přecházejí i na právní nástupce Správce a Zpracovatele.
+
+15.5. Salvátorská klauzule: Každé ustanovení této Smlouvy bude vykládáno takovým způsobem, aby bylo účinné a platné podle platného právního řádu Slovenské republiky. Pokud by některá ustanovení této Smlouvy měla být neplatná již v době jejího uzavření, nebo pokud se stanou neplatnými později po uzavření této Smlouvy, není tím dotčena platnost ostatních ustanovení této Smlouvy. Namísto neplatných ustanovení této Smlouvy se použijí ustanovení Nařízení, příslušná ustanovení ZoOOÚ a ostatních platných právních předpisů Slovenské republiky, která jsou svým obsahem a účelem nejbližší obsahu a účelu sledovanému touto Smlouvou.
+
+15.6. Příslušnost soudů: Smluvní strany se dohodly, že k řešení jakýchkoli sporů vzniklých mezi Smluvními stranami v souvislosti s touto Smlouvou jsou příslušné výlučně soudy Slovenské republiky.
+
+15.7. Elektronická akceptace: Tato Smlouva se nevyhotovuje v listinných rovopisech a nevyžaduje podpis Smluvních stran. Správce tuto Smlouvu akceptuje způsobem podle VOP a Základní smlouvy, zejména potvrzením Objednávky, samoregistrací, aktivací Služeb, používáním Platformy nebo jiným prokazatelným způsobem akceptace.
+
+15.8. Závěrečné prohlášení: Správce akceptací této Smlouvy potvrzuje, že se s jejími ustanoveními řádně seznámil, že jsou mu jasná a srozumitelná a že vyjadřují jeho svobodnou a vážnou vůli pověřit Zpracovatele zpracováním Osobních údajů za podmínek uvedených v této Smlouvě.
+15.9. Tato česká verze je poskytována výhradně jako překlad slovenské verze dokumentu Zmluva o spracúvaní osobných údajov. Slovenská verze je původní, závaznou a autoritativní verzí. V případě jakéhokoli rozporu, nesouladu, nejasnosti nebo výkladového problému vzniklého z tohoto českého překladu nebo v souvislosti s ním je rozhodující a právně závazná výhradně slovenská verze.
+
+### PŘÍLOHA Č. 1 KE SMLOUVĚ O ZPRACOVÁNÍ OSOBNÍCH ÚDAJŮ
+
+(náležitosti zpracování Osobních údajů)
+
+**Účel zpracování:**
+
+* Poskytování Služeb Rewora podle Základní smlouvy, VOP a Objednávky, zejména sběr, přijímání, uchovávání, zpracování, moderace, správa, zobrazování a analytické vyhodnocování produktových Recenzí, recenzí obchodu, Google Shopping recenzí, Q&A obsahu, produktové poradny, diskusního fóra, výzev na hodnocení, Dashboardu, Widgetů, API, integrací, importů a exportů dat, reportovacích, analytických, překladových, podpůrných a konzultačních služeb, Hotspots a dalších objednaných funkcionalit Platformy.
+
+**Kategorie dotčených osob:**
+
+* Zákazníci Správce, osoby kladoucí otázky nebo zanechávající Recenze, osoby uvedené v Recenzích, Q&A obsahu, odpovědích, diskusních příspěvcích nebo jiném Obsahu Objednatele, uživatelé Dashboardu a uživatelských účtů Správce, kontaktní osoby Správce, zaměstnanci a spolupracovníci Správce, případně jiné fyzické osoby, jejichž Osobní údaje Správce zpřístupní Zpracovateli při používání Služeb.
+
+**Kategorie Osobních údajů:**
+
+* Běžné osobní údaje v rozsahu potřebném pro poskytování Služeb, zejména jméno, příjmení, e-mailová adresa, telefonní číslo, identifikátor objednávky, datum a čas objednávky, údaje o zakoupeném produktu nebo službě, identifikátory produktů, obsah Recenze, hodnocení, otázka, odpověď, diskusní příspěvek, reakce Správce, uživatelské jméno nebo jiný identifikátor, IP adresa, technické identifikátory, logy, údaje o používání Platformy, údaje o odhlášení nebo námitce vůči zasílání výzev, komunikační a provozní údaje a jiné údaje vložené nebo zpřístupněné Správcem, jeho uživateli nebo Zákazníky v rámci Služeb.
+
+**Forma zpracování:**
+
+* Automatizovaná a neautomatizovaná, elektronická a technická, prostřednictvím Platformy, Dashboardu, Widgetů, API, integračních řešení, databází, cloudových a infrastrukturních služeb, podpůrných nástrojů a oprávněných osob Zpracovatele.
+
+**Další zpracovatelé (Subzpracovatelé)**
+
+AC PM, LLC (ActiveCampaign)
+
+Sídlo: 1 N Dearborn St, Suite 500, Chicago, IL 60602, USA
+
+Hetzner Online GmbH
+
+Sídlo: Industriestr. 25, 91710 Gunzenhausen, Německo
+
+IČO: HRB 6089, Amtsgericht Ansbach
+
+Shopify International Limited
+
+Sídlo: 2nd Floor Victoria Buildings, 1-2 Haddington Road, Dublin 4, D04 XN32, Irsko
+
+IČO: 560279
+
+Shoptet, a.s.
+
+Sídlo: Dvořeckého 628/8, Břevnov, 169 00 Praha 6, Česká republika
+
+IČO: 28935675
+
+OpenAI Ireland Ltd
+
+Sídlo: 1st Floor, The Liffey Trust Centre, 117-126 Sheriff Street Upper, Dublin 1, D01 YC43, Irsko
+
+IČO: 737350
+
+Microsoft Ireland Operations Limited
+
+Sídlo: One Microsoft Place, South County Business Park, Leopardstown, Dublin 18, D18 P521, Irsko
+
+IČO: 256796
+
+Google Ireland Limited
+
+Sídlo: Gordon House, Barrow Street, Dublin 4, D04 E5W5, Irsko
+
+IČO: 368047
+
+SmartBase s. r. o.
+
+Sídlo: Zimná 14181/2, 974 05 Banská Bystrica, Slovenská republika
+
+IČO: 47348071
+
+NEOSHIP s.r.o.
+
+Sídlo: Miletičova 23, 821 09 Bratislava - Ružinov, Slovenská republika
+
+IČO: 50286820
+
+RAYNET s.r.o.
+
+Sídlo: Hlavní třída 6078/13, Poruba, 708 00 Ostrava, Česká republika
+
+IČO: 26843820
+
+**Jiné pokyny Správce pro Zpracovatele:**
+
+* Zpracovatel je oprávněn zpracovávat Osobní údaje pouze pro účely poskytování Služeb podle Základní smlouvy, VOP, Objednávky, nastavení Platformy a této Smlouvy.
+* Správce je povinen zajistit, aby Zpracovateli předával pouze Osobní údaje, které jsou nezbytné a zákonné pro daný účel.
+* Zpracovatel je oprávněn zveřejnit nebo zobrazit Recenze, Q&A obsah a jiné výstupy pouze podle nastavení Platformy, VOP, Objednávky nebo pokynů Správce.
+
+**Doba zpracování**
+
+* Po dobu trvání Základní smlouvy, nejdéle po dobu trvání účelu zpracování a následně po dobu nezbytnou k splnění zákonných povinností, řešení reklamací, auditních a bezpečnostních záznamů, ochraně práv Zpracovatele a splnění povinností podle této Smlouvy.
+* Zpracovatel je oprávněn používat řádně anonymizovaná a agregovaná data podle bodu 10.3 této Smlouvy i po skončení doby zpracování uvedené v tomto bodu, Smlouvě a Základní smlouvě
+
+**Zpracování zvláštní kategorie OU**
+
+* Zvláštní kategorie osobních údajů podle článku 9 Nařízení se nemají v rámci Služeb zpracovávat.
+* Správce nesmí do Platformy vkládat Osobní údaje zvláštní kategorie ani údaje týkající se uznání viny za trestné činy a přestupky, pokud se Smluvní strany výslovně a písemně nedohodnou jinak a nejsou splněny podmínky podle Nařízení a ZoOOÚ.
+* Správce je povinen zajistit, aby byly Dotčené osoby informovány, že nesmí do Q&A, Recenzí ani na jiných platformách vkládat zvláštní kategorie Osobních údajů.
+
+**Forma zpracování osobních údajů**
+
+* získávat, přijímat, zaznamenávat, ukládat, uspořádávat, strukturovat, vyhledávat, prohlížet, používat, kombinovat, analyzovat, moderovat, třídit, označovat, překládat, zobrazovat, zveřejňovat, zpřístupňovat podle nastavení Platformy, importovat, exportovat, přenášet, zálohovat, archivovat, omezovat, opravovat, vymazávat, anonymizovat, agregovat a jinak zpracovávat v rozsahu potřebném pro poskytování Služeb.
+
+### PŘÍLOHA Č. 2 KE SMLOUVĚ O ZPRACOVÁNÍ OSOBNÍCH ÚDAJŮ
+
+(Technická a organizační opatření včetně technických a organizačních opatření pro zajištění bezpečnosti údajů)
+
+**Opatření pro zajištění trvalé důvěrnosti, integrity, dostupnosti a odolnosti systémů a služeb zpracování:**
+
+* Pravidelná aktualizace bezpečnostních systémů a softwaru. Využívání přiměřeně dostupné a odolné infrastruktury. Přístup k systémům je řízen na základě principu minimálních oprávnění (Least Privilege).
+
+**Opatření zaměřená na pseudonymizaci a šifrování osobních údajů**
+
+* Šifrování údajů při přenosu pomocí bezpečných komunikačních protokolů.
+* Přiměřená pseudonymizace nebo minimalizace údajů, pokud je to vzhledem k účelu a funkcionalitě Služeb možné.
+* Lokální nosiče nebo zařízení, na kterých se dočasně nacházejí Osobní údaje, musí být přiměřeně šifrovány nebo chráněny srovnatelným bezpečnostním opatřením.
+
+**Opatření pro včasnou obnovu dostupnosti osobních údajů a přístup k nim v případě bezpečnostního incidentu**
+
+* Pravidelné zálohování údajů v přiměřeném rozsahu. Využití infrastruktury nebo cloudových služeb s přiměřenou dostupností.
+
+**Opatření na ochranu údajů během uchovávání**
+
+* Šifrování zálohovaných údajů
+* Vícefaktorové zabezpečení přístupu k údajům.
+* Přístup k prostředkům s údaji je udělován pouze oprávněným a poučeným osobám.
+
+**Opatření na ochranu údajů během jejich přenosu**
+
+* Využití šifrovaných komunikačních protokolů.
+* Ochrana před útoky typu Man-in-the-Middle implementací mechanismů jako HSTS (HTTP Strict Transport Security).
+
+**Opatření na identifikaci uživatelů, logování a poskytování uživatelských oprávnění**
+
+* Přístup k systémům je řízen na základě principu minimálních oprávnění (Least Privilege).
+* Pravidelný audit uživatelských účtů a jejich oprávnění.
+
+**Procesy pravidelného testování, posuzování a hodnocení účinnosti technických a organizačních opatření ve prospěch zajištění bezpečnosti zpracování**
+
+* Pravidelné skenování zranitelností a pravidelné přehodnocování bezpečnostních politik
+
+**Opatření pro zajištění objektové bezpečnosti (fyzické bezpečnosti míst, na kterých se zpracovávají osobní údaje)**
+
+* Osobní údaje jsou zpracovávány zejména v elektronických systémech a cloudové infrastruktuře.
+* Fyzický přístup k pracovištím, zařízením a dokumentaci Zpracovatele je přiměřeně omezen.
+
+**Opatření pro zajištění zaznamenávání bezpečnostních incidentů a jiných událostí**
+
+* Zavedený proces evidence, posouzení a řešení bezpečnostních incidentů a porušení ochrany Osobních údajů včetně eskalace a oznámení Správci podle této Smlouvy.
+
+**Opatření pro zajištění konfigurace systému včetně výchozí konfigurace**
+
+* Přednastavené konfigurace podle zásady "Security by Design".
+* Automatizované politiky na ověřování změny konfigurací a jejich schvalování
+
+**Popis konkrétních technických a organizačních opatření, která má Zpracovatel přijmout, aby mohl poskytnout pomoc Správci.**
+
+* Zpracovatel má zavedený postup pro poskytování součinnosti Správci při vyřizování práv Dotčených osob, incidentů, auditů a žádostí orgánů veřejné moci.
+* Zpracovatel má určenou kontaktní osobu pro komunikaci se Správcem v oblasti ochrany osobních údajů. [doplnit kontaktní osobu/proces]
+
+**Opatření pro umožnění přenositelnosti údajů a zajištění jejich výmazu**
+
+* Poskytnutí údajů ve strukturovaném a strojově čitelném formátu (např. JSON nebo CSV).
+* Implementace procesů pro bezpečné vymazání údajů včetně přepisování údajů na úložištích a případná fyzická likvidace nosičů
+
+**Opatření pro zajištění omezeného uchovávání údajů**
+
+* Údaje se uchovávají pouze po dobu určenou Správcem, Základní smlouvou, touto Smlouvou nebo právními předpisy.
+* Zpracovatel uchovává Osobní údaje pouze v rozsahu nezbytném pro poskytování Služeb, plnění zákonných povinností, bezpečnostní účely, auditní záznamy a ochranu práv.
+
+**Opatření pro zajištění minimalizace osobních údajů**
+
+* Sběr a zpracování pouze údajů nezbytných pro daný účel (data minimization).
+* Správce je povinen nepředávat Zpracovateli údaje nad rámec potřebný pro poskytování Služeb.
+
+**Opatření pro vnitřní řízení informačních systémů a jejich bezpečnosti**
+
+* Zajištění přiměřeného poučení nebo školení osob, které mají přístup k Osobním údajům.
+* Definování pravidel pro správu přístupů, aktualizací, incidentů, zálohování a změn v systémech.
+
+**Opatření pro zajištění odpovědnosti při zpracování osobních údajů**
+
+* Zpracovatel vede nebo na požádání umí přiměřeně prokázat záznamy o pokynech Správce, okruhu Oprávněných osob, přidělených přístupech, incidentech a provedeném vrácení nebo výmazu Osobních údajů v rozsahu vyžadovaném Nařízením.
+
+**Opatření pro certifikaci/zajištění procesů a produktů**
+
+* neuplatňuje se
+
+Přihlaste se k odběru newsletteru a dostávejte upozornění na podobné články přímo do své e-mailové schránky.
+
+Přihlášením do našeho mailing listu souhlasíte se zpracováním svých osobních údajů
+ [osobní údaje](/cs/ochrana-osobnich-udaju/) pouze pro tento účel.

@@ -1,7 +1,13 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { testimonials, testimonialsCta, testimonialsIntro } from '@/lib/content';
+import {
+  testimonials as testimonialsData,
+  testimonialsCta as testimonialsCtaData,
+  testimonialsIntro as testimonialsIntroData,
+} from '@/lib/content';
+import { routes, type Lang } from '@/lib/i18n';
+import { createT, tDeep } from '@/lib/t';
 
 /** Odsadenie kariet v balíčku a posun pri odchode zo scény. */
 const PEEK = 16;
@@ -12,7 +18,13 @@ const EXIT = 200;
  * Na začiatku sú viditeľné všetky tri: prvá celá, z ďalších dvoch trčí
  * horný okraj. Scrollovaním predná karta odíde nadol a odkryje ďalšiu.
  */
-export default function Testimonials() {
+export default function Testimonials({ lang = 'sk' }: { lang?: Lang }) {
+  const t = createT(lang);
+  const testimonials = tDeep(testimonialsData, lang);
+  const testimonialsIntro = tDeep(testimonialsIntroData, lang);
+  const testimonialsCta = t(testimonialsCtaData);
+  /* odkazy na štúdie vedú do jazykovej mutácie */
+  const odkaz = (href: string) => routes.cases[lang] + href.split('/pripadove-studie/')[1];
   const runway = useRef<HTMLDivElement>(null);
   const stage = useRef<HTMLDivElement>(null);
   const [progress, setProgress] = useState(0);
@@ -58,7 +70,7 @@ export default function Testimonials() {
         </span>
         <h2 className="h2">{testimonialsIntro.title}</h2>
         <p className="cases__text">{testimonialsIntro.text}</p>
-        <a className="btn btn--outline-dark" href={testimonialsIntro.button.href}>
+        <a className="btn btn--outline-dark" href={routes.cases[lang]}>
           {testimonialsIntro.button.label}
         </a>
       </div>
@@ -110,13 +122,13 @@ export default function Testimonials() {
                       {item.role} · {item.company}
                     </small>
                   </span>
-                  <a className="case-card__link" href={item.href}>
+                  <a className="case-card__link" href={odkaz(item.href)}>
                     {testimonialsCta} →
                   </a>
                 </div>
                 </div>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img className="case-card__shot" src={item.shot} alt={`Rewora na e-shope ${item.company}`} />
+                <img className="case-card__shot" src={item.shot} alt={t('Rewora na e-shope {n}').replace('{n}', item.company)} />
               </article>
             );
           })}

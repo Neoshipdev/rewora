@@ -12,10 +12,6 @@ const nextConfig = {
   experimental: {
     serverComponentsExternalPackages: ['playwright', 'playwright-core'],
   },
-  /* Web je zatiaľ len slovenský — koreň natrvalo presmerujeme na /sk/. */
-  async redirects() {
-    return [{ source: '/', destination: '/sk/', permanent: true }];
-  },
 };
 
 export default nextConfig;
