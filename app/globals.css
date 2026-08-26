@@ -4908,8 +4908,32 @@ svg {
 }
 
 @media (max-width: 639px) {
-  /* widget recenzií má na telefóne jeden stĺpec — dva by pretiekli cez okraj */
-  .wdg__columns {
+  /* widget recenzií má na telefóne jeden stĺpec — dva by pretiekli cez okraj.
+     Rovnaká špecificita ako pravidlo v ukážke nástroja, inak by neprešlo. */
+  .wdg__columns,
+  .demo--widget .wdg__columns {
     grid-template-columns: 1fr;
+  }
+  /* menšie písmo, nech sa obsah zmestí do rámčekov namiesto pretekania */
+  .wdg,
+  .demo--widget .wdg {
+    font-size: 10px;
+  }
+  .wdg__chips {
+    flex-wrap: wrap;
+  }
+  /* fotka produktu nad textom — v úzkom stĺpci sa názov lámal po slovách */
+  .wdg__layout,
+  .demo--widget .wdg__layout {
+    grid-template-columns: 1fr;
+  }
+  .wdg__media {
+    max-width: 160px;
+  }
+  .wdg__card-head,
+  .wdg__author,
+  .wdg__card-meta {
+    min-width: 0;
+    flex-wrap: wrap;
   }
 }
