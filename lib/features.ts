@@ -220,7 +220,7 @@ export const features: Feature[] = [
 ];
 
 /** Sekcia „Spravujte recenzie v prehľadnom administrátorskom paneli“. */
-export type AdminShotKey = 'manage' | 'reviews' | 'overview';
+export type AdminShotKey = 'manage' | 'reviews' | 'recenzie' | 'riesenie' | 'overview';
 
 export const adminPanelSection: {
   eyebrow: string;
@@ -235,17 +235,17 @@ export const adminPanelSection: {
     {
       title: 'Žiadosti o recenziu',
       text: 'Rozhodnite, pre ktoré produkty a kedy sa majú automaticky vyžiadať recenzie.',
-      shot: 'manage',
+      shot: 'recenzie',
     },
     {
       title: 'Moderovanie recenzií',
       text: 'Overenie totožnosti recenzenta, posúdenie existencie konfliktu záujmov, moderovanie obsahu a schvaľovanie recenzií.',
-      shot: 'reviews',
+      shot: 'recenzie',
     },
     {
       title: 'Riešenie problémov',
       text: 'Ak zákazník zanechá hodnotenie 1, 2 alebo 3 hviezdičky, budete okamžite informovaní a môžete otvoriť súkromnú diskusiu, aby ste mu pomohli vyriešiť jeho problém.',
-      shot: 'reviews',
+      shot: 'riesenie',
     },
     {
       title: 'Pokročilá analytika',

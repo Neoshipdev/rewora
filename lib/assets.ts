@@ -57,6 +57,15 @@ export const adminShots = {
     src: `${M}/admin-reviews.format-avif.width-640.avif`,
     alt: 'Moderovanie recenzií v administrácii Rewora',
   },
+  /* reálne snímky z administrácie */
+  recenzie: {
+    src: `${M}/admin-recenzie.hd.webp`,
+    alt: 'Zoznam recenzií v administrácii Rewora',
+  },
+  riesenie: {
+    src: `${M}/admin-riesenie.hd.webp`,
+    alt: 'Odpoveď obchodu na recenziu v administrácii Rewora',
+  },
   manage: {
     src: `${M}/admin-manage.format-avif.width-640.avif`,
     alt: 'Správa žiadostí o recenziu v administrácii Rewora',
