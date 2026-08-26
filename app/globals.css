@@ -4972,3 +4972,23 @@ svg {
     height: 46px;
   }
 }
+
+/* ---------- hero: pravá polovica sa nezmenšuje ---------- */
+/* Panel s ukážkami si drží návrhovú šírku; keď sa okno zúži, posúva sa
+   vodorovne vo vlastnom páse namiesto toho, aby sa všetko stláčalo. */
+.hero__right {
+  overflow-x: auto;
+  /* bez toho by si zvislý posuvník ukrojil šírku a vodorovný pás
+     by sa objavil aj tam, kde sa panel v pohode zmestí */
+  overflow-y: hidden;
+  min-width: 0;
+}
+.panel {
+  min-width: 660px;
+}
+@media (max-width: 1023px) {
+  /* v stĺpcovom rozložení má panel k dispozícii celú šírku okna */
+  .hero__right {
+    padding: 0;
+  }
+}
