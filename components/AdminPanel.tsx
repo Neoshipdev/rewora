@@ -56,15 +56,6 @@ export default function AdminPanel({ lang = 'sk' }: { lang?: Lang }) {
 
   return (
     <div className="panel">
-      <div className="panel__chrome">
-        <div className="panel__lights" aria-hidden>
-          <span />
-          <span />
-          <span />
-        </div>
-        <span className="panel__locales">SK · CZ · EN</span>
-      </div>
-
       <div className="panel__body">
         <div
           className="panel__nav"

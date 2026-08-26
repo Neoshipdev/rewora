@@ -361,27 +361,6 @@ svg {
   border: 1px solid var(--line-300);
   box-shadow: var(--shadow-card);
 }
-.panel__chrome {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 14px 18px;
-  border-bottom: 1px solid var(--line-200);
-}
-.panel__lights {
-  display: flex;
-  gap: 8px;
-}
-.panel__lights span {
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: var(--line-400);
-}
-.panel__locales {
-  font-size: 11.4px;
-  color: var(--ink-400);
-}
 .panel__body {
   display: grid;
   grid-template-columns: 196px 1fr;
