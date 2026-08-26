@@ -10,11 +10,12 @@ const S = '/images/static';
 export const clientLogos = [
   /* zvislá značka — v rovnako vysokom boxe by pôsobila menšia než nápisy */
   { name: 'Panta Rhei', src: `${S}/logo-pantarhei.png`, tall: true },
-  { name: 'eTabletka', src: `${S}/logo-etabletka.496670ca5ac0.png` },
-  { name: 'FixServis', src: `${S}/logo-fixservis.0d2f81e253f7.png` },
-  { name: 'Origos', src: `${S}/logo-origos.eac328ebe908.png` },
-  { name: 'Najlekáreň', src: `${S}/logo-najlekaren.dfcf93699d59.png` },
-  { name: 'Drinkcentrum', src: `${S}/logo-drinkcentrum.463e914add1e.png` },
+  { name: 'eTabletka', src: `${S}/etabletka.svg` },
+  { name: 'FixServis', src: `${S}/logo-fixservis.png` },
+  { name: 'Origos', src: `${S}/logo-origos.png` },
+  { name: 'Najlekáreň', src: `${S}/logo-najlekaren.png` },
+  /* zvislé logo — potrebuje vyšší rámček ako jednoriadkové nápisy */
+  { name: 'Drinkcentrum', src: `${S}/logo-drinkcentrum.png`, tall: true },
 ];
 
 /**
