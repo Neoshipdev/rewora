@@ -4992,3 +4992,41 @@ svg {
     padding: 0;
   }
 }
+
+/* ---------- prípadové štúdie: metriky v dlaždiciach ---------- */
+/* Číslo sa nikdy nezalamuje; dlaždica sa podľa šírky zmenší alebo presunie. */
+.case-row__metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+  padding: 10px;
+}
+.case-row__metric {
+  padding: 12px 14px;
+  border-radius: var(--radius);
+  background: var(--surface-0);
+}
+.case-row__metric b {
+  white-space: nowrap;
+  font-size: clamp(17px, 1.5vw, 21px);
+}
+.case-row__metric span {
+  display: block;
+}
+@media (max-width: 1279px) {
+  .case-row {
+    grid-template-columns: 48px minmax(0, 1fr);
+  }
+  .case-row__metrics {
+    grid-column: 2 / -1;
+  }
+}
+@media (max-width: 639px) {
+  .case-row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .case-row > *,
+  .case-row__metrics {
+    grid-column: 1 / -1;
+  }
+}

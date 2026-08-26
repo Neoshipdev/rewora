@@ -76,15 +76,13 @@ export default async function CaseStudiesPage() {
                   Prečítať si prípadovú štúdiu →
                 </a>
               </div>
-              <div>
-                <div className="case-row__metrics">
-                  {study.metrics.map((metric) => (
-                    <div className="case-row__metric" key={metric.label}>
-                      <b>{metric.value}</b>
-                      <span>{metric.label}</span>
-                    </div>
-                  ))}
-                </div>
+              <div className="case-row__metrics">
+                {study.metrics.map((metric) => (
+                  <div className="case-row__metric" key={metric.label}>
+                    <b>{metric.value}</b>
+                    <span>{metric.label}</span>
+                  </div>
+                ))}
               </div>
             </article>
           ))}
