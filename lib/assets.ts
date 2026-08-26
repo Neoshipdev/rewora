@@ -66,15 +66,15 @@ export const adminShots = {
 /** Screenshoty k spôsobom integrácie. */
 export const integrationShots: Record<string, { src: string; alt: string }> = {
   'Google Tag Manager': {
-    src: `${M}/screenshot-gtm.e325b59f.format-avif.width-1240.avif`,
+    src: `${M}/screenshot-gtm.hd.webp`,
     alt: 'Nasadenie Rewora cez Google Tag Manager',
   },
   'Integrácia na mieru': {
-    src: `${M}/screenshot-code.f0160f47.format-avif.width-1240.avif`,
+    src: `${M}/screenshot-code.hd.webp`,
     alt: 'Integrácia Rewora na mieru cez kód',
   },
   'Shopify Plugin': {
-    src: `${M}/screenshot-plugin.format-avif.width-1240.avif`,
+    src: `${M}/screenshot-plugin.hd.webp`,
     alt: 'Rewora plugin pre Shopify',
   },
 };

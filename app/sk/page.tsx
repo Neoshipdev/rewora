@@ -192,7 +192,10 @@ export default function Home() {
           </div>
 
           {features.map((feature) => (
-            <div className="tool-row" key={feature.num}>
+            <div
+              className={`tool-row ${Number(feature.num) % 2 === 0 ? 'tool-row--tint' : ''}`}
+              key={feature.num}
+            >
               <span className="tool-row__num">{feature.num}</span>
               <div className="tool-row__copy">
                 <h3 className="tool-row__name">{feature.name}</h3>

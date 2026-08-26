@@ -845,7 +845,8 @@ svg {
 .tool-row:last-of-type {
   border-bottom: 1px solid var(--line-300);
 }
-.tool-row:hover {
+/* každý druhý nástroj má trvalé podsvietenie — bez efektu pri prejdení myšou */
+.tool-row--tint {
   background: var(--surface-50);
 }
 .tool-row__num {
