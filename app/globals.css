@@ -4938,3 +4938,37 @@ svg {
     flex-wrap: wrap;
   }
 }
+
+/* ---------- pás log: jeden riadok, ktorý sa zmenšuje ---------- */
+/* Pri zúžení okna sa logá nezalamujú do ďalších riadkov, ale škálujú.
+   Dva riadky pripúšťame až na telefóne, kde by inak boli nečitateľné. */
+.logos__row {
+  flex-wrap: nowrap;
+  gap: clamp(14px, 2.6vw, 48px);
+}
+.logos__img {
+  height: clamp(30px, 3.4vw, 52px);
+  width: auto;
+  max-width: clamp(92px, 11.5vw, 170px);
+  flex: 0 1 auto;
+  min-width: 0;
+}
+.logos__img--tall {
+  height: clamp(44px, 5vw, 76px);
+  max-width: clamp(72px, 9.8vw, 145px);
+}
+@media (max-width: 639px) {
+  .logos__row {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px 22px;
+  }
+  .logos__img {
+    flex: 0 0 calc(33.333% - 16px);
+    height: 32px;
+    max-width: none;
+  }
+  .logos__img--tall {
+    height: 46px;
+  }
+}
