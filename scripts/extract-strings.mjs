@@ -49,7 +49,14 @@ const technicky = (s) =>
   /^[a-z0-9-]+$/.test(s) ||
   !/[a-zA-ZáäčďéíĺľňóôŕšťúýžÁČĎÉÍĽŇÓŠŤÚÝŽ]/.test(s);
 
-const DATA = ['lib/content.ts', 'lib/features.ts', 'lib/panel-data.ts', 'lib/pricing.ts', 'lib/posts.ts'];
+const DATA = [
+  'lib/content.ts',
+  'lib/features.ts',
+  'lib/guides.ts',
+  'lib/panel-data.ts',
+  'lib/pricing.ts',
+  'lib/posts.ts',
+];
 
 const subory = [];
 const zbierPriecinok = (dir) => {

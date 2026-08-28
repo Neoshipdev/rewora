@@ -76,6 +76,11 @@ export const seo: Record<Lang, Partial<Record<PageKey, { title: string; descript
       description:
         'Zadajte adresu svojho e-shopu a do minúty dostanete PDF ukážku, ako by na ňom vyzerali recenzie, poradňa, hotspoty a BI dáta.',
     },
+    shopifyGuide: {
+      title: 'Nasadenie doplnku Rewora na Shopify ★ Rewora',
+      description:
+        'Krok za krokom: inštalácia doplnku Rewora Product Reviews, aktivácia app embed, vloženie widgetu na kartu produktu a schválenie prvej recenzie.',
+    },
   },
   cs: {
     home: {
@@ -134,6 +139,11 @@ export const seo: Record<Lang, Partial<Record<PageKey, { title: string; descript
       description:
         'Zadejte adresu svého e-shopu a do minuty dostanete PDF ukázku, jak by na něm vypadaly recenze, poradna, hotspoty a BI data.',
     },
+    shopifyGuide: {
+      title: 'Nasazení doplňku Rewora na Shopify ★ Rewora',
+      description:
+        'Krok za krokem: instalace doplňku Rewora Product Reviews, aktivace app embed, vložení widgetu na kartu produktu a schválení první recenze.',
+    },
   },
   en: {
     home: {
@@ -187,6 +197,11 @@ export const seo: Record<Lang, Partial<Record<PageKey, { title: string; descript
       title: 'Rewora demo on your store ★ Rewora',
       description:
         'Enter your store address and within a minute you get a PDF showing how reviews, Q&A, hotspots and BI data would look on it.',
+    },
+    shopifyGuide: {
+      title: 'Installing Rewora on Shopify ★ Rewora',
+      description:
+        'Step by step: installing the Rewora Product Reviews app, activating the app embed, adding the widget to the product page and approving the first review.',
     },
   },
 };

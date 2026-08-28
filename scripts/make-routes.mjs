@@ -140,6 +140,7 @@ const mutacie = {
     contact: '/sk/kontakt/',
     partner: '/sk/partnersky-program/',
     demo: '/sk/ukazka/',
+    shopifyGuide: '/sk/navody/shopify-plugin/',
   },
   cs: {
     group: '(cs)',
@@ -155,6 +156,7 @@ const mutacie = {
     contact: '/cs/kontakt/',
     partner: '/cs/partnersky-program/',
     demo: '/cs/ukazka/',
+    shopifyGuide: '/cs/navody/shopify-plugin/',
   },
   en: {
     group: '(en)',
@@ -169,6 +171,7 @@ const mutacie = {
     contact: '/contact/',
     partner: '/partner-program/',
     demo: '/demo/',
+    shopifyGuide: '/guides/shopify-plugin/',
   },
 };
 
@@ -187,6 +190,10 @@ for (const [lang, m] of Object.entries(mutacie)) {
   await zapis(join(koren, seg(m.contact), 'page.tsx'), page('ContactPage', lang, 'contact'));
   await zapis(join(koren, seg(m.partner), 'page.tsx'), page('PartnerPage', lang, 'partner'));
   await zapis(join(koren, seg(m.demo), 'page.tsx'), page('DemoPage', lang, 'demo'));
+  await zapis(
+    join(koren, seg(m.shopifyGuide), 'page.tsx'),
+    page('ShopifyGuidePage', lang, 'shopifyGuide')
+  );
 
   for (const key of ['thanks', 'privacy', 'terms', 'shoptet']) {
     const zaznam = m[key];

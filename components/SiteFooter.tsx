@@ -20,7 +20,7 @@ export default function SiteFooter({ lang = 'sk' }: { lang?: Lang }) {
   return (
     <footer className="footer">
       <div className="container footer__inner">
-        <Logo variant="light" height={22} />
+        <Logo variant="light" height={22} lang={lang} />
         <nav className="footer__links" aria-label="Rewora">
           {odkazy.map((item) => (
             <a key={item.href} href={item.href}>

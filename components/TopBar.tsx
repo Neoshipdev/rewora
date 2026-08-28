@@ -33,9 +33,7 @@ export default function TopBar({ lang = 'sk', alt }: Props) {
     <header className="topbar">
       <div className="container topbar__inner">
         <div className="topbar__left">
-          <a href={home[lang]} aria-label="Rewora">
-            <Logo variant="light" height={26} />
-          </a>
+          <Logo variant="light" height={26} lang={lang} />
           <nav
             className={`topbar__links ${open ? 'topbar__links--open' : ''}`}
             aria-label={t.nav.features}
@@ -73,6 +71,19 @@ export default function TopBar({ lang = 'sk', alt }: Props) {
                   </a>
                 ))}
               </div>
+            </div>
+            {/* na mobile je prepínač jazykov súčasťou rozbaleného menu */}
+            <div className="langs langs--menu" aria-label={t.langSwitch}>
+              {LANGS.map((l) => (
+                <a
+                  key={l}
+                  href={alt?.[l] ?? home[l]}
+                  className={`langs__item ${l === lang ? 'langs__item--on' : ''}`}
+                  hrefLang={l}
+                >
+                  {langLabel[l]}
+                </a>
+              ))}
             </div>
           </nav>
         </div>

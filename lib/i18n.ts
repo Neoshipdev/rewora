@@ -52,6 +52,11 @@ export const routes = {
   contact: { sk: p('/sk/kontakt/'), cs: p('/cs/kontakt/'), en: p('/contact/') },
   partner: { sk: p('/sk/partnersky-program/'), cs: p('/cs/partnersky-program/'), en: p('/partner-program/') },
   demo: { sk: p('/sk/ukazka/'), cs: p('/cs/ukazka/'), en: p('/demo/') },
+  shopifyGuide: {
+    sk: p('/sk/navody/shopify-plugin/'),
+    cs: p('/cs/navody/shopify-plugin/'),
+    en: p('/guides/shopify-plugin/'),
+  },
 };
 
 export type RouteKey = keyof typeof routes;
