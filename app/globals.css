@@ -304,6 +304,9 @@ svg {
   flex-direction: column;
   gap: 26px;
   max-width: 420px;
+  /* text musí byť nad dekoračnou fotografiou, nikdy pod ňou */
+  position: relative;
+  z-index: 1;
 }
 /* hviezda s fotografiou je dekorácia — text si drží plnú šírku */
 /* hviezda s fotkou vpravo, zarovnaná k nadpisu */
@@ -4590,8 +4593,8 @@ svg {
 }
 
 /* Hviezda s fotografiou stojí vedľa textu — pri užšom okne by mu liezla
-   do riadkov, tak ju schováme. */
-@media (max-width: 1399px) {
+   do riadkov (najmä pri dlhších českých nadpisoch), tak ju schováme. */
+@media (max-width: 1799px) {
   .hero__photo {
     display: none;
   }
