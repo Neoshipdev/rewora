@@ -87,6 +87,10 @@ export const integrationShots: Record<string, { src: string; alt: string }> = {
     src: `${M}/screenshot-plugin.hd.webp`,
     alt: 'Rewora plugin pre Shopify',
   },
+  'Shoptet Plugin': {
+    src: `${M}/screenshot-shoptet.hd.webp`,
+    alt: 'Doplnok Rewora v katalógu doplnkov Shoptet',
+  },
 };
 
 /** Prípadové štúdie — logo klienta a titulný obrázok. */

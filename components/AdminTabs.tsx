@@ -5,13 +5,14 @@ import Overview from '@/components/Overview';
 import { adminShots } from '@/lib/assets';
 import { adminPanelSection } from '@/lib/features';
 import type { Lang } from '@/lib/i18n';
-import { tDeep } from '@/lib/t';
+import { createT, tDeep } from '@/lib/t';
 
 /**
  * Administrátorský panel — vľavo zoznam možností, vpravo screenshot.
  * Po prekliku záložky sa vymení obrázok, rovnako ako na rewora.com.
  */
 export default function AdminTabs({ lang = 'sk' }: { lang?: Lang }) {
+  const t = createT(lang);
   const [active, setActive] = useState(0);
   const items = tDeep(adminPanelSection, lang).items;
   /* prehľad nie je screenshot, ale ten istý živý dashboard ako v hero sekcii */
@@ -55,7 +56,7 @@ export default function AdminTabs({ lang = 'sk' }: { lang?: Lang }) {
       >
         {shot ? (
           /* eslint-disable-next-line @next/next/no-img-element */
-          <img key={shot.src} src={shot.src} alt={shot.alt} loading="lazy" />
+          <img key={shot.src} src={shot.src} alt={t(shot.alt)} loading="lazy" />
         ) : (
           <div className="admin-tabs__dash">
             <Overview lang={lang} />

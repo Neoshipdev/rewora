@@ -21,7 +21,7 @@ export default function IntegrationGrid({ lang = 'sk' }: { lang?: Lang }) {
           <div key={item.name} className="integration">
             {shot ? (
               /* eslint-disable-next-line @next/next/no-img-element */
-              <img className="integration__img" src={shot.src} alt={shot.alt} loading="lazy" />
+              <img className="integration__img" src={shot.src} alt={t(shot.alt)} loading="lazy" />
             ) : (
               /* doplnok, ktorý ešte nie je vonku — namiesto snímky dlaždica */
               <span className="integration__img integration__img--text" aria-hidden>

@@ -50,6 +50,7 @@ const technicky = (s) =>
   !/[a-zA-ZáäčďéíĺľňóôŕšťúýžÁČĎÉÍĽŇÓŠŤÚÝŽ]/.test(s);
 
 const DATA = [
+  'lib/assets.ts',
   'lib/content.ts',
   'lib/features.ts',
   'lib/guides.ts',

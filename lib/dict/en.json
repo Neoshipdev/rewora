@@ -633,5 +633,20 @@
   "Widget sa nezobrazí, ak nie je zapnutý app embed alebo ak si po vložení bloku nedal Save v editore témy. A recenzia sa na e-shope zobrazí až po schválení — dovtedy ostáva len v Reviews Management.": "The widget will not show if the app embed is off, or if you did not click Save in the theme editor after adding the block. And a review only appears in the store once approved — until then it stays in Reviews Management.",
   "Potrebujete s nasadením pomôcť?": "Need a hand with the rollout?",
   "Napíšte nám a prejdeme nastavenie doplnku spolu — vrátane farieb widgetu a automatických žiadostí o recenziu.": "Write to us and we will go through the setup together — including the widget colours and automatic review requests.",
-  "Zobraziť návod": "Read the guide"
+  "Zobraziť návod": "Read the guide",
+  "Recenzie a hodnotenia na karte produktu": "Reviews and ratings on the product page",
+  "Otázky ku produktom a diskusné fórum": "Product questions and the discussion forum",
+  "Hotspoty — interaktívne obrázky": "Hotspots — interactive images",
+  "Business Intelligence — štatistiky a základné informácie o produkte": "Business Intelligence — product statistics and key facts",
+  "Moderovanie recenzií v administrácii Rewora": "Review moderation in the Rewora admin",
+  "Zoznam recenzií v administrácii Rewora": "The review list in the Rewora admin",
+  "Odpoveď obchodu na recenziu v administrácii Rewora": "A store reply to a review in the Rewora admin",
+  "Správa žiadostí o recenziu v administrácii Rewora": "Managing review requests in the Rewora admin",
+  "Nasadenie Rewora cez Google Tag Manager": "Deploying Rewora via Google Tag Manager",
+  "Integrácia Rewora na mieru cez kód": "A custom Rewora integration in code",
+  "Rewora plugin pre Shopify": "The Rewora plugin for Shopify",
+  "Doplnok Rewora v katalógu doplnkov Shoptet": "The Rewora add-on in the Shoptet add-on catalogue",
+  "FixServis — prípadová štúdia": "FixServis — case study",
+  "Drinkcentrum — prípadová štúdia": "Drinkcentrum — case study",
+  "kilpi.cz — prípadová štúdia": "kilpi.cz — case study"
 }
