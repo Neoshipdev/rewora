@@ -2,7 +2,8 @@
 
 import { useState } from 'react';
 import type { Lang } from '@/lib/i18n';
-import { createT } from '@/lib/t';
+import { hotspotCard } from '@/lib/panel-data';
+import { createT, tDeep } from '@/lib/t';
 import Stars from './Stars';
 import { ArrowRightIcon } from './icons';
 
@@ -23,6 +24,29 @@ type Props = {
 };
 
 const shift = (pct: string, by: number) => `calc(${pct} + ${by}%)`;
+
+/** Karta produktu presne nad tou, ktorá je vypálená vo fotografii. */
+function HotspotCard({ lang }: { lang: Lang }) {
+  const karta = tDeep(hotspotCard, lang);
+  return (
+    <div className="hotspot-card">
+      <div className="hotspot-card__head">
+        <span className="hotspot-card__name">{karta.name}</span>
+        <span className="hotspot-card__badge">{karta.badge}</span>
+      </div>
+      <span className="hotspot-card__stars" aria-hidden>
+        ★★★★★
+      </span>
+      <span className="hotspot-card__meta">{karta.meta}</span>
+      <div className="hotspot-card__foot">
+        <span className="hotspot-card__price">{karta.price}</span>
+        <span className="hotspot-card__go" aria-hidden>
+          →
+        </span>
+      </div>
+    </div>
+  );
+}
 
 /**
  * Plocha s hotspot bodmi. Bublina je viditeľná pre aktívny bod (default prvý),
@@ -50,9 +74,12 @@ export default function HotspotStage({
       style={image ? undefined : { height }}
     >
       {image ? (
-        /* Reálny vizuál necháme v plnom pomere strán — nič sa neoreže. */
-        /* eslint-disable-next-line @next/next/no-img-element */
-        <img className="hotspot-stage__img" src={image} alt="" />
+        <span className="hotspot-shot">
+          {/* Reálny vizuál necháme v plnom pomere strán — nič sa neoreže. */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img className="hotspot-stage__img" src={image} alt="" />
+          <HotspotCard lang={lang} />
+        </span>
       ) : (
         <span className="hotspot-stage__caption mono">{caption}</span>
       )}

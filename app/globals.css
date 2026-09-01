@@ -616,14 +616,91 @@ svg {
   align-items: center;
   justify-content: center;
 }
+/* Obal má presne rozmer fotografie, aby sa dala karta produktu umiestniť
+   percentuálne presne nad tú, ktorá je v nej vypálená. */
+.hotspot-shot {
+  position: relative;
+  display: block;
+  /* pomer strán vizuálu je 1050 × 1200, strop výšky nechávame na 460 px */
+  width: min(100%, 402px);
+  margin: 0 auto;
+  container-type: inline-size;
+}
 .hotspot-stage__img {
   display: block;
   width: 100%;
   height: auto;
-  /* celý vizuál je viditeľný, len sa nezmestí do neúmerne vysokého bloku */
-  max-height: 460px;
-  object-fit: contain;
-  margin: 0 auto;
+}
+
+/* Karta produktu — prekrýva vypálenú, takže je vo všetkých jazykoch. */
+.hotspot-card {
+  position: absolute;
+  left: 28.19%;
+  top: 55.42%;
+  width: 59.43%;
+  background: #fff;
+  border-radius: 2.4cqw;
+  padding: 3.4cqw 3.6cqw;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4cqw;
+  font-size: 2.9cqw;
+  box-shadow: 0 1.4cqw 3cqw rgba(16, 24, 40, 0.14);
+}
+.hotspot-card__head {
+  display: flex;
+  align-items: center;
+  gap: 1.6cqw;
+  justify-content: space-between;
+}
+.hotspot-card__name {
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-size: 1em;
+  font-weight: 600;
+  color: var(--ink-900);
+  line-height: 1.2;
+}
+.hotspot-card__badge {
+  flex: none;
+  padding: 0.5em 0.8em;
+  border-radius: 999px;
+  background: var(--orange-100);
+  color: var(--orange-500);
+  font-size: 0.62em;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.hotspot-card__stars {
+  color: var(--orange-500);
+  font-size: 0.86em;
+  letter-spacing: 0.12em;
+}
+.hotspot-card__meta {
+  color: var(--ink-600);
+  font-size: 0.76em;
+}
+.hotspot-card__foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.6cqw;
+}
+.hotspot-card__price {
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-weight: 700;
+  color: var(--ink-900);
+}
+.hotspot-card__go {
+  flex: none;
+  width: 2.2em;
+  height: 2.2em;
+  border-radius: 50%;
+  border: 1px solid var(--line-300);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink-900);
+  font-size: 0.8em;
 }
 .hotspot-stage__caption {
   position: absolute;

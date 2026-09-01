@@ -137,7 +137,7 @@ export const videoReviews = {
     { name: 'Katarína H.', stars: 5, photo: '/images/video-recenzia-1.png', caption: 'Rozbalenie objednávky' },
     { name: 'Martin P.', stars: 5, photo: '/images/video-recenzia-2.png', caption: 'Prvé dojmy po týždni' },
     { name: 'Simona K.', stars: 5, photo: '/images/video-recenzia-3.png', caption: 'Ako to nosím každý deň' },
-    { name: 'Jakub M.', stars: 4, photo: '/images/video-recenzia-4.png', caption: 'Porovnanie s predchádzajúcim' },
+    { name: 'Jakub M.', stars: 5, photo: '/images/video-recenzia-4.png', caption: 'Porovnanie s predchádzajúcim' },
     { name: 'Lucia V.', stars: 5, photo: '/images/video-recenzia-5.png', caption: 'Darček, ktorý potešil' },
   ],
 };
@@ -262,6 +262,17 @@ export const hotspots = {
     price: '24,90 €',
   },
   strip: { text: 'Funguje aj v PDF katalógoch', link: 'Pridať bod →' },
+};
+
+/**
+ * Karta produktu vo kampaňovom vizuáli. Vo fotografii je vypálená po
+ * slovensky, preto ju v každej mutácii prekryjeme touto — preloženou.
+ */
+export const hotspotCard = {
+  name: 'Otoman Bullet, semiš',
+  badge: 'Zľava 20 %',
+  meta: 'Coral, 160 × 140 cm',
+  price: '1 238,00 €',
 };
 
 /** Produkt, na ktorom ukazujeme BI dáta — rovnaký ako vo widgete recenzií. */

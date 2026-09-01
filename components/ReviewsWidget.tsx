@@ -135,13 +135,15 @@ export default function ReviewsWidget({ lang = 'sk' }: { lang?: Lang }) {
   );
 }
 
-/** Hviezdičky vo farbe widgetu (posledná môže byť polovičná). */
+/** Hviezdičky vo farbe widgetu — vždy presne päť, posledná môže byť polovičná. */
 function WidgetStars({ value, half }: { value: number; half?: boolean }) {
+  const plne = half ? Math.max(0, Math.min(value, 5) - 1) : Math.min(value, 5);
+  const prazdne = 5 - plne - (half ? 1 : 0);
   return (
     <span className="wdg__stars" aria-label={`Hodnotenie ${value} z 5`} role="img">
-      {'★'.repeat(value)}
+      {'★'.repeat(plne)}
       {half && <span className="wdg__stars-half">★</span>}
-      {value < 5 && !half && <span className="wdg__stars-empty">{'★'.repeat(5 - value)}</span>}
+      {prazdne > 0 && <span className="wdg__stars-empty">{'★'.repeat(prazdne)}</span>}
     </span>
   );
 }
