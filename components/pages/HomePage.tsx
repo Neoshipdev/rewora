@@ -140,7 +140,8 @@ export default function HomePage({ lang }: { lang: Lang }) {
             </h1>
             <p className="hero__lead">{hero.lead}</p>
             <div className="hero__actions">
-              <a className="btn btn--dark" href={routes.demo[lang] ?? hero.primary.href}>
+              {/* „Vyskúšať teraz" mieri na cenník — v jazyku, v ktorom sa web číta */}
+              <a className="btn btn--dark" href={routes.pricing[lang] ?? hero.primary.href}>
                 {hero.primary.label}
               </a>
               <VideoButton lang={lang} />
