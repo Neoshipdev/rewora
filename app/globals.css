@@ -328,7 +328,8 @@ svg {
   position: absolute;
   right: 8px;
   top: 96px;
-  width: clamp(200px, 20vw, 300px);
+  /* šírka rastie s oknom — na menších notebookoch je menšia, nezmizne */
+  width: clamp(150px, 13vw, 300px);
   height: auto;
   pointer-events: none;
 }
@@ -4775,9 +4776,9 @@ svg {
   }
 }
 
-/* Hviezda s fotografiou stojí vedľa textu — pri užšom okne by mu liezla
-   do riadkov (najmä pri dlhších českých nadpisoch), tak ju schováme. */
-@media (max-width: 1799px) {
+/* Hviezda s fotografiou stojí vedľa textu. Pod 1280 px na ňu v oranžovej
+   polovici nie je miesto (nadpis by sa s ňou prekrýval), tak ju schováme. */
+@media (max-width: 1339px) {
   .hero__photo {
     display: none;
   }
@@ -5284,9 +5285,14 @@ svg {
   min-width: 660px;
 }
 @media (max-width: 1023px) {
-  /* v stĺpcovom rozložení má panel k dispozícii celú šírku okna */
+  /* v stĺpcovom rozložení sa panel prispôsobí šírke zariadenia — bez
+     vodorovného posuvníka, ktorý na telefóne polovicu ukážky schoval */
   .hero__right {
     padding: 0;
+    overflow-x: visible;
+  }
+  .panel {
+    min-width: 0;
   }
 }
 
