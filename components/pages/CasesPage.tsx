@@ -33,7 +33,7 @@ export default async function CasesPage({ lang }: { lang: Lang }) {
 
       <section className="numbers">
         <div className="container">
-          <div className="numbers__grid" style={{ gridTemplateColumns: 'repeat(4, 1fr)' }}>
+          <div className="numbers__grid numbers__grid--4">
             {stats.map((stat) => (
               <div key={stat.value} className="numbers__cell">
                 <span className="numbers__value">{stat.value}</span>

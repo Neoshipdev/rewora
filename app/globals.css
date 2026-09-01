@@ -282,6 +282,20 @@ svg {
   display: none;
   color: var(--nav-text);
   padding: 8px;
+  /* v stlačenej hlavičke si drží celú plochu aj ikonu */
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+}
+.topbar__burger svg {
+  flex: none;
+}
+
+/* CTA v rozbalenom menu — na úzkych telefónoch nahrádza tlačidlo v hlavičke */
+.topbar__cta-menu {
+  display: none;
 }
 
 /* ---------- hero ---------- */
@@ -852,6 +866,9 @@ svg {
 .numbers__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+}
+.numbers__grid--4 {
+  grid-template-columns: repeat(4, 1fr);
 }
 .numbers__cell {
   padding: 36px 48px;
@@ -2000,6 +2017,28 @@ svg {
   flex-wrap: wrap;
   margin-bottom: 32px;
 }
+
+/* Na mobile by zoznam tém zabral pol obrazovky — necháme ho v jednom
+   riadku, ktorý sa posúva do strán. */
+@media (max-width: 767px) {
+  .blog-filters {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+    /* pás siaha po okraje obrazovky, aby bolo vidieť, že pokračuje */
+    margin-inline: calc(var(--pad) * -1);
+    padding-inline: var(--pad);
+    padding-bottom: 4px;
+  }
+  .blog-filters::-webkit-scrollbar {
+    display: none;
+  }
+  .blog-filters .chip {
+    flex: none;
+    scroll-snap-align: start;
+  }
+}
 .blog-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -2220,12 +2259,20 @@ svg {
   .numbers__grid {
     grid-template-columns: 1fr;
   }
+  .numbers__grid--4 {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 40px;
+  }
   .numbers__cell {
     padding: 28px 0;
     border-right: 0;
     border-bottom: 1px solid var(--divider-dark);
   }
   .numbers__cell:last-child {
+    border-bottom: 0;
+  }
+  /* pri dvoch stĺpcoch drží spodnú linku aj predposledná bunka */
+  .numbers__grid--4 .numbers__cell:nth-last-child(2) {
     border-bottom: 0;
   }
   .quotes,
@@ -2278,6 +2325,10 @@ svg {
     background: var(--ink-900);
     border-top: 1px solid var(--divider-dark);
     padding: 8px var(--pad) 20px;
+    /* na nízkych displejoch sa menu nezmestí celé — posúva sa vo vlastnom páse */
+    max-height: calc(100vh - 72px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
   }
   .topbar__links--open a {
     padding: 12px 0;
@@ -2288,9 +2339,43 @@ svg {
   }
 }
 
+/* Pod 390 px sa do hlavičky logo, tlačidlo aj menu naraz nezmestia —
+   oranžové CTA sa presunie do rozbaleného menu. */
+@media (max-width: 389px) {
+  :root {
+    --pad: 20px;
+  }
+  .topbar__right .btn--orange {
+    display: none;
+  }
+  .topbar__links--open .topbar__cta-menu {
+    display: inline-flex;
+    margin-top: 14px;
+    justify-content: center;
+  }
+}
+
 @media (max-width: 639px) {
   :root {
     --pad: 32px;
+  }
+  .numbers__grid--4 {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+  }
+  .numbers__grid--4 .numbers__cell:nth-last-child(2) {
+    border-bottom: 1px solid var(--divider-dark);
+  }
+  .numbers__cell {
+    gap: 10px;
+  }
+  .numbers__value {
+    font-size: 34px;
+    line-height: 1.1;
+  }
+  .numbers__label {
+    line-height: 1.55;
+    max-width: 34ch;
   }
   .hero h1 {
     font-size: 34.2px;
@@ -3184,8 +3269,12 @@ svg {
     border-top: 1px solid var(--line-300);
     min-height: 0;
   }
+  /* Na dotykových zariadeniach nemá panel vlastný zvislý posuvník — inak
+     prst scrolluje jeho vnútro namiesto stránky a widget ostáva odseknutý.
+     Ukážka sa zobrazí celá a hneď pod ňou pokračuje tmavý pás s číslami. */
   .panel__content {
-    max-height: 68vh;
+    max-height: none;
+    overflow-y: visible;
   }
 }
 
@@ -4368,7 +4457,7 @@ svg {
 .admin-tab:hover {
   background: rgba(255, 255, 255, 0.05);
 }
-.admin-tab[aria-selected='true'] {
+.admin-tab[aria-expanded='true'] {
   background: rgba(255, 255, 255, 0.08);
   border-color: rgba(255, 255, 255, 0.14);
 }
@@ -4413,10 +4502,27 @@ svg {
     animation: none;
   }
 }
+/* snímka vedľa zoznamu je pre široké obrazovky, vnorená pre mobil */
+.admin-tabs__shot--inline {
+  display: none;
+}
 @media (max-width: 1023px) {
   .admin-tabs {
     grid-template-columns: 1fr;
     gap: 24px;
+  }
+}
+@media (max-width: 767px) {
+  /* obrázok patrí hneď pod funkciu, ktorú práve čítam */
+  .admin-tabs__shot--inline {
+    display: block;
+    margin: 4px 0 14px;
+  }
+  .admin-tabs__shot--side {
+    display: none;
+  }
+  .admin-tabs {
+    gap: 0;
   }
 }
 
@@ -5276,9 +5382,18 @@ svg {
   }
   .topbar__links--open .langs--menu {
     display: flex;
-    gap: 4px;
-    padding: 14px 0 0;
-    margin-left: -7px;
+    gap: 6px;
+    padding: 16px 0 0;
+  }
+  /* prepínač jazykov nepreberá štýl položiek menu (linka pod textom) */
+  .topbar__links--open .langs--menu a {
+    padding: 8px 12px;
+    border-bottom: 0;
+    border: 1px solid var(--divider-dark);
+    border-radius: var(--radius-sm);
+  }
+  .topbar__links--open .langs--menu a.langs__item--on {
+    border-color: transparent;
   }
 }
 

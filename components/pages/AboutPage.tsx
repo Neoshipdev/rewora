@@ -41,7 +41,7 @@ export default function AboutPage({ lang }: { lang: Lang }) {
 
       <section className="numbers">
         <div className="container">
-          <div className="numbers__grid" style={{ gridTemplateColumns: 'repeat(4, 1fr)' }}>
+          <div className="numbers__grid numbers__grid--4">
             {about.facts.map((fact) => (
               <div key={fact.label} className="numbers__cell">
                 <span className="numbers__value">{fact.value}</span>

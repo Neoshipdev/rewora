@@ -72,6 +72,10 @@ export default function TopBar({ lang = 'sk', alt }: Props) {
                 ))}
               </div>
             </div>
+            {/* na úzkych telefónoch je v menu aj hlavné tlačidlo */}
+            <a className="btn btn--orange topbar__cta-menu" href={route('pricing', lang)!}>
+              {t.cta.try}
+            </a>
             {/* na mobile je prepínač jazykov súčasťou rozbaleného menu */}
             <div className="langs langs--menu" aria-label={t.langSwitch}>
               {LANGS.map((l) => (
