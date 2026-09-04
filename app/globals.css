@@ -280,7 +280,8 @@ svg {
 }
 .topbar__burger {
   display: none;
-  color: var(--nav-text);
+  /* na mobile je to jediná cesta do menu — nech je dobre vidieť */
+  color: #fff;
   padding: 8px;
   /* v stlačenej hlavičke si drží celú plochu aj ikonu */
   flex: none;
