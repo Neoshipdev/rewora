@@ -4,7 +4,10 @@ import { routes, type Lang } from '@/lib/i18n';
 import { createT } from '@/lib/t';
 
 /** Integrácie, ku ktorým máme návod — na karte pribudne odkaz naň. */
-const navody: Record<string, keyof typeof routes> = { 'Shopify Plugin': 'shopifyGuide' };
+const navody: Record<string, keyof typeof routes> = {
+  'Shopify Plugin': 'shopifyGuide',
+  'Shoptet Plugin': 'shoptetGuide',
+};
 
 /**
  * Spôsoby integrácie — spoločné pre homepage aj cenník.

@@ -57,6 +57,11 @@ export const routes = {
     cs: p('/cs/navody/shopify-plugin/'),
     en: p('/guides/shopify-plugin/'),
   },
+  shoptetGuide: {
+    sk: p('/sk/navody/shoptet-plugin/'),
+    cs: p('/cs/navody/shoptet-plugin/'),
+    en: p('/guides/shoptet-plugin/'),
+  },
 };
 
 export type RouteKey = keyof typeof routes;

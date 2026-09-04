@@ -141,6 +141,7 @@ const mutacie = {
     partner: '/sk/partnersky-program/',
     demo: '/sk/ukazka/',
     shopifyGuide: '/sk/navody/shopify-plugin/',
+    shoptetGuide: '/sk/navody/shoptet-plugin/',
   },
   cs: {
     group: '(cs)',
@@ -157,6 +158,7 @@ const mutacie = {
     partner: '/cs/partnersky-program/',
     demo: '/cs/ukazka/',
     shopifyGuide: '/cs/navody/shopify-plugin/',
+    shoptetGuide: '/cs/navody/shoptet-plugin/',
   },
   en: {
     group: '(en)',
@@ -172,6 +174,7 @@ const mutacie = {
     partner: '/partner-program/',
     demo: '/demo/',
     shopifyGuide: '/guides/shopify-plugin/',
+    shoptetGuide: '/guides/shoptet-plugin/',
   },
 };
 
@@ -193,6 +196,10 @@ for (const [lang, m] of Object.entries(mutacie)) {
   await zapis(
     join(koren, seg(m.shopifyGuide), 'page.tsx'),
     page('ShopifyGuidePage', lang, 'shopifyGuide')
+  );
+  await zapis(
+    join(koren, seg(m.shoptetGuide), 'page.tsx'),
+    page('ShoptetGuidePage', lang, 'shoptetGuide')
   );
 
   for (const key of ['thanks', 'privacy', 'terms', 'shoptet']) {

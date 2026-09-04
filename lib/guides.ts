@@ -139,3 +139,130 @@ export const shopifyGuide = {
     text: 'Napíšte nám a prejdeme nastavenie doplnku spolu — vrátane farieb widgetu a automatických žiadostí o recenziu.',
   },
 };
+
+/** Návod na nasadenie doplnku Rewora na platforme Shoptet. */
+export const shoptetGuide = {
+  eyebrow: 'Návod',
+  title: 'Nasadenie doplnku Rewora na Shoptete',
+  lead: 'Doplnok nainštalujete priamo z katalógu Shoptet Doplnky — bez zásahu do šablóny. Návod vás prevedie od inštalácie cez aktiváciu predplatného až po schválenie prvej recenzie.',
+  video: {
+    src: '/images/shoptet-navod.mp4',
+    caption: 'Celé nasadenie krok za krokom — od katalógu doplnkov po recenziu zobrazenú na karte produktu.',
+  },
+  sections: [
+    {
+      num: '01',
+      title: 'Inštalácia doplnku',
+      ordered: true,
+      steps: [
+        { text: 'V administrácii Shoptetu choďte do Prepojenie → Shoptet Doplnky.' },
+        { text: 'Do vyhľadávania napíšte rewora a otvorte doplnok Rewora.' },
+        {
+          text: 'V pravom stĺpci pri „Vaša cena“ je uvedené Zadarmo za inštaláciu doplnku — kliknite na Objednať a nainštalovať.',
+        },
+        {
+          text: 'Potvrďte objednávku doplnku. Shoptet vás vráti späť do administrácie, kde už Rewora figuruje medzi prepojeniami.',
+        },
+      ],
+    },
+    {
+      num: '02',
+      title: 'Overenie e-mailu a otvorenie administrácie',
+      ordered: true,
+      steps: [
+        {
+          text: 'V Prepojenie → Shoptet Doplnky otvorte Reworu — zobrazí sa obrazovka Dokončite nastavenie pre váš obchod.',
+        },
+        {
+          text: 'Overte svoju e-mailovú adresu. Potvrdzovací odkaz sme poslali na kontaktný e-mail obchodu.',
+          items: [
+            'Ak e-mail nedorazil, použite Zaslať overovací email znova a skontrolujte priečinok so spamom.',
+          ],
+        },
+        {
+          text: 'Po overení sa aktivuje tlačidlo Otvoriť administráciu Rewora — kliknutím sa dostanete do svojho účtu.',
+        },
+      ],
+    },
+    {
+      num: '03',
+      title: 'Aktivácia predplatného',
+      ordered: true,
+      steps: [
+        { text: 'V administrácii Rewora otvorte sekciu Fakturácia.' },
+        {
+          text: 'Prepínačom Mesačne / Ročne zvoľte obdobie a vyberte balík — Štandardný za 29 € alebo Profesionálny za 149 € mesačne. Kliknite Predplatiť.',
+        },
+        {
+          text: 'Platba prebieha cez Stripe: vyplňte údaje karty alebo zvoľte Revolut Pay a potvrďte Zaplatiť a predplatiť. K cene sa pripočíta DPH podľa krajiny.',
+        },
+        {
+          text: 'Predplatné je bez rizika — ak nebudete spokojní, do 30 dní od zakúpenia vám vrátime peniaze.',
+        },
+      ],
+    },
+    {
+      num: '04',
+      title: 'Nastavenie obchodu',
+      ordered: true,
+      steps: [
+        {
+          text: 'V sekcii Nastavenia skontrolujte názov a URL domény, nahrajte logo, prípadne súbor s dátami pre Business Intelligence.',
+        },
+        {
+          text: 'Doplňte URL všeobecných obchodných podmienok a kód jazyka. Ak predávate do viacerých krajín, zapnite widgety na automatický preklad a vyberte jazyky.',
+        },
+        {
+          text: 'Nastavte, kedy sa má odosielať žiadosť o recenziu:',
+          items: [
+            'krátkodobá a dlhodobá žiadosť po doručení objednávky (napríklad 7 a 70 dní),',
+            'krátkodobá a dlhodobá žiadosť po nákupe, ak nie je známy dátum doručenia (napríklad 21 a 90 dní).',
+          ],
+        },
+        {
+          text: 'V pravom stĺpci sú vzory adries e-shopu (produkt, katalóg, košík, pokladňa, úspešná objednávka, domovská stránka) a selektor tlačidla „Pridať do košíka“. Pri štandardnej šablóne Shoptetu ich netreba meniť.',
+        },
+        { text: 'Nastavenia uložte.' },
+      ],
+    },
+    {
+      num: '05',
+      title: 'Ako to vyzerá na e-shope',
+      intro:
+        'Po aktivácii sa widgety zobrazia bez zásahu do šablóny. Na karte produktu pribudne:',
+      steps: [
+        { text: 'hviezdičkové hodnotenie a počet recenzií hneď pri názve produktu,' },
+        { text: 'sekcia Recenzie a hodnotenia s priemerom a rozpadom hodnotení 1 – 5,' },
+        { text: 'tlačidlo Napísať recenziu s formulárom — hodnotenie, názov, text, plusy a mínusy,' },
+        { text: 'možnosť pripojiť fotografie (JPG, JPEG, PNG, GIF, WEBP do 10 MB) alebo video.' },
+      ],
+      outro:
+        'Ktoré widgety sa zobrazujú, spravujete v administrácii Rewora v sekcii Widgety.',
+    },
+    {
+      num: '06',
+      title: 'Schválenie recenzie',
+      ordered: true,
+      steps: [
+        { text: 'V administrácii Rewora otvorte Recenzie → Recenzie a kliknite na novú recenziu.' },
+        {
+          text: 'V detaile vidíte nadpis, hodnotenie, text, výhody a nevýhody, autora, zdroj recenzie aj jazyk.',
+        },
+        {
+          text: 'Vpravo hore kliknite na Označiť ako schválené — recenzia sa vzápätí zobrazí na e-shope. Prepínačom Je odporúčaný ju viete vyzdvihnúť medzi ostatnými.',
+        },
+        {
+          text: 'Stav žiadostí o recenziu ku konkrétnej objednávke nájdete v sekcii Objednávky — vidíte, či už bola odoslaná krátkodobá alebo dlhodobá žiadosť.',
+        },
+      ],
+    },
+  ] as GuideSection[],
+  warning: {
+    title: 'Na čo si dať pozor',
+    text: 'Widgety sa na e-shope zobrazia až po overení e-mailu a aktivácii predplatného. Nová recenzia je verejná až po schválení — dovtedy ju vidíte len v administrácii Rewora.',
+  },
+  cta: {
+    title: 'Potrebujete s nasadením pomôcť?',
+    text: 'Napíšte nám a prejdeme nastavenie doplnku spolu — vrátane žiadostí o recenziu a prekladov do ďalších jazykov.',
+  },
+};

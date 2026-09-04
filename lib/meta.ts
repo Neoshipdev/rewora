@@ -81,6 +81,11 @@ export const seo: Record<Lang, Partial<Record<PageKey, { title: string; descript
       description:
         'Krok za krokom: inštalácia doplnku Rewora Product Reviews, aktivácia app embed, vloženie widgetu na kartu produktu a schválenie prvej recenzie.',
     },
+    shoptetGuide: {
+      title: 'Nasadenie doplnku Rewora na Shoptete ★ Rewora',
+      description:
+        'Krok za krokom: inštalácia doplnku z katalógu Shoptet Doplnky, overenie e-mailu, aktivácia predplatného, nastavenie obchodu a schválenie prvej recenzie.',
+    },
   },
   cs: {
     home: {
@@ -144,6 +149,11 @@ export const seo: Record<Lang, Partial<Record<PageKey, { title: string; descript
       description:
         'Krok za krokem: instalace doplňku Rewora Product Reviews, aktivace app embed, vložení widgetu na kartu produktu a schválení první recenze.',
     },
+    shoptetGuide: {
+      title: 'Nasazení doplňku Rewora na Shoptetu ★ Rewora',
+      description:
+        'Krok za krokem: instalace doplňku z katalogu Shoptet Doplňky, ověření e-mailu, aktivace předplatného, nastavení obchodu a schválení první recenze.',
+    },
   },
   en: {
     home: {
@@ -202,6 +212,11 @@ export const seo: Record<Lang, Partial<Record<PageKey, { title: string; descript
       title: 'Installing Rewora on Shopify ★ Rewora',
       description:
         'Step by step: installing the Rewora Product Reviews app, activating the app embed, adding the widget to the product page and approving the first review.',
+    },
+    shoptetGuide: {
+      title: 'Installing Rewora on Shoptet ★ Rewora',
+      description:
+        'Step by step: installing the add-on from the Shoptet Doplňky catalogue, verifying your e-mail, activating the subscription, configuring the store and approving the first review.',
     },
   },
 };
