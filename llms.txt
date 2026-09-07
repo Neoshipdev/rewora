@@ -1,0 +1,267 @@
+# Rewora
+
+> Rewora is a Slovak SaaS platform for customer experience. It helps online stores collect, moderate and display reviews exactly where customers decide — on the product page, in the Q&A, in search and in Google Shopping.
+
+## What Rewora is
+
+Rewora gives you advanced tools for building trust in your brand. Whether you run an online store or your business goes in another direction, Rewora will help you too.
+
+## Who it is for
+
+- Online stores on Shoptet, Shopify or custom platforms that want more authentic reviews and a higher conversion rate.
+- Merchants who must comply with the rules for publishing consumer reviews (the Omnibus directive).
+- Brands selling across borders — reviews, the forum and the Q&A are translated automatically into 31 languages.
+- Agencies, freelancers and consultants who roll Rewora out for clients through the partner program.
+
+## Key numbers
+
+- +10% — average revenue growth after introducing reviews
+- 88% — of customers trust reviews as much as a friend's recommendation
+- 270% — higher chance of a purchase with 5+ reviews
+- on the market since: 2023
+- domains use Rewora: 100+
+- people on the team: 8
+- working together: 13 years
+
+## Features
+
+### 01 Reviews
+
+Reviews are 12 times more trusted than other marketing materials, which gives social proof considerable power. As many as 92% of people read customer reviews before buying.
+
+- **Collect product and store reviews from online and offline customers alike** — Rewora helps you collect feedback whether the customer bought online or in a bricks-and-mortar shop, and shows it exactly where the customer expects it.
+- **Reach out to customers automatically after a purchase** — Once an order is completed we automatically e-mail the customer asking them to rate both the goods they bought and the store itself. You get more authentic, verified reviews without any extra manual work.
+- **We aggregate reviews from different sources right at the products** — We can bring ratings from several sources together in one place right on the product page. Products gain more relevant user content, which strengthens credibility and can also support SEO and the visibility of product pages in search engines.
+
+### 02 Photo and video reviews
+
+Text convinces; an image convinces faster. The customer sees with their own eyes how the product looks in real use, not in a studio shot. Customer content also expands your product gallery for free.
+
+- **Customer photos** — A photo of the product in a real setting can be attached to a review. That shows the size, the colour and the real build quality.
+- **Video reviews** — Short vertical videos in the style customers know from social media. They appear in a carousel right on the product page and on the homepage.
+- **Connecting reviews with social media** — You can share photo and video reviews on your social media and build natural UGC content that way.
+
+### 03 Stars in Google Shopping
+
+Reviews collected by Rewora are sent automatically to Google Merchant Center. Your products appear in search with stars and a review count — unlike competitor listings, which stay bare.
+
+- **Automatic rating transfer** — We collect, verify and send reviews to Google Merchant Center without you exporting anything by hand.
+- **Higher click-through rate** — A listing with stars draws attention and wins a larger share of clicks on the same campaign budget.
+- **Compliant with Google's rules** — We only send verified reviews in the required format, so the feed passes review without needless rejections.
+
+### 04 Q&A and forum
+
+Give customers a place for questions and answers. Use the content they generate and collect feedback along the way. It saves your support team real resources.
+
+- **Product Q&A** — Collect product questions and answer them just once. You can attach a useful question to the product in a single click.
+- **Discussion forum and expert Q&A** — Rewora also provides a full discussion forum with post categories, expert answers and many other features.
+- **Post moderation and translations** — Full control over post moderation, and machine translation makes posts automatically available in 31 languages.
+
+### 05 AI review summary
+
+The summary pulls the essentials out of every review of the product — what customers praise and what bothers them. The shopper gets a quick picture without reading dozens of ratings.
+
+- **A summary of the product's pros and cons** — AI goes through every review of the product and highlights the recurring pros and cons. The summary is rewritten with each new review, so it always stays current.
+- **Automated replies to reviews** — AI answers the rating in your store's tone of voice and you simply approve the reply. The customer gets a response straight away and your support team saves time.
+- **A faster buying decision** — The customer sees a few lines of summary instead of a long list of reviews, so they decide faster and leave for a competitor less often.
+
+### 06 Hotspots
+
+Let customers buy products straight from images elsewhere on your site. With the Hotspots tool you simply tag products at the right spot in any image on the site.
+
+- **Products in context** — Pick any image on your site, tag the products and that is it! The customer can buy straight from the image.
+- **Building an online catalogue** — Turn your store into an online product catalogue or lookbook, or let customers buy straight from blog articles.
+- **PDF catalogue integration** — Hotspots work in PDF catalogues as well — just pick a page and place a point on the product.
+
+### 07 Business Intelligence
+
+Sales performance, complaint rates, return rates? Information like this can convince a customer to buy. With the BI data tool you show clear statistics and key product facts in one place.
+
+- **Sales statistics** — An overview of which products sell best, how their performance changes over time and where the commercial potential lies.
+- **Returns and complaints** — Comparing products by return and complaint rates helps uncover problem lines and the reasons behind dissatisfaction.
+- **Define your own data** — You can edit and define the metrics, filters and views shown, to match what a particular team or client needs.
+
+### 08 Smart search
+
+Smart product search so the customer always finds what they are after — even when they are not sure what they want. A colour, a specific requirement or just something they remember about the product is enough.
+
+- **Search in your own words** — The customer types the request the way they think it — “blue summer trainers under 80 euros”. The search understands the whole sentence, not just a match in the product name.
+- **Colour, specs and a scrap of memory** — We narrow the results by colour, size, material or price. Even a detail the customer remembers from a previous visit is enough.
+- **Suggestions as you type** — Autocomplete offers products and categories from the very first letters, so the customer reaches the goods in a few keystrokes.
+
+## Plans and pricing
+
+### Free — €0 forever
+
+- Widget: Product reviews
+- Widget: Product star ratings
+- Widget: Hotspots (PDF and web)
+- 1 domain
+
+### Standard — €29 per month / €290 per year
+
+- Widget: Company and product reviews
+- Widget: Purchase statistics (BI data)
+- Widget: Forum and product Q&A
+- Widget: Hotspots (PDF and web)
+- Widget: Stars on the product
+- Displaying reviews from several sources (e.g. Heureka)
+
+### Professional — €149 per month / €1,490 per year
+
+Everything in the Standard plan
+
+- 2,000 review invitations per month
+- Automatic listing of products in Google Shopping
+- Automatic translation of reviews, the forum and the product Q&A into 31 languages
+- Access to the Rewora API
+
+### Enterprise — Custom
+
+Everything in the Professional plan
+
+- More than 2,000 review invitations per month
+
+No risk – if you are not satisfied, we refund your money within 30 days of purchase.
+
+https://rewora.com/pricing/
+
+## Integrations
+
+- **Google Tag Manager** — Integration via Google Tag Manager makes it easy to connect your store with Rewora and share data between them.
+- **Custom integration** — Rewora works with any e-commerce platform. With our team behind you, the integration is a breeze.
+- **Shopify Plugin** — Integrate with your Shopify store in one click and use every available feature.
+- **Shoptet Plugin** — You install the Rewora add-on straight from your Shoptet store administration. The widgets appear without touching the template.
+
+### Deployment guides
+
+- Shopify: https://rewora.com/guides/shopify-plugin/
+- Shoptet: https://rewora.com/guides/shoptet-plugin/
+
+## Case studies
+
+- [How we increased sales by over 10% for FixServis using reviews](https://rewora.com/case-studies/how-are-we-for-fix-service-using-reviews-to-increase-turnover-by-10/) — FixServis: +15% increase in conversion rate, ~10% revenue growth after three months, 4.5 – 5.0 rating quality
+- [Rewora as a catalyst for growth: how Drinkcentrum boosted customer trust and e-shop performance](https://rewora.com/case-studies/rewora-as-catalyst-growth-drinkcentre/) — Drinkcentrum: +25% increase in conversion rate, +29.9% products added to the cart, 91.17% of customers influenced by Rewora tools
+- [From confidence to performance: How Rewora helped the kilpi.cz e-shop](https://rewora.com/case-studies/from-dovery-to-performance-how-rescue-helped-eshop-kilpi/) — kilpi.cz: ~10% more products added to the cart, +6% views of Rewora widgets, +36% more effective communication
+
+https://rewora.com/case-studies/
+
+## Frequently asked questions
+
+### What is social proof?
+
+The idea of social proof is that someone can be persuaded to try a product or service simply because they saw a positive review or read the opinion of an expert connected to that product.
+Social proof puts consumers' minds at ease and convinces them that buying the product will solve their need.
+
+### Are online reviews really that important?
+
+Online reviews matter to consumers because they provide social proof and build trust in the brand.
+Products with five or more reviews are 270% more likely to sell than products with none. Nine in ten online shoppers read reviews before buying.
+Studies have shown that customer reviews matter more in a purchase decision than price, because people trust them more than celebrity endorsements and traditional advertising.
+
+### Why should I care about reviews?
+
+Customer reviews have replaced word of mouth as the main engine of a business's reputation. Online reviews are easy to find, and as a result they can have an incredible impact on your business.
+User-generated content is a treasure trove of information and a largely untapped source of rich, contextual customer feedback.
+
+### Why should every online store collect product reviews?
+
+Reviews are written by real customers with real hands, feet, ears, homes and families. Product specifications are often written by talented marketers with little or no experience of the product itself.
+Individual product reviews can have a remarkable effect on customer experience and on your conversion rate.
+
+### Which languages does the automatic translation support?
+
+English, Bulgarian, Chinese, Czech, Danish, Estonian, Finnish, French, Indonesian, Italian, Japanese, Korean, Lithuanian, Latvian, Hungarian, German, Dutch, Norwegian, Polish, Portuguese, Romanian, Russian, Slovak, Slovenian, Spanish, Swedish, Turkish, Ukrainian and more.
+
+### Do product reviews help SEO?
+
+Yes. Letting search engines index your product review content helps potential customers find your product pages and improves your organic rankings.
+Most customers use keywords in their reviews, such as the product name, which adds more content associated with you online.
+
+### Which rules govern reviews in online stores?
+
+The basis is Directive (EU) 2019/2161 of the European Parliament and of the Council, known as the Omnibus directive. In Slovakia it was transposed by Act No. 108/2024 Coll. on consumer protection, in force since 1 July 2024, which replaced Acts No. 250/2007 Coll. and No. 102/2014 Coll.
+Reviews are also covered by the general rules on unfair commercial practices and misleading conduct, by the list of practices banned in all circumstances (the so-called blacklist), and — when reviewer names are published — by the GDPR.
+If you sell to other EU countries, the same rules apply there too — the Omnibus directive has been transposed in every member state.
+
+### Do I have to state whether reviews are verified?
+
+Yes. If you make consumer product reviews available, you have a duty to state whether and how you ensure that published reviews come from consumers who actually bought or used the product.
+The information must be available where the reviews are shown — at the product or in the ratings section, not hidden away in the terms and conditions. In practice it is a short line such as “We collect reviews from customers who ordered the product; each one is matched to an order number.”
+If you do not verify reviews, you must not claim or imply that they are verified. That is a legitimate option too — you just have to state it truthfully.
+
+### What is never allowed with reviews?
+
+Claiming that the reviews published in your store come from consumers who actually bought or used the product without taking reasonable and proportionate steps to verify that.
+Publishing fake reviews or endorsements, commissioning someone else to create them (for example buying reviews from an agency), or writing reviews of your own products under a customer's name.
+Distorting consumer reviews to promote a product — for example publishing only positive ones and systematically suppressing negative ones, editing their content, moving ratings from another product, or showing an average that does not match the real reviews.
+Showing a misleading aggregate rating — for instance averaging only selected reviews, or keeping stars from a time when the product was different.
+
+### How should I verify that a review comes from a real customer?
+
+The law does not prescribe one particular technology; it requires “reasonable and proportionate steps”. In practice, matching a review to a specific order is considered sufficient — an invitation sent after delivery to the e-mail from the order, with a unique link.
+It is advisable to keep the link between a review and the order identifier, the date the invitation was sent and the date of publication. That way you can prove to the trade inspection authority that the process really works.
+If you also collect reviews from visitors without an order or take ratings from other platforms, they should be visibly distinguished from verified ones — for example with a “verified review” label on those matched to a purchase.
+
+### Can I delete negative reviews?
+
+Selectively deleting negative reviews is prohibited — it distorts the reviews and is therefore an unfair commercial practice.
+You may remove a review that breaks your published moderation rules: it contains profanity, insults, third-party personal data or advertising, is unrelated to the product, or there is reasonable suspicion that it is fraudulent. The reason for removal should be documented.
+We recommend publishing your moderation rules and applying them equally to positive and negative ratings. It is better to answer a negative review publicly than to hide it — for other customers the store's response is often a stronger signal of trustworthiness than the review itself.
+
+### Can I offer a discount or a gift for a review?
+
+Encouraging customers to write a review is allowed, but the reward must not depend on the rating being positive. Wording such as “write a 5-star review and get a discount” is prohibited.
+If a review was rewarded, that fact should be stated with the review so it is not misleading. The same goes for influencer collaborations and reviews given in exchange for a free product.
+The reward has to be given regardless of whether the customer wrote praise or criticism.
+
+### What are my obligations regarding reviewers' personal data?
+
+A reviewer's name, e-mail or photo are personal data. You need a legal basis to process them, you must inform the data subject about the purpose and retention period, and you must let them exercise their GDPR rights, including erasure.
+We recommend publishing only the details the customer agreed to publish — for example a first name and the initial of the surname, or a “verified customer” label.
+If an external tool processes the reviews, it acts as a processor and the relationship must be covered by a data processing agreement.
+
+### Do the rules apply to stars in ads and in search too?
+
+Yes. If you display a rating in Google Shopping, in ads or in structured data in search, it must match the real reviews in your store and meet the same truthfulness requirements.
+The same goes for the store rating shown in the footer, on banners or in e-mails. Both the average and the review count must be current.
+Platforms also have their own rules — if you break them, they can suspend product campaigns independently of any state supervision.
+
+### What happens if the rules are broken?
+
+Supervision is carried out by the trade inspection authority, which can impose a fine and order the unlawful state to be remedied. Proceedings can start from its own inspection or from a complaint by a consumer or a competitor.
+For widespread infringements with a cross-border dimension, the Omnibus directive allows a fine of up to 4% of the trader's annual turnover in the member states concerned.
+Besides the penalty, expect reputational damage — fake review scandals make good headlines and customers still find them years later.
+
+### How does Rewora help meet these obligations?
+
+Review invitations are only sent after an order, so every review is linked to a specific purchase — the core of the required verification. Verified reviews are clearly labelled and distinguished from unverified ones.
+Moderation follows a single set of rules with a history of every action, so you can prove why a review was removed. Negative ratings cannot be quietly hidden — instead you get an alert and room for a public reply.
+The aggregate rating and review count are calculated from every published review, and the same numbers are sent to Google Shopping. We show how reviews are verified right in the review widget.
+This overview is for information only and does not replace legal advice — we recommend discussing your specific setup with your lawyer.
+
+## More links
+
+- https://rewora.com/resources/
+- https://rewora.com/about/
+- https://rewora.com/demo/
+- https://rewora.com/partner-program/
+- https://rewora.com/general-terms-and-conditions/
+- https://rewora.com/personal-data-protection/
+
+## Contact
+
+- Andrea Vargová, Sales manager at Rewora — andrea.vargova@rewora.com, +421 948 227 871
+- General enquiries and support: info@rewora.com
+- Rewora s. r. o., Prešovská 40A, 821 02 Bratislava – Ružinov, Slovak Republic, Company ID: 50 647 652
+
+## Language versions
+
+- Slovensky: https://rewora.com/sk/ · https://rewora.com/sk/llms.txt
+- Česky: https://rewora.com/cs/ · https://rewora.com/cs/llms.txt
+- English: https://rewora.com/ · https://rewora.com/llms.txt
+
+## Note
+
+This file is generated from the website content. Prices exclude VAT and apply to a single domain; the pricing page always holds the current state.
+en · 2026-09-07

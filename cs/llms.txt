@@ -1,0 +1,267 @@
+# Rewora
+
+> Rewora je slovenská SaaS platforma pro zákaznickou zkušenost. E-shopům pomáhá sbírat, moderovat a zobrazovat recenze tam, kde se zákazník rozhoduje — u produktu, v poradně, ve vyhledávání i v Google Shopping.
+
+## Co je Rewora
+
+S Reworou získáte pokročilé nástroje, které vám pomohou budovat důvěru ve vaši značku. Ať už vlastníte e-shop, nebo je váš byznys zaměřený jiným směrem, Rewora pomůže i vám.
+
+## Pro koho je
+
+- E-shopy na Shoptetu, Shopify i vlastních řešeních, které chtějí více autentických recenzí a vyšší konverzní poměr.
+- Prodejce, kteří musí plnit povinnosti při zveřejňování spotřebitelských recenzí (směrnice Omnibus).
+- Značky prodávající do více zemí — recenze, fórum i poradna se automaticky překládají do 31 jazyků.
+- Agentury, freelancery a konzultanty, kteří Reworu nasazují klientům v partnerském programu.
+
+## Čísla
+
+- +10 % — průměrný nárůst tržeb po zavedení recenzí
+- 88 % — zákazníků věří recenzím jako doporučení známých
+- 270 % — vyšší pravděpodobnost nákupu při 5+ recenzích
+- na trhu od roku: 2023
+- domén používá Reworu: 100+
+- lidí v týmu: 8
+- pracujeme spolu: 13 let
+
+## Funkce
+
+### 01 Recenze
+
+Recenze jsou 12krát důvěryhodnější než jiné marketingové materiály, což dává sociálnímu důkazu významnou sílu. Až 92 % lidí si před nákupem přečte recenze zákazníků.
+
+- **Sbíráte produktové i obchodní recenze od online i offline zákazníků** — Rewora vám pomáhá získávat zpětnou vazbu bez ohledu na to, jestli zákazník nakoupil v e-shopu nebo v kamenné prodejně, a ukazuje ji přesně tam, kde ji zákazník očekává.
+- **Automaticky oslovujte zákazníky po nákupu** — Po dokončení objednávky zákazníkovi automaticky odešleme e-mail se žádostí o hodnocení zakoupeného zboží i samotného obchodu. Získáváte tak více autentických a ověřených recenzí bez další manuální práce.
+- **Agregujeme recenze z různých zdrojů přímo u produktů** — Hodnocení z více zdrojů dokážeme soustředit na jednom místě přímo na produktové stránce. Produkty tak získají více relevantního uživatelského obsahu, což posiluje důvěryhodnost a zároveň může podpořit SEO a viditelnost produktových stránek ve vyhledávačích.
+
+### 02 Foto a video recenze
+
+Text přesvědčí, obraz přesvědčí rychleji. Zákazník na vlastní oči vidí, jak produkt vypadá v reálném používání, ne na ateliérové fotografii. Obsah od zákazníků zároveň zdarma doplňuje vaši produktovou galerii.
+
+- **Fotky od zákazníků** — K recenzi lze připojit fotografii produktu v reálném prostředí. Ukážete tak velikost, barvu i skutečnou kvalitu zpracování.
+- **Video recenze** — Krátká svislá videa ve stylu, na jaký jsou zákazníci zvyklí ze sociálních sítí. Zobrazují se v karuselu přímo na kartě produktu i na homepage.
+- **Propojení recenzí se sociálními sítěmi** — Máte možnost foto a video recenze sdílet na svých sociálních sítích a vytvářet tak přirozený UGC obsah.
+
+### 03 Hvězdičky v Google Shopping
+
+Recenze nasbírané Reworou automaticky posíláme do Google Merchant Center. Vaše produkty se ve vyhledávání zobrazí s hvězdičkami a počtem hodnocení — na rozdíl od karet konkurence, které zůstávají bez nich.
+
+- **Automatický přenos hodnocení** — Sbíráme, ověřujeme a odesíláme recenze do Google Merchant Center, aniž byste cokoli exportovali ručně.
+- **Vyšší prokliková míra** — Karta s hvězdičkami přitahuje pozornost a získává vyšší podíl prokliků při stejném rozpočtu na kampaně.
+- **Soulad s pravidly Googlu** — Odesíláme jen ověřené recenze v požadovaném formátu, takže feed projde kontrolou bez zbytečných zamítnutí.
+
+### 04 Poradna a fórum
+
+Poskytněte zákazníkům platformu pro otázky a odpovědi. Využijte obsah generovaný uživateli a získejte zpětnou vazbu od zákazníků. Dokážete tak ušetřit zdroje oddělení podpory.
+
+- **Produktová poradna** — Sbírejte dotazy k produktům a odpovídejte jen jednou. Užitečné dotazy totiž zobrazíte u produktu na 1 klik.
+- **Diskusní fórum a odborná poradna** — Rewora poskytuje i komplexní diskusní fórum s možností kategorizace příspěvků, odpověďmi odborníků a mnoha dalšími funkcemi.
+- **Moderování příspěvků a překlady** — Plná kontrola nad moderováním příspěvků a díky strojovému překladu je máte automaticky k dispozici v 31 jazycích.
+
+### 05 AI shrnutí recenzí
+
+Shrnutí vytáhne ze všech recenzí produktu to podstatné — co zákazníci chválí a co jim vadí. Zákazník tak získá rychlý přehled o produktu, aniž by musel přečíst desítky hodnocení.
+
+- **Souhrn pozitiv a negativ produktu** — AI projde všechny recenze produktu a vypíchne opakující se klady i výhrady. S každou novou recenzí se shrnutí přepíše, takže je stále aktuální.
+- **Automatizované odpovědi na recenze** — Na hodnocení odpoví AI v tónu vašeho e-shopu, vy odpověď už jen schválíte. Zákazník dostane reakci hned a vy ušetříte čas podpory.
+- **Rychlejší rozhodnutí o nákupu** — Zákazník vidí přehled na pár řádků místo dlouhého seznamu recenzí, takže se rozhodne rychleji a méně často odchází jinam.
+
+### 06 Hotspots
+
+Umožněte nakupování produktů přímo z obrázků na dalších místech webu. Pomocí nástroje Hotspots snadno označíte produkty na požadovaném místě v jakémkoli obrázku na webu.
+
+- **Produkty v kontextu** — Vyberte si jakýkoli obrázek na svém webu, označte produkty a je to! Zákazník může nakupovat přímo z obrázku.
+- **Tvorba online katalogu** — Proměňte svůj e-shop v online katalog produktů, lookbook nebo umožněte nákupy z blogových článků.
+- **Integrace s PDF katalogy** — Hotspoty fungují i v PDF katalozích, stačí zvolit stranu a umístit bod pro produkt.
+
+### 07 Business Intelligence
+
+Prodejnost, reklamovanost, či vratkovost? I takové informace dokážou zákazníka přesvědčit o nákupu. Pomocí nástroje BI data zobrazte přehledné statistiky a základní informace o produktu na jednom místě.
+
+- **Statistiky prodejnosti** — Přehled o tom, které produkty se prodávají nejlépe, jak se jejich výkon mění v čase a kde vzniká obchodní potenciál.
+- **Vratkovost a reklamovanost** — Porovnání produktů podle míry vrácení a reklamací pomáhá odhalit problémový sortiment i příčiny nespokojenosti.
+- **Vlastní definování dat** — Možnost upravovat a definovat zobrazované ukazatele, filtry a pohledy podle potřeb konkrétního týmu nebo klienta.
+
+### 08 Inteligentní vyhledávání
+
+Inteligentní vyhledávání produktů na e-shopu, aby zákazník našel vždy to, co hledá — i když neví přesně, co chce. Stačí mu barva, konkrétní požadavek nebo jen něco, co si z produktu pamatuje.
+
+- **Hledání vlastními slovy** — Zákazník napíše požadavek tak, jak ho má v hlavě — „modré tenisky na léto do 80 eur“. Vyhledávání rozumí celé větě, nejen shodě v názvu produktu.
+- **Barva, parametry i útržek vzpomínky** — Výsledky zúžíme podle barvy, velikosti, materiálu či ceny. Stačí i detail, který si zákazník pamatuje z minulé návštěvy.
+- **Návrhy během psaní** — Našeptávač nabízí produkty i kategorie hned u prvních písmen, takže se zákazník dostane ke zboží na pár úhozů klávesnice.
+
+## Balíčky a ceny
+
+### Bezplatný — 0 € navždy
+
+- Widget: Produktové recenze
+- Widget: Hvězdičková hodnocení produktů
+- Widget: Hotspoty (PDF a web)
+- 1 doména
+
+### Standardní — 29 € měsíčně / 290 € ročně
+
+- Widget: Recenze na firmu a produkty
+- Widget: Statistika nákupů (BI data)
+- Widget: Fórum a produktová poradna
+- Widget: Hotspoty (PDF a web)
+- Widget: Hvězdičky u produktu
+- Zobrazení recenzí z více zdrojů (např. Heureka)
+
+### Profesionální — 149 € měsíčně / 1490 € ročně
+
+Vše, co obsahuje balíček Standardní
+
+- 2 000 pozvánek na recenze měsíčně
+- Automatické zařazení produktů do Google Shopping
+- Automatické překlady recenzí, fóra a produktové poradny do 31 jazyků
+- Přístup k Rewora API
+
+### Podnikový — Individuální
+
+Vše, co obsahuje balíček Profesionální
+
+- Více než 2 000 pozvánek na recenze měsíčně
+
+Bez rizika – pokud nebudete spokojeni, do 30 dnů od zakoupení vám vrátíme peníze.
+
+https://rewora.com/cs/cenik/
+
+## Integrace
+
+- **Google Tag Manager** — Integrace přes Google Tag Manager umožňuje jednoduché napojení a sdílení informací mezi vaším obchodem a nástrojem Rewora.
+- **Integrace na míru** — Rewora funguje s jakýmkoli e-commerce řešením. Díky našemu týmu pro vás bude integrace hračkou.
+- **Shopify Plugin** — Integrujte se Shopify e-shopem na 1 klik a používejte všechny dostupné funkce.
+- **Shoptet Plugin** — Doplněk Rewora nainstalujete přímo z administrace e-shopu na platformě Shoptet. Widgety se zobrazí bez zásahu do šablony.
+
+### Návody na nasazení
+
+- Shopify: https://rewora.com/cs/navody/shopify-plugin/
+- Shoptet: https://rewora.com/cs/navody/shoptet-plugin/
+
+## Případové studie
+
+- [Jak jsme zvýšili prodej společnosti FixServis o více než 10 % pomocí recenzí](https://rewora.com/cs/pripadove-studie/jak-jsme-za-fix-servisu-pouzili-recenze-ke-zvyseni-obratu-o-10/) — FixServis: +15 % nárůst konverzního poměru, ~10 % nárůst obratu po třech měsících, 4,5 – 5,0 kvalita hodnocení
+- [Rewora ako katalyzátor rastu: Ako Drinkcentrum posilnilo dôveru zákazníkov aj výkonnosť e-shopu](https://rewora.com/cs/pripadove-studie/rewora-ako-katalyzator-rastu-drinkcentrum/) — Drinkcentrum: +25 % nárůst konverzního poměru, +29,9 % přidání produktu do košíku, 91,17 % zákazníků ovlivněných nástroji Rewora
+- [Od důvěry k výkonu: Jak Rewora pomohla e-shopu kilpi.cz](https://rewora.com/cs/pripadove-studie/od-sebeduvery-k-vykonu-jak-rewora-pomohla-eshopu-kilpi-cz/) — kilpi.cz: ~10 % nárůst vložení produktů do košíku, +6 % zobrazení Rewora widgetů, +36 % efektivnější komunikace
+
+https://rewora.com/cs/pripadove-studie/
+
+## Časté otázky
+
+### Co je sociální důkaz?
+
+Koncept sociálního důkazu spočívá v tom, že někoho lze přesvědčit, aby vyzkoušel výrobek nebo službu jen proto, že viděl pozitivní recenzi nebo si přečetl hodnocení odborníka, který s daným výrobkem souvisí.
+Sociální důkaz pomáhá uklidnit mysl spotřebitelů a přesvědčit je, že koupí produktu vyřeší svou potřebu.
+
+### Jsou online recenze opravdu tak důležité?
+
+Online recenze jsou pro spotřebitele důležité, protože poskytují sociální důkaz a budují důvěru ve značku.
+Produkty s pěti a více recenzemi mají o 270 % vyšší pravděpodobnost, že se prodají, než produkty bez recenzí. Devět z deseti online kupujících si před nákupem přečte recenze.
+Studie ukázaly, že recenze zákazníků jsou při rozhodování o nákupu důležitější než ceny, protože jim lidé důvěřují víc než doporučením známých osobností a tradičním reklamním metodám.
+
+### Proč by mě měly zajímat recenze?
+
+Recenze zákazníků nahradily ústní podání jako hlavní motor budování reputace podniku. Online recenze jsou snadno dostupné; v důsledku toho mohou mít neuvěřitelný vliv na vaše podnikání.
+Obsah generovaný uživateli je pokladnicí informací a do velké míry nevyužitým zdrojem zpětné vazby od zákazníků bohaté na souvislosti.
+
+### Proč by měl každý e-shop sbírat produktové recenze?
+
+Recenze píšou skuteční zákazníci se skutečnýma rukama, nohama, ušima, domovy a rodinami. Specifikace produktů často píšou talentovaní marketéři, kteří mají se samotným produktem jen malé nebo žádné zkušenosti.
+Jednotlivé recenze produktů mohou mít úžasný vliv na zákaznickou zkušenost a váš konverzní poměr.
+
+### Jaké jazyky podporuje automatický překlad?
+
+Angličtina, bulharština, čínština, čeština, dánština, estonština, finština, francouzština, indonéština, italština, japonština, korejština, litevština, lotyština, maďarština, němčina, nizozemština, norština, polština, portugalština, rumunština, ruština, slovenština, slovinština, španělština, švédština, turečtina, ukrajinština a další.
+
+### Jsou recenze produktů přínosem pro SEO?
+
+Ano. Pokud umožníte vyhledávačům indexovat obsah recenzí produktů, pomůžete potenciálním zákazníkům najít stránky s vašimi produkty a posouváte se v organickém vyhledávání.
+Většina zákazníků používá ve svých recenzích klíčová slova, například název produktu, čímž na internetu přibývá další obsah spojený s vámi.
+
+### Jaké předpisy upravují recenze na e-shopech?
+
+Základem je směrnice Evropského parlamentu a Rady (EU) 2019/2161, známá jako směrnice Omnibus. V Česku ji do práva přenesla novela zákona o ochraně spotřebitele, na Slovensku zákon č. 108/2024 Z. z. účinný od 1. července 2024.
+Na recenze se vztahují i obecná pravidla o nekalých obchodních praktikách a klamavém jednání, seznam praktik zakázaných za všech okolností (tzv. černá listina) a při zveřejňování jmen recenzentů také nařízení GDPR.
+Pokud prodáváte do dalších zemí EU, stejná pravidla platí i tam — směrnice Omnibus je transponována ve všech členských státech.
+
+### Musím uvádět, jestli jsou recenze ověřené?
+
+Ano. Pokud zpřístupňujete spotřebitelské recenze produktů, máte informační povinnost uvést, zda a jakým způsobem zajišťujete, že zveřejněné recenze pocházejí od spotřebitelů, kteří produkt skutečně koupili nebo použili.
+Informace musí být dostupná na místě, kde se recenze zobrazují — tedy u produktu nebo v sekci hodnocení, ne schovaná jen v obchodních podmínkách. V praxi jde o krátký text typu „Recenze sbíráme od zákazníků, kteří si produkt objednali; každou párujeme s číslem objednávky.“
+Pokud recenze neověřujete, nesmíte tvrdit ani naznačovat, že ověřené jsou. I to je legitimní možnost — musíte to však uvést pravdivě.
+
+### Co je u recenzí zakázáno za všech okolností?
+
+Tvrdit, že recenze zveřejněné na e-shopu pocházejí od spotřebitelů, kteří produkt skutečně koupili nebo použili, aniž byste podnikli přiměřené a proporcionální kroky k ověření této skutečnosti.
+Zveřejňovat falešné recenze nebo doporučení, pověřit jejich vytvořením jinou osobu (například nakupovat recenze od agentury) nebo psát recenze na vlastní produkty pod jménem zákazníka.
+Zkreslovat spotřebitelské recenze s cílem propagovat produkt — například zveřejňovat jen pozitivní a systematicky zamlčovat negativní, měnit jejich obsah, přesouvat hodnocení z jiného produktu nebo zobrazovat průměr, který neodpovídá reálným recenzím.
+Uvádět zavádějící agregované hodnocení, například počítat průměr jen z vybraných recenzí nebo ponechat hvězdičky z období, kdy měl produkt jinou podobu.
+
+### Jak mám ověřovat, že recenze pochází od skutečného zákazníka?
+
+Zákon nepředepisuje jednu konkrétní technologii, vyžaduje „přiměřené a proporcionální kroky“. V praxi se za dostatečné považuje spárování recenze s konkrétní objednávkou — tedy pozvánka k hodnocení odeslaná po doručení zboží na e-mail z objednávky, s jedinečným odkazem.
+Doporučuje se uchovávat vazbu mezi recenzí a identifikátorem objednávky, datum odeslání pozvánky a datum zveřejnění. Při kontrole ze strany obchodní inspekce tak dokážete doložit, že proces reálně funguje.
+Pokud sbíráte i recenze od návštěvníků bez objednávky nebo přebíráte hodnocení z jiných platforem, měly by být viditelně odlišené od ověřených — například štítkem „ověřená recenze“ u těch, které jsou spárované s nákupem.
+
+### Můžu mazat negativní recenze?
+
+Selektivní mazání negativních recenzí je zakázané — jde o zkreslování recenzí, a tedy o nekalou obchodní praktiku.
+Odstranit lze recenzi, která porušuje předem zveřejněná pravidla moderování: obsahuje vulgarismy, urážky, osobní údaje třetích osob, reklamu, netýká se produktu nebo existuje důvodné podezření, že je podvodná. Důvod odstranění by měl být zdokumentovaný.
+Pravidla moderování doporučujeme zveřejnit a uplatňovat stejně na pozitivní i negativní hodnocení. Na negativní recenzi je vhodnější veřejně odpovědět než ji skrývat — reakce obchodu bývá pro další zákazníky silnějším signálem důvěryhodnosti než samotná recenze.
+
+### Můžu za recenzi nabídnout slevu nebo dárek?
+
+Motivovat zákazníky k napsání recenze je přípustné, ale odměna nesmí být podmíněná pozitivním hodnocením. Formulace „napište 5hvězdičkovou recenzi a získáte slevu“ je zakázaná.
+Pokud byla recenze odměněna, měla by být tato skutečnost u recenze uvedena, aby nebyla zavádějící. Stejně se označuje spolupráce s influencery a recenze výměnou za produkt zdarma.
+Odměna musí být poskytnuta bez ohledu na to, jestli zákazník napsal pochvalu, nebo kritiku.
+
+### Jaké povinnosti mám u osobních údajů recenzentů?
+
+Jméno, e-mail či fotografie recenzenta jsou osobní údaje. Pro jejich zpracování potřebujete právní základ, musíte subjekt údajů informovat o účelu a době uchování a umožnit mu uplatnit práva podle GDPR včetně výmazu.
+Doporučujeme zveřejňovat jen údaje, které zákazník ke zveřejnění odsouhlasil — například křestní jméno a iniciálu příjmení, případně označení „ověřený zákazník“.
+Pokud recenze zpracovává externí nástroj, jde o zpracovatele a vztah je potřeba ošetřit smlouvou o zpracování osobních údajů.
+
+### Platí pravidla i pro hvězdičky v reklamě a ve vyhledávání?
+
+Ano. Pokud zobrazujete hodnocení v Google Shopping, v reklamách nebo ve strukturovaných datech ve vyhledávání, musí odpovídat reálným recenzím na vašem e-shopu a splňovat stejné požadavky na pravdivost.
+Stejně to platí pro hodnocení obchodu uváděné v patičce, na bannerech či v e-mailech. Průměr i počet recenzí musí být aktuální.
+Platformy mají navíc vlastní pravidla — při porušení mohou produktové kampaně pozastavit i nezávisle na státním dozoru.
+
+### Co hrozí při porušení pravidel?
+
+Dozor vykonává obchodní inspekce, která může uložit pokutu a nařídit odstranění protiprávního stavu. Řízení může začít na základě vlastní kontroly i podnětu spotřebitele či konkurence.
+Při rozsáhlých porušeních s přeshraničním dosahem umožňuje směrnice Omnibus pokutu až do výše 4 % ročního obratu obchodníka v dotčených členských státech.
+Vedle sankce je třeba počítat i s reputační ztrátou — kauzy s falešnými recenzemi jsou mediálně vděčné a zákazníci je dohledají i po letech.
+
+### Jak pomáhá Rewora tyto povinnosti splnit?
+
+Pozvánky k recenzi se odesílají až po objednávce, takže každá recenze má vazbu na konkrétní nákup — to je jádro požadovaného ověření. Ověřené recenze jsou viditelně označené a odlišené od neověřených.
+Moderování probíhá podle jednotných pravidel s historií zásahů, takže dokážete doložit, proč byla recenze odstraněna. Negativní hodnocení nejde „potichu“ schovat — místo toho máte upozornění a prostor pro veřejnou odpověď.
+Agregované hodnocení a počet recenzí se počítají ze všech zveřejněných recenzí a stejná čísla putují i do Google Shopping. Informaci o způsobu ověřování zobrazíme přímo u widgetu s recenzemi.
+Tento přehled má informativní charakter a nenahrazuje právní poradenství — konkrétní nastavení procesů doporučujeme konzultovat s vaším právníkem.
+
+## Další odkazy
+
+- https://rewora.com/cs/blog/
+- https://rewora.com/cs/o-nas/
+- https://rewora.com/cs/ukazka/
+- https://rewora.com/cs/partnersky-program/
+- https://rewora.com/cs/vseobecne-obchodni-podminky/
+- https://rewora.com/cs/ochrana-osobnich-udaju/
+
+## Kontakt
+
+- Andrea Vargová, Sales manažerka Rewora — andrea.vargova@rewora.com, +421 948 227 871
+- Obecné dotazy a podpora: info@rewora.com
+- Rewora s. r. o., Prešovská 40A, 821 02 Bratislava – Ružinov, Slovenská republika, IČO: 50 647 652
+
+## Jazykové verze
+
+- Slovensky: https://rewora.com/sk/ · https://rewora.com/sk/llms.txt
+- Česky: https://rewora.com/cs/ · https://rewora.com/cs/llms.txt
+- English: https://rewora.com/ · https://rewora.com/llms.txt
+
+## Poznámka
+
+Tento soubor je strojově generovaný z obsahu webu. Ceny jsou bez DPH a platí pro jednu doménu; aktuální stav vždy na stránce ceníku.
+cs · 2026-09-07
