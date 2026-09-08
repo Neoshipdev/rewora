@@ -25,6 +25,8 @@ Rewora gives you advanced tools for building trust in your brand. Whether you ru
 
 ## Features
 
+https://rewora.com/features/
+
 ### 01 Reviews
 
 Reviews are 12 times more trusted than other marketing materials, which gives social proof considerable power. As many as 92% of people read customer reviews before buying.
@@ -148,6 +150,8 @@ https://rewora.com/case-studies/
 
 ## Frequently asked questions
 
+https://rewora.com/faq/
+
 ### What is social proof?
 
 The idea of social proof is that someone can be persuaded to try a product or service simply because they saw a positive review or read the opinion of an expert connected to that product.
@@ -264,4 +268,4 @@ This overview is for information only and does not replace legal advice — we r
 ## Note
 
 This file is generated from the website content. Prices exclude VAT and apply to a single domain; the pricing page always holds the current state.
-en · 2026-09-07
+en · 2026-09-08

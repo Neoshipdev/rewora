@@ -25,6 +25,8 @@ S Reworou získate pokročilé nástroje, ktoré vám pomôžu budovať dôveru 
 
 ## Funkcie
 
+https://rewora.com/sk/funkcie/
+
 ### 01 Recenzie
 
 Recenzie sú 12-krát dôveryhodnejšie ako iné marketingové materiály, čo dáva sociálnemu dôkazu významnú silu. Až 92 % ľudí si pred nákupom prečíta recenzie zákazníkov.
@@ -148,6 +150,8 @@ https://rewora.com/sk/pripadove-studie/
 
 ## Časté otázky
 
+https://rewora.com/sk/faq/
+
 ### Čo je sociálny dôkaz?
 
 Koncept sociálneho dôkazu spočíva v tom, že niekoho možno presvedčiť, aby vyskúšal výrobok alebo službu len preto, že videl pozitívnu recenziu alebo si prečítal hodnotenie odborníka, ktorý súvisí s daným výrobkom.
@@ -264,4 +268,4 @@ Tento prehľad má informatívny charakter a nenahrádza právne poradenstvo —
 ## Poznámka
 
 Tento súbor je strojovo generovaný z obsahu webu. Ceny sú bez DPH a platia pre jednu doménu; aktuálny stav vždy na stránke cenníka.
-sk · 2026-09-07
+sk · 2026-09-08

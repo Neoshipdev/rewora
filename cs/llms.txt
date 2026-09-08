@@ -25,6 +25,8 @@ S Reworou získáte pokročilé nástroje, které vám pomohou budovat důvěru 
 
 ## Funkce
 
+https://rewora.com/cs/funkce/
+
 ### 01 Recenze
 
 Recenze jsou 12krát důvěryhodnější než jiné marketingové materiály, což dává sociálnímu důkazu významnou sílu. Až 92 % lidí si před nákupem přečte recenze zákazníků.
@@ -148,6 +150,8 @@ https://rewora.com/cs/pripadove-studie/
 
 ## Časté otázky
 
+https://rewora.com/cs/faq/
+
 ### Co je sociální důkaz?
 
 Koncept sociálního důkazu spočívá v tom, že někoho lze přesvědčit, aby vyzkoušel výrobek nebo službu jen proto, že viděl pozitivní recenzi nebo si přečetl hodnocení odborníka, který s daným výrobkem souvisí.
@@ -264,4 +268,4 @@ Tento přehled má informativní charakter a nenahrazuje právní poradenství �
 ## Poznámka
 
 Tento soubor je strojově generovaný z obsahu webu. Ceny jsou bez DPH a platí pro jednu doménu; aktuální stav vždy na stránce ceníku.
-cs · 2026-09-07
+cs · 2026-09-08
