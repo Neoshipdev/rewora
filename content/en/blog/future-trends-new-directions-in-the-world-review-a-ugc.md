@@ -4,6 +4,7 @@
 > Stiahnuté: 2026-08-26
 
 **Náhľad:** /media/images/person-using-ai-tool-job.hd.webp
+**Autor a dátum:** David Kucak 16 August 2023
 
 
 

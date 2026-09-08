@@ -131,6 +131,8 @@ export async function llmsTxt(lang: Lang): Promise<string> {
     '',
     `## ${n.funkcie}`,
     '',
+    `${r('features')}`,
+    '',
   ];
 
   for (const f of nastroje) {
@@ -171,7 +173,7 @@ export async function llmsTxt(lang: Lang): Promise<string> {
   }
   riadky.push('', `${r('cases')}`, '');
 
-  riadky.push(`## ${n.faq}`, '');
+  riadky.push(`## ${n.faq}`, '', `${r('faq')}`, '');
   for (const q of otazky) riadky.push(`### ${q.q}`, '', ...q.a, '');
 
   riadky.push(

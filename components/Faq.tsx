@@ -56,19 +56,33 @@ function FaqList({ items, idPrefix }: { items: Item[]; idPrefix: string }) {
   );
 }
 
-export default function Faq({ lang = 'sk' }: { lang?: Lang }) {
+/**
+ * Otázky a odpovede. Na homepage má vlastný nadpis, na samostatnej
+ * stránke /faq ho nesie hero, preto sa dá vypnúť.
+ */
+export default function Faq({
+  lang = 'sk',
+  withHeading = true,
+}: {
+  lang?: Lang;
+  withHeading?: boolean;
+}) {
   const t = createT(lang);
   const faq = tDeep(faqData, lang);
   const faqLegal = tDeep(faqLegalData, lang);
   return (
     <section className="section" id="faq">
       <div className="container">
-        <span className="eyebrow" style={{ color: 'var(--orange-500)' }}>
-          FAQ
-        </span>
-        <h2 className="h2" style={{ maxWidth: 720, marginTop: 8 }}>
-          {t('Často kladené otázky')}
-        </h2>
+        {withHeading && (
+          <>
+            <span className="eyebrow" style={{ color: 'var(--orange-500)' }}>
+              FAQ
+            </span>
+            <h2 className="h2" style={{ maxWidth: 720, marginTop: 8 }}>
+              {t('Často kladené otázky')}
+            </h2>
+          </>
+        )}
         <p style={{ maxWidth: 720, marginTop: 14, fontSize: 16.1, color: 'var(--ink-600)' }}>
           {t(faqIntroData)}
         </p>
@@ -87,6 +101,12 @@ export default function Faq({ lang = 'sk' }: { lang?: Lang }) {
           </p>
           <FaqList items={faqLegal} idPrefix="faq-legal" />
         </div>
+
+        <p className="faq__summary">
+          {t(
+            'Rewora je slovenská SaaS platforma na zber a zobrazovanie recenzií pre e-shopy, založená 2023, používaná na 100+ doménach v SR a ČR.'
+          )}
+        </p>
 
         <p className="faq__note">
           {t('Nenašli ste odpoveď na svoju otázku? Napíšte nám na')}{' '}

@@ -3,6 +3,8 @@
 > Zdroj: https://rewora.com/cs/blog/zakon-o-ochrane-spotrebitele/
 > Stiahnuté: 2026-09-04
 
+**Autor a dátum:** 18. listopadu 2025
+
 
 
 

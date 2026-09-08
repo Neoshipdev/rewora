@@ -86,6 +86,16 @@ export const seo: Record<Lang, Partial<Record<PageKey, { title: string; descript
       description:
         'Krok za krokom: inštalácia doplnku z katalógu Shoptet Doplnky, overenie e-mailu, aktivácia predplatného, nastavenie obchodu a schválenie prvej recenzie.',
     },
+    faq: {
+      title: 'Časté otázky ★ Rewora',
+      description:
+        'Odpovede na najčastejšie otázky o recenziách, integráciách a povinnostiach e-shopov pri zverejňovaní hodnotení podľa smernice Omnibus.',
+    },
+    features: {
+      title: 'Funkcie ★ Rewora',
+      description:
+        'Osem widgetov Rewory: recenzie, foto a video recenzie, hviezdičky v Google Shopping, poradňa a fórum, AI zhrnutie, hotspoty, BI dáta a inteligentné vyhľadávanie.',
+    },
   },
   cs: {
     home: {
@@ -154,6 +164,16 @@ export const seo: Record<Lang, Partial<Record<PageKey, { title: string; descript
       description:
         'Krok za krokem: instalace doplňku z katalogu Shoptet Doplňky, ověření e-mailu, aktivace předplatného, nastavení obchodu a schválení první recenze.',
     },
+    faq: {
+      title: 'Časté otázky ★ Rewora',
+      description:
+        'Odpovědi na nejčastější otázky o recenzích, integracích a povinnostech e-shopů při zveřejňování hodnocení podle směrnice Omnibus.',
+    },
+    features: {
+      title: 'Funkce ★ Rewora',
+      description:
+        'Osm widgetů Rewory: recenze, foto a video recenze, hvězdičky v Google Shopping, poradna a fórum, AI shrnutí, hotspoty, BI data a inteligentní vyhledávání.',
+    },
   },
   en: {
     home: {
@@ -217,6 +237,16 @@ export const seo: Record<Lang, Partial<Record<PageKey, { title: string; descript
       title: 'Installing Rewora on Shoptet ★ Rewora',
       description:
         'Step by step: installing the add-on from the Shoptet Doplňky catalogue, verifying your e-mail, activating the subscription, configuring the store and approving the first review.',
+    },
+    faq: {
+      title: 'Frequently asked questions ★ Rewora',
+      description:
+        'Answers to the questions we hear most about reviews, integrations and what online stores must do when publishing consumer ratings.',
+    },
+    features: {
+      title: 'Features ★ Rewora',
+      description:
+        'The eight Rewora widgets: reviews, photo and video reviews, stars in Google Shopping, Q&A and forum, AI summary, hotspots, BI data and smart search.',
     },
   },
 };

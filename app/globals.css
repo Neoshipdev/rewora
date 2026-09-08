@@ -1423,6 +1423,15 @@ svg {
   line-height: 1.7;
   color: var(--ink-600);
 }
+.faq__summary {
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line-300);
+  max-width: 760px;
+  font-size: 16.1px;
+  line-height: 1.7;
+  color: var(--ink-700);
+}
 .faq__note {
   margin-top: 32px;
   font-size: 14.2px;

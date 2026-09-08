@@ -4,6 +4,7 @@
 > Stiahnuté: 2026-08-26
 
 **Náhľad:** /media/images/male-office-worker.hd.webp
+**Autor a dátum:** David Kucak 4 September 2023
 
 
 

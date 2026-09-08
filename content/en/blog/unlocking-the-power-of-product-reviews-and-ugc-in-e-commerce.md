@@ -3,6 +3,8 @@
 > Zdroj: https://rewora.com/resources/unlocking-the-power-of-product-reviews-and-ugc-in-e-commerce/
 > Stiahnuté: 2026-09-04
 
+**Autor a dátum:** David Kucak 2 August 2023
+
 
 
 

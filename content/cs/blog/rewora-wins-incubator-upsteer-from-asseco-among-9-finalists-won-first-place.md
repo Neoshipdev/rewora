@@ -4,6 +4,7 @@
 > Stiahnuté: 2026-08-26
 
 **Náhľad:** /media/images/DSC09129-edit.hd.webp
+**Autor a dátum:** 26. listopadu 2025
 
 
 

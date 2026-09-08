@@ -1,9 +1,11 @@
 import BlogList from '@/components/BlogList';
 import CtaBand from '@/components/CtaBand';
+import JsonLd from '@/components/JsonLd';
 import PageHero from '@/components/PageHero';
 import SiteFooter from '@/components/SiteFooter';
 import TopBar from '@/components/TopBar';
 import { altOf, routes, ui, type Lang } from '@/lib/i18n';
+import { breadcrumbs, collection } from '@/lib/schema';
 import { getBlogIndex } from '@/lib/posts';
 import { createT } from '@/lib/t';
 
@@ -12,8 +14,22 @@ export default async function BlogIndexPage({ lang }: { lang: Lang }) {
   const posts = await getBlogIndex(lang);
   const t = createT(lang);
 
+  const url = routes.blog[lang]!;
+
   return (
     <>
+      <JsonLd
+        graf={[
+          collection({
+            lang,
+            url,
+            title: ui[lang].nav.blog,
+            description: t('Recenzie, sociálny dôkaz a e-commerce v praxi'),
+            items: posts.map((p) => ({ url: `${url}${p.slug}/`, name: p.title })),
+          }),
+          breadcrumbs(lang, [{ name: ui[lang].nav.blog, url }]),
+        ]}
+      />
       <TopBar lang={lang} alt={altOf('blog')} />
       <PageHero
         eyebrow={ui[lang].nav.blog}

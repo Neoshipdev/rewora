@@ -4,6 +4,7 @@
 > Stiahnuté: 2026-08-26
 
 **Náhľad:** /media/images/medium-shot-young-people-with-rev.hd.webp
+**Autor a dátum:** David Kucak 2. srpna 2023
 
 
 

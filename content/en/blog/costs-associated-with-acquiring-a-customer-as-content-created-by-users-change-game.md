@@ -4,6 +4,7 @@
 > Stiahnuté: 2026-08-26
 
 **Náhľad:** /media/images/business-teamwork-meeting-concept.hd.webp
+**Autor a dátum:** David Kucak 9 August 2023
 
 
 

@@ -1,8 +1,10 @@
 import CtaBand from '@/components/CtaBand';
+import JsonLd from '@/components/JsonLd';
 import PageHero from '@/components/PageHero';
 import SiteFooter from '@/components/SiteFooter';
 import TopBar from '@/components/TopBar';
 import { contentDir, type Lang } from '@/lib/i18n';
+import { breadcrumbs, webPage } from '@/lib/schema';
 import { readDoc } from '@/lib/markdown';
 
 type Props = {
@@ -12,14 +14,24 @@ type Props = {
   /** Bez CTA pásu (napr. ďakovacia stránka). */
   hideCta?: boolean;
   lang?: Lang;
+  /** Adresa stránky — pre štruktúrované dáta. */
+  url?: string;
 };
 
 /** Statická textová stránka (VOP, GDPR, ďakujeme) z markdownu. */
-export default async function ContentPage({ file, eyebrow, hideCta, lang = 'sk' }: Props) {
+export default async function ContentPage({ file, eyebrow, hideCta, lang = 'sk', url }: Props) {
   const doc = await readDoc(`${contentDir[lang]}stranky/${file}.md`);
 
   return (
     <>
+      {url && (
+        <JsonLd
+          graf={[
+            webPage({ lang, url, title: doc.title, description: doc.perex }),
+            breadcrumbs(lang, [{ name: doc.title, url }]),
+          ]}
+        />
+      )}
       <TopBar lang={lang} />
       <PageHero eyebrow={eyebrow} title={doc.title} />
 

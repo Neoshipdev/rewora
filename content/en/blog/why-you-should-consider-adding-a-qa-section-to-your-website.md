@@ -3,6 +3,8 @@
 > Zdroj: https://rewora.com/resources/why-you-should-consider-adding-a-qa-section-to-your-website/
 > Stiahnuté: 2026-09-04
 
+**Autor a dátum:** David Kucak 10 August 2023
+
 
 
 

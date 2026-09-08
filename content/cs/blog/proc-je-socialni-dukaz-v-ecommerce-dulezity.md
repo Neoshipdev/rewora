@@ -4,6 +4,7 @@
 > Stiahnuté: 2026-08-26
 
 **Náhľad:** /media/images/Snimka_obrazovky_2023-09-27_o_14.45.44.original.png
+**Autor a dátum:** David Kucak 27. září 2023
 
 
 

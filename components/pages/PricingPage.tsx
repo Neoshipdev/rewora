@@ -1,19 +1,35 @@
 import CtaBand from '@/components/CtaBand';
+import JsonLd from '@/components/JsonLd';
 import IntegrationGrid from '@/components/IntegrationGrid';
 import PageHero from '@/components/PageHero';
 import PricingPlans from '@/components/PricingPlans';
 import SiteFooter from '@/components/SiteFooter';
 import TopBar from '@/components/TopBar';
 import { integrationsIntro } from '@/lib/features';
-import { altOf, ui, type Lang } from '@/lib/i18n';
+import { altOf, routes, ui, type Lang } from '@/lib/i18n';
+import { breadcrumbs, softwareApplication, webPage } from '@/lib/schema';
 import { createT } from '@/lib/t';
 
 /** Cenník — spoločný pre všetky jazykové mutácie. */
 export default function PricingPage({ lang }: { lang: Lang }) {
   const t = createT(lang);
 
+  const url = routes.pricing[lang]!;
+
   return (
     <>
+      <JsonLd
+        graf={[
+          webPage({
+            lang,
+            url,
+            title: ui[lang].nav.pricing,
+            description: t('Vyberte si balík, ktorý sedí vášmu e-shopu'),
+          }),
+          softwareApplication(lang),
+          breadcrumbs(lang, [{ name: ui[lang].nav.pricing, url }]),
+        ]}
+      />
       <TopBar lang={lang} alt={altOf('pricing')} />
       <PageHero
         eyebrow={ui[lang].nav.pricing}

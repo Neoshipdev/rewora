@@ -1,10 +1,12 @@
 import CtaBand from '@/components/CtaBand';
+import JsonLd from '@/components/JsonLd';
 import PageHero from '@/components/PageHero';
 import SiteFooter from '@/components/SiteFooter';
 import TopBar from '@/components/TopBar';
 import { contact as contactData } from '@/lib/content';
 import type { GuideSection } from '@/lib/guides';
-import { altOf, type Lang, type RouteKey } from '@/lib/i18n';
+import { altOf, routes, type Lang, type RouteKey } from '@/lib/i18n';
+import { breadcrumbs, howTo } from '@/lib/schema';
 import { createT, tDeep } from '@/lib/t';
 
 export type Guide = {
@@ -31,8 +33,23 @@ export default function GuidePage({
   const navod = tDeep(guide, lang);
   const { person } = tDeep(contactData, lang);
 
+  const url = routes[routeKey][lang]!;
+
   return (
     <>
+      <JsonLd
+        graf={[
+          howTo({
+            lang,
+            url,
+            title: navod.title,
+            description: navod.lead,
+            sections: navod.sections,
+            video: navod.video,
+          }),
+          breadcrumbs(lang, [{ name: navod.title, url }]),
+        ]}
+      />
       <TopBar lang={lang} alt={altOf(routeKey)} />
       <PageHero eyebrow={navod.eyebrow} title={navod.title} lead={navod.lead} />
 

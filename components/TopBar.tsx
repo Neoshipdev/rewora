@@ -17,7 +17,7 @@ export default function TopBar({ lang = 'sk', alt }: Props) {
   const t = ui[lang];
 
   const odkazy = [
-    { href: `${home[lang]}#features`, label: t.nav.features },
+    { href: route('features', lang)!, label: t.nav.features },
     { href: route('cases', lang)!, label: t.nav.cases },
     { href: route('pricing', lang)!, label: t.nav.pricing },
     { href: `${home[lang]}#integration`, label: t.nav.integrations },

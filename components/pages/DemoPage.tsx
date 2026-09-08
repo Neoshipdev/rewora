@@ -1,9 +1,11 @@
 import CtaBand from '@/components/CtaBand';
+import JsonLd from '@/components/JsonLd';
 import DemoForm from '@/components/DemoForm';
 import PageHero from '@/components/PageHero';
 import SiteFooter from '@/components/SiteFooter';
 import TopBar from '@/components/TopBar';
-import { altOf, type Lang } from '@/lib/i18n';
+import { altOf, routes, ui, type Lang } from '@/lib/i18n';
+import { breadcrumbs, webPage } from '@/lib/schema';
 import { createT, tDeep } from '@/lib/t';
 
 const steps = [
@@ -34,8 +36,21 @@ export default function DemoPage({ lang }: { lang: Lang }) {
   const t = createT(lang);
   const kroky = tDeep(steps, lang);
 
+  const url = routes.demo[lang]!;
+
   return (
     <>
+      <JsonLd
+        graf={[
+          webPage({
+            lang,
+            url,
+            title: t('Ukážka Rewory na vašom e-shope'),
+            description: t('Ukážka na mieru'),
+          }),
+          breadcrumbs(lang, [{ name: ui[lang].cta.demo, url }]),
+        ]}
+      />
       <TopBar lang={lang} alt={altOf('demo')} />
       <PageHero
         eyebrow={t('Ukážka na mieru')}

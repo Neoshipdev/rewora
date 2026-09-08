@@ -4,6 +4,7 @@
 > Stiahnuté: 2026-08-26
 
 **Náhľad:** /media/images/blog-poradna2x.hd.webp
+**Autor a dátum:** 17. ledna 2025
 
 
 

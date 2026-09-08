@@ -38,6 +38,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     if (r.partner[lang]) zaznamy.push({ path: r.partner[lang]!, priority: 0.6 });
     if (r.shopifyGuide[lang]) zaznamy.push({ path: r.shopifyGuide[lang]!, priority: 0.6 });
     if (r.shoptetGuide[lang]) zaznamy.push({ path: r.shoptetGuide[lang]!, priority: 0.6 });
+    if (r.features[lang]) zaznamy.push({ path: r.features[lang]!, priority: 0.8 });
+    if (r.faq[lang]) zaznamy.push({ path: r.faq[lang]!, priority: 0.6 });
     if (r.terms[lang]) zaznamy.push({ path: r.terms[lang]!, priority: 0.3 });
     if (r.shoptet[lang]) zaznamy.push({ path: r.shoptet[lang]!, priority: 0.3 });
     if (r.privacy[lang]) zaznamy.push({ path: r.privacy[lang]!, priority: 0.3 });

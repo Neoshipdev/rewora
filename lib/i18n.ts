@@ -62,6 +62,8 @@ export const routes = {
     cs: p('/cs/navody/shoptet-plugin/'),
     en: p('/guides/shoptet-plugin/'),
   },
+  faq: { sk: p('/sk/faq/'), cs: p('/cs/faq/'), en: p('/faq/') },
+  features: { sk: p('/sk/funkcie/'), cs: p('/cs/funkce/'), en: p('/features/') },
 };
 
 export type RouteKey = keyof typeof routes;

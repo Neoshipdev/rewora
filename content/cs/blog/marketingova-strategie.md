@@ -4,6 +4,7 @@
 > Stiahnuté: 2026-08-26
 
 **Náhľad:** /media/images/Marketing.hd.webp
+**Autor a dátum:** David Kucak 9. května 2023
 
 
 ## Perex

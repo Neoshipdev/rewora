@@ -62,8 +62,21 @@ export default function Page() {
 }
 `;
 
+const llms = (lang) => `import { llmsTxt } from '@/lib/llms';
+
+/* Statický súbor pre jazykové modely — vzniká pri builde. */
+export const dynamic = 'force-static';
+
+export async function GET() {
+  return new Response(await llmsTxt('${lang}'), {
+    headers: { 'Content-Type': 'text/plain; charset=utf-8' },
+  });
+}
+`;
+
 const legal = (lang, file, key, eyebrow, hideCta = false) => `import type { Metadata } from 'next';
 import ContentPage from '@/components/ContentPage';
+import { routes } from '@/lib/i18n';
 import { pageMeta } from '@/lib/meta';
 
 export const metadata: Metadata = pageMeta('${key}', '${lang}'${
@@ -71,7 +84,14 @@ export const metadata: Metadata = pageMeta('${key}', '${lang}'${
 });
 
 export default function Page() {
-  return <ContentPage file="${file}" eyebrow="${eyebrow}" lang="${lang}"${hideCta ? ' hideCta' : ''} />;
+  return (
+    <ContentPage
+      file="${file}"
+      eyebrow="${eyebrow}"
+      lang="${lang}"
+      url={routes.${key}['${lang}'] ?? undefined}${hideCta ? ' hideCta' : ''}
+    />
+  );
 }
 `;
 
@@ -142,6 +162,8 @@ const mutacie = {
     demo: '/sk/ukazka/',
     shopifyGuide: '/sk/navody/shopify-plugin/',
     shoptetGuide: '/sk/navody/shoptet-plugin/',
+    faq: '/sk/faq/',
+    features: '/sk/funkcie/',
   },
   cs: {
     group: '(cs)',
@@ -159,6 +181,8 @@ const mutacie = {
     demo: '/cs/ukazka/',
     shopifyGuide: '/cs/navody/shopify-plugin/',
     shoptetGuide: '/cs/navody/shoptet-plugin/',
+    faq: '/cs/faq/',
+    features: '/cs/funkce/',
   },
   en: {
     group: '(en)',
@@ -175,6 +199,8 @@ const mutacie = {
     demo: '/demo/',
     shopifyGuide: '/guides/shopify-plugin/',
     shoptetGuide: '/guides/shoptet-plugin/',
+    faq: '/faq/',
+    features: '/features/',
   },
 };
 
@@ -201,6 +227,9 @@ for (const [lang, m] of Object.entries(mutacie)) {
     join(koren, seg(m.shoptetGuide), 'page.tsx'),
     page('ShoptetGuidePage', lang, 'shoptetGuide')
   );
+  await zapis(join(koren, seg(m.faq), 'page.tsx'), page('FaqPage', lang, 'faq'));
+  await zapis(join(koren, seg(m.features), 'page.tsx'), page('FeaturesPage', lang, 'features'));
+  await zapis(join(koren, seg(m.home), 'llms.txt', 'route.ts'), llms(lang));
 
   for (const key of ['thanks', 'privacy', 'terms', 'shoptet']) {
     const zaznam = m[key];

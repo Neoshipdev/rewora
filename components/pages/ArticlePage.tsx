@@ -1,10 +1,12 @@
 import { notFound } from 'next/navigation';
 import CtaBand from '@/components/CtaBand';
+import JsonLd from '@/components/JsonLd';
 import PageHero from '@/components/PageHero';
 import SiteFooter from '@/components/SiteFooter';
 import TopBar from '@/components/TopBar';
 import { authorPhotos } from '@/lib/assets';
 import { altOf, contentDir, routes, ui, type Lang } from '@/lib/i18n';
+import { article, breadcrumbs } from '@/lib/schema';
 import { listSlugs, readDoc } from '@/lib/markdown';
 
 /** Cesta k článku v danom jazyku. */
@@ -21,8 +23,28 @@ export default async function ArticlePage({ lang, slug }: { lang: Lang; slug: st
   const nahlad = doc.thumb?.split('/').pop()?.split('.format')[0] ?? '';
   const jeVTexte = nahlad ? doc.html.includes(nahlad) : false;
 
+  const url = `${routes.blog[lang]}${slug}/`;
+
   return (
     <>
+      <JsonLd
+        graf={[
+          article({
+            lang,
+            url,
+            title: doc.title,
+            description: doc.perex,
+            image: doc.thumb,
+            author: doc.author,
+            date: doc.date,
+            section: doc.category,
+          }),
+          breadcrumbs(lang, [
+            { name: ui[lang].nav.blog, url: routes.blog[lang]! },
+            { name: doc.title, url },
+          ]),
+        ]}
+      />
       <TopBar lang={lang} alt={altOf('blog')} />
       <PageHero
         eyebrow={doc.category ?? ui[lang].nav.blog}

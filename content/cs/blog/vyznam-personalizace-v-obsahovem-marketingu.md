@@ -4,6 +4,7 @@
 > Stiahnuté: 2026-08-26
 
 **Náhľad:** /media/images/personalisation.hd.webp
+**Autor a dátum:** David Kucak 31. května 2023
 
 
 

@@ -4,6 +4,7 @@
 > Stiahnuté: 2026-08-26
 
 **Náhľad:** /media/images/from_reviews_to_visual.hd.webp
+**Autor a dátum:** David Kucak 27 July 2023
 
 
 ## Perex

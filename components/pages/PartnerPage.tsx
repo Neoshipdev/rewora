@@ -1,9 +1,11 @@
 import CtaBand from '@/components/CtaBand';
+import JsonLd from '@/components/JsonLd';
 import PageHero from '@/components/PageHero';
 import SiteFooter from '@/components/SiteFooter';
 import TopBar from '@/components/TopBar';
 import { contact as contactData, partner as partnerData } from '@/lib/content';
-import { altOf, type Lang } from '@/lib/i18n';
+import { altOf, routes, ui, type Lang } from '@/lib/i18n';
+import { breadcrumbs, webPage } from '@/lib/schema';
 import { tDeep } from '@/lib/t';
 
 /** Partnerský program — spoločná stránka pre všetky jazykové mutácie. */
@@ -11,8 +13,16 @@ export default function PartnerPage({ lang }: { lang: Lang }) {
   const partner = tDeep(partnerData, lang);
   const { person } = tDeep(contactData, lang);
 
+  const url = routes.partner[lang]!;
+
   return (
     <>
+      <JsonLd
+        graf={[
+          webPage({ lang, url, title: partner.title, description: partner.lead }),
+          breadcrumbs(lang, [{ name: ui[lang].aboutMenu.partner, url }]),
+        ]}
+      />
       <TopBar lang={lang} alt={altOf('partner')} />
       <PageHero
         eyebrow={partner.eyebrow}

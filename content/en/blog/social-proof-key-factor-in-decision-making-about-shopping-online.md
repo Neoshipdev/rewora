@@ -4,6 +4,7 @@
 > Stiahnuté: 2026-08-26
 
 **Náhľad:** /media/images/1692795141093.hd.webp
+**Autor a dátum:** David Kucak 23 August 2023
 
 
 

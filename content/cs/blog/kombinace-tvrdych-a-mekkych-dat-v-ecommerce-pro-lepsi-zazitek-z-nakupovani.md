@@ -4,6 +4,7 @@
 > Stiahnuté: 2026-08-26
 
 **Náhľad:** /media/images/MicrosoftTeams-image_8.original.png
+**Autor a dátum:** David Kucak 22. srpna 2023
 
 
 

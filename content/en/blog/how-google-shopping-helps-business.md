@@ -4,6 +4,7 @@
 > Stiahnuté: 2026-08-26
 
 **Náhľad:** /media/images/blog-google-shopping2x.hd.webp
+**Autor a dátum:** 17 January 2025
 
 
 

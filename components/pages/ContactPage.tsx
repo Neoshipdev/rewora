@@ -1,9 +1,11 @@
 import CtaBand from '@/components/CtaBand';
+import JsonLd from '@/components/JsonLd';
 import PageHero from '@/components/PageHero';
 import SiteFooter from '@/components/SiteFooter';
 import TopBar from '@/components/TopBar';
 import { contact as contactData, demoCta as demoCtaData } from '@/lib/content';
-import { altOf, routes, type Lang } from '@/lib/i18n';
+import { altOf, routes, ui, type Lang } from '@/lib/i18n';
+import { breadcrumbs, organization, webPage } from '@/lib/schema';
 import { createT, tDeep } from '@/lib/t';
 
 /** Kontakt — spoločná stránka pre všetky jazykové mutácie. */
@@ -13,8 +15,17 @@ export default function ContactPage({ lang }: { lang: Lang }) {
   const demoCta = tDeep(demoCtaData, lang);
   const { person, general, company } = contact;
 
+  const url = routes.contact[lang]!;
+
   return (
     <>
+      <JsonLd
+        graf={[
+          organization(lang),
+          webPage({ lang, url, title: contact.title, description: contact.lead, typ: 'ContactPage' }),
+          breadcrumbs(lang, [{ name: ui[lang].aboutMenu.contact, url }]),
+        ]}
+      />
       <TopBar lang={lang} alt={altOf('contact')} />
       <PageHero eyebrow={contact.eyebrow} title={contact.title} lead={contact.lead} />
 

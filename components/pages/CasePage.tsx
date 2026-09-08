@@ -1,10 +1,12 @@
 import { notFound } from 'next/navigation';
 import CtaBand from '@/components/CtaBand';
+import JsonLd from '@/components/JsonLd';
 import PageHero from '@/components/PageHero';
 import SiteFooter from '@/components/SiteFooter';
 import TopBar from '@/components/TopBar';
 import { caseAssets } from '@/lib/assets';
 import { altOf, routes, ui, type Lang } from '@/lib/i18n';
+import { article, breadcrumbs } from '@/lib/schema';
 import { readDoc } from '@/lib/markdown';
 import { caseStudyRef } from '@/lib/posts';
 import { createT } from '@/lib/t';
@@ -17,8 +19,27 @@ export default async function CasePage({ lang, slug }: { lang: Lang; slug: strin
   const assets = caseAssets[ref.key];
   const t = createT(lang);
 
+  const url = `${routes.cases[lang]}${slug}/`;
+
   return (
     <>
+      <JsonLd
+        graf={[
+          article({
+            lang,
+            url,
+            title: doc.title,
+            description: doc.perex,
+            image: assets?.cover,
+            section: doc.category,
+            typ: 'Article',
+          }),
+          breadcrumbs(lang, [
+            { name: ui[lang].nav.cases, url: routes.cases[lang]! },
+            { name: doc.title, url },
+          ]),
+        ]}
+      />
       <TopBar lang={lang} alt={altOf('cases')} />
       <PageHero
         eyebrow={t('Prípadová štúdia')}

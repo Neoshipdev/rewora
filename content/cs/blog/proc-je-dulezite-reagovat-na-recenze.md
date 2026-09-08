@@ -4,6 +4,7 @@
 > Stiahnuté: 2026-08-26
 
 **Náhľad:** /media/images/3d-render-customer-leave-feedback.hd.webp
+**Autor a dátum:** David Kucak 4. srpna 2023
 
 
 

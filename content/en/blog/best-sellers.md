@@ -4,6 +4,7 @@
 > Stiahnuté: 2026-08-26
 
 **Náhľad:** /media/images/group-friends-gathering-together.hd.webp
+**Autor a dátum:** David Kucak 12 September 2023
 
 
 

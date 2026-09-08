@@ -1,8 +1,10 @@
 import CtaBand from '@/components/CtaBand';
+import JsonLd from '@/components/JsonLd';
 import PageHero from '@/components/PageHero';
 import SiteFooter from '@/components/SiteFooter';
 import TopBar from '@/components/TopBar';
 import { altOf, routes, ui, type Lang } from '@/lib/i18n';
+import { breadcrumbs, collection } from '@/lib/schema';
 import { getCaseStudies } from '@/lib/posts';
 import { createT, tDeep } from '@/lib/t';
 
@@ -22,6 +24,18 @@ export default async function CasesPage({ lang }: { lang: Lang }) {
 
   return (
     <>
+      <JsonLd
+        graf={[
+          collection({
+            lang,
+            url: base,
+            title: ui[lang].nav.cases,
+            description: ui[lang].casesHero.title,
+            items: studies.map((s) => ({ url: `${base}${s.slug}/`, name: s.title })),
+          }),
+          breadcrumbs(lang, [{ name: ui[lang].nav.cases, url: base }]),
+        ]}
+      />
       <TopBar lang={lang} alt={altOf('cases')} />
       <PageHero
         eyebrow={ui[lang].nav.cases}

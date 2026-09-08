@@ -4,6 +4,7 @@
 > Stiahnuté: 2026-08-26
 
 **Náhľad:** /media/images/customer-experience-creative-coll.hd.webp
+**Autor a dátum:** David Kucak 3. srpna 2023
 
 
 

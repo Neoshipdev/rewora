@@ -3,6 +3,8 @@
 > Zdroj: https://rewora.com/resources/marketing-strategy/
 > Stiahnuté: 2026-09-04
 
+**Autor a dátum:** David Kucak 9 May 2023
+
 
 
 

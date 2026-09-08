@@ -1,10 +1,12 @@
 import CtaBand from '@/components/CtaBand';
+import JsonLd from '@/components/JsonLd';
 import PageHero from '@/components/PageHero';
 import ReviewsWidget from '@/components/ReviewsWidget';
 import SiteFooter from '@/components/SiteFooter';
 import TopBar from '@/components/TopBar';
 import { about as aboutData, contact as contactData } from '@/lib/content';
-import { altOf, type Lang } from '@/lib/i18n';
+import { altOf, routes, ui, type Lang } from '@/lib/i18n';
+import { breadcrumbs, organization, webPage } from '@/lib/schema';
 import { createT, tDeep } from '@/lib/t';
 
 /** O Rewore — spoločná stránka pre všetky jazykové mutácie. */
@@ -13,8 +15,17 @@ export default function AboutPage({ lang }: { lang: Lang }) {
   const about = tDeep(aboutData, lang);
   const { person } = tDeep(contactData, lang);
 
+  const url = routes.about[lang]!;
+
   return (
     <>
+      <JsonLd
+        graf={[
+          organization(lang),
+          webPage({ lang, url, title: about.title, description: about.lead, typ: 'AboutPage' }),
+          breadcrumbs(lang, [{ name: ui[lang].aboutMenu.about, url }]),
+        ]}
+      />
       <TopBar lang={lang} alt={altOf('about')} />
       <PageHero
         eyebrow={about.eyebrow}

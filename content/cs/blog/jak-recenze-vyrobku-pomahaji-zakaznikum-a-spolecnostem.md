@@ -4,6 +4,7 @@
 > Stiahnuté: 2026-08-26
 
 **Náhľad:** /media/images/rewora.original.png
+**Autor a dátum:** David Kucak 16. května 2023
 
 
 

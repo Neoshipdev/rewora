@@ -4,12 +4,12 @@ import Logo from './Logo';
 export default function SiteFooter({ lang = 'sk' }: { lang?: Lang }) {
   const t = ui[lang];
   const odkazy = [
-    { href: `${home[lang]}#features`, label: t.nav.features },
+    { href: route('features', lang)!, label: t.nav.features },
     { href: route('cases', lang)!, label: t.nav.cases },
     { href: route('pricing', lang)!, label: t.nav.pricing },
     { href: `${home[lang]}#integration`, label: t.nav.integrations },
     { href: route('blog', lang)!, label: t.nav.blog },
-    { href: `${home[lang]}#faq`, label: t.footer.faq },
+    { href: route('faq', lang)!, label: t.footer.faq },
     { href: route('about', lang)!, label: t.aboutMenu.about },
     { href: route('contact', lang)!, label: t.aboutMenu.contact },
     { href: route('partner', lang)!, label: t.aboutMenu.partner },

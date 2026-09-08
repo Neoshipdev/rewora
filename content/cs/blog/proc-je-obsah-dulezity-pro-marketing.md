@@ -4,6 +4,7 @@
 > Stiahnuté: 2026-08-26
 
 **Náhľad:** /media/images/Why_is_content_important.hd.webp
+**Autor a dátum:** David Kucak 20. července 2023
 
 
 ## Perex

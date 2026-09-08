@@ -3,6 +3,8 @@
 > Zdroj: https://rewora.com/resources/the-importance-of-personalization-in-content-marketing/
 > Stiahnuté: 2026-09-04
 
+**Autor a dátum:** David Kucak 31 May 2023
+
 
 
 
