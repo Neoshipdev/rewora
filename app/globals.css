@@ -2119,8 +2119,6 @@ svg {
   font-weight: 700;
   color: var(--ink-900);
   margin-top: 48px;
-  padding-top: 20px;
-  border-top: 2px solid var(--ink-900);
 }
 .prose h3 {
   font-family: var(--font-space-grotesk), sans-serif;
