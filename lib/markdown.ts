@@ -39,8 +39,8 @@ export async function readDoc(relPath: string): Promise<Doc> {
     .exec(raw)?.[1]
     ?.replace(/^(?:https:\/\/rewora\.com)?\/media\/images\//, '/images/media/');
 
-  /* „David Kucak 11. máj 2023“ → autor + dátum */
-  const metaMatch = metaLine ? /^(.*?)\s*(\d{1,2}\.\s*\S+\s*\d{4})$/.exec(metaLine) : null;
+  /* „David Kucak 11. máj 2023“ aj „David Kucak 24 May 2023“ → autor + dátum */
+  const metaMatch = metaLine ? /^(.*?)\s*(\d{1,2}\.?\s+\S+\s+\d{4})$/.exec(metaLine) : null;
 
   const body = lines
     .filter(

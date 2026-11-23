@@ -4,6 +4,7 @@ import { caseAssets } from './assets';
 import { contentDir, type Lang } from './i18n';
 import { tDeep } from './t';
 import { CONTENT_DIR, firstImage, listSlugs, readDoc } from './markdown';
+import { isoDatum } from './schema';
 
 export type BlogListItem = {
   slug: string;
@@ -37,7 +38,10 @@ export async function getBlogIndex(lang: Lang = 'sk'): Promise<BlogListItem[]> {
         };
       })
     );
-    return items.filter((i) => i.title);
+    /* Priečinok vracia súbory podľa názvu — vo výpise chceme najnovšie hore. */
+    return items
+      .filter((i) => i.title)
+      .sort((a, b) => (isoDatum(b.date) ?? '').localeCompare(isoDatum(a.date) ?? ''));
   }
 
   const raw = await readFile(join(CONTENT_DIR, 'blog.md'), 'utf8');
