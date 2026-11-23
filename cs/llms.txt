@@ -268,4 +268,4 @@ Tento přehled má informativní charakter a nenahrazuje právní poradenství �
 ## Poznámka
 
 Tento soubor je strojově generovaný z obsahu webu. Ceny jsou bez DPH a platí pro jednu doménu; aktuální stav vždy na stránce ceníku.
-cs · 2026-09-08
+cs · 2026-11-23
