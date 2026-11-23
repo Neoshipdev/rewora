@@ -6,7 +6,7 @@ import SiteFooter from '@/components/SiteFooter';
 import TopBar from '@/components/TopBar';
 import { authorPhotos } from '@/lib/assets';
 import { altOf, contentDir, routes, ui, type Lang } from '@/lib/i18n';
-import { article, breadcrumbs } from '@/lib/schema';
+import { article, breadcrumbs, faqZClanku } from '@/lib/schema';
 import { listSlugs, readDoc } from '@/lib/markdown';
 
 /** Cesta k článku v danom jazyku. */
@@ -24,6 +24,9 @@ export default async function ArticlePage({ lang, slug }: { lang: Lang; slug: st
   const jeVTexte = nahlad ? doc.html.includes(nahlad) : false;
 
   const url = `${routes.blog[lang]}${slug}/`;
+
+  /* Články so sekciou častých otázok dostávajú aj FAQPage. */
+  const faq = faqZClanku({ lang, url, html: doc.html });
 
   return (
     <>
@@ -43,6 +46,7 @@ export default async function ArticlePage({ lang, slug }: { lang: Lang; slug: st
             { name: ui[lang].nav.blog, url: routes.blog[lang]! },
             { name: doc.title, url },
           ]),
+          ...(faq ? [faq] : []),
         ]}
       />
       <TopBar lang={lang} alt={altOf('blog')} />

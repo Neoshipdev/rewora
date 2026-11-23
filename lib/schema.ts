@@ -141,6 +141,48 @@ export function faqPage(lang: Lang, url: string) {
   };
 }
 
+/** Holý text z úryvku HTML — pre JSON-LD, kde značky nepatria. */
+const holyText = (html: string) =>
+  html
+    .replace(/<[^>]+>/g, '')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&amp;/g, '&')
+    .replace(/\s+/g, ' ')
+    .trim();
+
+/**
+ * FAQPage z článku, ktorý má sekciu častých otázok — nadpis H2 so slovami
+ * „Často kladené“ (resp. ich českou/anglickou obdobou) a otázky v H3.
+ */
+export function faqZClanku(opts: { lang: Lang; url: string; html: string }) {
+  const nadpis = /<h2[^>]*>(?:(?!<\/h2>)[\s\S])*?(?:Často kladené|Nejčastější|Frequently asked)(?:(?!<\/h2>)[\s\S])*?<\/h2>/i.exec(
+    opts.html
+  );
+  if (!nadpis) return null;
+
+  const sekcia = opts.html.slice(nadpis.index + nadpis[0].length).split(/<h2[\s>]/)[0];
+  const otazky = [...sekcia.matchAll(/<h3[^>]*>([\s\S]*?)<\/h3>\s*<p>([\s\S]*?)<\/p>/gi)]
+    .map(([, q, a]) => ({ q: holyText(q), a: holyText(a) }))
+    .filter((x) => x.q && x.a);
+
+  if (!otazky.length) return null;
+
+  return {
+    '@type': 'FAQPage',
+    '@id': `${abs(opts.url)}#faq`,
+    url: abs(opts.url),
+    inLanguage: htmlLang[opts.lang],
+    mainEntity: otazky.map((q) => ({
+      '@type': 'Question',
+      name: q.q,
+      acceptedAnswer: { '@type': 'Answer', text: q.a },
+    })),
+  };
+}
+
 const MESIACE: Record<string, string> = {
   január: '01', januára: '01', jan: '01', leden: '01', ledna: '01', january: '01',
   február: '02', februára: '02', únor: '02', února: '02', february: '02',
