@@ -1,0 +1,299 @@
+3:I[4707,[],""]
+5:I[6423,[],""]
+4:["slug","inteligentni-vyhledavani-produktu-na-eshopu","d"]
+6:{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"}
+7:{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"}
+8:{"display":"inline-block"}
+9:{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0}
+0:["jOZLZs25AE3ovpevCjVOW",[[["",{"children":["(cs)",{"children":["cs",{"children":["blog",{"children":[["slug","inteligentni-vyhledavani-produktu-na-eshopu","d"],{"children":["__PAGE__?{\"slug\":\"inteligentni-vyhledavani-produktu-na-eshopu\"}",{}]}]}]}]},"$undefined","$undefined",true]}],["",{"children":["(cs)",{"children":["cs",{"children":["blog",{"children":[["slug","inteligentni-vyhledavani-produktu-na-eshopu","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","(cs)","children","cs","children","blog","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","(cs)","children","cs","children","blog","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","(cs)","children","cs","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/rewora/_next/static/css/46fef861a0c5592f.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/rewora/_next/static/css/5a06736b90d64cc7.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"cs","className":"__variable_b8b284 __variable_2368cb","children":["$","body",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","(cs)","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[]}]}]}]],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":"$6","children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":"$7","children":"404"}],["$","div",null,{"style":"$8","children":["$","h2",null,{"style":"$9","children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[]}]],null],["$La",null]]]]
+c:I[8712,["8712","static/chunks/8712-a07932aa1565cbe1.js","7635","static/chunks/app/(cs)/cs/blog/%5Bslug%5D/page-e95b684ccf794759.js"],"default"]
+b:T1512,{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","@id":"https://rewora.com/cs/blog/inteligentni-vyhledavani-produktu-na-eshopu/#article","headline":"Inteligentní vyhledávání na e-shopu: Zjistěte, co zákazníci hledají, co nenacházejí a proč nenakupují","description":"Zákazník hledá produkt, který máte skladem. Zadá jeho název do vyhledávání, jenže váš e-shop mu nezobrazí žádný výsledek. Odchází ke konkurenci. Přitom stačilo, aby vyhledávání rozumělo i jinému pojmenování produktu.","url":"https://rewora.com/cs/blog/inteligentni-vyhledavani-produktu-na-eshopu/","inLanguage":"cs","image":"https://rewora.com/images/media/inteligentne-vyhladavanie-produktov-rewora.hd.webp","datePublished":"2026-11-23","dateModified":"2026-11-23","author":{"@type":"Person","name":"Andrea Vargová"},"publisher":{"@id":"https://rewora.com/#organization"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://rewora.com/cs/blog/inteligentni-vyhledavani-produktu-na-eshopu/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Rewora","item":"https://rewora.com/cs/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://rewora.com/cs/blog/"},{"@type":"ListItem","position":3,"name":"Inteligentní vyhledávání na e-shopu: Zjistěte, co zákazníci hledají, co nenacházejí a proč nenakupují","item":"https://rewora.com/cs/blog/inteligentni-vyhledavani-produktu-na-eshopu/"}]},{"@type":"FAQPage","@id":"https://rewora.com/cs/blog/inteligentni-vyhledavani-produktu-na-eshopu/#faq","url":"https://rewora.com/cs/blog/inteligentni-vyhledavani-produktu-na-eshopu/","inLanguage":"cs","mainEntity":[{"@type":"Question","name":"Co je inteligentní vyhledávání na e-shopu?","acceptedAnswer":{"@type":"Answer","text":"Inteligentní vyhledávání pomáhá zákazníkům najít produkty, kategorie a značky i při použití alternativních pojmenování. Rewora podporuje synonyma, automatické návrhy výsledků a filtrování produktů podle parametrů, ceny či dostupnosti. Zároveň poskytuje statistiky vyhledávání, které pomáhají obchodníkům lépe pochopit zákaznickou poptávku."}},{"@type":"Question","name":"Co jsou synonyma ve vyhledávání produktů?","acceptedAnswer":{"@type":"Answer","text":"Synonyma jsou alternativní názvy nebo výrazy, pod kterými má být produkt vyhledatelný. Například k produktu „sedací souprava“ lze přidat synonyma „gauč“, „pohovka“ nebo „sedačka“."}},{"@type":"Question","name":"Mohu přidat synonyma celé kategorii produktů?","acceptedAnswer":{"@type":"Answer","text":"Ano. Rewora umožňuje přiřazovat synonyma kategoriím a automaticky je přenášet na produkty v daných kategoriích. U jednotlivých produktů lze toto dědění vypnout."}},{"@type":"Question","name":"Dokáže Rewora vyhledávat i značky a kategorie?","acceptedAnswer":{"@type":"Answer","text":"Ano. Vyhledávání pracuje s produkty, kategoriemi i značkami a nabízí automatické návrhy už během zadávání výrazu."}},{"@type":"Question","name":"Jak zjistím, co zákazníci nejčastěji vyhledávají na mém e-shopu?","acceptedAnswer":{"@type":"Answer","text":"Rewora poskytuje statistiky nejčastěji hledaných výrazů a produktů. E-shop tak může identifikovat produkty s největším zájmem zákazníků a využít tyto informace při plánování skladových zásob, marketingových kampaní a optimalizaci sortimentu."}},{"@type":"Question","name":"Jak zjistím, které produkty zákazníci na e-shopu nenašli?","acceptedAnswer":{"@type":"Answer","text":"Ve statistikách inteligentního vyhledávání Rewora najdete výrazy bez výsledků. Ty ukazují, co zákazníci hledali, ale vyhledávání jim nezobrazilo žádný produkt. Pomocí těchto údajů můžete identifikovat chybějící sortiment nebo doplnit synonyma stávajících produktů."}},{"@type":"Question","name":"Dá se pomocí vyhledávání zjistit, jaké produkty se vyplatí přidat do e-shopu?","acceptedAnswer":{"@type":"Answer","text":"Ano. Opakovaně vyhledávané výrazy bez výsledků mohou naznačovat neuspokojenou zákaznickou poptávku. Statistiky Rewora tak představují užitečný podklad při rozhodování o rozšíření produktové nabídky."}},{"@type":"Question","name":"Jak zjistit, proč zákazníci po vyhledávání nenakupují?","acceptedAnswer":{"@type":"Answer","text":"Rewora umožňuje identifikovat vyhledávání s nízkou konverzí. Obchodník může následně prověřit relevanci výsledků, ceny, skladovou dostupnost, kvalitu produktových informací či zákaznické recenze a hledat příčiny nízkého počtu objednávek."}},{"@type":"Question","name":"Je možné spravovat synonyma automaticky?","acceptedAnswer":{"@type":"Answer","text":"Ano. Rewora podporuje správu synonym přes administraci, API a MCP, což umožňuje jejich začlenění do automatizovaných pracovních postupů."}},{"@type":"Question","name":"Pomáhá inteligentní vyhledávání zvýšit konverzní poměr?","acceptedAnswer":{"@type":"Answer","text":"Může. Pokud zákazníci snáze najdou relevantní produkty a dokážou je rychleji porovnat, odstraňují se některé překážky při nákupu. Statistiky vyhledávání navíc pomáhají identifikovat výrazy s nízkou konverzí a odhalovat prostor pro další optimalizaci."}}]}]}d:T612f,<h2>Nové inteligentní vyhledávání produktů od Rewora</h2>
+<p>Co když ale zákazníci opakovaně hledají produkty, které ve své nabídce vůbec nemáte? Nebo produkty najdou, a přesto je nenakoupí?</p>
+<p>Právě tyto situace pomáhá řešit nové <strong>inteligentní vyhledávání produktů od Rewora</strong>. Zákazníkům usnadňuje orientaci v sortimentu pomocí synonym, automatických návrhů a pokročilého filtrování. E-shopům zároveň poskytuje statistiky, které odhalují, co návštěvníci nejčastěji hledají, které produkty nedokážou najít a u kterých vyhledávání dochází k nízké konverzi.</p>
+<p>Vyhledávací pole se tak mění z jednoduché funkce v užitečný nástroj pro optimalizaci sortimentu, zlepšování nákupního zážitku a hledání nových prodejních příležitostí.</p>
+<h2>Co je inteligentní vyhledávání produktů na e-shopu?</h2>
+<p>Inteligentní vyhledávání je funkce, která pomáhá zákazníkům najít relevantní produkty i tehdy, když neznají jejich přesný název nebo používají jiné pojmenování, než jaké má produkt uvedené v katalogu.</p>
+<p>Zákazník často neví, jak výrobce konkrétní produkt nazývá. Pamatuje si jen značku, barvu, určitou vlastnost nebo běžně používaný název.</p>
+<p>Na rozdíl od jednoduchého vyhledávání, které stojí především na shodě zadaných slov s produktovými údaji, umožňuje Rewora pracovat i s vlastními synonymy produktů a kategorií.</p>
+<p><strong>Inteligentní vyhledávání Rewora nabízí:</strong></p>
+<ul>
+<li>Vyhledávání produktů, kategorií a značek</li>
+<li>Automatické návrhy výsledků během psaní</li>
+<li>Vlastní synonyma produktů a kategorií</li>
+<li>Automatické dědění synonym z kategorií na produkty</li>
+<li>Filtrování výsledků podle parametrů, ceny a dostupnosti</li>
+<li>Produktové karty s fotografiemi, cenami, hodnocením a skladovou dostupností</li>
+<li>Statistiky nejčastěji hledaných výrazů a produktů</li>
+<li>Přehled vyhledávání bez výsledků</li>
+<li>Identifikaci produktů s minimem vyhledávání</li>
+<li>Analýzu vyhledávání s nízkou konverzí</li>
+</ul>
+<p>Cílem je nejen zjednodušit zákazníkovi cestu k produktu, ale zároveň pomoci obchodníkovi lépe pochopit zákaznickou poptávku.</p>
+<h2>Vyhledávání se synonymy: Když zákazník používá jiná slova než váš e-shop</h2>
+<p>Představte si, že prodáváte elektrické koloběžky. V produktovém katalogu je máte označené jako „elektrické koloběžky“, ale zákazník do vyhledávání napíše „e-koloběžka“.</p>
+<p>Nebo prodáváte sedací soupravy, jenže návštěvník hledá „gauč“.</p>
+<p>U běžného vyhledávání může být výsledkem prázdná stránka, přestože požadovaný produkt v nabídce máte.</p>
+<p><strong>Rewora umožňuje ke každému produktu nebo kategorii přiřadit synonyma</strong>, tedy další výrazy, pod kterými má být produkt vyhledatelný.</p>
+<h3>Jak synonyma fungují v praxi?</h3>
+<table>
+<thead>
+<tr>
+<th>Název produktu v e-shopu</th>
+<th>Synonyma, která můžete přidat</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Sedací souprava</td>
+<td>gauč, pohovka, sedačka</td>
+</tr>
+<tr>
+<td>Mobilní telefon</td>
+<td>mobil, smartphone, chytrý telefon</td>
+</tr>
+<tr>
+<td>Elektrická koloběžka</td>
+<td>e-koloběžka, elektro koloběžka</td>
+</tr>
+<tr>
+<td>Běžecká obuv</td>
+<td>tenisky na běhání, běžecké boty</td>
+</tr>
+<tr>
+<td>Akumulátorová vrtačka</td>
+<td>aku vrtačka, vrtačka na baterku</td>
+</tr>
+<tr>
+<td>Chladnička</td>
+<td>lednice, lednička</td>
+</tr>
+</tbody></table>
+<p>Synonyma přitom nemusíte nastavovat jednotlivě u každého produktu.</p>
+<h3>Synonyma kategorií se mohou automaticky přenášet na produkty</h3>
+<p>Jednou z praktických funkcí Rewora je <strong>dědění synonym z kategorií na jednotlivé produkty</strong>.</p>
+<p>Pokud například kategorii „Sedací soupravy“ přiřadíte synonymum „gauče“, produkty v této kategorii mohou být automaticky vyhledatelné i pod tímto výrazem.</p>
+<p>Nemusíte tedy upravovat desítky či stovky produktů jednotlivě.</p>
+<p>Pokud ale u konkrétního produktu synonyma kategorie používat nechcete, jejich dědění můžete vypnout.</p>
+<h3>Proč jsou synonyma důležitá pro prodej?</h3>
+<p>Zákazníci často nepoužívají odbornou terminologii výrobců. Vyhledávají tak, jak mluví v běžném životě.</p>
+<p>Dobře nastavená synonyma proto pomáhají:</p>
+<ul>
+<li>Snižovat počet neúspěšných vyhledávání.</li>
+<li>Zobrazovat relevantní produkty i u alternativních pojmenování.</li>
+<li>Zlepšovat vyhledatelnost sortimentu bez změny oficiálních názvů produktů.</li>
+<li>Zjednodušit orientaci v rozsáhlých produktových katalozích.</li>
+<li>Omezovat situace, kdy zákazník odchází jen proto, že produkt nedokázal najít.</li>
+</ul>
+<p>Synonyma jsou užitečná i u regionálních výrazů, hovorových pojmenování nebo zažitých anglických názvů produktů.</p>
+<h2>Automatické návrhy produktů už během psaní</h2>
+<p>Zákazník nemusí dopsat celý vyhledávací výraz ani procházet množství kategorií.</p>
+<p>Inteligentní vyhledávání Rewora zobrazuje <strong>automatické návrhy výsledků přímo během zadávání textu</strong>, čímž zkracuje cestu k požadovanému produktu.</p>
+<p>Vyhledávání pracuje se třemi typy obsahu:</p>
+<ul>
+<li><strong>Produkty:</strong> konkrétní položky z katalogu.</li>
+<li><strong>Kategorie:</strong> skupiny produktů související s hledaným výrazem.</li>
+<li><strong>Značky:</strong> výrobci a značky, které odpovídají vyhledávání.</li>
+</ul>
+<p>Pokud zákazník začne psát název značky, může se rychleji dostat k jejím produktům. Pokud zadá název produktové kategorie, vyhledávání mu pomůže pokračovat správným směrem.</p>
+<p>Takový způsob vyhledávání zjednodušuje orientaci zejména v e-shopech s rozsáhlým sortimentem.</p>
+<h2>Přehledné výsledky vyhledávání s cenami, hodnocením a dostupností</h2>
+<p>Najít produkt je teprve první krok. Zákazník potřebuje vědět i to, jestli mu vyhovuje a jestli je dostupný.</p>
+<p>Rewora proto nabízí samostatnou stránku s výsledky vyhledávání, na které se produkty zobrazují v přehledných kartách.</p>
+<p>Zákazník u nich vidí:</p>
+<ul>
+<li>Fotografii produktu.</li>
+<li>Krátký popis.</li>
+<li>Hodnocení produktu.</li>
+<li>Aktuální cenu.</li>
+<li>Informaci o slevě.</li>
+<li>Dostupnost produktu.</li>
+</ul>
+<h3>Inteligentní filtrování výsledků</h3>
+<p>Pokud vyhledávání zobrazí větší množství produktů, zákazník si je může dále zúžit pomocí filtrů.</p>
+<p>K dispozici jsou filtry podle:</p>
+<ul>
+<li>produktových atributů a parametrů</li>
+<li>dostupnosti</li>
+<li>cenového rozpětí.</li>
+</ul>
+<p>Zvolené filtry se zobrazují jako samostatné štítky, které může zákazník jednoduše odebrat.</p>
+<p>Výsledky podporují i stránkování, takže se zákazník může pohodlně pohybovat i ve větším množství produktů.</p>
+<p>Kromě konkrétních produktů se ve výsledcích mohou zobrazovat také odpovídající kategorie a značky.</p>
+<h2>Co zákazníci hledají, ale nenacházejí? Statistiky vyhledávání odhalí nové prodejní příležitosti</h2>
+<p><strong>Víte, které produkty zákazníci na vašem e-shopu nejčastěji hledají? A kolikrát odejdou, aniž by našli to, co potřebují?</strong></p>
+<p>Každé vyhledávání představuje cennou informaci o zákaznické poptávce. Návštěvník, který zadá konkrétní výraz do vyhledávání, už projevuje zájem o určitý produkt, značku nebo kategorii.</p>
+<p>Nové inteligentní vyhledávání Rewora proto není jen nástrojem pro vyhledávání produktů. <strong>Obchodníkům poskytuje i statistiky, které pomáhají pochopit nákupní chování zákazníků, odhalit nedostatky v sortimentu a najít příležitosti ke zvýšení prodeje.</strong></p>
+<p>V administraci Rewora získáte přehled o čtyřech důležitých oblastech:</p>
+<ul>
+<li><strong>Nejčastěji hledané výrazy a produkty</strong> – zjistíte, o co mají zákazníci největší zájem.</li>
+<li><strong>Výrazy bez výsledků</strong> – odhalíte produkty, které zákazníci hledají, ale nedokážou najít.</li>
+<li><strong>Produkty s minimem vyhledávání</strong> – identifikujete sortiment, o který zákazníci prostřednictvím vyhledávání projevují malý zájem.</li>
+<li><strong>Vyhledávání s nízkou konverzí</strong> – zjistíte, u kterých vyhledávání zájem zákazníků jen zřídka vede k nákupu.</li>
+</ul>
+<h3>Nejčastěji hledané výrazy a produkty: Zjistěte, co zákazníci skutečně chtějí</h3>
+<p>Které produkty zákazníci na vašem e-shopu aktivně vyhledávají? Jaké značky je zajímají? A jaké výrazy používají?</p>
+<p>Statistiky nejčastěji hledaných výrazů a produktů vám pomohou lépe porozumět aktuální zákaznické poptávce.</p>
+<p>Tyto informace můžete využít například při plánování skladových zásob, nastavování marketingových kampaní nebo rozhodování o tom, které produkty zvýraznit na úvodní stránce.</p>
+<p>Pokud například zákazníci často vyhledávají konkrétní typ běžeckých bot, můžete prověřit jejich dostupnost, rozšířit nabídku velikostí nebo připravit tematickou kampaň.</p>
+<p><strong>Místo rozhodování jen podle historických prodejů tak získáváte další pohled na to, co zákazníci aktivně hledají.</strong></p>
+<h3>Výrazy bez výsledků: Odhalte produkty, které vám v nabídce chybějí</h3>
+<p>Jednou z nejcennějších statistik jsou <strong>vyhledávací výrazy, u kterých zákazníci nedostali žádný výsledek</strong>.</p>
+<p>Představte si e-shop s kávovary, na kterém zákazníci opakovaně vyhledávají „čisticí tablety do kávovaru“. Obchod je ale zatím neprodává.</p>
+<p>Ve statistikách Rewora můžete taková neúspěšná vyhledávání identifikovat a zjistit, o jaký sortiment se zákazníci zajímají.</p>
+<p>Pro e-shop to může být impulz k rozšíření nabídky o produkty, u kterých už zájem návštěvníků existuje.</p>
+<p>Ne každé vyhledávání bez výsledků však znamená, že produkt chybí.</p>
+<p>Někdy zákazník hledá „gauč“, ale e-shop nabízí produkty pod názvem „sedací souprava“. Právě v takovém případě pomůže doplnění synonym.</p>
+<p><strong>Statistiky vyhledávání a možnost nastavovat synonyma tak spolu vytvářejí praktický nástroj pro optimalizaci produktového katalogu.</strong></p>
+<p>Výrazy bez výsledků vám pomohou:</p>
+<ul>
+<li>Identifikovat produkty a značky, které zákazníci poptávají, ale nemáte je v nabídce.</li>
+<li>Odhalovat příležitosti k rozšíření sortimentu.</li>
+<li>Najít chybějící synonyma a alternativní pojmenování produktů.</li>
+<li>Zlepšovat názvy a popisy produktů.</li>
+<li>Předcházet situacím, kdy zákazník odchází ke konkurenci jen proto, že nedokázal najít správný produkt.</li>
+</ul>
+<h3>Produkty s minimem vyhledávání: Který sortiment zůstává bez povšimnutí?</h3>
+<p>Některé produkty mohou mít dobrou cenu, kvalitní recenze i dostatečné skladové zásoby, a zákazníci je přesto téměř nevyhledávají.</p>
+<p>Statistiky Rewora pomáhají identifikovat <strong>produkty s minimem vyhledávání</strong>.</p>
+<p>Takové produkty nemusí být automaticky nezajímavé. Může jít o méně známý sortiment, produkty s nevhodným pojmenováním nebo položky, které zákazníci spíše objevují přes kategorie než přes vyhledávací pole.</p>
+<p>Obchodník tak získává podklad pro další analýzu a může prověřit, jestli je potřeba upravit názvy produktů, doplnit synonyma nebo zvýšit jejich viditelnost v marketingové komunikaci.</p>
+<h3>Vyhledávání s nízkou konverzí: Zákazníci hledají, ale nenakupují</h3>
+<p>Zákazník zadá do vyhledávání konkrétní produkt, zobrazí se mu výsledky, ale k nákupu nedojde.</p>
+<p>Pokud se podobná situace opakuje, může jít o signál, že zákazníci sice mají zájem, ale něco jim brání v dokončení objednávky.</p>
+<p><strong>Rewora proto poskytuje i statistiky vyhledávání s nízkou konverzí.</strong></p>
+<p>Představte si například, že zákazníci často vyhledávají „bezdrátová sluchátka“. E-shop jim zobrazí relevantní produkty, ale jen malé procento těchto vyhledávání vede k objednávce.</p>
+<p>Příčin může být několik:</p>
+<ul>
+<li>Příliš vysoká cena v porovnání s očekáváním zákazníků.</li>
+<li>Nedostupnost požadovaných modelů.</li>
+<li>Nedostatečný výběr produktů.</li>
+<li>Neúplné informace o produktech.</li>
+<li>Slabé hodnocení nebo nedostatek recenzí.</li>
+<li>Výsledky, které neodpovídají představám zákazníka.</li>
+</ul>
+<p>Nízká konverze sama o sobě neurčuje příčinu problému, ale upozorňuje na oblast, kterou se vyplatí prověřit.</p>
+<p>Obchodník tak může postupně optimalizovat produktovou nabídku, ceny, dostupnost či prezentaci produktů.</p>
+<h3>Jak využít statistiky vyhledávání ke zvýšení prodeje?</h3>
+<p>Největší výhodou statistik Rewora je možnost proměnit zákaznická vyhledávání v konkrétní obchodní rozhodnutí.</p>
+<table>
+<thead>
+<tr>
+<th>Co odhalí statistiky</th>
+<th>Jak může e-shop reagovat</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Zákazníci často hledají konkrétní produkt</td>
+<td>Zvýraznit ho, podpořit reklamou nebo prověřit skladové zásoby</td>
+</tr>
+<tr>
+<td>Opakovaně hledají produkt bez výsledků</td>
+<td>Doplnit chybějící sortiment nebo nastavit synonyma</td>
+</tr>
+<tr>
+<td>Některé produkty mají minimum vyhledávání</td>
+<td>Prověřit jejich pojmenování, viditelnost a marketingovou podporu</td>
+</tr>
+<tr>
+<td>Určitá vyhledávání mají nízkou konverzi</td>
+<td>Analyzovat ceny, dostupnost, recenze a relevanci výsledků</td>
+</tr>
+</tbody></table>
+<p><strong>Rewora tak pomáhá odpovědět nejen na otázku „Co zákazníci kupují?“, ale i „Co chtějí koupit, a zatím se jim to nepodařilo?“</strong></p>
+<p>Právě tyto informace mohou být klíčem k lépe nastavenému sortimentu, efektivnějšímu marketingu a vyššímu počtu objednávek.</p>
+<h2>Lepší kontrola nad tím, které produkty se zobrazují ve vyhledávání</h2>
+<p>Ne každý produkt v katalogu musí být automaticky vhodný k zobrazení ve výsledcích vyhledávání.</p>
+<p>Rewora proto umožňuje spravovat vyhledatelnost jednotlivých produktů.</p>
+<p>V administraci produktu je dostupná sekce <strong>Catalog Search</strong>, ve které lze nastavit:</p>
+<ul>
+<li><strong>Searchable:</strong> jestli má být produkt zahrnutý do vyhledávání.</li>
+<li><strong>Synonyms:</strong> pod jakými dalšími výrazy má být produkt vyhledatelný.</li>
+<li><strong>Include category synonyms:</strong> jestli má produkt přebírat synonyma svých kategorií.</li>
+</ul>
+<p>Systém zároveň upozorní, pokud produktu označenému jako vyhledatelný chybějí údaje potřebné k jeho zobrazení ve vyhledávání.</p>
+<p>V seznamu produktů je možné filtrovat položky, které vyhledávání nedokáže zobrazit.</p>
+<p>To je užitečné hlavně u větších e-shopů, kde se produkty pravidelně importují nebo aktualizují a ne všechny musí mít správně vyplněné údaje.</p>
+<h2>Správa synonym přes administraci, API i AI nástroje</h2>
+<p>U e-shopů s tisíci produkty může být ruční správa synonym časově náročná.</p>
+<p>Rewora proto nabízí několik možností jejich nastavování.</p>
+<h3>Přímo v administraci</h3>
+<p>Synonyma lze přidávat a upravovat u jednotlivých produktů a kategorií. Tento způsob je vhodný pro průběžné úpravy katalogu.</p>
+<h3>Prostřednictvím API</h3>
+<p>Produkty a kategorie lze spravovat i přes API, což otevírá možnosti automatizace a integrace s dalšími systémy.</p>
+<h3>Prostřednictvím MCP</h3>
+<p>Rewora podporuje i správu synonym přes MCP (Model Context Protocol), který umožňuje propojení s kompatibilními AI nástroji a agenty.</p>
+<p>To vytváří prostor pro efektivnější práci s rozsáhlým katalogem a jeho průběžnou optimalizaci.</p>
+<h2>Proč je kvalitní vyhledávání důležité pro konverze e-shopu?</h2>
+<p>Vyhledávání není jen technická funkce. Je součástí nákupní cesty zákazníka.</p>
+<p>Návštěvník, který ví, co chce, očekává, že produkt najde rychle a bez komplikací.</p>
+<p>Pokud musí opakovaně zkoušet různé výrazy, procházet kategorie nebo ručně filtrovat stovky produktů, jeho nákupní zkušenost se zhoršuje.</p>
+<p>Inteligentní vyhledávání může pomoci:</p>
+<ul>
+<li>Zkrátit čas potřebný k nalezení produktu.</li>
+<li>Snížit počet vyhledávání bez relevantního výsledku.</li>
+<li>Usnadnit porovnávání produktů.</li>
+<li>Zvýšit viditelnost relevantního sortimentu.</li>
+<li>Omezit odchody způsobené neúspěšným hledáním.</li>
+<li>Podpořit konverzní poměr a prodej.</li>
+</ul>
+<p>Významnou výhodou Rewora je, že kromě samotného vyhledávání poskytuje i statistiky, které pomáhají odhalovat problematická místa.</p>
+<p>Pokud například určitá vyhledávání dosahují nízké konverze, obchodník může prověřit, jestli zákazníci nacházejí vhodné produkty, jestli jsou dostupné a jestli jejich cena odpovídá očekávání.</p>
+<p><strong>Kvalitní vyhledávání tak může nejen usnadnit nákup, ale také pomoci identifikovat překážky, které snižují prodejní potenciál e-shopu.</strong></p>
+<h2>Inteligentní vyhledávání jako zdroj informací pro marketing a SEO</h2>
+<p>Vyhledávání na e-shopu může být zajímavým zdrojem informací o tom, jaký jazyk zákazníci používají.</p>
+<p>Obchodníci totiž často pojmenovávají produkty podle výrobců, technických parametrů nebo interních kategorií. Zákazníci však používají jednodušší, hovorové či alternativní názvy.</p>
+<p>Tyto poznatky lze využít nejen při nastavování synonym, ale i při:</p>
+<ul>
+<li>Optimalizaci názvů a popisů produktů.</li>
+<li>Tvorbě nových produktových kategorií.</li>
+<li>Přípravě článků a nákupních rádců.</li>
+<li>Výběru témat pro obsahový marketing.</li>
+<li>Plánování reklamních kampaní.</li>
+<li>Rozšiřování sortimentu podle zákaznické poptávky.</li>
+</ul>
+<p>Pokud například zákazníci pravidelně hledají „malý kávovar do kanceláře“, může to být podnět k vytvoření nákupního rádce nebo relevantní produktové kolekce.</p>
+<p><strong>Statistiky vyhledávání tak mohou pomáhat i při SEO optimalizaci e-shopu.</strong> Odhalují výrazy, které zákazníci reálně používají, a poskytují podklady pro tvorbu obsahu odpovídajícího jejich potřebám.</p>
+<p>Samotné přidání synonyma však automaticky nezlepší pozici stránky ve výsledcích Google. Zjištěné výrazy je potřeba vhodně zapracovat i do obsahu e-shopu.</p>
+<h2>Pro koho je inteligentní vyhledávání Rewora vhodné?</h2>
+<p>Inteligentní vyhledávání může být přínosem pro menší i velké e-shopy, zejména pokud mají široký sortiment nebo produkty s více zažitými pojmenováními.</p>
+<p>Význam má například pro:</p>
+<ul>
+<li><strong>E-shopy s elektronikou:</strong> zákazníci používají technické, anglické i hovorové názvy.</li>
+<li><strong>Prodejce nábytku:</strong> jeden typ produktu může mít několik běžných pojmenování.</li>
+<li><strong>Módní e-shopy:</strong> zákazníci hledají podle barvy, typu či vlastností.</li>
+<li><strong>Obchody s nářadím:</strong> odborné názvy se často liší od výrazů, které používají domácí kutilové.</li>
+<li><strong>E-shopy s autodíly:</strong> produkty mohou být označované několika technickými a obchodními názvy.</li>
+<li><strong>Prodejce kosmetiky:</strong> zákazníci mohou vyhledávat podle značky, typu nebo konkrétních vlastností.</li>
+</ul>
+<p>Čím rozsáhlejší je katalog a čím rozmanitější jsou pojmenování produktů, tím důležitější je pomoci zákazníkům dostat se k relevantním výsledkům.</p>
+<p>A čím více zákazníci vyhledávání používají, tím zajímavější informace o jejich nákupních potřebách může e-shop získávat.</p>
+<h2>Nejčastější dotazy k inteligentnímu vyhledávání na e-shopu</h2>
+<h3>Co je inteligentní vyhledávání na e-shopu?</h3>
+<p>Inteligentní vyhledávání pomáhá zákazníkům najít produkty, kategorie a značky i při použití alternativních pojmenování. Rewora podporuje synonyma, automatické návrhy výsledků a filtrování produktů podle parametrů, ceny či dostupnosti. Zároveň poskytuje statistiky vyhledávání, které pomáhají obchodníkům lépe pochopit zákaznickou poptávku.</p>
+<h3>Co jsou synonyma ve vyhledávání produktů?</h3>
+<p>Synonyma jsou alternativní názvy nebo výrazy, pod kterými má být produkt vyhledatelný. Například k produktu „sedací souprava“ lze přidat synonyma „gauč“, „pohovka“ nebo „sedačka“.</p>
+<h3>Mohu přidat synonyma celé kategorii produktů?</h3>
+<p>Ano. Rewora umožňuje přiřazovat synonyma kategoriím a automaticky je přenášet na produkty v daných kategoriích. U jednotlivých produktů lze toto dědění vypnout.</p>
+<h3>Dokáže Rewora vyhledávat i značky a kategorie?</h3>
+<p>Ano. Vyhledávání pracuje s produkty, kategoriemi i značkami a nabízí automatické návrhy už během zadávání výrazu.</p>
+<h3>Jak zjistím, co zákazníci nejčastěji vyhledávají na mém e-shopu?</h3>
+<p>Rewora poskytuje statistiky nejčastěji hledaných výrazů a produktů. E-shop tak může identifikovat produkty s největším zájmem zákazníků a využít tyto informace při plánování skladových zásob, marketingových kampaní a optimalizaci sortimentu.</p>
+<h3>Jak zjistím, které produkty zákazníci na e-shopu nenašli?</h3>
+<p>Ve statistikách inteligentního vyhledávání Rewora najdete výrazy bez výsledků. Ty ukazují, co zákazníci hledali, ale vyhledávání jim nezobrazilo žádný produkt. Pomocí těchto údajů můžete identifikovat chybějící sortiment nebo doplnit synonyma stávajících produktů.</p>
+<h3>Dá se pomocí vyhledávání zjistit, jaké produkty se vyplatí přidat do e-shopu?</h3>
+<p>Ano. Opakovaně vyhledávané výrazy bez výsledků mohou naznačovat neuspokojenou zákaznickou poptávku. Statistiky Rewora tak představují užitečný podklad při rozhodování o rozšíření produktové nabídky.</p>
+<h3>Jak zjistit, proč zákazníci po vyhledávání nenakupují?</h3>
+<p>Rewora umožňuje identifikovat vyhledávání s nízkou konverzí. Obchodník může následně prověřit relevanci výsledků, ceny, skladovou dostupnost, kvalitu produktových informací či zákaznické recenze a hledat příčiny nízkého počtu objednávek.</p>
+<h3>Je možné spravovat synonyma automaticky?</h3>
+<p>Ano. Rewora podporuje správu synonym přes administraci, API a MCP, což umožňuje jejich začlenění do automatizovaných pracovních postupů.</p>
+<h3>Pomáhá inteligentní vyhledávání zvýšit konverzní poměr?</h3>
+<p>Může. Pokud zákazníci snáze najdou relevantní produkty a dokážou je rychleji porovnat, odstraňují se některé překážky při nákupu. Statistiky vyhledávání navíc pomáhají identifikovat výrazy s nízkou konverzí a odhalovat prostor pro další optimalizaci.</p>
+<h2>Proměňte vyhledávání v lepší nákupní zážitek i zdroj obchodních příležitostí</h2>
+<p>Vyhledávací pole na e-shopu nemusí sloužit jen k zadávání názvů produktů.</p>
+<p>Může zákazníkům pomáhat najít správné zboží, zjednodušovat rozhodování a zároveň poskytovat obchodníkovi cenné poznatky o zákaznických potřebách.</p>
+<p><strong>Nové inteligentní vyhledávání Rewora spojuje automatické návrhy, synonyma, produktová hodnocení, pokročilé filtrování a statistiky vyhledávání do jednoho řešení.</strong></p>
+<p>Díky němu můžete zjistit nejen to, co zákazníci nejčastěji hledají, ale i které produkty nenacházejí, o jaký sortiment projevují malý zájem a u kterých vyhledávání dochází k nízké konverzi.</p>
+<p>Tyto informace můžete využít k rozšíření nabídky, úpravě produktových údajů, zlepšení marketingových kampaní i optimalizaci nákupní cesty.</p>
+<p><strong>Protože každé neúspěšné vyhledávání může představovat prodejní příležitost, kterou váš e-shop zatím nevyužívá.</strong></p>
+2:[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"$b"}}],["$","$Lc",null,{"lang":"cs","alt":{"sk":"/rewora/sk/blog/","cs":"/rewora/cs/blog/","en":"/rewora/resources/"}}],["$","section",null,{"className":"page-hero","children":["$","div",null,{"className":"container page-hero__inner ","children":[["$","a",null,{"className":"page-hero__back","href":"/rewora/cs/blog/","children":["← ","Zpět na blog"]}],["$","span",null,{"className":"eyebrow page-hero__eyebrow","children":"Blog"}],["$","h1",null,{"className":"page-hero__title","children":"Inteligentní vyhledávání na e-shopu: Zjistěte, co zákazníci hledají, co nenacházejí a proč nenakupují"}],"$undefined",["$","div",null,{"className":"page-hero__meta","children":[["$","span",null,{"className":"page-hero__author","children":[["$","img",null,{"className":"page-hero__avatar","src":"/rewora/images/andrea-vargova.png","alt":""}],"Andrea Vargová"]}],["$","span",null,{"children":"23. listopadu 2026"}]]}]]}]}],["$","section",null,{"className":"section","children":["$","div",null,{"className":"container article","children":["$","div",null,{"children":[["$","img",null,{"className":"article__cover","src":"/rewora/images/media/inteligentne-vyhladavanie-produktov-rewora.hd.webp","alt":"Inteligentní vyhledávání na e-shopu: Zjistěte, co zákazníci hledají, co nenacházejí a proč nenakupují"}],["$","p",null,{"className":"article__perex","children":"Zákazník hledá produkt, který máte skladem. Zadá jeho název do vyhledávání, jenže váš e-shop mu nezobrazí žádný výsledek. Odchází ke konkurenci. Přitom stačilo, aby vyhledávání rozumělo i jinému pojmenování produktu."}],["$","div",null,{"className":"prose","dangerouslySetInnerHTML":{"__html":"$d"}}]]}]}]}],["$","section",null,{"className":"cta","children":["$","div",null,{"className":"container cta__inner","children":[["$","div",null,{"className":"cta__copy","children":[["$","h2",null,{"children":"Vyzkoušejte Reworu nyní"}],["$","p",null,{"children":"GTM, integrace na míru nebo Shopify plugin — vyberte si."}]]}],["$","div",null,{"className":"cta__actions","children":[["$","a",null,{"className":"btn btn--dark btn--lg","href":"/rewora/cs/ukazka/","children":"Ukázka Rewory na vašem e-shopu"}],["$","a",null,{"className":"btn btn--ghost btn--lg","href":"/rewora/cs/cenik/","children":"Vyzkoušet nyní"}]]}]]}]}],["$","footer",null,{"className":"footer","children":["$","div",null,{"className":"container footer__inner","children":[["$","a",null,{"href":"/rewora/cs/","className":"logo-link","aria-label":"Rewora — domovská stránka","children":["$","img",null,{"src":"/rewora/images/logo-rewora-white.svg","alt":"Rewora","className":"logo-img ","style":{"height":22},"width":136.4,"height":22}]}],["$","nav",null,{"className":"footer__links","aria-label":"Rewora","children":[["$","a","/rewora/cs/funkce/",{"href":"/rewora/cs/funkce/","children":"Funkce"}],["$","a","/rewora/cs/pripadove-studie/",{"href":"/rewora/cs/pripadove-studie/","children":"Případové studie"}],["$","a","/rewora/cs/cenik/",{"href":"/rewora/cs/cenik/","children":"Ceník"}],["$","a","/rewora/cs/#integration",{"href":"/rewora/cs/#integration","children":"Integrace"}],["$","a","/rewora/cs/blog/",{"href":"/rewora/cs/blog/","children":"Blog"}],["$","a","/rewora/cs/faq/",{"href":"/rewora/cs/faq/","children":"Časté otázky"}],["$","a","/rewora/cs/o-nas/",{"href":"/rewora/cs/o-nas/","children":"O Reworze"}],["$","a","/rewora/cs/kontakt/",{"href":"/rewora/cs/kontakt/","children":"Kontakt"}],["$","a","/rewora/cs/partnersky-program/",{"href":"/rewora/cs/partnersky-program/","children":"Partnerský program"}],["$","a","/rewora/cs/vseobecne-obchodni-podminky/",{"href":"/rewora/cs/vseobecne-obchodni-podminky/","children":"Všeobecné obchodní podmínky"}],["$","a","/rewora/cs/ochrana-osobnich-udaju/",{"href":"/rewora/cs/ochrana-osobnich-udaju/","children":"Ochrana osobních údajů"}]]}],["$","span",null,{"className":"footer__copy","children":["© ",2026," Rewora. ","Všechna práva vyhrazena."]}]]}]}]]
+a:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Inteligentní vyhledávání na e-shopu: Zjistěte, co zákazníci hledají, co nenacházejí a proč nenakupují ★ Rewora"}],["$","meta","3",{"name":"description","content":"Zákazník hledá produkt, který máte skladem. Zadá jeho název do vyhledávání, jenže váš e-shop mu nezobrazí žádný výsledek. Odchází ke konkurenci. Přitom stačilo, aby vyhledávání rozumělo i jinému pojmenování produktu."}],["$","link","4",{"rel":"canonical","href":"https://rewora.com/cs/blog/inteligentni-vyhledavani-produktu-na-eshopu/"}],["$","meta","5",{"property":"og:title","content":"Inteligentní vyhledávání na e-shopu: Zjistěte, co zákazníci hledají, co nenacházejí a proč nenakupují ★ Rewora"}],["$","meta","6",{"property":"og:description","content":"Zákazník hledá produkt, který máte skladem. Zadá jeho název do vyhledávání, jenže váš e-shop mu nezobrazí žádný výsledek. Odchází ke konkurenci. Přitom stačilo, aby vyhledávání rozumělo i jinému pojmenování produktu."}],["$","meta","7",{"property":"og:locale","content":"cs_CZ"}],["$","meta","8",{"property":"og:type","content":"article"}],["$","meta","9",{"name":"twitter:card","content":"summary"}],["$","meta","10",{"name":"twitter:title","content":"Inteligentní vyhledávání na e-shopu: Zjistěte, co zákazníci hledají, co nenacházejí a proč nenakupují ★ Rewora"}],["$","meta","11",{"name":"twitter:description","content":"Zákazník hledá produkt, který máte skladem. Zadá jeho název do vyhledávání, jenže váš e-shop mu nezobrazí žádný výsledek. Odchází ke konkurenci. Přitom stačilo, aby vyhledávání rozumělo i jinému pojmenování produktu."}]]
+1:null
